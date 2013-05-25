@@ -1,0 +1,21 @@
+[
+{
+  "modid": "UniItems",
+  "name": "Unified Items",
+  "description": "Adds items and blocks like copper and tin\nthat most tech mods add their own versions of, needlessly taking up more block/item ids",
+  "version": "0.01",
+  "mcversion": "1.5.2",
+  "url": "",
+  "updateUrl": "",
+  "authors": [
+    "chazwarp923"
+  ],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]
