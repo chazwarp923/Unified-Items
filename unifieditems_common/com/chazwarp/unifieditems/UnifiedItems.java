@@ -8,6 +8,7 @@ import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.network.PacketHandler;
+import com.chazwarp.unifieditems.oredictionary.RegisterDict;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -36,10 +37,18 @@ public class UnifiedItems {
         	Items.initCopper();
         	Items.initTin();
         	Items.initBronze();
-        	Items.initRubberRaw();
+        	Items.initSilver();
+        	Items.initLead();
         	Items.initRubber();
+        	Blocks.initOreCopper();
+        	Blocks.initOreTin();
+        	Blocks.initOreSilver();
+        	Blocks.initOreLead();
         	Blocks.initCopper();
         	Blocks.initTin();
+        	Blocks.initBronze();
+        	Blocks.initSilver();
+        	Blocks.initLead();
         	//Blocks.initSapling();
         	Blocks.initLog();
         	//Blocks.initLeaves();
@@ -54,13 +63,27 @@ public class UnifiedItems {
         	Items.addCopperName();
         	Items.addTinName();
         	Items.addBronzeName();
-        	Items.addRubberRawName();
+        	Items.addSilverName();
+        	Items.addLeadName();
         	Items.addRubberName();
+        	Blocks.addOreCopperName();
+        	Blocks.addOreTinName();
+        	Blocks.addOreSilverName();
+        	Blocks.addOreLeadName();
         	Blocks.addCopperName();
         	Blocks.addTinName();
+        	Blocks.addBronzeName();
+        	Blocks.addSilverName();
+        	Blocks.addLeadName();
         	//Blocks.addSaplingName();
         	Blocks.addLogName();
         	//Blocks.addLeavesName();
+        	RegisterDict.addCopper();
+        	RegisterDict.addTin();
+        	RegisterDict.addBronze();
+        	RegisterDict.addSilver();
+        	RegisterDict.addLead();
+        	RegisterDict.addRubber();
         }
        
         @EventHandler

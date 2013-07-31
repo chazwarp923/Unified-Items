@@ -21,11 +21,14 @@ public class Smelting {
 	//Smelting recipe for Tin
 	GameRegistry.addSmelting(BlockInfo.TIN_ORE_ID, new ItemStack(Items.ingotTin), 0.1f);
 	
-	//Smelting recipe for Rubber
-	GameRegistry.addSmelting(ItemInfo.RUBBER_RAW_ID, new ItemStack(Items.rubber), 0.1f);
+	//Smelting recipe for Silver
+	GameRegistry.addSmelting(BlockInfo.SILVER_ORE_ID, new ItemStack(Items.ingotSilver), 0.1f);
 	
-	//Smelting recipe for charcoal from rubber wood
-	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID,new ItemStack(Item.coal, 1, 1), 0.1f);
+	//Smelting recipe for Lead
+	GameRegistry.addSmelting(BlockInfo.LEAD_ORE_ID, new ItemStack(Items.ingotLead), 0.1f);
+	
+	//Smelting recipe for Rubber
+	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.rubber, 6, 0), 0.2f);
 
 	}
 

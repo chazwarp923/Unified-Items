@@ -32,7 +32,7 @@ public class BlockRubberSapling extends BlockSapling {
         this.setStepSound(Block.soundGrassFootstep);
         this.setCreativeTab(CreativeTabs.tabDecorations);
 		
-		this.func_111022_d("test:saplingRubber");
+		this.func_111022_d("uniitems:saplingRubber");
 	}
 	
 	@Override

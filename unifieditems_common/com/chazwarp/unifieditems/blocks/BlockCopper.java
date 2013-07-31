@@ -10,17 +10,17 @@ import com.chazwarp.unifieditems.lib.BlockInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockRubberWood extends Block {
+public class BlockCopper extends Block {
 	
-	public BlockRubberWood(int id) {
-		super(id, Material.wood);
+	public BlockCopper(int id) {
+		super(id, Material.iron);
 		
 		setCreativeTab(CreativeTabs.tabBlock);
-		setHardness(1F);
-		setStepSound(Block.soundWoodFootstep);
-		setUnlocalizedName(BlockInfo.RUBBER_WOOD_UNLOCALIZED_NAME);
+		setHardness(2F);
+		setStepSound(Block.soundMetalFootstep);
+		setUnlocalizedName(BlockInfo.COPPER_UNLOCALIZED_NAME);
 		
-		this.func_111022_d("uniitems:woodRubber");
+		this.func_111022_d("uniitems:blockCopper");
 	}
 	
 	@Override

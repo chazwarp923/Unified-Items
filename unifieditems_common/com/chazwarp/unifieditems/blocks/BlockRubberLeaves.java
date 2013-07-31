@@ -28,7 +28,7 @@ public class BlockRubberLeaves extends BlockLeaves {
         setBurnProperties(this.blockID, 30, 60);
         this.setCreativeTab(CreativeTabs.tabDecorations);
         
-		this.func_111022_d("test:leavesRubber");
+		this.func_111022_d("uniitems:leavesRubber");
 	}
 	
     public int getBlockColor ()

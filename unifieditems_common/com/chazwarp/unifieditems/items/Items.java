@@ -13,7 +13,7 @@ public static Item ingotCopper;
 	//This registers the item id
 	public static void initCopper() {
 		
-	ingotCopper = new ItemCopper(ItemInfo.INGOT_COPPER_ID);
+	ingotCopper = new ItemIngotCopper(ItemInfo.INGOT_COPPER_ID);
 	}
 	//This registers the name
 	public static void addCopperName() {
@@ -26,7 +26,7 @@ public static Item ingotTin;
 	//This registers the item id
 	public static void initTin() {
 	
-	ingotTin = new ItemTin(ItemInfo.INGOT_TIN_ID);			
+	ingotTin = new ItemIngotTin(ItemInfo.INGOT_TIN_ID);			
 	}
 	//This registers the name
 	public static void 	addTinName() {
@@ -39,7 +39,7 @@ public static Item ingotBronze;
 	//This registers the item id
 	public static void initBronze() {
 	
-	ingotBronze = new ItemBronze(ItemInfo.INGOT_BRONZE_ID);			
+	ingotBronze = new ItemIngotBronze(ItemInfo.INGOT_BRONZE_ID);			
 	}
 	//This registers the name
 	public static void 	addBronzeName() {
@@ -47,19 +47,32 @@ public static Item ingotBronze;
 		LanguageRegistry.addName(ingotBronze, ItemInfo.INGOT_BRONZE_NAME);
 	}
 	
-public static Item rubberRaw;
+public static Item ingotSilver;
 
 	//This registers the item id
-	public static void initRubberRaw() {
-		
-	rubberRaw = new ItemRawRubber(ItemInfo.RUBBER_RAW_ID);
+	public static void initSilver() {
+	
+	ingotSilver = new ItemIngotSilver(ItemInfo.INGOT_SILVER_ID);			
 	}
 	//This registers the name
-	public static void addRubberRawName() {
+	public static void 	addSilverName() {
 		
-		LanguageRegistry.addName(rubberRaw, ItemInfo.RUBBER_RAW_NAME);
+		LanguageRegistry.addName(ingotSilver, ItemInfo.INGOT_SILVER_NAME);
 	}
 	
+public static Item ingotLead;
+
+	//This registers the item id
+	public static void initLead() {
+	
+	ingotLead = new ItemIngotLead(ItemInfo.INGOT_LEAD_ID);			
+	}
+	//This registers the name
+	public static void 	addLeadName() {
+		
+		LanguageRegistry.addName(ingotLead, ItemInfo.INGOT_LEAD_NAME);
+	}
+		
 public static Item rubber;
 
 	//This registers the item id

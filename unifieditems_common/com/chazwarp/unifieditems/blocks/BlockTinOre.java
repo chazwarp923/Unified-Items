@@ -20,7 +20,7 @@ public class BlockTinOre extends Block {
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName(BlockInfo.TIN_ORE_UNLOCALIZED_NAME);
 		
-		this.func_111022_d("test:oreTin");
+		this.func_111022_d("uniitems:oreTin");
 	}
 	
 	@Override

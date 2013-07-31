@@ -20,7 +20,7 @@ public class BlockCopperOre extends Block {
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName(BlockInfo.COPPER_ORE_UNLOCALIZED_NAME);
 		
-		this.func_111022_d("test:oreCopper");
+		this.func_111022_d("uniitems:oreCopper");
 	}
 	
 	@Override

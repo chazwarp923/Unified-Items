@@ -9,15 +9,15 @@ import com.chazwarp.unifieditems.lib.ItemInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemRawRubber extends Item {
+public class ItemIngotTin extends Item {
 
-        public ItemRawRubber(int id) {
+        public ItemIngotTin(int id) {
                 super(id);
                 setCreativeTab(CreativeTabs.tabMaterials);
                 setMaxStackSize(64);
-                setUnlocalizedName(ItemInfo.RUBBER_RAW_UNLOCALIZED_NAME);
+                setUnlocalizedName(ItemInfo.INGOT_BRONZE_UNLOCALIZED_NAME);
                 
-        		this.func_111206_d("test:rubberRaw");
+        		this.func_111206_d("uniitems:ingotTin");
     	}
     	
         @Override
