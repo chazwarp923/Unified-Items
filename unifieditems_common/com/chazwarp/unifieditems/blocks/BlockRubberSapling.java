@@ -12,8 +12,8 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.ForgeDirection;
 
-import com.chazwap.unifieditems.worldgen.TreeGen;
 import com.chazwarp.unifieditems.lib.BlockInfo;
+import com.chazwarp.unifieditems.worldgen.TreeGen;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

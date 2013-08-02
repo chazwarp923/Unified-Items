@@ -48,7 +48,7 @@ public static Item ingotLead;
 public static Item itemRubber;
 
 	public static void addRubber() {
-		OreDictionary.registerOre("itemRubber", new ItemStack(Items.rubber));
+		OreDictionary.registerOre("itemRubber", new ItemStack(Items.ingotRubber));
 	}
 	
 }

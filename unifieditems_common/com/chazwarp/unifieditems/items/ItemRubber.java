@@ -15,9 +15,9 @@ public class ItemRubber extends Item {
                 super(id);
                 setCreativeTab(CreativeTabs.tabMaterials);
                 setMaxStackSize(64);
-                setUnlocalizedName(ItemInfo.RUBBER_UNLOCALIZED_NAME);
+                setUnlocalizedName(ItemInfo.INGOT_RUBBER_UNLOCALIZED_NAME);
                 
-        		this.func_111206_d("uniitems:rubber");
+        		this.func_111206_d("uniitems:rubberBar");
     	}
     	
         @Override

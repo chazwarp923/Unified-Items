@@ -72,18 +72,31 @@ public static Item ingotLead;
 		
 		LanguageRegistry.addName(ingotLead, ItemInfo.INGOT_LEAD_NAME);
 	}
-		
-public static Item rubber;
+	
+public static Item rawRubber;
 
 	//This registers the item id
-	public static void initRubber() {
+	public static void initRawRubber() {
 		
-	rubber = new ItemRubber(ItemInfo.RUBBER_ID);
+	rawRubber = new ItemRawRubber(ItemInfo.RAW_RUBBER_ID);
+	}
+	//This registers the name
+	public static void addRawRubberName() {
+		
+		LanguageRegistry.addName(rawRubber, ItemInfo.RAW_RUBBER_NAME);
+	}
+	
+public static Item ingotRubber;
+
+	//This registers the item id
+	public static void initIngotRubber() {
+		
+	ingotRubber = new ItemRubber(ItemInfo.INGOT_RUBBER_ID);
 	}
 	//This registers the name
 	public static void addRubberName() {
 		
-		LanguageRegistry.addName(rubber, ItemInfo.RUBBER_NAME);
+		LanguageRegistry.addName(ingotRubber, ItemInfo.INGOT_RUBBER_NAME);
 	}
 	
 }

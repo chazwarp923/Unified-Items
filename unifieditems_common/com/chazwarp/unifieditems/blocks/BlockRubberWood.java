@@ -15,9 +15,11 @@ public class BlockRubberWood extends Block {
 	public BlockRubberWood(int id) {
 		super(id, Material.wood);
 		
-		setCreativeTab(CreativeTabs.tabBlock);
-		setHardness(1F);
-		setStepSound(Block.soundWoodFootstep);
+		this.setCreativeTab(CreativeTabs.tabBlock);
+		this.setHardness(1.5F);
+        this.setResistance(5F);
+		this.setStepSound(Block.soundWoodFootstep);
+        this.setBurnProperties(this.blockID, 5, 20);
 		setUnlocalizedName(BlockInfo.RUBBER_WOOD_UNLOCALIZED_NAME);
 		
 		this.func_111022_d("uniitems:woodRubber");

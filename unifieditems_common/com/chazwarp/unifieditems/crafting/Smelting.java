@@ -27,9 +27,11 @@ public class Smelting {
 	//Smelting recipe for Lead
 	GameRegistry.addSmelting(BlockInfo.LEAD_ORE_ID, new ItemStack(Items.ingotLead), 0.1f);
 	
-	//Smelting recipe for Rubber
-	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.rubber, 6, 0), 0.2f);
+	//Smelting recipe for Rubber from logs
+	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.ingotRubber), 0.2f);
 
+	//Smelting recipe for Rubber from rawrubber
+	GameRegistry.addSmelting(ItemInfo.RAW_RUBBER_ID, new ItemStack(Items.ingotRubber), 0.2f);
 	}
 
 }

@@ -42,10 +42,17 @@ public class ItemInfo {
 	public static final String INGOT_LEAD_NAME = "Lead Ingot";
 	public static final String INGOT_LEAD_ICON = "ingotLead";
 	
-	public static int RUBBER_ID;
-	public static final String RUBBER_KEY = "Rubber";
-	public static final int RUBBER_DEFAULT = 24106;
-	public static final String RUBBER_UNLOCALIZED_NAME = "rubber";
-	public static final String RUBBER_NAME = "Rubber";
-	public static final String RUBBER_ICON = "rubber";	
+	public static int RAW_RUBBER_ID;
+	public static final String RAW_RUBBER_KEY = "Raw Rubber";
+	public static final int RAW_RUBBER_DEFAULT = 24106;
+	public static final String RAW_RUBBER_UNLOCALIZED_NAME = "rawRubber";
+	public static final String RAW_RUBBER_NAME = "Raw Rubber";
+	public static final String RAW_RUBBER_ICON = "rubberRaw";
+	
+	public static int INGOT_RUBBER_ID;
+	public static final String INGOT_RUBBER_KEY = "Rubber";
+	public static final int INGOT_RUBBER_DEFAULT = 24107;
+	public static final String INGOT_RUBBER_UNLOCALIZED_NAME = "ingotRubber";
+	public static final String INGOT_RUBBER_NAME = "Rubber";
+	public static final String INGOT_RUBBER_ICON = "rubber";	
 }

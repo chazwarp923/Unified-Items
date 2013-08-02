@@ -1,4 +1,4 @@
-package com.chazwap.unifieditems.worldgen;
+package com.chazwarp.unifieditems.worldgen;
 
 import java.util.Random;
 

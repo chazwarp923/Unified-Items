@@ -15,7 +15,7 @@ public class ItemIngotCopper extends Item {
                 super(id);
                 setCreativeTab(CreativeTabs.tabMaterials);
                 setMaxStackSize(64);
-                setUnlocalizedName(ItemInfo.INGOT_BRONZE_UNLOCALIZED_NAME);
+                setUnlocalizedName(ItemInfo.INGOT_COPPER_UNLOCALIZED_NAME);
                 
         		this.func_111206_d("uniitems:ingotCopper");
     	}

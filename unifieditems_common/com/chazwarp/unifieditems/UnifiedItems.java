@@ -39,7 +39,8 @@ public class UnifiedItems {
         	Items.initBronze();
         	Items.initSilver();
         	Items.initLead();
-        	Items.initRubber();
+        	Items.initRawRubber();
+        	Items.initIngotRubber();
         	Blocks.initOreCopper();
         	Blocks.initOreTin();
         	Blocks.initOreSilver();
@@ -65,6 +66,7 @@ public class UnifiedItems {
         	Items.addBronzeName();
         	Items.addSilverName();
         	Items.addLeadName();
+        	Items.addRawRubberName();
         	Items.addRubberName();
         	Blocks.addOreCopperName();
         	Blocks.addOreTinName();

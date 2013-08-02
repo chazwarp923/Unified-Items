@@ -33,7 +33,8 @@ public class ConfigHandler {
 		ItemInfo.INGOT_BRONZE_ID = config.getItem(ItemInfo.INGOT_BRONZE_KEY, ItemInfo.INGOT_BRONZE_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_SILVER_ID = config.getItem(ItemInfo.INGOT_SILVER_KEY, ItemInfo.INGOT_SILVER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_LEAD_ID = config.getItem(ItemInfo.INGOT_LEAD_KEY, ItemInfo.INGOT_LEAD_DEFAULT).getInt() - 256;
-		ItemInfo.RUBBER_ID = config.getItem(ItemInfo.RUBBER_KEY, ItemInfo.RUBBER_DEFAULT).getInt() - 256;
+		ItemInfo.RAW_RUBBER_ID = config.getItem(ItemInfo.RAW_RUBBER_KEY, ItemInfo.RAW_RUBBER_DEFAULT).getInt() - 256;
+		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
 		
 		config.save();
 		
