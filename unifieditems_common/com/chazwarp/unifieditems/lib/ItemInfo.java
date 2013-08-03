@@ -2,7 +2,7 @@ package com.chazwarp.unifieditems.lib;
 
 public class ItemInfo {
 
-	//This is all the information for the Copper Ingot
+	//This is all the information for the Copper Ingot and dust
 	public static int INGOT_COPPER_ID;
 	public static final String INGOT_COPPER_KEY = "Copper Ingot";
 	public static final int INGOT_COPPER_DEFAULT = 24101;
@@ -10,7 +10,7 @@ public class ItemInfo {
 	public static final String INGOT_COPPER_NAME = "Copper Ingot";
 	public static final String INGOT_COPPER_ICON = "ingotCopper";
 	
-	//This is all the information for the Tin Ingot
+	//This is all the information for the Tin Ingot and dust
 	public static int INGOT_TIN_ID;
 	public static final String INGOT_TIN_KEY = "Tin Ingot";
 	public static final int INGOT_TIN_DEFAULT = 24102;
@@ -26,7 +26,7 @@ public class ItemInfo {
 	public static final String INGOT_BRONZE_NAME = "Bronze Ingot";
 	public static final String INGOT_BRONZE_ICON = "ingotBronze";
 	
-	//This is all the information for the Silver Ingot
+	//This is all the information for the Silver Ingot and dust
 	public static int INGOT_SILVER_ID;
 	public static final String INGOT_SILVER_KEY = "Silver Ingot";
 	public static final int INGOT_SILVER_DEFAULT = 24104;
@@ -34,7 +34,7 @@ public class ItemInfo {
 	public static final String INGOT_SILVER_NAME = "Silver Ingot";
 	public static final String INGOT_SILVER_ICON = "ingotSilver";
 	
-	//This is all the information for the Lead Ingot
+	//This is all the information for the Lead Ingot and dust
 	public static int INGOT_LEAD_ID;
 	public static final String INGOT_LEAD_KEY = "Lead Ingot";
 	public static final int INGOT_LEAD_DEFAULT = 24105;
@@ -42,6 +42,7 @@ public class ItemInfo {
 	public static final String INGOT_LEAD_NAME = "Lead Ingot";
 	public static final String INGOT_LEAD_ICON = "ingotLead";
 	
+	//This is all the information for Raw Rubber
 	public static int RAW_RUBBER_ID;
 	public static final String RAW_RUBBER_KEY = "Raw Rubber";
 	public static final int RAW_RUBBER_DEFAULT = 24106;
@@ -49,10 +50,11 @@ public class ItemInfo {
 	public static final String RAW_RUBBER_NAME = "Raw Rubber";
 	public static final String RAW_RUBBER_ICON = "rubberRaw";
 	
+	//This is all the information for the Rubber Bar
 	public static int INGOT_RUBBER_ID;
-	public static final String INGOT_RUBBER_KEY = "Rubber";
+	public static final String INGOT_RUBBER_KEY = "Rubber Bar";
 	public static final int INGOT_RUBBER_DEFAULT = 24107;
 	public static final String INGOT_RUBBER_UNLOCALIZED_NAME = "ingotRubber";
-	public static final String INGOT_RUBBER_NAME = "Rubber";
-	public static final String INGOT_RUBBER_ICON = "rubber";	
+	public static final String INGOT_RUBBER_NAME = "Rubber Bar";
+	public static final String INGOT_RUBBER_ICON = "rubberBar";	
 }

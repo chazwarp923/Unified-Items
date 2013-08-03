@@ -30,7 +30,7 @@ public class Smelting {
 	//Smelting recipe for Rubber from logs
 	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.ingotRubber), 0.2f);
 
-	//Smelting recipe for Rubber from rawrubber
+	//Smelting recipe for Rubber from "Raw Rubber"
 	GameRegistry.addSmelting(ItemInfo.RAW_RUBBER_ID, new ItemStack(Items.ingotRubber), 0.2f);
 	}
 

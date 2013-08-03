@@ -33,7 +33,9 @@ public class UnifiedItems {
        
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
+        	
         	ConfigHandler.init(event.getSuggestedConfigurationFile());
+        //Registers the items
         	Items.initCopper();
         	Items.initTin();
         	Items.initBronze();
@@ -41,6 +43,7 @@ public class UnifiedItems {
         	Items.initLead();
         	Items.initRawRubber();
         	Items.initIngotRubber();
+        //Registers the blocks
         	Blocks.initOreCopper();
         	Blocks.initOreTin();
         	Blocks.initOreSilver();
@@ -53,6 +56,7 @@ public class UnifiedItems {
         	//Blocks.initSapling();
         	Blocks.initLog();
         	//Blocks.initLeaves();
+       	//Registers crafting recipes
         	Shapeless.addCrafting();
         	Smelting.addSmelting();
         	proxy.registerRenderers();
@@ -61,6 +65,7 @@ public class UnifiedItems {
         @EventHandler
         public void Init(FMLInitializationEvent event) {
 
+       	//Registers names for Items
         	Items.addCopperName();
         	Items.addTinName();
         	Items.addBronzeName();
@@ -68,6 +73,7 @@ public class UnifiedItems {
         	Items.addLeadName();
         	Items.addRawRubberName();
         	Items.addRubberName();
+        //Registers names for Blocks
         	Blocks.addOreCopperName();
         	Blocks.addOreTinName();
         	Blocks.addOreSilverName();
@@ -80,6 +86,7 @@ public class UnifiedItems {
         	//Blocks.addSaplingName();
         	Blocks.addLogName();
         	//Blocks.addLeavesName();
+        //Registers things with the Ore Dictionary
         	RegisterDict.addCopper();
         	RegisterDict.addTin();
         	RegisterDict.addBronze();
