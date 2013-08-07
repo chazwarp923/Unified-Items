@@ -9,15 +9,15 @@ import com.chazwarp.unifieditems.lib.ItemInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemDustCopper extends Item {
+public class ItemDustLead extends Item {
 
-        public ItemDustCopper(int id) {
+        public ItemDustLead(int id) {
                 super(id);
                 setCreativeTab(CreativeTabs.tabMaterials);
                 setMaxStackSize(64);
-                setUnlocalizedName(ItemInfo.DUST_COPPER_UNLOCALIZED_NAME);
+                setUnlocalizedName(ItemInfo.DUST_LEAD_UNLOCALIZED_NAME);
                 
-        		this.func_111206_d("uniitems:dustCopper");
+        		this.func_111206_d("uniitems:dustLead");
     	}
     	
         @Override

@@ -15,7 +15,7 @@ public class Smelting {
 	
 //GameRegistry.addSmelting(inputItemID,new ItemStack(result), 0.1f);
 		
-	//Smelting recipe forCcopper
+	//Smelting recipe for Ccopper
 	GameRegistry.addSmelting(BlockInfo.COPPER_ORE_ID, new ItemStack(Items.ingotCopper), 0.1f);
 	
 	//Smelting recipe for Tin
@@ -30,6 +30,18 @@ public class Smelting {
 	//Smelting recipe for Rubber from logs
 	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.ingotRubber), 0.2f);
 
+	//Smelting recipe for Copper from dust
+	GameRegistry.addSmelting(ItemInfo.DUST_COPPER_ID, new ItemStack(Items.ingotCopper), 0.1f);
+	
+	//Smelting recipe for Copper from dust
+	GameRegistry.addSmelting(ItemInfo.DUST_TIN_ID, new ItemStack(Items.ingotTin), 0.1f);
+	
+	//Smelting recipe for Copper from dust
+	GameRegistry.addSmelting(ItemInfo.DUST_SILVER_ID, new ItemStack(Items.ingotSilver), 0.1f);
+	
+	//Smelting recipe for Copper from dust
+	GameRegistry.addSmelting(ItemInfo.DUST_LEAD_ID, new ItemStack(Items.ingotLead), 0.1f);
+	
 	//Smelting recipe for Rubber from "Raw Rubber"
 	GameRegistry.addSmelting(ItemInfo.RAW_RUBBER_ID, new ItemStack(Items.ingotRubber), 0.2f);
 	}

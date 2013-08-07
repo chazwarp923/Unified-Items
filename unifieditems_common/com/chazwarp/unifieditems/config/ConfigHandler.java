@@ -29,10 +29,14 @@ public class ConfigHandler {
 		BlockInfo.RUBBER_LEAVES_ID = config.getBlock(BlockInfo.RUBBER_LEAVES_KEY, BlockInfo.RUBBER_LEAVES_DEFAULT).getInt();
 		
 		ItemInfo.INGOT_COPPER_ID = config.getItem(ItemInfo.INGOT_COPPER_KEY, ItemInfo.INGOT_COPPER_DEFAULT).getInt() - 256;
+		ItemInfo.DUST_COPPER_ID = config.getItem(ItemInfo.DUST_COPPER_KEY, ItemInfo.DUST_COPPER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_TIN_ID = config.getItem(ItemInfo.INGOT_TIN_KEY, ItemInfo.INGOT_TIN_DEFAULT).getInt() - 256;
+		ItemInfo.DUST_TIN_ID = config.getItem(ItemInfo.DUST_TIN_KEY, ItemInfo.DUST_TIN_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_BRONZE_ID = config.getItem(ItemInfo.INGOT_BRONZE_KEY, ItemInfo.INGOT_BRONZE_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_SILVER_ID = config.getItem(ItemInfo.INGOT_SILVER_KEY, ItemInfo.INGOT_SILVER_DEFAULT).getInt() - 256;
+		ItemInfo.DUST_SILVER_ID = config.getItem(ItemInfo.DUST_SILVER_KEY, ItemInfo.DUST_SILVER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_LEAD_ID = config.getItem(ItemInfo.INGOT_LEAD_KEY, ItemInfo.INGOT_LEAD_DEFAULT).getInt() - 256;
+		ItemInfo.DUST_LEAD_ID = config.getItem(ItemInfo.DUST_LEAD_KEY, ItemInfo.DUST_LEAD_DEFAULT).getInt() - 256;
 		ItemInfo.RAW_RUBBER_ID = config.getItem(ItemInfo.RAW_RUBBER_KEY, ItemInfo.RAW_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
 		

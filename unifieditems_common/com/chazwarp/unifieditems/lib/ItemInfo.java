@@ -10,6 +10,13 @@ public class ItemInfo {
 	public static final String INGOT_COPPER_NAME = "Copper Ingot";
 	public static final String INGOT_COPPER_ICON = "ingotCopper";
 	
+	public static int DUST_COPPER_ID;
+	public static final String DUST_COPPER_KEY = "Copper Dust";
+	public static final int DUST_COPPER_DEFAULT = 24108;
+	public static final String DUST_COPPER_UNLOCALIZED_NAME = "dustCopper";
+	public static final String DUST_COPPER_NAME = "Copper Dust";
+	public static final String DUST_COPPER_ICON = "dustCopper";
+	
 	//This is all the information for the Tin Ingot and dust
 	public static int INGOT_TIN_ID;
 	public static final String INGOT_TIN_KEY = "Tin Ingot";
@@ -17,6 +24,13 @@ public class ItemInfo {
 	public static final String INGOT_TIN_UNLOCALIZED_NAME = "ingotTin";
 	public static final String INGOT_TIN_NAME = "Tin Ingot";
 	public static final String INGOT_TIN_ICON = "ingotTin";
+	
+	public static int DUST_TIN_ID;
+	public static final String DUST_TIN_KEY = "Tin Dust";
+	public static final int DUST_TIN_DEFAULT = 24109;
+	public static final String DUST_TIN_UNLOCALIZED_NAME = "dustTin";
+	public static final String DUST_TIN_NAME = "Tin Dust";
+	public static final String DUST_TIN_ICON = "dustTin";
 	
 	//This is all the information for the Bronze Ingot
 	public static int INGOT_BRONZE_ID;
@@ -34,6 +48,13 @@ public class ItemInfo {
 	public static final String INGOT_SILVER_NAME = "Silver Ingot";
 	public static final String INGOT_SILVER_ICON = "ingotSilver";
 	
+	public static int DUST_SILVER_ID;
+	public static final String DUST_SILVER_KEY = "Silver Dust";
+	public static final int DUST_SILVER_DEFAULT = 24110;
+	public static final String DUST_SILVER_UNLOCALIZED_NAME = "dustSilver";
+	public static final String DUST_SILVER_NAME = "Silver Dust";
+	public static final String DUST_SILVER_ICON = "dustSilver";
+	
 	//This is all the information for the Lead Ingot and dust
 	public static int INGOT_LEAD_ID;
 	public static final String INGOT_LEAD_KEY = "Lead Ingot";
@@ -42,11 +63,18 @@ public class ItemInfo {
 	public static final String INGOT_LEAD_NAME = "Lead Ingot";
 	public static final String INGOT_LEAD_ICON = "ingotLead";
 	
+	public static int DUST_LEAD_ID;
+	public static final String DUST_LEAD_KEY = "Lead Dust";
+	public static final int DUST_LEAD_DEFAULT = 24111;
+	public static final String DUST_LEAD_UNLOCALIZED_NAME = "dustLead";
+	public static final String DUST_LEAD_NAME = "Lead Dust";
+	public static final String DUST_LEAD_ICON = "dustLead";
+	
 	//This is all the information for Raw Rubber
 	public static int RAW_RUBBER_ID;
 	public static final String RAW_RUBBER_KEY = "Raw Rubber";
 	public static final int RAW_RUBBER_DEFAULT = 24106;
-	public static final String RAW_RUBBER_UNLOCALIZED_NAME = "rawRubber";
+	public static final String RAW_RUBBER_UNLOCALIZED_NAME = "rubberRaw";
 	public static final String RAW_RUBBER_NAME = "Raw Rubber";
 	public static final String RAW_RUBBER_ICON = "rubberRaw";
 	

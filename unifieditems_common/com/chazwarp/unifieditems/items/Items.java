@@ -9,29 +9,35 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class Items {
 
 public static Item ingotCopper;
+public static Item dustCopper;
 
 	//This registers the item id
 	public static void initCopper() {
 		
 	ingotCopper = new ItemIngotCopper(ItemInfo.INGOT_COPPER_ID);
+	dustCopper = new ItemDustCopper(ItemInfo.DUST_COPPER_ID);
 	}
 	//This registers the name
 	public static void addCopperName() {
 		
 		LanguageRegistry.addName(ingotCopper, ItemInfo.INGOT_COPPER_NAME);
+		LanguageRegistry.addName(dustCopper, ItemInfo.DUST_COPPER_NAME);
 	}
 	
 public static Item ingotTin;
+public static Item dustTin;
 
 	//This registers the item id
 	public static void initTin() {
 	
-	ingotTin = new ItemIngotTin(ItemInfo.INGOT_TIN_ID);			
+	ingotTin = new ItemIngotTin(ItemInfo.INGOT_TIN_ID);	
+	dustTin = new ItemDustTin(ItemInfo.DUST_TIN_ID);
 	}
 	//This registers the name
 	public static void 	addTinName() {
 		
 		LanguageRegistry.addName(ingotTin, ItemInfo.INGOT_TIN_NAME);
+		LanguageRegistry.addName(dustTin, ItemInfo.DUST_TIN_NAME);
 	}
 	
 public static Item ingotBronze;
@@ -48,29 +54,35 @@ public static Item ingotBronze;
 	}
 	
 public static Item ingotSilver;
+public static Item dustSilver;
 
 	//This registers the item id
 	public static void initSilver() {
 	
-	ingotSilver = new ItemIngotSilver(ItemInfo.INGOT_SILVER_ID);			
+	ingotSilver = new ItemIngotSilver(ItemInfo.INGOT_SILVER_ID);
+	dustSilver = new ItemDustSilver(ItemInfo.DUST_SILVER_ID);
 	}
 	//This registers the name
 	public static void 	addSilverName() {
 		
 		LanguageRegistry.addName(ingotSilver, ItemInfo.INGOT_SILVER_NAME);
+		LanguageRegistry.addName(dustSilver, ItemInfo.DUST_SILVER_NAME);
 	}
 	
 public static Item ingotLead;
+public static Item dustLead;
 
 	//This registers the item id
 	public static void initLead() {
 	
-	ingotLead = new ItemIngotLead(ItemInfo.INGOT_LEAD_ID);			
+	ingotLead = new ItemIngotLead(ItemInfo.INGOT_LEAD_ID);
+	dustLead = new ItemDustLead(ItemInfo.DUST_LEAD_ID);
 	}
 	//This registers the name
 	public static void 	addLeadName() {
 		
 		LanguageRegistry.addName(ingotLead, ItemInfo.INGOT_LEAD_NAME);
+		LanguageRegistry.addName(dustLead, ItemInfo.DUST_LEAD_NAME);
 	}
 	
 public static Item rawRubber;
