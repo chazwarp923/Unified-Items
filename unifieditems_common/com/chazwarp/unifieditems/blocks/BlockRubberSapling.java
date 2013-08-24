@@ -120,7 +120,7 @@ public class BlockRubberSapling extends BlockSapling {
         return true;
     }
     
-    public void growTree (World world, int x, int y, int z, Random random)
+    /*. public void growTree (World world, int x, int y, int z, Random random)
     {
         int md = world.getBlockMetadata(x, y, z) % 8;
         world.setBlock(x, y, z, 0);
@@ -131,6 +131,7 @@ public class BlockRubberSapling extends BlockSapling {
 
         if (!(obj.generate(world, random, x, y, z)))
             world.setBlock(x, y, z, blockID, md + 8, 3);
+        */
     }
     
-}    
+  

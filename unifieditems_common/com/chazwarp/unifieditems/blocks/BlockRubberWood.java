@@ -4,8 +4,11 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.Icon;
 
 import com.chazwarp.unifieditems.lib.BlockInfo;
+import com.chazwarp.unifieditems.lib.Reference;
+import com.chazwarp.unifieditems.lib.Textures;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -25,11 +28,32 @@ public class BlockRubberWood extends Block {
 		this.func_111022_d("uniitems:woodRubber");
 	}
 	
-	@Override
+	@SideOnly(Side.CLIENT)
+	private Icon topIcon;
+	@SideOnly(Side.CLIENT)
+	private Icon botIcon;
+	@SideOnly(Side.CLIENT)
+	private Icon sideIcon;
+	
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
-
-        this.blockIcon = iconRegister.registerIcon(this.func_111023_E());
-	}
+    @Override
+    public void registerIcons(IconRegister register) {
+		topIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + Textures.WOOD_RUBBER_TOP);
+		sideIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + Textures.WOOD_RUBBER_SIDE);
+		botIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + Textures.WOOD_RUBBER_TOP);
+		
+    }
+    
+    @SideOnly(Side.CLIENT)
+    @Override
+    public Icon getIcon(int side, int meta) {
+    	if (side == 0) {
+    		return botIcon;
+    	}else if (side == 1) {
+    		return topIcon;
+    	}else{
+    		return sideIcon;
+    	}
+    }
 	
 }

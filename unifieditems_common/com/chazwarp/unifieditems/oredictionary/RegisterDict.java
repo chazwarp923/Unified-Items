@@ -55,4 +55,10 @@ public static Item itemRubber;
 		OreDictionary.registerOre("itemRubber", new ItemStack(Items.ingotRubber));
 	}
 	
+public static Item singlePul;
+
+	public static void singlePul() {
+		OreDictionary.registerOre("singlePul", new ItemStack(Items.singlePul));
+	}
+	
 }

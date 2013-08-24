@@ -12,7 +12,7 @@ public class ItemInfo {
 	
 	public static int DUST_COPPER_ID;
 	public static final String DUST_COPPER_KEY = "Copper Dust";
-	public static final int DUST_COPPER_DEFAULT = 24108;
+	public static final int DUST_COPPER_DEFAULT = 24109;
 	public static final String DUST_COPPER_UNLOCALIZED_NAME = "dustCopper";
 	public static final String DUST_COPPER_NAME = "Copper Dust";
 	public static final String DUST_COPPER_ICON = "dustCopper";
@@ -27,7 +27,7 @@ public class ItemInfo {
 	
 	public static int DUST_TIN_ID;
 	public static final String DUST_TIN_KEY = "Tin Dust";
-	public static final int DUST_TIN_DEFAULT = 24109;
+	public static final int DUST_TIN_DEFAULT = 24110;
 	public static final String DUST_TIN_UNLOCALIZED_NAME = "dustTin";
 	public static final String DUST_TIN_NAME = "Tin Dust";
 	public static final String DUST_TIN_ICON = "dustTin";
@@ -50,7 +50,7 @@ public class ItemInfo {
 	
 	public static int DUST_SILVER_ID;
 	public static final String DUST_SILVER_KEY = "Silver Dust";
-	public static final int DUST_SILVER_DEFAULT = 24110;
+	public static final int DUST_SILVER_DEFAULT = 24111;
 	public static final String DUST_SILVER_UNLOCALIZED_NAME = "dustSilver";
 	public static final String DUST_SILVER_NAME = "Silver Dust";
 	public static final String DUST_SILVER_ICON = "dustSilver";
@@ -65,7 +65,7 @@ public class ItemInfo {
 	
 	public static int DUST_LEAD_ID;
 	public static final String DUST_LEAD_KEY = "Lead Dust";
-	public static final int DUST_LEAD_DEFAULT = 24111;
+	public static final int DUST_LEAD_DEFAULT = 24112;
 	public static final String DUST_LEAD_UNLOCALIZED_NAME = "dustLead";
 	public static final String DUST_LEAD_NAME = "Lead Dust";
 	public static final String DUST_LEAD_ICON = "dustLead";
@@ -85,4 +85,12 @@ public class ItemInfo {
 	public static final String INGOT_RUBBER_UNLOCALIZED_NAME = "ingotRubber";
 	public static final String INGOT_RUBBER_NAME = "Rubber Bar";
 	public static final String INGOT_RUBBER_ICON = "rubberBar";	
+	
+	//This is all the information for the "One Time Pulverize"
+	public static int PULVERIZE_ID;
+	public static final String PULVERIZE_KEY = "One Time Pulverize";
+	public static final int PULVERIZE_DEFAULT = 24108;
+	public static final String PULVERIZE_UNLOCALIZED_NAME = "pulverize";
+	public static final String PULVERIZE_NAME = "One Time Pulverize";
+	public static final String PULVERIZE_ICON = "pulverize";	
 }

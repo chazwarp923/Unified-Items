@@ -2,6 +2,8 @@ package com.chazwarp.unifieditems.crafting;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.oredict.ShapedOreRecipe;
+import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import com.chazwarp.unifieditems.blocks.Blocks;
 import com.chazwarp.unifieditems.items.Items;
@@ -26,7 +28,10 @@ public class Shapeless {
 	
 	//Adds the recipe for jungle wood planks from rubber wood
 	GameRegistry.addShapelessRecipe(new ItemStack(Block.planks, 4, 3), new ItemStack(Blocks.woodRubber));
-		
+	
+	//Adds The Recipes for Ores to Dusts
+	GameRegistry.addRecipe(new ShapedOreRecipe(Items.dustCopper, true, new Object[]{"AB", Character.valueOf('A'), "singlePul", Character.valueOf('B'), "oreCopper"}));
+	
 	}
 
 }

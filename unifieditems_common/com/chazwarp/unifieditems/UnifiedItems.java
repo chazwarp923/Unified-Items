@@ -43,6 +43,7 @@ public class UnifiedItems {
         	Items.initLead();
         	Items.initRawRubber();
         	Items.initIngotRubber();
+        	Items.initSinglePul();
         //Registers the blocks
         	Blocks.initOreCopper();
         	Blocks.initOreTin();
@@ -72,7 +73,8 @@ public class UnifiedItems {
         	Items.addSilverName();
         	Items.addLeadName();
         	Items.addRawRubberName();
-        	Items.addRubberName();
+        	Items.addIngotRubberName();
+        	Items.addSinglePulName();
         //Registers names for Blocks
         	Blocks.addOreCopperName();
         	Blocks.addOreTinName();

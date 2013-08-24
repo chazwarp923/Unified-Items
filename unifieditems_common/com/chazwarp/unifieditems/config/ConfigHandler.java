@@ -39,6 +39,7 @@ public class ConfigHandler {
 		ItemInfo.DUST_LEAD_ID = config.getItem(ItemInfo.DUST_LEAD_KEY, ItemInfo.DUST_LEAD_DEFAULT).getInt() - 256;
 		ItemInfo.RAW_RUBBER_ID = config.getItem(ItemInfo.RAW_RUBBER_KEY, ItemInfo.RAW_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
+		ItemInfo.PULVERIZE_ID = config.getItem(ItemInfo.PULVERIZE_KEY, ItemInfo.PULVERIZE_DEFAULT).getInt() - 256;
 		
 		config.save();
 		

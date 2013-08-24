@@ -106,9 +106,22 @@ public static Item ingotRubber;
 	ingotRubber = new ItemRubber(ItemInfo.INGOT_RUBBER_ID);
 	}
 	//This registers the name
-	public static void addRubberName() {
+	public static void addIngotRubberName() {
 		
 		LanguageRegistry.addName(ingotRubber, ItemInfo.INGOT_RUBBER_NAME);
+	}
+	
+public static Item singlePul;
+
+	//This registers the item id
+	public static void initSinglePul() {
+		
+	singlePul = new ItemOneTimePulverize(ItemInfo.PULVERIZE_ID);
+	}
+	//This registers the name
+	public static void addSinglePulName() {
+		
+		LanguageRegistry.addName(singlePul, ItemInfo.PULVERIZE_NAME);
 	}
 	
 }
