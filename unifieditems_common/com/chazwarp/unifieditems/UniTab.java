@@ -1,0 +1,40 @@
+package com.chazwarp.unifieditems;
+
+import com.chazwarp.unifieditems.blocks.Blocks;
+
+import net.minecraft.block.Block;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
+import cpw.mods.fml.common.registry.LanguageRegistry;
+
+public class UniTab extends CreativeTabs
+{
+    public static UniTab tab = new UniTab();
+    static boolean hasInit;
+    static int icon;
+
+    public UniTab()
+    {
+        super("uniTab");
+        LanguageRegistry.instance().addStringLocalization("itemGroup.uniTab", "Unified Items");
+    }
+
+    public static void init (int index)
+    {
+        if (!hasInit)
+        {
+            hasInit = true;
+            icon = index;
+        }
+    }
+
+    public int getTabIconItemIndex ()
+    {
+        return icon;
+        
+    	}
+    @Override
+    public ItemStack getIconItemStack() {
+    	return new ItemStack(Blocks.oreCopper, 1, 0);
+    }
+}

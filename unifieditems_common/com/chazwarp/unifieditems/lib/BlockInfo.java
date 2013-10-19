@@ -7,7 +7,7 @@ public class BlockInfo {
 	//This is all the information for Copper
 	public static int COPPER_ORE_ID;
 	public static final String COPPER_ORE_KEY = "Copper Ore";
-	public static final int COPPER_ORE_DEFAULT = 2455;
+	public static final int COPPER_ORE_DEFAULT = 2456;
 	public static final String COPPER_ORE_UNLOCALIZED_NAME = "Copper Ore";
 	public static int COPPER_ID;
 	public static final String COPPER_KEY = "Copper Block";

@@ -17,6 +17,7 @@ public static Block oreCopper;
 	OreDictionary.registerOre("oreCopper", new ItemStack(Blocks.oreCopper));
 	OreDictionary.registerOre("ingotCopper", new ItemStack(Items.ingotCopper));
 	OreDictionary.registerOre("dustCopper", new ItemStack(Items.dustCopper));
+	OreDictionary.registerOre("blockCopper", new ItemStack(Blocks.blockCopper));
 	}
 	
 public static Block oreTin;
@@ -25,12 +26,14 @@ public static Block oreTin;
 		OreDictionary.registerOre("oreTin", new ItemStack(Blocks.oreTin));
 		OreDictionary.registerOre("ingotTin", new ItemStack(Items.ingotTin));
 		OreDictionary.registerOre("dustTin", new ItemStack(Items.dustTin));
+		OreDictionary.registerOre("blockTin", new ItemStack(Blocks.blockTin));
 	}
 	
 public static Item ingotBronze;
 
 	public static void addBronze() {
 		OreDictionary.registerOre("ingotBronze", new ItemStack(Items.ingotBronze));
+		OreDictionary.registerOre("blockBronze", new ItemStack(Blocks.blockBronze));
 	}
 	
 public static Item ingotSilver;
@@ -39,6 +42,7 @@ public static Item ingotSilver;
 		OreDictionary.registerOre("oreSilver", new ItemStack(Blocks.oreSilver));
 		OreDictionary.registerOre("ingotSilver", new ItemStack(Items.ingotSilver));
 		OreDictionary.registerOre("dustSilver", new ItemStack(Items.dustSilver));
+		OreDictionary.registerOre("blockSilver", new ItemStack(Blocks.blockSilver));
 	}	
 	
 public static Item ingotLead;
@@ -47,12 +51,14 @@ public static Item ingotLead;
 		OreDictionary.registerOre("oreLead", new ItemStack(Blocks.oreLead));
 		OreDictionary.registerOre("ingotLead", new ItemStack(Items.ingotLead));
 		OreDictionary.registerOre("dustLead", new ItemStack(Items.dustLead));
+		OreDictionary.registerOre("blockLead", new ItemStack(Blocks.blockLead));
 	}
 	
 public static Item itemRubber;
 
 	public static void addRubber() {
 		OreDictionary.registerOre("itemRubber", new ItemStack(Items.ingotRubber));
+		OreDictionary.registerOre("woodRubber", new ItemStack(Blocks.woodRubber));
 	}
 	
 public static Item singlePul;

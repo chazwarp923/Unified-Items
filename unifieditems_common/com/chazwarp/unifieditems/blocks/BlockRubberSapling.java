@@ -2,6 +2,9 @@ package com.chazwarp.unifieditems.blocks;
 
 import java.util.Random;
 
+import com.chazwarp.unifieditems.lib.Reference;
+import com.chazwarp.unifieditems.lib.BlockTextures;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -28,20 +31,28 @@ public class BlockRubberSapling extends BlockSapling {
         this.setStepSound(Block.soundGrassFootstep);
         this.setCreativeTab(CreativeTabs.tabDecorations);
 		
-		this.func_111022_d("uniitems:saplingRubber");
 	}
 	
-	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) 
-	{
-		this.icons = new Icon[textureNames.length];
-
-        for (int i = 0; i < this.icons.length; ++i)
-        {
-        this.blockIcon = iconRegister.registerIcon(this.func_111023_E());
-        }
-	}
+    @Override
+    public void registerIcons(IconRegister register) {
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.SAPLING_RUBBER);
+		
+    }
+    
+    @SideOnly(Side.CLIENT)
+    @Override
+    public Icon getIcon(int side, int meta) {
+    	if (side == 0) {
+    		return blockIcon;
+    	}else if (side == 1) {
+    		return blockIcon;
+    	}else{
+    		return blockIcon;
+    	}
+    	
+    }
+	
 	
 	
 	public boolean canPlaceBlockAt (World world, int x, int y, int z)

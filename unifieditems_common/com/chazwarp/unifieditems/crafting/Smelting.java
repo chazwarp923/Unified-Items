@@ -32,16 +32,16 @@ public class Smelting {
 	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.ingotRubber), 0.7f);
 
 	//Smelting recipe for Copper from dust
-	GameRegistry.addSmelting(24108, new ItemStack(Items.ingotCopper), 0.25f);
+	GameRegistry.addSmelting(ItemInfo.DUST_COPPER_ID, new ItemStack(Items.ingotCopper), 0.25f);
 	
 	//Smelting recipe for Copper from dust
-	GameRegistry.addSmelting(24109, new ItemStack(Items.ingotTin), 0.25f);
+	GameRegistry.addSmelting(24110, new ItemStack(Items.ingotTin), 0.25f);
 	
 	//Smelting recipe for Copper from dust
-	GameRegistry.addSmelting(24110, new ItemStack(Items.ingotSilver), 0.5f);
+	GameRegistry.addSmelting(24111, new ItemStack(Items.ingotSilver), 0.5f);
 	
 	//Smelting recipe for Copper from dust
-	GameRegistry.addSmelting(24111, new ItemStack(Items.ingotLead), 0.5f);
+	GameRegistry.addSmelting(24112, new ItemStack(Items.ingotLead), 0.5f);
 	
 	//Smelting recipe for Rubber from "Raw Rubber"
 	GameRegistry.addSmelting(ItemInfo.RAW_RUBBER_ID, new ItemStack(Items.ingotRubber), 0.7f);

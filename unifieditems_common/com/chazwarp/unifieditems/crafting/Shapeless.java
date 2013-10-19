@@ -1,6 +1,7 @@
 package com.chazwarp.unifieditems.crafting;
 
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -29,8 +30,14 @@ public class Shapeless {
 	//Adds the recipe for jungle wood planks from rubber wood
 	GameRegistry.addShapelessRecipe(new ItemStack(Block.planks, 4, 3), new ItemStack(Blocks.woodRubber));
 	
+	//Adds the recipe for the One Time Pulverize
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.singlePul), new ItemStack(Item.flint), new ItemStack(Item.flint));
+	
 	//Adds The Recipes for Ores to Dusts
-	GameRegistry.addRecipe(new ShapedOreRecipe(Items.dustCopper, true, new Object[]{"AB", Character.valueOf('A'), "singlePul", Character.valueOf('B'), "oreCopper"}));
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustCopper, 2), new ItemStack(Blocks.oreCopper), new ItemStack(Items.singlePul));
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustTin, 2), new ItemStack(Blocks.oreTin), new ItemStack(Items.singlePul));
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustSilver, 2), new ItemStack(Blocks.oreSilver), new ItemStack(Items.singlePul));
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustLead, 2), new ItemStack(Blocks.oreLead), new ItemStack(Items.singlePul));
 	
 	}
 

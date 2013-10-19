@@ -5,10 +5,14 @@ import net.minecraft.block.BlockLeaves;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.util.Icon;
 import net.minecraft.world.ColorizerFoliage;
 import net.minecraft.world.IBlockAccess;
 
+import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.lib.BlockInfo;
+import com.chazwarp.unifieditems.lib.Reference;
+import com.chazwarp.unifieditems.lib.BlockTextures;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -26,9 +30,8 @@ public class BlockRubberLeaves extends BlockLeaves {
         this.setStepSound(Block.soundGrassFootstep);
         this.setUnlocalizedName(BlockInfo.RUBBER_LEAVES_UNLOCALIZED_NAME);
         setBurnProperties(this.blockID, 30, 60);
-        this.setCreativeTab(CreativeTabs.tabDecorations);
+        this.setCreativeTab(UniTab.tab);
         
-		this.func_111022_d("uniitems:leavesRubber");
 	}
 	
     public int getBlockColor ()
@@ -83,12 +86,25 @@ public class BlockRubberLeaves extends BlockLeaves {
         //}
     }
     
-	@Override
     @SideOnly(Side.CLIENT)
-    public void registerIcons(IconRegister iconRegister) {
-
-        this.blockIcon = iconRegister.registerIcon(this.func_111023_E());
-	}
+    @Override
+    public void registerIcons(IconRegister register) {
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.LEAVES_RUBBER);
+		
+    }
+    
+    @SideOnly(Side.CLIENT)
+    @Override
+    public Icon getIcon(int side, int meta) {
+    	if (side == 0) {
+    		return blockIcon;
+    	}else if (side == 1) {
+    		return blockIcon;
+    	}else{
+    		return blockIcon;
+    	}
+    	
+    }
 	
 	@Override
     public boolean shouldSideBeRendered (IBlockAccess var1, int var2, int var3, int var4, int var5)

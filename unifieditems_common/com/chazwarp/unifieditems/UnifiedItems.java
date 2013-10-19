@@ -9,15 +9,19 @@ import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.network.PacketHandler;
 import com.chazwarp.unifieditems.oredictionary.RegisterDict;
+import com.chazwarp.unifieditems.worldgen.WorldGenHandler;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
+import cpw.mods.fml.common.Mod.PostInit;
+import cpw.mods.fml.common.Mod.PreInit;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 @NetworkMod(channels = {Reference.CHANNEL}  ,clientSideRequired = true, serverSideRequired = true, packetHandler = PacketHandler.class)
@@ -61,6 +65,8 @@ public class UnifiedItems {
         	Shapeless.addCrafting();
         	Smelting.addSmelting();
         	proxy.registerRenderers();
+        //Registers World Gen
+        	GameRegistry.registerWorldGenerator(new WorldGenHandler());
         }
        
         @EventHandler

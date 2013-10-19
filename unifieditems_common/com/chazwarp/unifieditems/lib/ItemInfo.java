@@ -84,7 +84,7 @@ public class ItemInfo {
 	public static final int INGOT_RUBBER_DEFAULT = 24107;
 	public static final String INGOT_RUBBER_UNLOCALIZED_NAME = "ingotRubber";
 	public static final String INGOT_RUBBER_NAME = "Rubber Bar";
-	public static final String INGOT_RUBBER_ICON = "rubberBar";	
+	public static final String INGOT_RUBBER_ICON = "ingotRubber";	
 	
 	//This is all the information for the "One Time Pulverize"
 	public static int PULVERIZE_ID;
