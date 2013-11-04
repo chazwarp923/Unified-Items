@@ -1,5 +1,7 @@
 package com.chazwarp.unifieditems.blocks;
 
+import java.util.Random;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -7,6 +9,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
 
 import com.chazwarp.unifieditems.UniTab;
+import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.BlockInfo;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.lib.BlockTextures;
@@ -26,6 +29,10 @@ public class BlockRubberWood extends Block {
         this.setBurnProperties(this.blockID, 5, 20);
 		setUnlocalizedName(BlockInfo.RUBBER_WOOD_UNLOCALIZED_NAME);
 		
+	}
+	
+	public int idDropped(int par1, Random random, int zero) {
+        return Items.rawRubber.itemID;
 	}
 	
 	@SideOnly(Side.CLIENT)

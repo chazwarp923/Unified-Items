@@ -11,13 +11,13 @@ import com.chazwarp.unifieditems.lib.Reference;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemOneTimePulverize extends Item {
+public class ItemDustGold extends Item {
 
-        public ItemOneTimePulverize(int id) {
+        public ItemDustGold(int id) {
                 super(id);
                 setCreativeTab(UniTab.tab);
                 setMaxStackSize(64);
-                setUnlocalizedName(ItemInfo.PULVERIZE_UNLOCALIZED_NAME);
+                setUnlocalizedName(ItemInfo.DUST_GOLD_UNLOCALIZED_NAME);
                 
     	}
     	
@@ -25,7 +25,7 @@ public class ItemOneTimePulverize extends Item {
         @SideOnly(Side.CLIENT)
         public void registerIcons(IconRegister iconRegister) {
 
-        	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.PULVERIZE_UNLOCALIZED_NAME);
+        	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.DUST_GOLD_UNLOCALIZED_NAME);
         }
 
 }

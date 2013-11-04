@@ -30,7 +30,7 @@ public class BlockRubberLeaves extends BlockLeaves {
         this.setStepSound(Block.soundGrassFootstep);
         this.setUnlocalizedName(BlockInfo.RUBBER_LEAVES_UNLOCALIZED_NAME);
         setBurnProperties(this.blockID, 30, 60);
-        this.setCreativeTab(UniTab.tab);
+        setCreativeTab(UniTab.tab);
         
 	}
 	

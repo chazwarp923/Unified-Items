@@ -9,7 +9,7 @@ import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.network.PacketHandler;
 import com.chazwarp.unifieditems.oredictionary.RegisterDict;
-import com.chazwarp.unifieditems.worldgen.WorldGenHandler;
+import com.chazwarp.unifieditems.world.WorldGenHandler;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
@@ -40,6 +40,8 @@ public class UnifiedItems {
         	
         	ConfigHandler.init(event.getSuggestedConfigurationFile());
         //Registers the items
+        	Items.initIron();
+        	Items.initGold();
         	Items.initCopper();
         	Items.initTin();
         	Items.initBronze();
@@ -58,21 +60,23 @@ public class UnifiedItems {
         	Blocks.initBronze();
         	Blocks.initSilver();
         	Blocks.initLead();
-        	//Blocks.initSapling();
+        	Blocks.initSapling();
         	Blocks.initLog();
-        	//Blocks.initLeaves();
+        	Blocks.initLeaves();
        	//Registers crafting recipes
         	Shapeless.addCrafting();
         	Smelting.addSmelting();
         	proxy.registerRenderers();
         //Registers World Gen
-        	GameRegistry.registerWorldGenerator(new WorldGenHandler());
+        	new WorldGenHandler();
         }
        
         @EventHandler
         public void Init(FMLInitializationEvent event) {
 
        	//Registers names for Items
+        	Items.addIronName();
+        	Items.addGoldName();
         	Items.addCopperName();
         	Items.addTinName();
         	Items.addBronzeName();
@@ -91,16 +95,19 @@ public class UnifiedItems {
         	Blocks.addBronzeName();
         	Blocks.addSilverName();
         	Blocks.addLeadName();
-        	//Blocks.addSaplingName();
+        	Blocks.addSaplingName();
         	Blocks.addLogName();
-        	//Blocks.addLeavesName();
+        	Blocks.addLeavesName();
         //Registers things with the Ore Dictionary
+        	RegisterDict.addIron();
+        	RegisterDict.addGold();
         	RegisterDict.addCopper();
         	RegisterDict.addTin();
         	RegisterDict.addBronze();
         	RegisterDict.addSilver();
         	RegisterDict.addLead();
         	RegisterDict.addRubber();
+        	RegisterDict.addSinglePul();
         }
        
         @EventHandler

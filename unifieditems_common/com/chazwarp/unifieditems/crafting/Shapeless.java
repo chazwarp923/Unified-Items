@@ -3,7 +3,6 @@ package com.chazwarp.unifieditems.crafting;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.ShapedOreRecipe;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 
 import com.chazwarp.unifieditems.blocks.Blocks;
@@ -33,11 +32,16 @@ public class Shapeless {
 	//Adds the recipe for the One Time Pulverize
 	GameRegistry.addShapelessRecipe(new ItemStack(Items.singlePul), new ItemStack(Item.flint), new ItemStack(Item.flint));
 	
+	//Adds a recipe for flint
+	GameRegistry.addShapelessRecipe(new ItemStack(Item.flint), new ItemStack(Block.cobblestone), new ItemStack(Block.gravel));
+	
 	//Adds The Recipes for Ores to Dusts
-	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustCopper, 2), new ItemStack(Blocks.oreCopper), new ItemStack(Items.singlePul));
-	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustTin, 2), new ItemStack(Blocks.oreTin), new ItemStack(Items.singlePul));
-	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustSilver, 2), new ItemStack(Blocks.oreSilver), new ItemStack(Items.singlePul));
-	GameRegistry.addShapelessRecipe(new ItemStack(Items.dustLead, 2), new ItemStack(Blocks.oreLead), new ItemStack(Items.singlePul));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustIron, 2), new Object[] {"oreIron", "singlePul"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustGold, 2), new Object[] {"oreGold", "singlePul"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustCopper, 2), new Object[] {"oreCopper", "singlePul"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustTin, 2), new Object[] {"oreTin", "singlePul"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustSilver, 2), new Object[] {"oreSilver", "singlePul"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustLead, 2), new Object[] {"oreLead", "singlePul"}));
 	
 	}
 

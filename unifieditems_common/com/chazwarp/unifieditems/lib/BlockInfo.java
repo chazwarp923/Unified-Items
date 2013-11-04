@@ -67,4 +67,9 @@ public class BlockInfo {
 	public static int RUBBER_LEAVES_DEFAULT = 2467;
 	public static final String RUBBER_LEAVES_UNLOCALIZED_NAME = "Rubber Leaves";
 	
+	public static int MULTIPART_TEST_ID;
+	public static String MULTIPART_TEST_KEY = "Multipart Test";
+	public static int MULTIPART_TEST_DEFAULT = 2480;
+	public static final String MULTIPART_TEST_UNLOCALIZED_NAME = "Multipart Test";
+	
 }

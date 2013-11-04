@@ -8,6 +8,34 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class Items {
 
+public static Item dustIron;
+
+	//This registers the item id
+	public static void initIron() {
+		
+	dustIron = new ItemDustIron(ItemInfo.DUST_IRON_ID);
+	}
+	//This registers the name
+	public static void addIronName() {
+		
+		LanguageRegistry.addName(dustIron, ItemInfo.DUST_IRON_NAME);
+		
+	}	
+		
+public static Item dustGold;
+
+	//This registers the item id
+	public static void initGold() {
+		
+	dustGold = new ItemDustGold(ItemInfo.DUST_GOLD_ID);
+	}
+	//This registers the name
+	public static void addGoldName() {
+		
+		LanguageRegistry.addName(dustGold, ItemInfo.DUST_GOLD_NAME);
+		
+	}
+	
 public static Item ingotCopper;
 public static Item dustCopper;
 

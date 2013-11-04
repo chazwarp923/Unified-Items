@@ -28,7 +28,7 @@ public class BlockBronze extends Block {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.BRONZE_BLOCK);
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + "blockBronze");
 		
     }
     

@@ -33,17 +33,6 @@ public class BlockCopperOre extends Block {
 		
     }
     
-    @SideOnly(Side.CLIENT)
-    @Override
-    public Icon getIcon(int side, int meta) {
-    	if (side == 0) {
-    		return blockIcon;
-    	}else if (side == 1) {
-    		return blockIcon;
-    	}else{
-    		return blockIcon;
-    	}
-    	
-    }
+    
 	
 }

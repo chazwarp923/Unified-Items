@@ -1,6 +1,7 @@
 package com.chazwarp.unifieditems.blocks;
 
 import net.minecraft.block.Block;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.chazwarp.unifieditems.lib.BlockInfo;
 
@@ -14,6 +15,7 @@ public static Block oreCopper;
 	public static void initOreCopper() {
 		oreCopper = new BlockCopperOre(BlockInfo.COPPER_ORE_ID);
 		GameRegistry.registerBlock(oreCopper, BlockInfo.COPPER_ORE_KEY);
+		MinecraftForge.setBlockHarvestLevel(oreCopper, "pickaxe", 1);
 	}
 	
 	public static void addOreCopperName() {
@@ -25,6 +27,7 @@ public static Block blockCopper;
 	public static void initCopper() {
 		blockCopper = new BlockCopper(BlockInfo.COPPER_ID);
 		GameRegistry.registerBlock(blockCopper, BlockInfo.COPPER_KEY);
+		MinecraftForge.setBlockHarvestLevel(blockCopper, "pickaxe", 2);
 	}
 	
 	public static void addCopperName() {
@@ -36,6 +39,7 @@ public static Block oreTin;
 	public static void initOreTin() {
 		oreTin = new BlockTinOre(BlockInfo.TIN_ORE_ID);
 		GameRegistry.registerBlock(oreTin, BlockInfo.TIN_ORE_KEY);
+		MinecraftForge.setBlockHarvestLevel(oreTin, "pickaxe", 1);
 	}	
 	
 	public static void addOreTinName() {
@@ -47,6 +51,7 @@ public static Block blockTin;
 	public static void initTin() {
 		blockTin = new BlockTin(BlockInfo.TIN_ID);
 		GameRegistry.registerBlock(blockTin, BlockInfo.TIN_KEY);
+		MinecraftForge.setBlockHarvestLevel(blockTin, "pickaxe", 2);
 	}
 	
 	public static void addTinName() {
@@ -58,6 +63,7 @@ public static Block blockBronze;
 	public static void initBronze() {
 		blockBronze = new BlockBronze(BlockInfo.BRONZE_ID);
 		GameRegistry.registerBlock(blockBronze, BlockInfo.BRONZE_KEY);
+		MinecraftForge.setBlockHarvestLevel(blockBronze, "pickaxe", 2);
 	}
 	
 	public static void addBronzeName() {
@@ -69,6 +75,7 @@ public static Block oreSilver;
 	public static void initOreSilver() {
 		oreSilver = new BlockSilverOre(BlockInfo.SILVER_ORE_ID);
 		GameRegistry.registerBlock(oreSilver, BlockInfo.SILVER_ORE_KEY);
+		MinecraftForge.setBlockHarvestLevel(oreSilver, "pickaxe", 2);
 	}	
 	
 	public static void addOreSilverName() {
@@ -80,6 +87,7 @@ public static Block blockSilver;
 	public static void initSilver() {
 		blockSilver = new BlockSilver(BlockInfo.SILVER_ID);
 		GameRegistry.registerBlock(blockSilver, BlockInfo.SILVER_KEY);
+		MinecraftForge.setBlockHarvestLevel(blockSilver, "pickaxe", 2);
 	}
 	
 	public static void addSilverName() {
@@ -91,6 +99,7 @@ public static Block oreLead;
 	public static void initOreLead() {
 		oreLead = new BlockLeadOre(BlockInfo.LEAD_ORE_ID);
 		GameRegistry.registerBlock(oreLead, BlockInfo.LEAD_ORE_KEY);
+		MinecraftForge.setBlockHarvestLevel(oreLead, "pickaxe", 2);
 	}	
 	
 	public static void addOreLeadName() {
@@ -102,6 +111,7 @@ public static Block blockLead;
 	public static void initLead() {
 		blockLead = new BlockLead(BlockInfo.LEAD_ID);
 		GameRegistry.registerBlock(blockLead, BlockInfo.LEAD_KEY);
+		MinecraftForge.setBlockHarvestLevel(blockLead, "pickaxe", 2);
 	}
 	
 	public static void addLeadName() {

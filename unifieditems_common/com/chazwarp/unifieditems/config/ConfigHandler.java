@@ -6,6 +6,7 @@ import net.minecraftforge.common.Configuration;
 
 import com.chazwarp.unifieditems.lib.BlockInfo;
 import com.chazwarp.unifieditems.lib.ItemInfo;
+import com.chazwarp.unifieditems.lib.OreGen;
 
 public class ConfigHandler {
 
@@ -28,6 +29,8 @@ public class ConfigHandler {
 		BlockInfo.RUBBER_WOOD_ID = config.getBlock(BlockInfo.RUBBER_WOOD_KEY, BlockInfo.RUBBER_WOOD_DEFAULT).getInt();
 		BlockInfo.RUBBER_LEAVES_ID = config.getBlock(BlockInfo.RUBBER_LEAVES_KEY, BlockInfo.RUBBER_LEAVES_DEFAULT).getInt();
 		
+		ItemInfo.DUST_IRON_ID = config.getItem(ItemInfo.DUST_IRON_KEY, ItemInfo.DUST_IRON_DEFAULT).getInt() - 256;
+		ItemInfo.DUST_GOLD_ID = config.getItem(ItemInfo.DUST_GOLD_KEY, ItemInfo.DUST_GOLD_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_COPPER_ID = config.getItem(ItemInfo.INGOT_COPPER_KEY, ItemInfo.INGOT_COPPER_DEFAULT).getInt() - 256;
 		ItemInfo.DUST_COPPER_ID = config.getItem(ItemInfo.DUST_COPPER_KEY, ItemInfo.DUST_COPPER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_TIN_ID = config.getItem(ItemInfo.INGOT_TIN_KEY, ItemInfo.INGOT_TIN_DEFAULT).getInt() - 256;
@@ -40,6 +43,11 @@ public class ConfigHandler {
 		ItemInfo.RAW_RUBBER_ID = config.getItem(ItemInfo.RAW_RUBBER_KEY, ItemInfo.RAW_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.PULVERIZE_ID = config.getItem(ItemInfo.PULVERIZE_KEY, ItemInfo.PULVERIZE_DEFAULT).getInt() - 256;
+		
+		OreGen.COPPER_RATE = config.get("Ore Gen Rates", "Copper", 7).getInt();
+		OreGen.TIN_RATE = config.get("Ore Gen Rates", "Tin", 7).getInt();
+		OreGen.SILVER_RATE = config.get("Ore Gen Rates", "Silver", 7).getInt();
+		OreGen.LEAD_RATE = config.get("Ore Gen Rates", "Lead", 7).getInt();
 		
 		config.save();
 		

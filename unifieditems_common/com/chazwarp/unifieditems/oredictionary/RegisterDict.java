@@ -10,9 +10,20 @@ import com.chazwarp.unifieditems.items.Items;
 
 public class RegisterDict {
 	
+public static Item dustIron;
+	
+	public static void addIron() {
+	OreDictionary.registerOre("dustIron", new ItemStack(Items.dustIron));
+	}
+	
+public static Item dustGold;
+	
+	public static void addGold() {
+	OreDictionary.registerOre("dustGold", new ItemStack(Items.dustGold));
+	}
+	
 public static Block oreCopper;
 	
-//OreDictionary.registerOre("ingotCopper", new ItemStack(ingotCopper));
 	public static void addCopper() {
 	OreDictionary.registerOre("oreCopper", new ItemStack(Blocks.oreCopper));
 	OreDictionary.registerOre("ingotCopper", new ItemStack(Items.ingotCopper));
@@ -63,7 +74,7 @@ public static Item itemRubber;
 	
 public static Item singlePul;
 
-	public static void singlePul() {
+	public static void addSinglePul() {
 		OreDictionary.registerOre("singlePul", new ItemStack(Items.singlePul));
 	}
 	
