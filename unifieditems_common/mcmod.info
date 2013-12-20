@@ -2,9 +2,9 @@
 {
   "modid": "UniItems",
   "name": "Unified Items",
-  "description": "Adds items and blocks like copper and tin\nthat most tech mods add their own versions of, needlessly taking up more block/item ids",
-  "version": "0.01",
-  "mcversion": "1.5.2",
+  "description": "Adds items and blocks like copper and tin\nso that we can have a more 'unified' playing experience",
+  "version": "0.03",
+  "mcversion": "1.6.4",
   "url": "",
   "updateUrl": "",
   "authors": [

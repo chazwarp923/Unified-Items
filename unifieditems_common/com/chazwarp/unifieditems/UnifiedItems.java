@@ -2,7 +2,9 @@ package com.chazwarp.unifieditems;
 
 
 import com.chazwarp.unifieditems.blocks.Blocks;
+import com.chazwarp.unifieditems.compat.ModExistence;
 import com.chazwarp.unifieditems.config.ConfigHandler;
+import com.chazwarp.unifieditems.crafting.CraftingHandler;
 import com.chazwarp.unifieditems.crafting.Shapeless;
 import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.items.Items;
@@ -40,64 +42,26 @@ public class UnifiedItems {
         	
         	ConfigHandler.init(event.getSuggestedConfigurationFile());
         //Registers the items
-        	Items.initIron();
-        	Items.initGold();
-        	Items.initCopper();
-        	Items.initTin();
-        	Items.initBronze();
-        	Items.initSilver();
-        	Items.initLead();
-        	Items.initRawRubber();
-        	Items.initIngotRubber();
-        	Items.initSinglePul();
+        	Items.initItems();
         //Registers the blocks
-        	Blocks.initOreCopper();
-        	Blocks.initOreTin();
-        	Blocks.initOreSilver();
-        	Blocks.initOreLead();
-        	Blocks.initCopper();
-        	Blocks.initTin();
-        	Blocks.initBronze();
-        	Blocks.initSilver();
-        	Blocks.initLead();
-        	Blocks.initSapling();
-        	Blocks.initLog();
-        	Blocks.initLeaves();
-       	//Registers crafting recipes
+        	Blocks.initBlocks();
+       	//Adds Crafting Related Things
+        	GameRegistry.registerCraftingHandler(new CraftingHandler());
         	Shapeless.addCrafting();
         	Smelting.addSmelting();
-        	proxy.registerRenderers();
         //Registers World Gen
         	new WorldGenHandler();
+        //Registers Things With The Proxy
+        	proxy.registerRenderers();
         }
        
         @EventHandler
         public void Init(FMLInitializationEvent event) {
 
-       	//Registers names for Items
-        	Items.addIronName();
-        	Items.addGoldName();
-        	Items.addCopperName();
-        	Items.addTinName();
-        	Items.addBronzeName();
-        	Items.addSilverName();
-        	Items.addLeadName();
-        	Items.addRawRubberName();
-        	Items.addIngotRubberName();
-        	Items.addSinglePulName();
         //Registers names for Blocks
-        	Blocks.addOreCopperName();
-        	Blocks.addOreTinName();
-        	Blocks.addOreSilverName();
-        	Blocks.addOreLeadName();
-        	Blocks.addCopperName();
-        	Blocks.addTinName();
-        	Blocks.addBronzeName();
-        	Blocks.addSilverName();
-        	Blocks.addLeadName();
-        	Blocks.addSaplingName();
-        	Blocks.addLogName();
-        	Blocks.addLeavesName();
+        	Blocks.addNames();
+       	//Registers names for Items
+        	Items.addNames();
         //Registers things with the Ore Dictionary
         	RegisterDict.addIron();
         	RegisterDict.addGold();
@@ -112,6 +76,8 @@ public class UnifiedItems {
        
         @EventHandler
         public void postInit(FMLPostInitializationEvent event) {
-                // Stub Method
+        
+        //Adds additional ores per vein if other mods are installed
+        	ModExistence.Compat();
         }
 }

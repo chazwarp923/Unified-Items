@@ -44,10 +44,15 @@ public class ConfigHandler {
 		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.PULVERIZE_ID = config.getItem(ItemInfo.PULVERIZE_KEY, ItemInfo.PULVERIZE_DEFAULT).getInt() - 256;
 		
-		OreGen.COPPER_RATE = config.get("Ore Gen Rates", "Copper", 7).getInt();
-		OreGen.TIN_RATE = config.get("Ore Gen Rates", "Tin", 7).getInt();
-		OreGen.SILVER_RATE = config.get("Ore Gen Rates", "Silver", 7).getInt();
-		OreGen.LEAD_RATE = config.get("Ore Gen Rates", "Lead", 7).getInt();
+		OreGen.COPPER_VEIN = config.get("How Many Ores Per Vein", "Copper", 10).getInt();
+		OreGen.TIN_VEIN = config.get("How Many Ores Per Vein", "Tin", 10).getInt();
+		OreGen.SILVER_VEIN = config.get("How Many Ores Per Vein", "Silver", 12).getInt();
+		OreGen.LEAD_VEIN = config.get("How Many Ores Per Vein", "Lead", 10).getInt();
+		
+		OreGen.COPPER_CHUNK = config.get("How Many Veins Per Chunk", "Copper", 8).getInt();
+		OreGen.TIN_CHUNK = config.get("How Many Veins Per Chunk", "Tin", 6).getInt();
+		OreGen.SILVER_CHUNK = config.get("How Many Veins Per Chunk", "Silver", 3).getInt();
+		OreGen.LEAD_CHUNK = config.get("How Many Veins Per Chunk", "Lead", 4).getInt();
 		
 		config.save();
 		

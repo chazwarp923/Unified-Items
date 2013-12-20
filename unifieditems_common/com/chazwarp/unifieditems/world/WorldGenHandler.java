@@ -22,10 +22,10 @@ public class WorldGenHandler implements IWorldGenerator {
 	
 	public WorldGenHandler() {
 		GameRegistry.registerWorldGenerator(this);
-		copperGen = new WorldGenMinable(Blocks.oreCopper.blockID, OreGen.COPPER_RATE);
-		tinGen = new WorldGenMinable(Blocks.oreTin.blockID, OreGen.TIN_RATE);
-		silverGen = new WorldGenMinable(Blocks.oreSilver.blockID, OreGen.SILVER_RATE);
-		leadGen = new WorldGenMinable(Blocks.oreLead.blockID, OreGen.LEAD_RATE);
+		copperGen = new WorldGenMinable(Blocks.oreCopper.blockID, OreGen.COPPER_VEIN);
+		tinGen = new WorldGenMinable(Blocks.oreTin.blockID, OreGen.TIN_VEIN);
+		silverGen = new WorldGenMinable(Blocks.oreSilver.blockID, OreGen.SILVER_VEIN);
+		leadGen = new WorldGenMinable(Blocks.oreLead.blockID, OreGen.LEAD_VEIN);
 	}	
 		
 	private void generateStandardOre(Random rand, int chunkX, int chunkZ, World world, int iterations, WorldGenerator gen, int LowestY, int HighestY){
@@ -40,10 +40,10 @@ public class WorldGenHandler implements IWorldGenerator {
 
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-		generateStandardOre(random, chunkX, chunkZ, world, 12, copperGen, 35, 70);
-		generateStandardOre(random, chunkX, chunkZ, world, 12, tinGen, 35, 70);
-		generateStandardOre(random, chunkX, chunkZ, world, 8, silverGen, 1, 35);
-		generateStandardOre(random, chunkX, chunkZ, world, 8, leadGen, 1, 35);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.COPPER_CHUNK, copperGen, 40, 75);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.TIN_CHUNK, tinGen, 20, 55);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.SILVER_CHUNK, silverGen, 5, 30);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.LEAD_CHUNK, leadGen, 10, 35);
 	}
 
 }

@@ -1,6 +1,5 @@
 package com.chazwarp.unifieditems.lib;
 
-import com.chazwarp.unifieditems.blocks.BlockRubberSapling;
 
 public class BlockInfo {
 
@@ -55,7 +54,6 @@ public class BlockInfo {
 	public static final String RUBBER_SAPLING_KEY = "Rubber Tree Sapling";
 	public static int RUBBER_SAPLING_DEFAULT = 2465;
 	public static final String RUBBER_SAPLING_UNLOCALIZED_NAME = "Rubber Tree Sapling";
-	public static BlockRubberSapling rareSapling;
 	
 	public static int RUBBER_WOOD_ID;
 	public static final String RUBBER_WOOD_KEY = "Rubber Wood";
@@ -65,11 +63,5 @@ public class BlockInfo {
 	public static int RUBBER_LEAVES_ID;
 	public static String RUBBER_LEAVES_KEY = "Rubber Leaves";
 	public static int RUBBER_LEAVES_DEFAULT = 2467;
-	public static final String RUBBER_LEAVES_UNLOCALIZED_NAME = "Rubber Leaves";
-	
-	public static int MULTIPART_TEST_ID;
-	public static String MULTIPART_TEST_KEY = "Multipart Test";
-	public static int MULTIPART_TEST_DEFAULT = 2480;
-	public static final String MULTIPART_TEST_UNLOCALIZED_NAME = "Multipart Test";
-	
+	public static final String RUBBER_LEAVES_UNLOCALIZED_NAME = "Rubber Leaves";	
 }

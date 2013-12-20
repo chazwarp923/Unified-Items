@@ -1,6 +1,8 @@
 package com.chazwarp.unifieditems.crafting;
 
 import net.minecraft.block.Block;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
@@ -11,7 +13,7 @@ import com.chazwarp.unifieditems.items.Items;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 public class Shapeless {
-	
+
 	public static void addCrafting() {
 		
 //GameRegistry.addShapelessRecipe(new ItemStack(result, amount), Object... recipe);
@@ -42,6 +44,11 @@ public class Shapeless {
 	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustTin, 2), new Object[] {"oreTin", "singlePul"}));
 	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustSilver, 2), new Object[] {"oreSilver", "singlePul"}));
 	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustLead, 2), new Object[] {"oreLead", "singlePul"}));
+	
+	//Miscellaneous Recipes
+	for(int i = 0; i < Item.flintAndSteel.getMaxDamage(); i++) {
+		GameRegistry.addShapelessRecipe(new ItemStack(Block.torchWood), new ItemStack(Item.stick), new ItemStack(Item.flintAndSteel, 1, i));
+	}
 	
 	}
 

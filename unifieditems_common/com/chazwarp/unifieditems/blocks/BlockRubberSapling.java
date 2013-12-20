@@ -2,18 +2,19 @@ package com.chazwarp.unifieditems.blocks;
 
 import java.util.Random;
 
-import com.chazwarp.unifieditems.lib.Reference;
-import com.chazwarp.unifieditems.lib.BlockTextures;
-
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSapling;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
 import net.minecraft.world.World;
-import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.common.EnumPlantType;
 import net.minecraftforge.common.ForgeDirection;
+
+import com.chazwarp.unifieditems.UniTab;
+import com.chazwarp.unifieditems.lib.BlockInfo;
+import com.chazwarp.unifieditems.lib.BlockTextures;
+import com.chazwarp.unifieditems.lib.Reference;
+
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -29,7 +30,8 @@ public class BlockRubberSapling extends BlockSapling {
         setBlockBounds(0.5F - f, 0.0F, 0.5F - f, 0.5F + f, f * 2.0F, 0.5F + f);
         this.setHardness(0.0F);
         this.setStepSound(Block.soundGrassFootstep);
-        this.setCreativeTab(CreativeTabs.tabDecorations);
+        this.setCreativeTab(UniTab.tab);
+		this.setUnlocalizedName(BlockInfo.RUBBER_SAPLING_UNLOCALIZED_NAME);
 		
 	}
 	
