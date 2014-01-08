@@ -75,7 +75,7 @@ public static Item itemRubber;
 public static Item singlePul;
 
 	public static void addSinglePul() {
-		OreDictionary.registerOre("singlePul", new ItemStack(Items.singlePul));
+		OreDictionary.registerOre("itemSinglePul", new ItemStack(Items.singlePul));
 	}
 	
 }

@@ -5,6 +5,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 
 import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.lib.BlockInfo;
@@ -25,6 +26,12 @@ public class BlockLeadOre extends Block {
 		setUnlocalizedName(BlockInfo.LEAD_ORE_UNLOCALIZED_NAME);
 		
 	}
+	
+	@Override
+	public int getExpDrop(World world, int data, int enchantmentLevel)
+    {
+        return 1;
+    }
 	
     @SideOnly(Side.CLIENT)
     @Override

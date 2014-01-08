@@ -7,6 +7,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
+import net.minecraft.world.World;
 
 import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.items.Items;
@@ -30,6 +31,18 @@ public class BlockRubberWood extends Block {
 		setUnlocalizedName(BlockInfo.RUBBER_WOOD_UNLOCALIZED_NAME);
 		
 	}
+	
+	@Override
+	public boolean isWood(World world, int x, int y, int z)
+    {
+         return true;
+    }
+	
+	@Override
+	public boolean canSustainLeaves(World world, int x, int y, int z)
+    {
+        return true;
+    }
 	
 	public int idDropped(int par1, Random random, int zero) {
         return Items.rawRubber.itemID;
