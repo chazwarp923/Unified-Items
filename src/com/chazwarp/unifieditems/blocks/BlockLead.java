@@ -3,13 +3,12 @@ package com.chazwarp.unifieditems.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.Icon;
 
 import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.lib.BlockInfo;
-import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.lib.BlockTextures;
+import com.chazwarp.unifieditems.lib.Reference;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

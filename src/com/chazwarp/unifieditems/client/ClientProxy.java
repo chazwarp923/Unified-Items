@@ -1,14 +1,16 @@
 package com.chazwarp.unifieditems.client;
 
 import com.chazwarp.unifieditems.CommonProxy;
+import com.chazwarp.unifieditems.render.RubberTapRenderer;
+import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
 
-import net.minecraftforge.client.MinecraftForgeClient;
+import cpw.mods.fml.client.registry.ClientRegistry;
 
 public class ClientProxy extends CommonProxy {
        
         @Override
         public void registerRenderers() {
-                // This is for rendering entities and so forth later on
+        	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityRubberTap.class, new RubberTapRenderer());
         }
        
 }

@@ -49,19 +49,10 @@ public class BlockInfo {
 	public static final int LEAD_DEFAULT = 2464;
 	public static final String LEAD_UNLOCALIZED_NAME = "Lead Block";
 	
-	//This is all the information for Rubber Trees
-	public static int RUBBER_SAPLING_ID;
-	public static final String RUBBER_SAPLING_KEY = "Rubber Tree Sapling";
-	public static int RUBBER_SAPLING_DEFAULT = 2465;
-	public static final String RUBBER_SAPLING_UNLOCALIZED_NAME = "Rubber Tree Sapling";
+	//This is all the information for Rubber Taps
+	public static int RUBBER_TAP_ID;
+	public static final String RUBBER_TAP_KEY = "Rubber Tap";
+	public static int RUBBER_TAP_DEFAULT = 2465;
+	public static final String RUBBER_TAP_UNLOCALIZED_NAME = "Rubber Tap";
 	
-	public static int RUBBER_WOOD_ID;
-	public static final String RUBBER_WOOD_KEY = "Rubber Wood";
-	public static final int RUBBER_WOOD_DEFAULT = 2466;
-	public static final String RUBBER_WOOD_UNLOCALIZED_NAME = "Rubber Wood";
-	
-	public static int RUBBER_LEAVES_ID;
-	public static String RUBBER_LEAVES_KEY = "Rubber Leaves";
-	public static int RUBBER_LEAVES_DEFAULT = 2467;
-	public static final String RUBBER_LEAVES_UNLOCALIZED_NAME = "Rubber Leaves";	
 }

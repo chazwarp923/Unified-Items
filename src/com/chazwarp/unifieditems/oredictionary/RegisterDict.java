@@ -69,13 +69,12 @@ public static Item itemRubber;
 
 	public static void addRubber() {
 		OreDictionary.registerOre("itemRubber", new ItemStack(Items.ingotRubber));
-		OreDictionary.registerOre("woodRubber", new ItemStack(Blocks.woodRubber));
 	}
 	
-public static Item singlePul;
+public static Item itemSinglePul;
 
 	public static void addSinglePul() {
-		OreDictionary.registerOre("itemSinglePul", new ItemStack(Items.singlePul));
+		OreDictionary.registerOre("craftingSinglePul", new ItemStack(Items.singlePul));
 	}
 	
 }

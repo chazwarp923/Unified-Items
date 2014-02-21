@@ -8,7 +8,6 @@ import net.minecraft.util.Icon;
 import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.lib.BlockInfo;
 import com.chazwarp.unifieditems.lib.Reference;
-import com.chazwarp.unifieditems.lib.BlockTextures;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

@@ -2,7 +2,6 @@ package com.chazwarp.unifieditems.items;
 
 import net.minecraft.item.Item;
 
-import com.chazwarp.unifieditems.lib.BlockInfo;
 import com.chazwarp.unifieditems.lib.ItemInfo;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -184,6 +183,7 @@ public class Items {
 		addGoldName();
 		addCopperName();
 		addTinName();
+		addBronzeName();
 		addSilverName();
 		addLeadName();
 		addRawRubberName();

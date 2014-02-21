@@ -1,7 +1,6 @@
 package com.chazwarp.unifieditems.items;
 
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 import com.chazwarp.unifieditems.UniTab;

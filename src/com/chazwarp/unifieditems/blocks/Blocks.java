@@ -10,11 +10,9 @@ import com.chazwarp.unifieditems.items.ItemBlockSilver;
 import com.chazwarp.unifieditems.items.ItemBlockTin;
 import com.chazwarp.unifieditems.items.ItemCopperOre;
 import com.chazwarp.unifieditems.items.ItemLeadOre;
-import com.chazwarp.unifieditems.items.ItemLeavesRubber;
-import com.chazwarp.unifieditems.items.ItemSaplingRubber;
+import com.chazwarp.unifieditems.items.ItemRubberTap;
 import com.chazwarp.unifieditems.items.ItemSilverOre;
 import com.chazwarp.unifieditems.items.ItemTinOre;
-import com.chazwarp.unifieditems.items.ItemWoodRubber;
 import com.chazwarp.unifieditems.lib.BlockInfo;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -129,38 +127,16 @@ public class Blocks {
 		public static void addBlockLeadName() {
 			LanguageRegistry.addName(blockLead, BlockInfo.LEAD_UNLOCALIZED_NAME);
 		}	
-	
-	public static Block saplingRubber;
-
-		public static void initSaplingRubber() {
-			saplingRubber = new BlockRubberSapling(BlockInfo.RUBBER_SAPLING_ID);
-			GameRegistry.registerBlock(saplingRubber, ItemSaplingRubber.class, BlockInfo.RUBBER_SAPLING_KEY);
-		}
-	
-		public static void addSaplingRubberName() {
-			LanguageRegistry.addName(saplingRubber, BlockInfo.RUBBER_SAPLING_UNLOCALIZED_NAME);	
-		}	
 		
-	public static Block woodRubber;
-
-		public static void initWoodRubber() {
-			woodRubber = new BlockRubberWood(BlockInfo.RUBBER_WOOD_ID);
-			GameRegistry.registerBlock(woodRubber, ItemWoodRubber.class, BlockInfo.RUBBER_WOOD_KEY);
+	public static Block rubberTap;
+		
+		public static void initRubberTap() {
+			rubberTap = new BlockRubberTap(BlockInfo.RUBBER_TAP_ID);
+			GameRegistry.registerBlock(rubberTap, ItemRubberTap.class, BlockInfo.RUBBER_TAP_KEY);
 		}
 	
-		public static void addWoodRubberName() {
-		LanguageRegistry.addName(woodRubber, BlockInfo.RUBBER_WOOD_UNLOCALIZED_NAME);
-		}
-	
-	public static Block leavesRubber;
-
-		public static void initLeavesRubber() {
-			leavesRubber = new BlockRubberLeaves(BlockInfo.RUBBER_LEAVES_ID);
-			GameRegistry.registerBlock(leavesRubber, ItemLeavesRubber.class, BlockInfo.RUBBER_LEAVES_KEY);
-		}
-	
-		public static void addLeavesRubberName() {
-		LanguageRegistry.addName(leavesRubber, BlockInfo.RUBBER_LEAVES_UNLOCALIZED_NAME);
+		public static void addRubberTapName() {
+			LanguageRegistry.addName(rubberTap, BlockInfo.RUBBER_TAP_UNLOCALIZED_NAME);
 		}
 	
 	public static void initBlocks() {
@@ -173,9 +149,7 @@ public class Blocks {
 		initBlockBronze();
 		initBlockSilver();
 		initBlockLead();
-		initSaplingRubber();
-		initWoodRubber();
-		initLeavesRubber();
+		initRubberTap();
 	}
 	
 	public static void addNames() {
@@ -188,9 +162,7 @@ public class Blocks {
 		addBlockBronzeName();
 		addBlockSilverName();
 		addBlockLeadName();
-		addSaplingRubberName();
-		addWoodRubberName();
-		addLeavesRubberName();
+		addRubberTapName();
 	}
 	
 }

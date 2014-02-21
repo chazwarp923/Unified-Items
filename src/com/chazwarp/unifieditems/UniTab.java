@@ -1,10 +1,10 @@
 package com.chazwarp.unifieditems;
 
-import com.chazwarp.unifieditems.blocks.Blocks;
-
-import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
+
+import com.chazwarp.unifieditems.blocks.Blocks;
+
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 public class UniTab extends CreativeTabs

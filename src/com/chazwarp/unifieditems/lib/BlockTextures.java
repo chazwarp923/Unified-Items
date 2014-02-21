@@ -21,9 +21,6 @@ public class BlockTextures {
 	public static final String LEAD_BLOCK = "blockLead";
 	public static final String LEAD_ORE = "oreLead";
 
-	//Textures for Rubber Trees
-	public static final String WOOD_RUBBER_TOP = "woodRubberTop";
-	public static final String WOOD_RUBBER_SIDE = "woodRubberSide";	
-	public static final String LEAVES_RUBBER = "leavesRubber";
-	public static final String SAPLING_RUBBER = "saplingRubber";
+	//Texture for Rubber Tap
+	public static final String RUBBER_TAP = "rubberTap";
 }

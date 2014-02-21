@@ -1,9 +1,7 @@
 package com.chazwarp.unifieditems.crafting;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.FurnaceRecipes;
 
 import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.BlockInfo;
@@ -28,9 +26,6 @@ public class Smelting {
 	
 	//Smelting recipe for Lead
 	GameRegistry.addSmelting(BlockInfo.LEAD_ORE_ID, new ItemStack(Items.ingotLead), 1.0f);
-	
-	//Smelting recipe for Rubber from logs
-	GameRegistry.addSmelting(BlockInfo.RUBBER_WOOD_ID, new ItemStack(Items.ingotRubber), 0.7f);
 
 	//Smelting recipe for Iron from dust
 	GameRegistry.addSmelting(ItemInfo.DUST_IRON_ID + 256, new ItemStack(Item.ingotIron), 0.25f);

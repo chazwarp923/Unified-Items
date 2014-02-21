@@ -25,9 +25,7 @@ public class ConfigHandler {
 		BlockInfo.BRONZE_ID = config.getBlock(BlockInfo.BRONZE_KEY, BlockInfo.BRONZE_DEFAULT).getInt();
 		BlockInfo.SILVER_ID = config.getBlock(BlockInfo.SILVER_KEY, BlockInfo.SILVER_DEFAULT).getInt();
 		BlockInfo.LEAD_ID = config.getBlock(BlockInfo.LEAD_KEY, BlockInfo.LEAD_DEFAULT).getInt();
-		BlockInfo.RUBBER_SAPLING_ID = config.getBlock(BlockInfo.RUBBER_SAPLING_KEY, BlockInfo.RUBBER_SAPLING_DEFAULT).getInt();
-		BlockInfo.RUBBER_WOOD_ID = config.getBlock(BlockInfo.RUBBER_WOOD_KEY, BlockInfo.RUBBER_WOOD_DEFAULT).getInt();
-		BlockInfo.RUBBER_LEAVES_ID = config.getBlock(BlockInfo.RUBBER_LEAVES_KEY, BlockInfo.RUBBER_LEAVES_DEFAULT).getInt();
+		BlockInfo.RUBBER_TAP_ID = config.getBlock(BlockInfo.RUBBER_TAP_KEY, BlockInfo.RUBBER_TAP_DEFAULT).getInt();
 		
 		ItemInfo.DUST_IRON_ID = config.getItem(ItemInfo.DUST_IRON_KEY, ItemInfo.DUST_IRON_DEFAULT).getInt() - 256;
 		ItemInfo.DUST_GOLD_ID = config.getItem(ItemInfo.DUST_GOLD_KEY, ItemInfo.DUST_GOLD_DEFAULT).getInt() - 256;
@@ -44,10 +42,10 @@ public class ConfigHandler {
 		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.PULVERIZE_ID = config.getItem(ItemInfo.PULVERIZE_KEY, ItemInfo.PULVERIZE_DEFAULT).getInt() - 256;
 		
-		OreGen.COPPER_VEIN = config.get("How Many Ores Per Vein", "Copper", 10).getInt();
-		OreGen.TIN_VEIN = config.get("How Many Ores Per Vein", "Tin", 10).getInt();
-		OreGen.SILVER_VEIN = config.get("How Many Ores Per Vein", "Silver", 12).getInt();
-		OreGen.LEAD_VEIN = config.get("How Many Ores Per Vein", "Lead", 10).getInt();
+		OreGen.COPPER_VEIN = config.get("How Many Ores Per Vein", "Copper", 8).getInt();
+		OreGen.TIN_VEIN = config.get("How Many Ores Per Vein", "Tin", 8).getInt();
+		OreGen.SILVER_VEIN = config.get("How Many Ores Per Vein", "Silver", 8).getInt();
+		OreGen.LEAD_VEIN = config.get("How Many Ores Per Vein", "Lead", 8).getInt();
 		
 		OreGen.COPPER_CHUNK = config.get("How Many Veins Per Chunk", "Copper", 8).getInt();
 		OreGen.TIN_CHUNK = config.get("How Many Veins Per Chunk", "Tin", 6).getInt();
