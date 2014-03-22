@@ -38,6 +38,7 @@ public class UnifiedItems {
         @EventHandler
         public void preInit(FMLPreInitializationEvent event) {
         	
+        //Makes a Config
         	ConfigHandler.init(event.getSuggestedConfigurationFile());
         //Registers the items
         	Items.initItems();
@@ -51,6 +52,14 @@ public class UnifiedItems {
         	new WorldGenHandler();
         //Registers Things With The Proxy
         	proxy.registerRenderers();
+        	
+        //Hard Codes The Mod Data
+        	event.getModMetadata().credits = "";
+        	event.getModMetadata().description = "A Collection of Random Things That Don't Need Their Own Mods";
+        	event.getModMetadata().logoFile = "assets/" + Reference.MOD_ID +"/textures/logo.png";
+        	event.getModMetadata().modId = Reference.MOD_ID;
+        	event.getModMetadata().name = Reference.MOD_NAME;
+        	event.getModMetadata().version = Reference.VERSION;
         }
        
         @EventHandler
