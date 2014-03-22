@@ -18,7 +18,7 @@ public class ModelRubberTap extends ModelBase
     
       Left_Side = new ModelRenderer(this, 0, 0);
       Left_Side.addBox(-0.5F, -1.5F, -1.5F, 1, 4, 6);
-      Left_Side.setRotationPoint(-2.4F, 17F, 3.5F);
+      Left_Side.setRotationPoint(-2.5F, 17F, 3.5F);
       Left_Side.setTextureSize(32, 32);
       Left_Side.mirror = true;
       setRotation(Left_Side, 0F, 0F, 0F);
