@@ -14,7 +14,7 @@ public class Shapeless {
 
 	public static void addCrafting() {
 		
-//GameRegistry.addShapelessRecipe(new ItemStack(result, amount), Object... recipe);
+	//GameRegistry.addShapelessRecipe(new ItemStack(result, amount), Object... recipe);
 		
 	//Adds the recipe for bronze
 	GameRegistry.addShapelessRecipe(new ItemStack(Items.ingotBronze, 4), new ItemStack(Items.ingotCopper),new ItemStack(Items.ingotCopper),new ItemStack(Items.ingotCopper), new ItemStack(Items.ingotTin));
