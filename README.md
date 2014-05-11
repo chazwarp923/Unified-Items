@@ -1,1 +1,1 @@
-Unified Items
+This is just a mod to centralize your ores and simplify configs, it also dynamically adjusts ore generation rates depending upon what mods you have installed
