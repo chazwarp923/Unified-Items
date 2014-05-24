@@ -26,25 +26,21 @@ public class Shapeless {
 	GameRegistry.addShapelessRecipe(new ItemStack(Blocks.blockSilver), new ItemStack(Items.ingotSilver),new ItemStack(Items.ingotSilver),new ItemStack(Items.ingotSilver), new ItemStack(Items.ingotSilver),new ItemStack(Items.ingotSilver),new ItemStack(Items.ingotSilver), new ItemStack(Items.ingotSilver),new ItemStack(Items.ingotSilver),new ItemStack(Items.ingotSilver));	
 	GameRegistry.addShapelessRecipe(new ItemStack(Blocks.blockLead), new ItemStack(Items.ingotLead),new ItemStack(Items.ingotLead),new ItemStack(Items.ingotLead), new ItemStack(Items.ingotLead),new ItemStack(Items.ingotLead),new ItemStack(Items.ingotLead), new ItemStack(Items.ingotLead),new ItemStack(Items.ingotLead),new ItemStack(Items.ingotLead));
 	
-	//Adds the recipe for the One Time Pulverize
-	GameRegistry.addShapelessRecipe(new ItemStack(Items.singlePul), new ItemStack(Item.flint), new ItemStack(Item.flint));
+	//Adds the recipe for the "Mortar And Pestle"
+	GameRegistry.addShapelessRecipe(new ItemStack(Items.mortarAndPestle), new ItemStack(Item.bowlEmpty), new ItemStack(Block.cobblestone));
 	
 	//Adds a recipe for flint
-	GameRegistry.addShapelessRecipe(new ItemStack(Item.flint), new ItemStack(Block.cobblestone), new ItemStack(Block.gravel));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Item.flint, 1), new Object[] {"blockGravel", "craftingMortarAndPestle"}));
 	
 	//Adds The Recipes for Ores to Dusts
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustIron, 2), new Object[] {"oreIron", "craftingSinglePul"}));
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustGold, 2), new Object[] {"oreGold", "craftingSinglePul"}));
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustCopper, 2), new Object[] {"oreCopper", "craftingSinglePul"}));
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustTin, 2), new Object[] {"oreTin", "craftingSinglePul"}));
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustSilver, 2), new Object[] {"oreSilver", "craftingSinglePul"}));
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustLead, 2), new Object[] {"oreLead", "craftingSinglePul"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustIron, 2), new Object[] {"oreIron", "craftingMortarAndPestle"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustGold, 2), new Object[] {"oreGold", "craftingMortarAndPestle"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustCopper, 2), new Object[] {"oreCopper", "craftingMortarAndPestle"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustTin, 2), new Object[] {"oreTin", "craftingMortarAndPestle"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustSilver, 2), new Object[] {"oreSilver", "craftingMortarAndPestle"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Items.dustLead, 2), new Object[] {"oreLead", "craftingMortarAndPestle"}));
 	
 	//Miscellaneous Recipes
-	for(int i = 0; i < Item.flintAndSteel.getMaxDamage(); i++) {
-		GameRegistry.addShapelessRecipe(new ItemStack(Block.torchWood), new ItemStack(Item.stick), new ItemStack(Item.flintAndSteel, 1, i));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Block.torchWood, 1), new Object[] {"stickWood", "craftingFlintAndSteel"}));
 	}
-	
-	}
-
 }

@@ -10,7 +10,7 @@ import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.network.PacketHandler;
-import com.chazwarp.unifieditems.oredictionary.RegisterDict;
+import com.chazwarp.unifieditems.oredictionary.Register;
 import com.chazwarp.unifieditems.world.WorldGenHandler;
 
 import cpw.mods.fml.common.Mod;
@@ -70,15 +70,7 @@ public class UnifiedItems {
        	//Registers names for Items
         	Items.addNames();
         //Registers things with the Ore Dictionary
-        	RegisterDict.addIron();
-        	RegisterDict.addGold();
-        	RegisterDict.addCopper();
-        	RegisterDict.addTin();
-        	RegisterDict.addBronze();
-        	RegisterDict.addSilver();
-        	RegisterDict.addLead();
-        	RegisterDict.addRubber();
-        	RegisterDict.addSinglePul();
+        	Register.registerAll();;
         }
        
         @EventHandler

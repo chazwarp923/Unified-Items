@@ -40,7 +40,7 @@ public class ConfigHandler {
 		ItemInfo.DUST_LEAD_ID = config.getItem(ItemInfo.DUST_LEAD_KEY, ItemInfo.DUST_LEAD_DEFAULT).getInt() - 256;
 		ItemInfo.RAW_RUBBER_ID = config.getItem(ItemInfo.RAW_RUBBER_KEY, ItemInfo.RAW_RUBBER_DEFAULT).getInt() - 256;
 		ItemInfo.INGOT_RUBBER_ID = config.getItem(ItemInfo.INGOT_RUBBER_KEY, ItemInfo.INGOT_RUBBER_DEFAULT).getInt() - 256;
-		ItemInfo.PULVERIZE_ID = config.getItem(ItemInfo.PULVERIZE_KEY, ItemInfo.PULVERIZE_DEFAULT).getInt() - 256;
+		ItemInfo.MORTAR_AND_PESTLE_ID = config.getItem(ItemInfo.MORTAR_AND_PESTLE_KEY, ItemInfo.MORTAR_AND_PESTLE_DEFAULT).getInt() - 256;
 		
 		OreGen.COPPER_VEIN = config.get("How Many Ores Per Vein", "Copper", 8).getInt();
 		OreGen.TIN_VEIN = config.get("How Many Ores Per Vein", "Tin", 8).getInt();

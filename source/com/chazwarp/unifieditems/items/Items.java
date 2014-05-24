@@ -151,18 +151,18 @@ public class Items {
 			LanguageRegistry.addName(ingotRubber, ItemInfo.INGOT_RUBBER_NAME);
 		}
 		
-	public static Item singlePul;
+	public static Item mortarAndPestle;
 	
 		//This registers the item id
-		public static void initSinglePul() {
+		public static void initMortarAndPestle() {
 			
-			singlePul = new ItemOneTimePulverize(ItemInfo.PULVERIZE_ID);
-			GameRegistry.registerItem(singlePul, ItemInfo.PULVERIZE_NAME);
+			mortarAndPestle = new ItemMortarAndPestle(ItemInfo.MORTAR_AND_PESTLE_ID);
+			GameRegistry.registerItem(mortarAndPestle, ItemInfo.MORTAR_AND_PESTLE_NAME);
 		}
 		//This registers the name
-		public static void addSinglePulName() {
+		public static void addMortarAndPestle() {
 			
-			LanguageRegistry.addName(singlePul, ItemInfo.PULVERIZE_NAME);
+			LanguageRegistry.addName(mortarAndPestle, ItemInfo.MORTAR_AND_PESTLE_NAME);
 		}
 	
 	public static void initItems() {
@@ -175,7 +175,7 @@ public class Items {
 		initLead();
 		initRawRubber();
 		initIngotRubber();
-		initSinglePul();
+		initMortarAndPestle();
 	}
 		
 	public static void addNames() {
@@ -188,7 +188,7 @@ public class Items {
 		addLeadName();
 		addRawRubberName();
 		addIngotRubberName();
-		addSinglePulName();
+		addMortarAndPestle();
 	}
 	
 }

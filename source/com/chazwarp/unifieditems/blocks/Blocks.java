@@ -163,6 +163,5 @@ public class Blocks {
 		addBlockSilverName();
 		addBlockLeadName();
 		addRubberTapName();
-	}
-	
+	}	
 }

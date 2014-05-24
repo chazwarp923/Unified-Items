@@ -89,10 +89,10 @@ public class ItemInfo {
 	public static final String INGOT_RUBBER_UNLOCALIZED_NAME = "ingotRubber";
 	public static final String INGOT_RUBBER_NAME = "Rubber Bar";	
 	
-	//This is all the information for the "One Time Pulverize"
-	public static int PULVERIZE_ID;
-	public static final String PULVERIZE_KEY = "One Time Pulverize";
-	public static final int PULVERIZE_DEFAULT = 24108;
-	public static final String PULVERIZE_UNLOCALIZED_NAME = "pulverize";
-	public static final String PULVERIZE_NAME = "One Time Pulverize";	
+	//This is all the information for the "Mortar And Pestle"
+	public static int MORTAR_AND_PESTLE_ID;
+	public static final String MORTAR_AND_PESTLE_KEY = "Mortar And Pestle";
+	public static final int MORTAR_AND_PESTLE_DEFAULT = 24108;
+	public static final String MORTAR_AND_PESTLE_UNLOCALIZED_NAME = "mortarAndPestle";
+	public static final String MORTAR_AND_PESTLE_NAME = "Mortar And Pestle";	
 }
