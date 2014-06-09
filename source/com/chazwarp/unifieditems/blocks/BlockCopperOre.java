@@ -36,8 +36,5 @@ public class BlockCopperOre extends Block {
     public void registerIcons(IconRegister register) {
 		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.COPPER_ORE);
 		
-    }
-    
-    
-	
+    }	
 }

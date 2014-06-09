@@ -43,5 +43,3 @@ public class BlockBronze extends Block {
     	}
 	}
 }
-    
-

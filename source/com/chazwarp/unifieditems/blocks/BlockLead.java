@@ -28,8 +28,7 @@ public class BlockLead extends Block {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.LEAD_BLOCK);
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.LEAD_BLOCK);		
     }
     
     @SideOnly(Side.CLIENT)
