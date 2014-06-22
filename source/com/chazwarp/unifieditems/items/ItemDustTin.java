@@ -26,5 +26,4 @@ public class ItemDustTin extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.DUST_TIN_UNLOCALIZED_NAME);
         }
-
 }

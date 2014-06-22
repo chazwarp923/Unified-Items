@@ -25,8 +25,7 @@ public class BlockRubberTap extends BlockContainer {
 		setHardness(2F);
 		setStepSound(Block.soundStoneFootstep);
 		setUnlocalizedName(BlockInfo.RUBBER_TAP_UNLOCALIZED_NAME);
-		this.setBlockBounds(0.3F, 0.25F, 0.6F, 0.7000F, 0.55F, 1.0F);
-		
+		this.setBlockBounds(0.3F, 0.25F, 0.6F, 0.7000F, 0.55F, 1.0F);		
 	}
 	
 	public boolean isOpaqueCube()
@@ -54,10 +53,6 @@ public class BlockRubberTap extends BlockContainer {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.RUBBER_TAP);
-		
-    }
-    
-    
-	
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.RUBBER_TAP);		
+    }	
 }

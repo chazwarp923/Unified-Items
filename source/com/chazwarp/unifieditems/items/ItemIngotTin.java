@@ -26,5 +26,4 @@ public class ItemIngotTin extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.INGOT_TIN_UNLOCALIZED_NAME);
         }
-
 }

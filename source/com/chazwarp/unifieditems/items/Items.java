@@ -189,9 +189,5 @@ public class Items {
 		addRawRubberName();
 		addIngotRubberName();
 		addMortarAndPestle();
-	}
-	
+	}	
 }
-
-
-

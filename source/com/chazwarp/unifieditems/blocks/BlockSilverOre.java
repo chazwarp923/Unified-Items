@@ -22,8 +22,7 @@ public class BlockSilverOre extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundStoneFootstep);
-		setUnlocalizedName(BlockInfo.SILVER_ORE_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.SILVER_ORE_UNLOCALIZED_NAME);		
 	}
 	
 	@Override
@@ -35,8 +34,7 @@ public class BlockSilverOre extends Block {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.SILVER_ORE);
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.SILVER_ORE);		
     }
     
     @SideOnly(Side.CLIENT)
@@ -48,8 +46,6 @@ public class BlockSilverOre extends Block {
     		return blockIcon;
     	}else{
     		return blockIcon;
-    	}
-    	
-    }
-	
+    	}   	
+    }	
 }

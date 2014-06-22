@@ -13,5 +13,4 @@ public class ItemRubberTap extends ItemBlock {
 	public int getMetadata(int dmg) {
 		return dmg;
 	}
-
 }

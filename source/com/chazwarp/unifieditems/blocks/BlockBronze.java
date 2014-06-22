@@ -20,15 +20,13 @@ public class BlockBronze extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundMetalFootstep);
-		setUnlocalizedName(BlockInfo.BRONZE_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.BRONZE_UNLOCALIZED_NAME);		
 	}
 	
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + "blockBronze");
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + "blockBronze");		
     }
     
     @SideOnly(Side.CLIENT)

@@ -28,11 +28,12 @@ public class UniTab extends CreativeTabs
         }
     }
 
+    @Override
     public int getTabIconItemIndex ()
     {
-        return icon;
-        
-    	}
+        return icon;        
+    }
+    
     @Override
     public ItemStack getIconItemStack() {
     	return new ItemStack(Blocks.oreCopper, 1, 0);

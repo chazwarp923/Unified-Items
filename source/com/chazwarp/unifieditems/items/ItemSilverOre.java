@@ -13,5 +13,4 @@ public class ItemSilverOre extends ItemBlock {
 	public int getMetadata(int dmg) {
 		return dmg;
 	}
-
 }

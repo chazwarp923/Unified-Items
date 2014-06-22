@@ -26,5 +26,4 @@ public class ItemRubber extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.INGOT_RUBBER_UNLOCALIZED_NAME);
         }
-
 }

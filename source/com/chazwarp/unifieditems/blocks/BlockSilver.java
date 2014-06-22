@@ -21,15 +21,13 @@ public class BlockSilver extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundMetalFootstep);
-		setUnlocalizedName(BlockInfo.SILVER_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.SILVER_UNLOCALIZED_NAME);		
 	}
 	
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.SILVER_BLOCK);
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.SILVER_BLOCK);		
     }
     
     @SideOnly(Side.CLIENT)
@@ -41,8 +39,6 @@ public class BlockSilver extends Block {
     		return blockIcon;
     	}else{
     		return blockIcon;
-    	}
-    	
-    }
-	
+    	}   	
+    }	
 }

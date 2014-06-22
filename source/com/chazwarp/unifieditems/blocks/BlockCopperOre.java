@@ -21,8 +21,7 @@ public class BlockCopperOre extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundStoneFootstep);
-		setUnlocalizedName(BlockInfo.COPPER_ORE_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.COPPER_ORE_UNLOCALIZED_NAME);		
 	}
 	
 	@Override
@@ -34,7 +33,6 @@ public class BlockCopperOre extends Block {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.COPPER_ORE);
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.COPPER_ORE);		
     }	
 }

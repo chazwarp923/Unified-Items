@@ -22,8 +22,7 @@ public class BlockLeadOre extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundStoneFootstep);
-		setUnlocalizedName(BlockInfo.LEAD_ORE_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.LEAD_ORE_UNLOCALIZED_NAME);		
 	}
 	
 	@Override
@@ -35,8 +34,7 @@ public class BlockLeadOre extends Block {
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.LEAD_ORE);
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.LEAD_ORE);		
     }
     
     @SideOnly(Side.CLIENT)
@@ -48,8 +46,6 @@ public class BlockLeadOre extends Block {
     		return blockIcon;
     	}else{
     		return blockIcon;
-    	}
-    	
-    }
-	
+    	}   	
+    }	
 }

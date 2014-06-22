@@ -45,5 +45,4 @@ public class WorldGenHandler implements IWorldGenerator {
 		generateStandardOre(random, chunkX, chunkZ, world, OreGen.SILVER_CHUNK, silverGen, 5, 30);
 		generateStandardOre(random, chunkX, chunkZ, world, OreGen.LEAD_CHUNK, leadGen, 10, 35);
 	}
-
 }

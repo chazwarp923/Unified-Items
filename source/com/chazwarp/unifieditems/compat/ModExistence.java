@@ -12,6 +12,8 @@ public class ModExistence {
 	static int leadMods = 0;
 	
 	public static void Compat() {
+		
+		 //IC2
 	     if (Loader.isModLoaded("IC2")) {
 	         OreGen.COPPER_VEIN = OreGen.COPPER_VEIN + 1;
 	         OreGen.TIN_VEIN = OreGen.TIN_VEIN + 1;
@@ -20,10 +22,13 @@ public class ModExistence {
 	         tinMods = tinMods++;
 	         leadMods = leadMods++;
 	         System.out.println("[Unified Items] IC2 Integration Loaded");
-	        }
+	     }
+	     
 	     else {
 	    	 System.out.println("[Unified Items] IC2 Integration Not Loaded"); 
 	     }
+	     
+	     //Thermal Expansion
 	     if (Loader.isModLoaded("ThermalExpansion")) {
 	         OreGen.COPPER_VEIN = OreGen.COPPER_VEIN + 1;
 	         OreGen.TIN_VEIN = OreGen.TIN_VEIN + 1;
@@ -34,10 +39,12 @@ public class ModExistence {
 	         silverMods = silverMods++;
 	         leadMods = leadMods++;
 	         System.out.println("[Unified Items] Thermal Expansion Integration Loaded");
-	        }
+	     }
+	     
 	     else {
 	    	 System.out.println("[Unified Items] Thermal Expansion Integration Not Loaded"); 
 	     }
+	     
 	     //EnderIO
 	     if (Loader.isModLoaded("EnderIO")) {
 	         OreGen.COPPER_VEIN = OreGen.COPPER_VEIN + 1;
@@ -45,19 +52,23 @@ public class ModExistence {
 	         copperMods = copperMods++;
 	         tinMods = tinMods++;
 	         System.out.println("[Unified Items] EnderIO Integration Loaded");
-	        }
+	     }
+	     
 	     else {
 	    	 System.out.println("[Unified Items] EnderIO Integration Not Loaded"); 
 	     }
+	     
 	     //Factorization Support
 	     if (Loader.isModLoaded("Factorization")) {
 	         OreGen.SILVER_VEIN = OreGen.SILVER_VEIN + 2;
 	         silverMods = silverMods++;
 	         System.out.println("[Unified Items] Factorization Integration Loaded");
-	        }
+	     }
+	     
 	     else {
 	    	 System.out.println("[Unified Items] Factorization Integration Not Loaded"); 
 	     }
+	     
 	     //Forestry Support
 	     if (Loader.isModLoaded("Forestry")) {
 	         OreGen.COPPER_VEIN = OreGen.COPPER_VEIN + 1;
@@ -65,16 +76,19 @@ public class ModExistence {
 	         copperMods = copperMods++;
 	         tinMods = tinMods++;
 	         System.out.println("[Unified Items] Forestry Integration Loaded");
-	        }
+	     }
+	     
 	     else {
 	    	 System.out.println("[Unified Items] Forestry Integration Not Loaded"); 
 	     }
+	     
 	     //Tinkers Support
 	     if (Loader.isModLoaded("TConstruct")) {
 	         OreGen.COPPER_VEIN = OreGen.COPPER_VEIN + 1;
 	         copperMods = copperMods++;
 	         System.out.println("[Unified Items] Tinker's Construct Integration Loaded");
-	        }
+	     }
+	     
 	     else {
 	    	 System.out.println("[Unified Items] Tinker's Construct Integration Not Loaded"); 
 	     }
@@ -91,7 +105,5 @@ public class ModExistence {
 	if(leadMods > 5) {
 		OreGen.LEAD_CHUNK = OreGen.LEAD_CHUNK++;
 	 }
-	
-	}
-	
+	}	
 }

@@ -26,5 +26,4 @@ public class ItemDustCopper extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.DUST_COPPER_UNLOCALIZED_NAME);
         }
-
 }

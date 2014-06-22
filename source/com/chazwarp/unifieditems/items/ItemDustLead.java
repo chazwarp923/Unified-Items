@@ -26,5 +26,4 @@ public class ItemDustLead extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.DUST_LEAD_UNLOCALIZED_NAME);
         }
-
 }

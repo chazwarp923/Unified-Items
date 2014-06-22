@@ -26,5 +26,4 @@ public class ItemDustSilver extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.DUST_SILVER_UNLOCALIZED_NAME);
         }
-
 }

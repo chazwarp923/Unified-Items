@@ -13,5 +13,4 @@ public class ItemBlockCopper extends ItemBlock {
 	public int getMetadata(int dmg) {
 		return dmg;
 	}
-
 }

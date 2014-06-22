@@ -10,7 +10,7 @@ import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.items.Items;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.network.PacketHandler;
-import com.chazwarp.unifieditems.oredictionary.Register;
+import com.chazwarp.unifieditems.oredictionary.OreDict;
 import com.chazwarp.unifieditems.world.WorldGenHandler;
 
 import cpw.mods.fml.common.Mod;
@@ -25,6 +25,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
 @NetworkMod(channels = {Reference.CHANNEL}  ,clientSideRequired = true, serverSideRequired = true, packetHandler = PacketHandler.class)
+
 public class UnifiedItems {
 
         // The instance of your mod that Forge uses.
@@ -40,22 +41,20 @@ public class UnifiedItems {
         	
         //Makes a Config
         	ConfigHandler.init(event.getSuggestedConfigurationFile());
-        //Registers the items
-        	Items.initItems();
-        //Registers the blocks
+        	
+        //Registers The Blocks And Items
         	Blocks.initBlocks();
-       	//Adds Crafting Related Things
-        	GameRegistry.registerCraftingHandler(new CraftingHandler());
-        	Shapeless.addCrafting();
-        	Smelting.addSmelting();
+        	Items.initItems();
+
         //Registers World Gen
         	new WorldGenHandler();
+        	
         //Registers Things With The Proxy
         	proxy.registerRenderers();
         	
         //Hard Codes The Mod Data
         	event.getModMetadata().credits = "";
-        	event.getModMetadata().description = "A Collection of Random Things That Don't Need Their Own Mods";
+        	event.getModMetadata().description = "A Mod That Unified Your World Generation";
         	event.getModMetadata().logoFile = "assets/" + Reference.MOD_ID +"/textures/logo.png";
         	event.getModMetadata().modId = Reference.MOD_ID;
         	event.getModMetadata().name = Reference.MOD_NAME;
@@ -65,12 +64,12 @@ public class UnifiedItems {
         @EventHandler
         public void Init(FMLInitializationEvent event) {
 
-        //Registers names for Blocks
+        //Registers Names For Blocks And Items
         	Blocks.addNames();
-       	//Registers names for Items
         	Items.addNames();
+        	
         //Registers things with the Ore Dictionary
-        	Register.registerAll();;
+        	OreDict.registerAll();
         }
        
         @EventHandler

@@ -27,5 +27,4 @@ public class ItemMortarAndPestle extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.MORTAR_AND_PESTLE_UNLOCALIZED_NAME);
         }
-
 }

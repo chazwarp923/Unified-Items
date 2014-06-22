@@ -21,8 +21,7 @@ public class BlockLead extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundMetalFootstep);
-		setUnlocalizedName(BlockInfo.LEAD_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.LEAD_UNLOCALIZED_NAME);		
 	}
 	
     @SideOnly(Side.CLIENT)
@@ -40,8 +39,6 @@ public class BlockLead extends Block {
     		return blockIcon;
     	}else{
     		return blockIcon;
-    	}
-    	
-    }
-	
+    	}    	
+    }	
 }

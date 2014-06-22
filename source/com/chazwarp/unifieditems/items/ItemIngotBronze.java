@@ -26,5 +26,4 @@ public class ItemIngotBronze extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.INGOT_BRONZE_UNLOCALIZED_NAME);
         }
-
 }

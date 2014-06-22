@@ -26,5 +26,4 @@ public class ItemIngotLead extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.INGOT_LEAD_UNLOCALIZED_NAME);
         }
-
 }

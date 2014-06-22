@@ -21,15 +21,13 @@ public class BlockTin extends Block {
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundMetalFootstep);
-		setUnlocalizedName(BlockInfo.TIN_UNLOCALIZED_NAME);
-		
+		setUnlocalizedName(BlockInfo.TIN_UNLOCALIZED_NAME);		
 	}
 	
     @SideOnly(Side.CLIENT)
     @Override
     public void registerIcons(IconRegister register) {
-		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.TIN_BLOCK);
-		
+		blockIcon = register.registerIcon(Reference.TEXTURE_LOC + ":" + BlockTextures.TIN_BLOCK);		
     }
     
     @SideOnly(Side.CLIENT)
@@ -41,8 +39,6 @@ public class BlockTin extends Block {
     		return blockIcon;
     	}else{
     		return blockIcon;
-    	}
-    	
-    }
-	
+    	}  	
+    }	
 }

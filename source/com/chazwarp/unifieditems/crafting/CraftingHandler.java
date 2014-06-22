@@ -71,5 +71,4 @@ public class CraftingHandler implements ICraftingHandler{
 	public void onSmelting(EntityPlayer player, ItemStack item) {
 		
 	}
-
 }

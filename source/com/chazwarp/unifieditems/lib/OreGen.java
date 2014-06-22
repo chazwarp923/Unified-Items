@@ -13,5 +13,5 @@ public class OreGen {
 	public static int TIN_CHUNK;
 	public static int SILVER_CHUNK;
 	public static int LEAD_CHUNK;
-
+	
 }

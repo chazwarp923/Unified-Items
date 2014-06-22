@@ -46,8 +46,6 @@ public class Smelting {
 	GameRegistry.addSmelting(ItemInfo.DUST_LEAD_ID + 256, new ItemStack(Items.ingotLead), 0.5f);
 	
 	//Smelting recipe for Rubber from "Raw Rubber"
-	GameRegistry.addSmelting(ItemInfo.RAW_RUBBER_ID + 256, new ItemStack(Items.ingotRubber), 0.7f);
-	
+	GameRegistry.addSmelting(ItemInfo.RAW_RUBBER_ID + 256, new ItemStack(Items.ingotRubber), 0.7f);	
 	}
-
 }

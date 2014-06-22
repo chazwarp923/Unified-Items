@@ -26,5 +26,4 @@ public class ItemIngotCopper extends Item {
 
             this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.INGOT_COPPER_UNLOCALIZED_NAME);
         }
-
 }

@@ -26,5 +26,4 @@ public class ItemDustGold extends Item {
 
         	this.itemIcon = iconRegister.registerIcon(Reference.MOD_ID.toLowerCase() + ":" + ItemInfo.DUST_GOLD_UNLOCALIZED_NAME);
         }
-
 }
