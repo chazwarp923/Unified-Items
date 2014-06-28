@@ -1,0 +1,16 @@
+[
+{
+  "modid": "UnifiedItems",
+  "name": "Unified Items",
+  "description": "Adds items and blocks like copper and tin\nso that we can have a more 'unified' playing experience",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authors": ["chazwarp923"],
+  "credits": "enderblaze2",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
