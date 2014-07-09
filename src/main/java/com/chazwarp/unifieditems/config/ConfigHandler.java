@@ -4,9 +4,12 @@ import java.io.File;
 
 import net.minecraftforge.common.config.Configuration;
 
-import com.chazwarp.unifieditems.lib.BlockInfo;
-import com.chazwarp.unifieditems.lib.ItemInfo;
+import com.chazwarp.unifieditems.UnifiedItems;
 import com.chazwarp.unifieditems.lib.OreGen;
+import com.chazwarp.unifieditems.lib.Reference;
+
+import cpw.mods.fml.client.event.ConfigChangedEvent;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class ConfigHandler {
 	
@@ -36,5 +39,11 @@ public class ConfigHandler {
 		config.save();
 		
 		return config;
+	}
+	
+    @SubscribeEvent
+	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
+	 	if(eventArgs.modID.equals(Reference.MOD_ID))
+	 		ConfigHandler.init(UnifiedItems.configFile);
 	}
 }

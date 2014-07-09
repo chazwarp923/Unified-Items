@@ -1,13 +1,10 @@
 package com.chazwarp.unifieditems.crafting;
 
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.chazwarp.unifieditems.blocks.ModBlocks;
 import com.chazwarp.unifieditems.items.ModItems;
-import com.chazwarp.unifieditems.lib.BlockInfo;
-import com.chazwarp.unifieditems.lib.ItemInfo;
 
 import cpw.mods.fml.common.registry.GameRegistry;
 

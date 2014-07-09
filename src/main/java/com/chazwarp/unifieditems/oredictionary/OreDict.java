@@ -2,7 +2,6 @@ package com.chazwarp.unifieditems.oredictionary;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -35,6 +34,7 @@ public class OreDict {
 	
 		public static void addBronze() {
 			OreDictionary.registerOre("ingotBronze", new ItemStack(ModItems.ingotBronze));
+			OreDictionary.registerOre("dustBronze", new ItemStack(ModItems.dustBronze));
 			OreDictionary.registerOre("blockBronze", new ItemStack(ModBlocks.blockBronze));
 		}
 	

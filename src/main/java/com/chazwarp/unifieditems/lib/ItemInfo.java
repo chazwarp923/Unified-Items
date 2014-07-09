@@ -30,10 +30,14 @@ public class ItemInfo {
 	public static final String DUST_TIN_UNLOCALIZED_NAME = "dustTin";
 	public static final String DUST_TIN_NAME = "Tin Dust";
 	
-	//This is all the information for the Bronze Ingot
+	//This is all the information for the Bronze Ingot and dust
 	public static final String INGOT_BRONZE_KEY = "Bronze Ingot";
 	public static final String INGOT_BRONZE_UNLOCALIZED_NAME = "ingotBronze";
 	public static final String INGOT_BRONZE_NAME = "Bronze Ingot";
+	
+	public static final String DUST_BRONZE_KEY = "Bronze Dust";
+	public static final String DUST_BRONZE_UNLOCALIZED_NAME = "dustBronze";
+	public static final String DUST_BRONZE_NAME = "Bronze Dust";
 	
 	//This is all the information for the Silver Ingot and dust
 	public static final String INGOT_SILVER_KEY = "Silver Ingot";

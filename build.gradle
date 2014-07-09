@@ -22,12 +22,8 @@ group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-
 archivesBaseName = "unifieditems"
 
 minecraft {
-    version = "1.7.10-10.13.0.1152"
-    if(file('../run').exists()) {
-        assetsDir = "../run/assets"
-    } else {
-        assetsDir = "assets"
-    }
+    version = "1.7.10-10.13.0.1170"
+    assetsDir = "E:/Development/Forge 1.7/run/assets"
 }
 
 dependencies {

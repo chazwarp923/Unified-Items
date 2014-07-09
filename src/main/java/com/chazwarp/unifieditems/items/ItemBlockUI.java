@@ -1,11 +1,16 @@
+/**
+@author Chaz Kerby
+*/
+
 package com.chazwarp.unifieditems.items;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 
-public class ItemRubberTap extends ItemBlock {
-	
-	public ItemRubberTap(int id) {
-		super(id);
+public class ItemBlockUI extends ItemBlock{
+
+	public ItemBlockUI(Block block) {
+		super(block);
 		setHasSubtypes(true);
 	}
 	
