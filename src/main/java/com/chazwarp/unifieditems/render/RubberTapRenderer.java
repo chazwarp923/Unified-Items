@@ -12,6 +12,7 @@ import net.minecraft.world.World;
 
 import org.lwjgl.opengl.GL11;
 
+import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.models.ModelRubberTap;
 
 public class RubberTapRenderer extends TileEntitySpecialRenderer {
@@ -33,7 +34,7 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
         public void renderTileEntityAt(TileEntity te, double x, double y, double z, float scale) {
                 GL11.glPushMatrix();
                 GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-                ResourceLocation textures = (new ResourceLocation("uniitems:textures/models/Model_Rubber_Tap.png"));
+                ResourceLocation textures = (new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/models/Model_Rubber_Tap.png"));
                 Minecraft.getMinecraft().renderEngine.bindTexture(textures);
                      
                 GL11.glPushMatrix();
@@ -45,7 +46,7 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
       
         private void adjustLightFixture(World world, int i, int j, int k, Block block) {
                 Tessellator tess = Tessellator.instance;
-                float brightness = block.getBlockBrightness(world, i, j, k);
+                float brightness = block.getLightValue(world, i, j, k);
                 int skyLight = world.getLightBrightnessForSkyBlocks(i, j, k, 0);
                 int modulousModifier = skyLight % 65536;
                 int divModifier = skyLight / 65536;

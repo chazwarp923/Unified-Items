@@ -1,30 +1,34 @@
 package com.chazwarp.unifieditems.crafting;
 
-import com.chazwarp.unifieditems.blocks.ModBlocks;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
+import net.minecraft.inventory.IInventory;
+import net.minecraft.item.ItemStack;
+
 import com.chazwarp.unifieditems.items.ModItems;
 
-import net.minecraft.block.Block;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.OreDictionary;
-import cpw.mods.fml.common.ICraftingHandler;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
-public class CraftingHandler implements ICraftingHandler{
+public class CraftingHandler {
 
-	@Override
-	public void onCrafting(EntityPlayer player, ItemStack item, IInventory inv) 
-	{
+	@SuppressWarnings("unused")
+	@SubscribeEvent
+	public void onCrafting(ItemCraftedEvent event) {
+		EntityPlayer player = event.player;
+		ItemStack stack = event.crafting;
+		IInventory inv = event.craftMatrix;
+		
 		//Helps The Torch Recipe
 	  	for(int i=0; i < inv.getSizeInventory(); i++)
 		{        	
 	    	if(inv.getStackInSlot(i) != null)
 	    	{
 	    		ItemStack j = inv.getStackInSlot(i);
-	    		if(j.getItem() != null && j.getItem() == Item.flintAndSteel)
+	    		if(j.getItem() != null && j.getItem() == Items.flint_and_steel)
 	    		{
-	    			ItemStack k = new ItemStack(Item.flintAndSteel, 2, (j.getItemDamage() + 1));
+	    			ItemStack k = new ItemStack(Items.flint_and_steel, 2, (j.getItemDamage() + 1));
 	    			if(k.getItemDamage() == k.getMaxDamage()) {
 	    				k = null;
 	    			}
@@ -51,7 +55,7 @@ public class CraftingHandler implements ICraftingHandler{
 		}
 	  	
 	  	//Helps The Flint Recipe
-	  	ItemStack GravelStack = new ItemStack(Block.gravel);
+	  	ItemStack GravelStack = new ItemStack(Blocks.gravel);
 	  	
 	  	for(int i=0; i < inv.getSizeInventory(); i++)
 		{        	
@@ -65,10 +69,5 @@ public class CraftingHandler implements ICraftingHandler{
 	    		}
 	    	}  
 		}
-	}
-
-	@Override
-	public void onSmelting(EntityPlayer player, ItemStack item) {
-		
 	}
 }
