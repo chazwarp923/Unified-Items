@@ -59,7 +59,7 @@ public class ItemInfo {
 	
 	//This is all the information for Raw Rubber
 	public static final String RAW_RUBBER_KEY = "Raw Rubber";
-	public static final String RAW_RUBBER_UNLOCALIZED_NAME = "rubberRaw";
+	public static final String RAW_RUBBER_UNLOCALIZED_NAME = "rawRubber";
 	public static final String RAW_RUBBER_NAME = "Raw Rubber";
 	
 	//This is all the information for the Rubber Bar

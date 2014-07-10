@@ -13,25 +13,21 @@ import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
 public class BlockRubberTap extends BlockContainer {
 	
 	public BlockRubberTap(Material mat) {
-		super(mat);
-		
+		super(mat);	
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
-		setStepSound(Block.soundTypeStone);
+		setStepSound(Block.soundTypeMetal);
 		setBlockName(BlockInfo.RUBBER_TAP_UNLOCALIZED_NAME);
-		setBlockTextureName("minecraft" + ":" + "oak_planks");
 		setBlockBounds(0.3F, 0.25F, 0.6F, 0.7000F, 0.55F, 1.0F);		
 	}
 	
 	@Override
-	public boolean isOpaqueCube()
-    {
+	public boolean isOpaqueCube() {
         return false;
     }
 	
 	@Override
-	public boolean renderAsNormalBlock()
-    {
+	public boolean renderAsNormalBlock() {
         return false;
     }
 	

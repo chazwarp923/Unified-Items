@@ -5,6 +5,9 @@ import java.io.File;
 import com.chazwarp.unifieditems.blocks.ModBlocks;
 import com.chazwarp.unifieditems.compat.ModExistence;
 import com.chazwarp.unifieditems.config.ConfigHandler;
+import com.chazwarp.unifieditems.crafting.Shaped;
+import com.chazwarp.unifieditems.crafting.Shapeless;
+import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.items.ModItems;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.oredictionary.OreDict;
@@ -42,7 +45,6 @@ public class UnifiedItems {
         //Registers The Blocks And Items
         	ModBlocks.initBlocks();
         	ModItems.initItems();
-        	ModItems.initItemBlocks();
 
         //Registers World Gen
         	new WorldGenHandler();
@@ -62,13 +64,18 @@ public class UnifiedItems {
        
         @Mod.EventHandler
         public void Init(FMLInitializationEvent event) {
-        	OreDict.registerAll();        	
-        	FMLCommonHandler.instance().bus().register(instance);
+        	//Registers Everything TO The Ore Dictionary
+        		OreDict.registerAll();
+        	//Adds All The Crafting Related Stuff
+        		Shaped.addCrafting();
+        		Shapeless.addCrafting();
+        		Smelting.addSmelting(); 
+        	//Registers The Instance Of The Mod
+        		FMLCommonHandler.instance().bus().register(instance);
         }
        
         @Mod.EventHandler
-        public void postInit(FMLPostInitializationEvent event) {
-        
+        public void postInit(FMLPostInitializationEvent event) {        
         //Adds additional ores per vein if other mods are installed
         	ModExistence.Compat();
         }

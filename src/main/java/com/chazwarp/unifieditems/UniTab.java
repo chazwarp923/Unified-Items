@@ -17,7 +17,7 @@ public class UniTab extends CreativeTabs
     
     @Override
     public ItemStack getIconItemStack() {
-    	return new ItemStack(ModBlocks.blockBronze, 1, 0);
+    	return new ItemStack(ModBlocks.oreCopper);
     }
 
 	@Override
