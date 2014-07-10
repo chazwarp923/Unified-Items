@@ -8,6 +8,7 @@ import com.chazwarp.unifieditems.config.ConfigHandler;
 import com.chazwarp.unifieditems.items.ModItems;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.oredictionary.OreDict;
+import com.chazwarp.unifieditems.world.WorldGenHandler;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;
@@ -34,8 +35,8 @@ public class UnifiedItems {
         public void preInit(FMLPreInitializationEvent event) {
         	
         //Does Config Things
-        	ConfigHandler.init(event.getSuggestedConfigurationFile());
         	configFile = event.getSuggestedConfigurationFile();
+        	ConfigHandler.init(configFile);
         	FMLCommonHandler.instance().bus().register(new ConfigHandler());
         	
         //Registers The Blocks And Items
@@ -44,7 +45,7 @@ public class UnifiedItems {
         	ModItems.initItemBlocks();
 
         //Registers World Gen
-        	//new WorldGenHandler();
+        	new WorldGenHandler();
         	
         //Registers Things With The Proxy
         	proxy.registerRenderers();
