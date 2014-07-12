@@ -18,7 +18,10 @@ public class BlockRubberTap extends BlockContainer {
 		setHardness(2F);
 		setStepSound(Block.soundTypeMetal);
 		setBlockName(BlockInfo.RUBBER_TAP_UNLOCALIZED_NAME);
-		setBlockBounds(0.3F, 0.25F, 0.6F, 0.7000F, 0.55F, 1.0F);		
+		setBlockTextureName("minecraft" + ":" + "anvil_base");
+		setBlockBounds(0.3F, 0.25F, 0.6F, 0.7F, 0.55F, 1.0F);
+		setLightOpacity(0);
+		//--username chazkirby@me.com --password 080398ck
 	}
 	
 	@Override

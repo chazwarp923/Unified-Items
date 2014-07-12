@@ -23,7 +23,8 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
                 this.model = new ModelRubberTap();
         }
        
-        private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
+        @SuppressWarnings("unused")
+		private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
                 int meta = world.getBlockMetadata(x, y, z);
                 GL11.glPushMatrix();
                 GL11.glRotatef(meta * (-90), 0.0F, 0.0F, 1.0F);
@@ -44,7 +45,8 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
                 GL11.glPopMatrix();
         }
       
-        private void adjustLightFixture(World world, int i, int j, int k, Block block) {
+        @SuppressWarnings("unused")
+		private void adjustLightFixture(World world, int i, int j, int k, Block block) {
                 Tessellator tess = Tessellator.instance;
                 float brightness = block.getLightValue(world, i, j, k);
                 int skyLight = world.getLightBrightnessForSkyBlocks(i, j, k, 0);
