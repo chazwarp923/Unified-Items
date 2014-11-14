@@ -21,7 +21,6 @@ public class BlockRubberTap extends BlockContainer {
 		setBlockTextureName("minecraft" + ":" + "anvil_base");
 		setBlockBounds(0.3F, 0.25F, 0.6F, 0.7F, 0.55F, 1.0F);
 		setLightOpacity(0);
-		//--username chazkirby@me.com --password 080398ck
 	}
 	
 	@Override
