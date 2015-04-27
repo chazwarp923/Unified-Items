@@ -40,6 +40,6 @@ public class Shapeless {
 	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModItems.dustLead, 2), new Object[] {"oreLead", "craftingMortarAndPestle"}));
 	
 	//Miscellaneous Recipes
-	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.torch, 1), new Object[] {"stickWood", "craftingFlintAndSteel"}));
+	GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(Blocks.torch, 2), new Object[] {"stickWood", "craftingFlintAndSteel"}));
 	}
 }

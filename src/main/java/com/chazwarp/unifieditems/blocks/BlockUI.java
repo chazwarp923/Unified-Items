@@ -17,10 +17,10 @@ public class BlockUI extends Block {
 	public static String PICKAXE = "pickaxe";
 	public static String SHOVEL = "spade";	
 	
-	public static String LVL_0 = "Wood";
-	public static String LVL_1 = "Stone";
-	public static String LVL_2 = "Iron";
-	public static String LVL_3 = "Diamond";
+	public static int WOOD = 0;
+	public static int STONE = 1;
+	public static int IRON = 2;
+	public static int DIAMOND = 3;
 	
 	protected BlockUI(Material mat, float hardness, SoundType sound, String unlocalizedName, String harvestTool, int harvestLevel) {
 		super(mat);

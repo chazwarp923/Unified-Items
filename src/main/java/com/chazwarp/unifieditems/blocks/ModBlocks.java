@@ -19,86 +19,28 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
 
-	public static Block oreCopper;
+	public static Block oreCopper = new BlockUI(Material.rock, 2F, Block.soundTypeStone, BlockInfo.COPPER_ORE_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.STONE);
+	public static Block blockCopper = new BlockUI(Material.iron, 2F, Block.soundTypeMetal, BlockInfo.COPPER_BLOCK_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block oreTin = new BlockUI(Material.rock, 2F, Block.soundTypeStone, BlockInfo.TIN_ORE_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.STONE);
+	public static Block blockTin = new BlockUI(Material.iron, 2F, Block.soundTypeMetal, BlockInfo.TIN_BLOCK_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block blockBronze = new BlockUI(Material.iron, 2F, Block.soundTypeMetal, BlockInfo.BRONZE_BLOCK_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block oreSilver = new BlockUI(Material.rock, 2F, Block.soundTypeStone, BlockInfo.SILVER_ORE_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block blockSilver = new BlockUI(Material.iron, 2F, Block.soundTypeMetal, BlockInfo.SILVER_BLOCK_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block oreLead = new BlockUI(Material.rock, 2F, Block.soundTypeStone, BlockInfo.LEAD_ORE_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block blockLead = new BlockUI(Material.iron, 2F, Block.soundTypeMetal, BlockInfo.LEAD_BLOCK_UNLOCALIZED_NAME, BlockUI.PICKAXE, BlockUI.IRON);
+	public static Block rubberTap = new BlockRubberTap();
 	
-		public static void initOreCopper() {
-			oreCopper = new BlockCopperOre(Material.rock);
-			GameRegistry.registerBlock(oreCopper, ItemBlockCopperOre.class, BlockInfo.COPPER_ORE_KEY);
-		}
 	
-	public static Block blockCopper;
-	
-		public static void initBlockCopper() {
-			blockCopper = new BlockCopper(Material.iron);
-			GameRegistry.registerBlock(blockCopper, ItemBlockCopper.class, BlockInfo.COPPER_BLOCK_KEY);
-		}
-	
-	public static Block oreTin;
-
-		public static void initOreTin() {
-			oreTin = new BlockTinOre(Material.rock);
-			GameRegistry.registerBlock(oreTin, ItemBlockTinOre.class, BlockInfo.TIN_ORE_KEY);
-		}	
-
-	public static Block blockTin;
-	
-		public static void initBlockTin() {
-			blockTin = new BlockTin(Material.iron);
-			GameRegistry.registerBlock(blockTin, ItemBlockTin.class, BlockInfo.TIN_BLOCK_KEY);
-		}	
-	
-	public static Block blockBronze;
-	
-		public static void initBlockBronze() {
-			blockBronze = new BlockBronze(Material.iron);
-			GameRegistry.registerBlock(blockBronze, ItemBlockBronze.class, BlockInfo.BRONZE_BLOCK_KEY);
-		}	
-	
-	public static Block oreSilver;
-
-		public static void initOreSilver() {
-			oreSilver = new BlockSilverOre(Material.rock);
-			GameRegistry.registerBlock(oreSilver, ItemBlockSilverOre.class, BlockInfo.SILVER_ORE_KEY);
-		}	
-
-	public static Block blockSilver;
-	
-		public static void initBlockSilver() {
-			blockSilver = new BlockSilver(Material.iron);
-			GameRegistry.registerBlock(blockSilver, ItemBlockSilver.class, BlockInfo.SILVER_BLOCK_KEY);
-		}
-	
-	public static Block oreLead;
-
-		public static void initOreLead() {
-			oreLead = new BlockLeadOre(Material.rock);
-			GameRegistry.registerBlock(oreLead, ItemBlockLeadOre.class, BlockInfo.LEAD_ORE_KEY);
-		}	
-
-	public static Block blockLead;
-	
-		public static void initBlockLead() {
-			blockLead = new BlockLead(Material.iron);
-			GameRegistry.registerBlock(blockLead, ItemBlockLead.class, BlockInfo.LEAD_BLOCK_KEY);
-		}	
-		
-	public static Block rubberTap;
-		
-		public static void initRubberTap() {
-			rubberTap = new BlockRubberTap(Material.iron);
-			GameRegistry.registerBlock(rubberTap, ItemBlockRubberTap.class, BlockInfo.RUBBER_TAP_KEY);
-		}
-	
-	public static void initBlocks() {
-		initOreCopper();
-		initOreTin();
-		initOreSilver();
-		initOreLead();
-		initBlockCopper();
-		initBlockTin(); 
-		initBlockBronze();
-		initBlockSilver();
-		initBlockLead();
-		initRubberTap(); 
+	public static void registerBlocks() {
+		GameRegistry.registerBlock(oreCopper, ItemBlockCopperOre.class, BlockInfo.COPPER_ORE_KEY);
+		GameRegistry.registerBlock(oreTin, ItemBlockTinOre.class, BlockInfo.TIN_ORE_KEY);
+		GameRegistry.registerBlock(oreSilver, ItemBlockSilverOre.class, BlockInfo.SILVER_ORE_KEY);
+		GameRegistry.registerBlock(oreLead, ItemBlockLeadOre.class, BlockInfo.LEAD_ORE_KEY);
+		GameRegistry.registerBlock(blockCopper, ItemBlockCopper.class, BlockInfo.COPPER_BLOCK_KEY);
+		GameRegistry.registerBlock(blockTin, ItemBlockTin.class, BlockInfo.TIN_BLOCK_KEY);
+		GameRegistry.registerBlock(blockBronze, ItemBlockBronze.class, BlockInfo.BRONZE_BLOCK_KEY);
+		GameRegistry.registerBlock(blockSilver, ItemBlockSilver.class, BlockInfo.SILVER_BLOCK_KEY);
+		GameRegistry.registerBlock(blockLead, ItemBlockLead.class, BlockInfo.LEAD_BLOCK_KEY);
+		GameRegistry.registerBlock(rubberTap, ItemBlockRubberTap.class, BlockInfo.RUBBER_TAP_KEY);
 	}
 }

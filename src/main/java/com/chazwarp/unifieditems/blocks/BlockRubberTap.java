@@ -12,8 +12,8 @@ import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
 
 public class BlockRubberTap extends BlockContainer {
 	
-	public BlockRubberTap(Material mat) {
-		super(mat);	
+	public BlockRubberTap() {
+		super(Material.iron);
 		setCreativeTab(UniTab.tab);
 		setHardness(2F);
 		setStepSound(Block.soundTypeMetal);
@@ -39,7 +39,7 @@ public class BlockRubberTap extends BlockContainer {
 	}
 
 	@Override
-	public TileEntity createNewTileEntity(World world, int integer) {
+	public TileEntity createNewTileEntity(World world, int Integer) {
 		return new TileEntityRubberTap();
 	}	
 }

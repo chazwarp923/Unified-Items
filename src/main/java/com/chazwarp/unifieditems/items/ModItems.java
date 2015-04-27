@@ -26,17 +26,19 @@ public class ModItems {
 		GameRegistry.registerItem(dustIron, ItemInfo.DUST_IRON_KEY);
 		GameRegistry.registerItem(dustGold, ItemInfo.DUST_GOLD_KEY);
 		GameRegistry.registerItem(dustCopper, ItemInfo.DUST_COPPER_KEY);
-		GameRegistry.registerItem(ingotCopper, ItemInfo.INGOT_COPPER_KEY);
 		GameRegistry.registerItem(dustTin, ItemInfo.DUST_TIN_KEY);
-		GameRegistry.registerItem(ingotTin, ItemInfo.INGOT_TIN_KEY);
-		GameRegistry.registerItem(dustBronze, ItemInfo.DUST_BRONZE_NAME);
-		GameRegistry.registerItem(ingotBronze, ItemInfo.INGOT_BRONZE_NAME);
 		GameRegistry.registerItem(dustSilver, ItemInfo.DUST_SILVER_KEY);
-		GameRegistry.registerItem(ingotSilver, ItemInfo.INGOT_SILVER_KEY);
 		GameRegistry.registerItem(dustLead, ItemInfo.DUST_LEAD_KEY);
+		GameRegistry.registerItem(dustBronze, ItemInfo.DUST_BRONZE_KEY);
+		
+		GameRegistry.registerItem(ingotCopper, ItemInfo.INGOT_COPPER_KEY);
+		GameRegistry.registerItem(ingotTin, ItemInfo.INGOT_TIN_KEY);
+		GameRegistry.registerItem(ingotSilver, ItemInfo.INGOT_SILVER_KEY);
 		GameRegistry.registerItem(ingotLead, ItemInfo.INGOT_LEAD_KEY);
-		GameRegistry.registerItem(rawRubber, ItemInfo.RAW_RUBBER_NAME);
-		GameRegistry.registerItem(ingotRubber, ItemInfo.INGOT_RUBBER_NAME);
-		GameRegistry.registerItem(mortarAndPestle, ItemInfo.MORTAR_AND_PESTLE_NAME);
+		GameRegistry.registerItem(ingotBronze, ItemInfo.INGOT_BRONZE_KEY);
+		
+		GameRegistry.registerItem(rawRubber, ItemInfo.RAW_RUBBER_KEY);
+		GameRegistry.registerItem(ingotRubber, ItemInfo.INGOT_RUBBER_KEY);
+		GameRegistry.registerItem(mortarAndPestle, ItemInfo.MORTAR_AND_PESTLE_KEY);
 	}
 }

@@ -1,3 +1,6 @@
+/**
+@author Chaz Kerby
+*/
 package com.chazwarp.unifieditems;
 
 import net.minecraft.creativetab.CreativeTabs;

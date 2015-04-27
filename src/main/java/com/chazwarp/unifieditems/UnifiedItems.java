@@ -11,6 +11,7 @@ import com.chazwarp.unifieditems.config.ConfigHandler;
 import com.chazwarp.unifieditems.crafting.Shaped;
 import com.chazwarp.unifieditems.crafting.Shapeless;
 import com.chazwarp.unifieditems.crafting.Smelting;
+import com.chazwarp.unifieditems.event.ItemCraftedEventHandler;
 import com.chazwarp.unifieditems.items.ModItems;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.oredictionary.OreDict;
@@ -45,8 +46,11 @@ public class UnifiedItems {
         	ConfigHandler.init(configFile);
         	FMLCommonHandler.instance().bus().register(new ConfigHandler());
         	
+        //Does Event Related Things
+        	FMLCommonHandler.instance().bus().register(new ItemCraftedEventHandler());
+        	
         //Registers The Blocks And Items
-        	ModBlocks.initBlocks();
+        	ModBlocks.registerBlocks();
         	ModItems.initItems();
 
         //Registers World Gen
