@@ -6,7 +6,7 @@ public class ItemMortarAndPestle extends ItemUI {
 
 	public ItemMortarAndPestle() {
 		super(ItemInfo.MORTAR_AND_PESTLE_UNLOCALIZED_NAME);
-        setMaxStackSize(1);
-        setMaxDamage(4);                
-    }
+		setMaxStackSize(1);
+		setMaxDamage(4);
+	}
 }

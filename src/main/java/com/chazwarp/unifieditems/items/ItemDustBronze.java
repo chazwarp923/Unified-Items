@@ -1,6 +1,6 @@
 /**
 @author Chaz Kerby
-*/
+ */
 
 package com.chazwarp.unifieditems.items;
 

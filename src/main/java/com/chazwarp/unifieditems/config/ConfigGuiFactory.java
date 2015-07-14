@@ -6,11 +6,11 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import cpw.mods.fml.client.IModGuiFactory;
 
-public class ConfigGuiFactory implements IModGuiFactory{
+public class ConfigGuiFactory implements IModGuiFactory {
 
 	@Override
 	public void initialize(Minecraft minecraftInstance) {
-		
+
 	}
 
 	@Override
@@ -24,7 +24,8 @@ public class ConfigGuiFactory implements IModGuiFactory{
 	}
 
 	@Override
-	public RuntimeOptionGuiHandler getHandlerFor(RuntimeOptionCategoryElement element) {
+	public RuntimeOptionGuiHandler getHandlerFor(
+			RuntimeOptionCategoryElement element) {
 		return null;
 	}
 }

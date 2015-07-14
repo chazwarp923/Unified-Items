@@ -22,7 +22,7 @@ group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-
 archivesBaseName = "unifieditems"
 
 minecraft {
-    version = "1.7.10-10.13.3.1388-1.7.10"
+    version = "1.7.10-10.13.3.1424-1.7.10"
     runDir = "../run"
 }
 

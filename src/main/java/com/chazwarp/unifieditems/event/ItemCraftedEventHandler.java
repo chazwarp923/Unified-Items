@@ -1,14 +1,15 @@
 /**
 @author Chaz Kerby
-*/
+ */
 
 package com.chazwarp.unifieditems.event;
-
-import com.chazwarp.unifieditems.items.ModItems;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
+
+import com.chazwarp.unifieditems.items.ModItems;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
 
@@ -16,43 +17,46 @@ public class ItemCraftedEventHandler {
 
 	@SubscribeEvent
 	public void itemCrafted(ItemCraftedEvent event) {
-		
-		//Helps The Torch Recipe
-		for(int i=0; i < event.craftMatrix.getSizeInventory(); i++) {
-			if(event.craftMatrix.getStackInSlot(i) != null) {
+
+		// Helps The Torch Recipe
+		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
+			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
-				if(j.getItem() != null && j.getItem() == Items.flint_and_steel) {
-					ItemStack k = new ItemStack(Items.flint_and_steel, 2, (j.getItemDamage() + 1));
-					if(k.getItemDamage() == k.getMaxDamage()) {
+				if (j.getItem() != null && j.getItem() == Items.flint_and_steel) {
+					ItemStack k = new ItemStack(Items.flint_and_steel, 2,
+							(j.getItemDamage() + 1));
+					if (k.getItemDamage() == k.getMaxDamage()) {
 						k = null;
 					}
 					event.craftMatrix.setInventorySlotContents(i, k);
 				}
 			}
 		}
-		
-		//Helps The Ore Recipes
-		for(int i=0; i < event.craftMatrix.getSizeInventory(); i++) {
-			if(event.craftMatrix.getStackInSlot(i) != null) {
+
+		// Helps The Ore Recipes
+		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
+			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
-				if(j.getItem() == ModItems.mortarAndPestle) {
-					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2, (j.getItemDamage() + 1));
-					if(k.getItemDamage() == k.getMaxDamage()) {
+				if (j.getItem() == ModItems.mortarAndPestle) {
+					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2,
+							(j.getItemDamage() + 1));
+					if (k.getItemDamage() == k.getMaxDamage()) {
 						k = null;
 					}
 					event.craftMatrix.setInventorySlotContents(i, k);
 				}
 			}
 		}
-		
-		//Helps The Flint Recipe
+
+		// Helps The Flint Recipe
 		ItemStack GravelStack = new ItemStack(Blocks.gravel);
-		
-		for(int i=0; i < event.craftMatrix.getSizeInventory(); i++) {
-			if(event.craftMatrix.getStackInSlot(i) != null) {
+
+		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
+			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
-				if(j != null && j == GravelStack) {
-					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2, (j.getItemDamage() + 1));
+				if (j != null && j == GravelStack) {
+					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2,
+							(j.getItemDamage() + 1));
 					event.craftMatrix.setInventorySlotContents(i, k);
 				}
 			}

@@ -11,7 +11,7 @@ import com.chazwarp.unifieditems.lib.BlockInfo;
 import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
 
 public class BlockRubberTap extends BlockContainer {
-	
+
 	public BlockRubberTap() {
 		super(Material.iron);
 		setCreativeTab(UniTab.tab);
@@ -22,24 +22,24 @@ public class BlockRubberTap extends BlockContainer {
 		setBlockBounds(0.3F, 0.25F, 0.6F, 0.7F, 0.55F, 1.0F);
 		setLightOpacity(0);
 	}
-	
+
 	@Override
 	public boolean isOpaqueCube() {
-        return false;
-    }
-	
+		return false;
+	}
+
 	@Override
 	public boolean renderAsNormalBlock() {
-        return false;
-    }
-	
+		return false;
+	}
+
 	@Override
 	public int getRenderType() {
-		return -1;	
+		return -1;
 	}
 
 	@Override
 	public TileEntity createNewTileEntity(World world, int Integer) {
 		return new TileEntityRubberTap();
-	}	
+	}
 }
