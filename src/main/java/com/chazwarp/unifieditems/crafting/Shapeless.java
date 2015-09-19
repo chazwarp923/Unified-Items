@@ -15,43 +15,13 @@ public class Shapeless {
 	public static void addCrafting() {
 
 		// Adds the recipe for bronze
-		GameRegistry
-				.addShapelessRecipe(new ItemStack(ModItems.ingotBronze, 4),
-						new ItemStack(ModItems.ingotCopper), new ItemStack(
-								ModItems.ingotCopper), new ItemStack(
-								ModItems.ingotCopper), new ItemStack(
-								ModItems.ingotTin));
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustBronze, 4),
-				new ItemStack(ModItems.dustCopper), new ItemStack(
-						ModItems.dustCopper),
-				new ItemStack(ModItems.dustCopper), new ItemStack(
-						ModItems.dustTin));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ingotBronze, 4), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotTin));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.dustBronze, 4), new ItemStack(ModItems.dustCopper), new ItemStack(ModItems.dustCopper), new ItemStack(ModItems.dustCopper), new ItemStack(ModItems.dustTin));
 
 		// Adds the recipes for all the storage blocks
-		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockCopper),
-				new ItemStack(ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper), new ItemStack(
-						ModItems.ingotCopper));
-		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockTin),
-				new ItemStack(ModItems.ingotTin), new ItemStack(
-						ModItems.ingotTin), new ItemStack(ModItems.ingotTin),
-				new ItemStack(ModItems.ingotTin), new ItemStack(
-						ModItems.ingotTin), new ItemStack(ModItems.ingotTin),
-				new ItemStack(ModItems.ingotTin), new ItemStack(
-						ModItems.ingotTin), new ItemStack(ModItems.ingotTin));
-		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockBronze),
-				new ItemStack(ModItems.ingotBronze), new ItemStack(
-						ModItems.ingotBronze), new ItemStack(
-						ModItems.ingotBronze), new ItemStack(
-						ModItems.ingotBronze), new ItemStack(
-						ModItems.ingotBronze), new ItemStack(
-						ModItems.ingotBronze), new ItemStack(
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper), new ItemStack(ModItems.ingotCopper));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin), new ItemStack(ModItems.ingotTin));
+		GameRegistry.addShapelessRecipe(new ItemStack(ModBlocks.blockBronze), new ItemStack(ModItems.ingotBronze), new ItemStack(ModItems.ingotBronze), new ItemStack(ModItems.ingotBronze), new ItemStack(ModItems.ingotBronze), new ItemStack(ModItems.ingotBronze), new ItemStack(ModItems.ingotBronze), new ItemStack(
 						ModItems.ingotBronze), new ItemStack(
 						ModItems.ingotBronze), new ItemStack(
 						ModItems.ingotBronze));

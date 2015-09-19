@@ -23,9 +23,6 @@ public class WorldGenHandler implements IWorldGenerator {
 	public WorldGenHandler() {
 		GameRegistry.registerWorldGenerator(this, 0);
 		copperGen = new WorldGenMinable(ModBlocks.oreCopper, OreGen.COPPER_VEIN);
-		tinGen = new WorldGenMinable(ModBlocks.oreTin, OreGen.TIN_VEIN);
-		silverGen = new WorldGenMinable(ModBlocks.oreSilver, OreGen.SILVER_VEIN);
-		leadGen = new WorldGenMinable(ModBlocks.oreLead, OreGen.LEAD_VEIN);
 	}
 
 	private void generateStandardOre(Random rand, int chunkX, int chunkZ,

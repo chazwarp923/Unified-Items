@@ -2,7 +2,7 @@ package com.chazwarp.unifieditems.items;
 
 import com.chazwarp.unifieditems.lib.ItemInfo;
 
-public class ItemRubber extends ItemUI {
+public class ItemRubber extends UIItem {
 
 	public ItemRubber() {
 		super(ItemInfo.INGOT_RUBBER_UNLOCALIZED_NAME);

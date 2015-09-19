@@ -6,7 +6,6 @@ package com.chazwarp.unifieditems;
 import java.io.File;
 
 import com.chazwarp.unifieditems.blocks.ModBlocks;
-import com.chazwarp.unifieditems.compat.ModExistence;
 import com.chazwarp.unifieditems.config.ConfigHandler;
 import com.chazwarp.unifieditems.crafting.Shaped;
 import com.chazwarp.unifieditems.crafting.Shapeless;
@@ -46,8 +45,7 @@ public class UnifiedItems {
 		FMLCommonHandler.instance().bus().register(new ConfigHandler());
 
 		// Does Event Related Things
-		FMLCommonHandler.instance().bus()
-				.register(new ItemCraftedEventHandler());
+		FMLCommonHandler.instance().bus().register(new ItemCraftedEventHandler());
 
 		// Registers The Blocks And Items
 		ModBlocks.registerBlocks();
@@ -62,8 +60,7 @@ public class UnifiedItems {
 		// Hard Codes The Mod Data
 		preInitEvent.getModMetadata().credits = "Reika & enderblaze2";
 		preInitEvent.getModMetadata().description = "A Mod That Unifies Your World Generation";
-		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.MOD_ID
-				+ "/textures/logo.png";
+		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.MOD_ID + "/textures/logo.png";
 		preInitEvent.getModMetadata().modId = Reference.MOD_ID;
 		preInitEvent.getModMetadata().name = Reference.MOD_NAME;
 		preInitEvent.getModMetadata().version = Reference.VERSION;
@@ -71,7 +68,7 @@ public class UnifiedItems {
 
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent initEvent) {
-		// Registers Everything TO The Ore Dictionary
+		// Registers Everything To The Ore Dictionary
 		OreDict.registerAll();
 		// Adds All The Crafting Related Stuff
 		Shaped.addCrafting();
@@ -83,7 +80,6 @@ public class UnifiedItems {
 
 	@Mod.EventHandler
 	public void postInit(FMLPostInitializationEvent postInitEvent) {
-		// Adds additional ores per vein if other mods are installed
-		ModExistence.Compat();
+		
 	}
 }

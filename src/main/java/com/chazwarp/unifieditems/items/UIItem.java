@@ -9,9 +9,9 @@ import net.minecraft.item.Item;
 import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.lib.Reference;
 
-public class ItemUI extends Item {
+public class UIItem extends Item {
 
-	protected ItemUI(String unlocalizedName) {
+	protected UIItem(String unlocalizedName) {
 		super();
 		setCreativeTab(UniTab.tab);
 		setTextureName(Reference.RESOURCE_PREFIX + unlocalizedName);

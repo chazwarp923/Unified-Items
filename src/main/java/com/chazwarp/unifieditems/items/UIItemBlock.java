@@ -2,14 +2,14 @@
 @author Chaz Kerby
  */
 
-package com.chazwarp.unifieditems.items.itemblocks;
+package com.chazwarp.unifieditems.items;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 
-public class ItemBlockUI extends ItemBlock {
+public class UIItemBlock extends ItemBlock {
 
-	public ItemBlockUI(Block block) {
+	public UIItemBlock(Block block) {
 		super(block);
 		setHasSubtypes(true);
 	}

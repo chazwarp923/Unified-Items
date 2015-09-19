@@ -21,10 +21,8 @@ public class ConfigHandler {
 
 		config.load();
 
-		config.addCustomCategoryComment(PER_VEIN,
-				"This Is How Many Ore Blocks There Will Be In A Vein Of Ore");
-		config.addCustomCategoryComment(PER_CHUNK,
-				"This Is How Many Veins Of Ore There Will Be Per Chunk");
+		config.addCustomCategoryComment(PER_VEIN, "This Is How Many Ore Blocks There Will Be In A Vein Of Ore");
+		config.addCustomCategoryComment(PER_CHUNK, "This Is How Many Veins Of Ore There Will Be Per Chunk");
 		config.setCategoryRequiresWorldRestart(PER_VEIN, true);
 		config.setCategoryRequiresWorldRestart(PER_CHUNK, true);
 
@@ -44,8 +42,7 @@ public class ConfigHandler {
 	}
 
 	@SubscribeEvent
-	public void onConfigChanged(
-			ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
+	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
 		if (eventArgs.modID.equals(Reference.MOD_ID))
 			ConfigHandler.init(UnifiedItems.configFile);
 	}
