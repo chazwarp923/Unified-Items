@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public enum MaterialType {
 	GENERIC(true, true, true, false, true),
 	METAL(false, true, true, false, true),
-	CRAFTING(false, true, true, false, true),
 	GEM(true, true, false, true, true),
 	DUST(false, true, false, false, false),
 	INGOT(false, false, true, false, false),

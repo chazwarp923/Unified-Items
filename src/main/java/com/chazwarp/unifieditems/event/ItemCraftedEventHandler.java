@@ -8,7 +8,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
-import com.chazwarp.unifieditems.items.ModItems;
+import com.chazwarp.unifieditems.items.UIItems;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
@@ -37,8 +37,8 @@ public class ItemCraftedEventHandler {
 		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
 			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
-				if (j.getItem() == ModItems.mortarAndPestle) {
-					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2,
+				if (j.getItem() == UIItems.mortarAndPestle) {
+					ItemStack k = new ItemStack(UIItems.mortarAndPestle, 2,
 							(j.getItemDamage() + 1));
 					if (k.getItemDamage() == k.getMaxDamage()) {
 						k = null;
@@ -55,7 +55,7 @@ public class ItemCraftedEventHandler {
 			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
 				if (j != null && j == GravelStack) {
-					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2,
+					ItemStack k = new ItemStack(UIItems.mortarAndPestle, 2,
 							(j.getItemDamage() + 1));
 					event.craftMatrix.setInventorySlotContents(i, k);
 				}

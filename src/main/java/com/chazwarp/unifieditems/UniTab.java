@@ -3,12 +3,12 @@
  */
 package com.chazwarp.unifieditems;
 
+import com.chazwarp.unifieditems.items.UIItems;
+
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-
-import com.chazwarp.unifieditems.blocks.ModBlocks;
 
 public class UniTab extends CreativeTabs {
 	public static UniTab tab = new UniTab();
@@ -19,7 +19,8 @@ public class UniTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ModBlocks.oreCopper);
+		return new ItemStack(Items.baked_potato);
+				//UIItems.getStackForCreativeTab();
 	}
 
 	@Override

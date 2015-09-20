@@ -7,7 +7,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-import com.chazwarp.unifieditems.blocks.ModBlocks;
+import com.chazwarp.unifieditems.blocks.UIBlocks;
 import com.chazwarp.unifieditems.lib.OreGen;
 
 import cpw.mods.fml.common.IWorldGenerator;
@@ -22,7 +22,7 @@ public class WorldGenHandler implements IWorldGenerator {
 
 	public WorldGenHandler() {
 		GameRegistry.registerWorldGenerator(this, 0);
-		copperGen = new WorldGenMinable(ModBlocks.oreCopper, OreGen.COPPER_VEIN);
+		//copperGen = new WorldGenMinable(UIBlocks.oreCopper, OreGen.COPPER_VEIN);
 	}
 
 	private void generateStandardOre(Random rand, int chunkX, int chunkZ,

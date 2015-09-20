@@ -3,11 +3,15 @@
 */
 package com.chazwarp.unifieditems.blocks;
 
+import com.chazwarp.unifieditems.lib.Reference;
+
+import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
 public class UIBlockStorage extends UIBlock {
 	
-	protected UIBlockStorage(Material mat, float hardness, SoundType sound, String unlocalizedName, String harvestTool, int harvestLevel, int hexColor) {
-		super(mat, hardness, sound, unlocalizedName, harvestTool, harvestLevel);
+	protected UIBlockStorage(float hardness, String unlocalizedName, int harvestLevel, int hexColor) {
+		super(Material.iron, hardness, Block.soundTypeMetal, unlocalizedName, UIBlock.PICKAXE, harvestLevel);
+		setBlockTextureName(Reference.RESOURCE_PREFIX + "block");
 	}
 }

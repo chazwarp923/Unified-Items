@@ -6,7 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
 
-import com.chazwarp.unifieditems.items.ModItems;
+import com.chazwarp.unifieditems.items.UIItems;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
@@ -44,8 +44,8 @@ public class Shaped {
 		for (int i = 0; i < inv.getSizeInventory(); i++) {
 			if (inv.getStackInSlot(i) != null) {
 				ItemStack j = inv.getStackInSlot(i);
-				if (j.getItem() == ModItems.mortarAndPestle) {
-					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2,
+				if (j.getItem() == UIItems.mortarAndPestle) {
+					ItemStack k = new ItemStack(UIItems.mortarAndPestle, 2,
 							(j.getItemDamage() + 1));
 					if (k.getItemDamage() == k.getMaxDamage()) {
 						k = null;
@@ -62,7 +62,7 @@ public class Shaped {
 			if (inv.getStackInSlot(i) != null) {
 				ItemStack j = inv.getStackInSlot(i);
 				if (j != null && j == GravelStack) {
-					ItemStack k = new ItemStack(ModItems.mortarAndPestle, 2,
+					ItemStack k = new ItemStack(UIItems.mortarAndPestle, 2,
 							(j.getItemDamage() + 1));
 					inv.setInventorySlotContents(i, k);
 				}

@@ -5,15 +5,15 @@ package com.chazwarp.unifieditems;
 
 import java.io.File;
 
-import com.chazwarp.unifieditems.blocks.ModBlocks;
+import com.chazwarp.unifieditems.blocks.UIBlocks;
 import com.chazwarp.unifieditems.config.ConfigHandler;
 import com.chazwarp.unifieditems.crafting.Shaped;
 import com.chazwarp.unifieditems.crafting.Shapeless;
 import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.event.ItemCraftedEventHandler;
-import com.chazwarp.unifieditems.items.ModItems;
+import com.chazwarp.unifieditems.items.UIItems;
 import com.chazwarp.unifieditems.lib.Reference;
-import com.chazwarp.unifieditems.oredictionary.OreDict;
+import com.chazwarp.unifieditems.material.MaterialHandler;
 import com.chazwarp.unifieditems.world.WorldGenHandler;
 
 import cpw.mods.fml.common.FMLCommonHandler;
@@ -48,8 +48,10 @@ public class UnifiedItems {
 		FMLCommonHandler.instance().bus().register(new ItemCraftedEventHandler());
 
 		// Registers The Blocks And Items
-		ModBlocks.registerBlocks();
-		ModItems.initItems();
+		ModDetector.preInit();
+		MaterialHandler.addBlocksAndItemsForMaterials();
+		UIBlocks.registerBlocks();
+		UIItems.initItems();
 
 		// Registers World Gen
 		new WorldGenHandler();
@@ -69,7 +71,7 @@ public class UnifiedItems {
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent initEvent) {
 		// Registers Everything To The Ore Dictionary
-		OreDict.registerAll();
+		//OreDict.registerAll();
 		// Adds All The Crafting Related Stuff
 		Shaped.addCrafting();
 		Shapeless.addCrafting();

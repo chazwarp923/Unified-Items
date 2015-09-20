@@ -1,14 +1,14 @@
 /**
 @author Chaz Kerby
 */
-package com.chazwarp.unifieditems.modules;
+package com.chazwarp.unifieditems.modular.modules;
 
 import com.chazwarp.unifieditems.material.MaterialRegistry;
+import com.chazwarp.unifieditems.modular.UIModule;
 
 public class ThermalExpansion extends UIModule {
 
-	@Override
-	public void instantiateModule() {
+	public ThermalExpansion() {
 		usesMaterial(MaterialRegistry.COPPER);
 		usesMaterial(MaterialRegistry.TIN);
 		usesMaterial(MaterialRegistry.BRONZE);
