@@ -11,9 +11,9 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class UIItems {
 
-	protected static Map<String, UIItemDust> dusts = new HashMap<String, UIItemDust>();
-	protected static Map<String, UIItemIngot> ingots = new HashMap<String, UIItemIngot>();
-	protected static Map<String, UIItemGem> gems = new HashMap<String, UIItemGem>();
+	public static Map<String, UIItemDust> dusts = new HashMap<String, UIItemDust>();
+	public static Map<String, UIItemIngot> ingots = new HashMap<String, UIItemIngot>();
+	public static Map<String, UIItemGem> gems = new HashMap<String, UIItemGem>();
 	
 	public static void addDust(String matName, String unlocalizedName, int hexColor) {
 		dusts.put(matName, new UIItemDust(unlocalizedName, hexColor));

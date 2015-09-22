@@ -19,8 +19,7 @@ public class UniTab extends CreativeTabs {
 
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(Items.baked_potato);
-				//UIItems.getStackForCreativeTab();
+		return UIItems.getStackForCreativeTab();
 	}
 
 	@Override

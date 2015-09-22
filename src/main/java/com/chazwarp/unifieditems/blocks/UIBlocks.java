@@ -12,15 +12,15 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class UIBlocks {
 
-	protected static Map<String, UIBlockOre> ores = new HashMap<String, UIBlockOre>();
-	protected static Map<String, UIBlockStorage> blocks = new HashMap<String, UIBlockStorage>();
+	public static Map<String, UIBlockOre> ores = new HashMap<String, UIBlockOre>();
+	public static Map<String, UIBlockStorage> blocks = new HashMap<String, UIBlockStorage>();
 	
 	public static void addOre(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor, Block baseTex) {
-		ores.put(matName, new UIBlockOre(hardness, unlocalizedName, harvestLevel, hexColor, baseTex));
+		ores.put(matName, new UIBlockOre(matName, hardness, unlocalizedName, harvestLevel, hexColor, baseTex));
 	}
 	
 	public static void addBlock(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor) {
-		blocks.put(matName, new UIBlockStorage(hardness, unlocalizedName, harvestLevel, hexColor));
+		blocks.put(matName, new UIBlockStorage(matName, hardness, unlocalizedName, harvestLevel, hexColor));
 	}
 	
 	public static Block rubberTap = new BlockRubberTap();

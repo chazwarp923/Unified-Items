@@ -8,7 +8,7 @@ import net.minecraft.init.Blocks;
 
 public enum MaterialRegistry {
 	
-	COAL(MaterialType.GEM, "Coal", 0x404040),
+	COAL(MaterialType.DUST, "Coal", 0x404040),
 	IRON(MaterialType.DUST, "Iron", 0xCABAB5, 2F, 2, Blocks.stone),
 	GOLD(MaterialType.DUST, "Gold", 0xFFFF48, 2F, 3, Blocks.stone),
 	COPPER(MaterialType.GENERIC, "Copper", 0xFFA700, 2F, 1, Blocks.stone),

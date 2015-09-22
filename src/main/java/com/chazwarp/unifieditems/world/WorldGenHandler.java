@@ -25,9 +25,7 @@ public class WorldGenHandler implements IWorldGenerator {
 		//copperGen = new WorldGenMinable(UIBlocks.oreCopper, OreGen.COPPER_VEIN);
 	}
 
-	private void generateStandardOre(Random rand, int chunkX, int chunkZ,
-			World world, int iterations, WorldGenerator gen, int LowestY,
-			int HighestY) {
+	private void generateStandardOre(Random rand, int chunkX, int chunkZ, World world, int iterations, WorldGenerator gen, int LowestY, int HighestY) {
 		for (int i = 0; i < iterations; i++) {
 			int x = chunkX * 16 + rand.nextInt(16);
 			int y = rand.nextInt(HighestY - LowestY) + LowestY;

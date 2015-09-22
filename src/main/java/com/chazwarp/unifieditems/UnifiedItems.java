@@ -54,13 +54,13 @@ public class UnifiedItems {
 		UIItems.initItems();
 
 		// Registers World Gen
-		new WorldGenHandler();
+		//new WorldGenHandler();
 
 		// Registers Things With The Proxy
 		proxy.registerRenderers();
 
 		// Hard Codes The Mod Data
-		preInitEvent.getModMetadata().credits = "Reika & enderblaze2";
+		preInitEvent.getModMetadata().credits = "Reika, enderblaze2 & ganymedes01";
 		preInitEvent.getModMetadata().description = "A Mod That Unifies Your World Generation";
 		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.MOD_ID + "/textures/logo.png";
 		preInitEvent.getModMetadata().modId = Reference.MOD_ID;
