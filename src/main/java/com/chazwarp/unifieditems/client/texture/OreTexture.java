@@ -83,8 +83,9 @@ public class OreTexture extends TextureAtlasSprite {
 		int height = oreImage[0].getHeight();
 		
 		
-		Color tempColor = new Color(hexColor);
-		oreImage[0] = ColorizingHelper.colorizeImage(oreImage[0], (short)tempColor.getRed(), (short)tempColor.getGreen(), (short)tempColor.getBlue());
+		Color cwoa = new Color(hexColor);
+		Color colorWithAlpha = new Color(cwoa.getRed(), cwoa.getGreen(), cwoa.getBlue(), 160);
+		oreImage[0] = ColorizingHelper.colorizeImage(oreImage[0], colorWithAlpha);
 		
 		BufferedImage finishedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 		
