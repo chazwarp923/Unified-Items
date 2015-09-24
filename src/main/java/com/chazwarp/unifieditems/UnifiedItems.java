@@ -14,7 +14,6 @@ import com.chazwarp.unifieditems.event.ItemCraftedEventHandler;
 import com.chazwarp.unifieditems.items.UIItems;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.material.MaterialHandler;
-import com.chazwarp.unifieditems.world.WorldGenHandler;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.Mod;

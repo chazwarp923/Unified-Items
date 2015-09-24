@@ -1,13 +1,5 @@
 package com.chazwarp.unifieditems.crafting;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-
-import com.chazwarp.unifieditems.blocks.UIBlocks;
-import com.chazwarp.unifieditems.items.UIItems;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-
 public class Smelting {
 
 	public static void addSmelting() {

@@ -16,7 +16,7 @@ public class UIBlocks {
 	public static Map<String, UIBlockStorage> blocks = new HashMap<String, UIBlockStorage>();
 	
 	public static void addOre(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor, Block baseTex) {
-		ores.put(matName, new UIBlockOre(matName, hardness, unlocalizedName, harvestLevel, hexColor, baseTex));
+		ores.put(matName, new UIBlockOre(hardness, unlocalizedName, harvestLevel, hexColor, baseTex));
 	}
 	
 	public static void addBlock(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor) {
@@ -27,12 +27,12 @@ public class UIBlocks {
 
 	public static void registerBlocks() {
 		for(Map.Entry<String, UIBlockOre> block : ores.entrySet()) {
-			GameRegistry.registerBlock(block.getValue(), block.getKey() + " Ore");
+			GameRegistry.registerBlock(block.getValue(), "ore" + block.getKey());
 			OreDictionary.registerOre("ore" + block.getKey(), block.getValue());
 		}
 		
 		for(Map.Entry<String, UIBlockStorage> block : blocks.entrySet()) {
-			GameRegistry.registerBlock(block.getValue(), UIItemBlock.class, block.getKey() + " Block");
+			GameRegistry.registerBlock(block.getValue(), UIItemBlock.class, "block" + block.getKey());
 			OreDictionary.registerOre("block" + block.getKey(), block.getValue());
 		}
 		

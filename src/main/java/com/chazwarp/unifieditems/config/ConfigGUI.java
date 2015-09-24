@@ -3,14 +3,13 @@ package com.chazwarp.unifieditems.config;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraftforge.common.config.ConfigElement;
-
 import com.chazwarp.unifieditems.UnifiedItems;
 import com.chazwarp.unifieditems.lib.Reference;
 
 import cpw.mods.fml.client.config.GuiConfig;
 import cpw.mods.fml.client.config.IConfigElement;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraftforge.common.config.ConfigElement;
 
 public class ConfigGUI extends GuiConfig {
 

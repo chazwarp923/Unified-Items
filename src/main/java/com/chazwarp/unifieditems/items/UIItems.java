@@ -33,23 +33,23 @@ public class UIItems {
 
 	public static void initItems() {
 		for(Map.Entry<String, UIItemDust> item : dusts.entrySet()) {
-			GameRegistry.registerItem(item.getValue(), item.getKey() + " Dust");
+			GameRegistry.registerItem(item.getValue(), "dust" + item.getKey());
 			OreDictionary.registerOre("dust" + item.getKey(), item.getValue());
 		}
 		
 		for(Map.Entry<String, UIItemIngot> item : ingots.entrySet()) {
-			GameRegistry.registerItem(item.getValue(), item.getKey() + " Ingot");
+			GameRegistry.registerItem(item.getValue(), "ingot" + item.getKey());
 			OreDictionary.registerOre("ingot" + item.getKey(), item.getValue());
 		}
 		
 		for(Map.Entry<String, UIItemGem> item : gems.entrySet()) {
-			GameRegistry.registerItem(item.getValue(), item.getKey() + " Gem");
+			GameRegistry.registerItem(item.getValue(), "gem" + item.getKey());
 			OreDictionary.registerOre("gem" + item.getKey(), item.getValue());
 		}
 
-		GameRegistry.registerItem(rawRubber, ItemInfo.RAW_RUBBER_KEY);
-		GameRegistry.registerItem(ingotRubber, ItemInfo.INGOT_RUBBER_KEY);
-		GameRegistry.registerItem(mortarAndPestle, ItemInfo.MORTAR_AND_PESTLE_KEY);
+		GameRegistry.registerItem(rawRubber, ItemInfo.RAW_RUBBER_UNLOCALIZED_NAME);
+		GameRegistry.registerItem(ingotRubber, ItemInfo.INGOT_RUBBER_UNLOCALIZED_NAME);
+		GameRegistry.registerItem(mortarAndPestle, ItemInfo.MORTAR_AND_PESTLE_UNLOCALIZED_NAME);
 	}
 	
 	public static ItemStack getStackForCreativeTab() {

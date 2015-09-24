@@ -1,14 +1,14 @@
 package com.chazwarp.unifieditems.blocks;
 
+import com.chazwarp.unifieditems.UniTab;
+import com.chazwarp.unifieditems.lib.BlockInfo;
+import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.world.World;
-
-import com.chazwarp.unifieditems.UniTab;
-import com.chazwarp.unifieditems.lib.BlockInfo;
-import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
 
 public class BlockRubberTap extends BlockContainer {
 

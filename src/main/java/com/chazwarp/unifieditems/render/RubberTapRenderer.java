@@ -1,5 +1,10 @@
 package com.chazwarp.unifieditems.render;
 
+import org.lwjgl.opengl.GL11;
+
+import com.chazwarp.unifieditems.lib.Reference;
+import com.chazwarp.unifieditems.models.ModelRubberTap;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.OpenGlHelper;
@@ -9,11 +14,6 @@ import net.minecraft.entity.Entity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-
-import org.lwjgl.opengl.GL11;
-
-import com.chazwarp.unifieditems.lib.Reference;
-import com.chazwarp.unifieditems.models.ModelRubberTap;
 
 public class RubberTapRenderer extends TileEntitySpecialRenderer {
 

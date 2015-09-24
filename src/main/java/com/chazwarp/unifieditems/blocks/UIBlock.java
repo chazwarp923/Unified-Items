@@ -4,11 +4,11 @@
 
 package com.chazwarp.unifieditems.blocks;
 
-import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
-
 import com.chazwarp.unifieditems.UniTab;
 import com.chazwarp.unifieditems.lib.Reference;
+
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 
 public class UIBlock extends Block {
 

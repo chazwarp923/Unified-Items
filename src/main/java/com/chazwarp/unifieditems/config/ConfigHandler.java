@@ -2,14 +2,13 @@ package com.chazwarp.unifieditems.config;
 
 import java.io.File;
 
-import net.minecraftforge.common.config.Configuration;
-
 import com.chazwarp.unifieditems.UnifiedItems;
 import com.chazwarp.unifieditems.lib.OreGen;
 import com.chazwarp.unifieditems.lib.Reference;
 
 import cpw.mods.fml.client.event.ConfigChangedEvent;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.common.config.Configuration;
 
 public class ConfigHandler {
 

@@ -24,13 +24,13 @@ import net.minecraft.client.resources.data.AnimationMetadataSection;
 import net.minecraft.util.ResourceLocation;
 
 @SideOnly(Side.CLIENT)
-public class OreTexture extends TextureAtlasSprite {
+public class TextureOre extends TextureAtlasSprite {
 
 	private String backgroundTex;
 	private int hexColor;
 	
-	public OreTexture(String background, int hexColor) {
-		super(Reference.RESOURCE_PREFIX + "textures/blocks/oreOverlay.png");
+	public TextureOre(String unlocalizedName, String background, int hexColor) {
+		super(Reference.RESOURCE_PREFIX + unlocalizedName);
 		this.backgroundTex = background;
 		this.hexColor = hexColor;
 	}
@@ -61,7 +61,7 @@ public class OreTexture extends TextureAtlasSprite {
 			width = oreImage[0].getWidth();
 			
 			if(stoneImage.getWidth() != width) {
-				List resourcePacks = manager.getAllResources(new ResourceLocation("minecraft", backgroundTex));
+				List<?> resourcePacks = manager.getAllResources(new ResourceLocation("minecraft", backgroundTex));
 				for (int i = resourcePacks.size() - 1; i >= 0; --i) {
                     IResource resource = (IResource) resourcePacks.get(i);
                     stoneImage = ImageIO.read(resource.getInputStream());
@@ -84,7 +84,7 @@ public class OreTexture extends TextureAtlasSprite {
 		
 		
 		Color cwoa = new Color(hexColor);
-		Color colorWithAlpha = new Color(cwoa.getRed(), cwoa.getGreen(), cwoa.getBlue(), 160);
+		Color colorWithAlpha = new Color(cwoa.getRed(), cwoa.getGreen(), cwoa.getBlue(), 128);
 		oreImage[0] = ColorizingHelper.colorizeImage(oreImage[0], colorWithAlpha);
 		
 		BufferedImage finishedImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);

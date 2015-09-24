@@ -1,15 +1,5 @@
 package com.chazwarp.unifieditems.crafting;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import net.minecraftforge.oredict.ShapelessOreRecipe;
-
-import com.chazwarp.unifieditems.blocks.UIBlocks;
-import com.chazwarp.unifieditems.items.UIItems;
-
-import cpw.mods.fml.common.registry.GameRegistry;
-
 public class Shapeless {
 
 	public static void addCrafting() {

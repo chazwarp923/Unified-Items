@@ -3,8 +3,7 @@
 */
 package com.chazwarp.unifieditems.blocks;
 
-import com.chazwarp.unifieditems.client.texture.OreTexture;
-import com.chazwarp.unifieditems.lib.Reference;
+import com.chazwarp.unifieditems.client.texture.TextureOre;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,14 +18,12 @@ import net.minecraft.world.IBlockAccess;
 public class UIBlockOre extends UIBlock {
 	
 	private IIcon texture;
-	private String matName;
 	private String unlocalizedName;
 	private int hexColor;
 	private Block baseTex;
 	
-	public UIBlockOre(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor, Block baseTex) {
+	public UIBlockOre(float hardness, String unlocalizedName, int harvestLevel, int hexColor, Block baseTex) {
 		super(Material.rock, hardness, Block.soundTypeStone, unlocalizedName, UIBlock.PICKAXE, harvestLevel);
-		this.matName = matName;
 		this.unlocalizedName = unlocalizedName;
 		this.hexColor = hexColor;
 		this.baseTex = baseTex;
@@ -38,14 +35,13 @@ public class UIBlockOre extends UIBlock {
 		//You can never be too sure
 		if(register instanceof TextureMap) {
 			TextureMap map = (TextureMap) register;
-			String name = Reference.RESOURCE_PREFIX + "ore" + matName;
-			TextureAtlasSprite sprite = map.getTextureExtry(getTextureName());
+			String name = getTextureName();
+			TextureAtlasSprite sprite = map.getTextureExtry(name);
 			if(sprite == null) {
-				sprite = new OreTexture(baseTex.getUnlocalizedName().substring(5), hexColor);
-				map.setTextureEntry(Reference.RESOURCE_PREFIX + this.unlocalizedName, sprite);
-				System.out.println("Just tried to create new OreTexture, idk if it worked though");
+				sprite = new TextureOre(this.unlocalizedName, baseTex.getUnlocalizedName().substring(5), hexColor);
+				map.setTextureEntry(name, sprite);
 			}
-			texture = map.getTextureExtry(name);
+			texture = sprite;//map.getTextureExtry(name);
 		}
 	}
 	
