@@ -4,10 +4,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.chazwarp.unifieditems.items.UIItemBlock;
-import com.chazwarp.unifieditems.lib.BlockInfo;
 
-import cpw.mods.fml.common.registry.GameRegistry;
 import net.minecraft.block.Block;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class UIBlocks {
@@ -35,7 +34,5 @@ public class UIBlocks {
 			GameRegistry.registerBlock(block.getValue(), UIItemBlock.class, "block" + block.getKey());
 			OreDictionary.registerOre("block" + block.getKey(), block.getValue());
 		}
-		
-		GameRegistry.registerBlock(rubberTap, UIItemBlock.class, BlockInfo.RUBBER_TAP_KEY);
 	}
 }

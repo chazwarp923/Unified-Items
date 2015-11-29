@@ -23,7 +23,6 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
 		this.model = new ModelRubberTap();
 	}
 	
-	@SuppressWarnings("unused")
 	private void adjustRotatePivotViaMeta(World world, int x, int y, int z) {
 		int meta = world.getBlockMetadata(x, y, z);
 		GL11.glPushMatrix();
@@ -32,13 +31,10 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
 	}
 
 	@Override
-	public void renderTileEntityAt(TileEntity te, double x, double y, double z,
-			float scale) {
+	public void renderTileEntityAt(TileEntity te, double x, double y, double z, float scale) {
 		GL11.glPushMatrix();
 		GL11.glTranslatef((float) x + 0.5F, (float) y + 1.5F, (float) z + 0.5F);
-		ResourceLocation textures = (new ResourceLocation(
-				Reference.RESOURCE_PREFIX
-						+ "textures/models/Model_Rubber_Tap.png"));
+		ResourceLocation textures = (new ResourceLocation(Reference.RESOURCE_PREFIX + "textures/models/Model_Rubber_Tap.png"));
 		Minecraft.getMinecraft().renderEngine.bindTexture(textures);
 
 		GL11.glPushMatrix();
@@ -49,7 +45,6 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
 		GL11.glPopMatrix();
 	}
 
-	@SuppressWarnings("unused")
 	private void adjustLightFixture(World world, int i, int j, int k, Block block) {
 		Tessellator tess = Tessellator.instance;
 		float brightness = block.getLightValue(world, i, j, k);
@@ -57,7 +52,6 @@ public class RubberTapRenderer extends TileEntitySpecialRenderer {
 		int modulousModifier = skyLight % 65536;
 		int divModifier = skyLight / 65536;
 		tess.setColorOpaque_F(brightness, brightness, brightness);
-		OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit,
-				modulousModifier, divModifier);
+		OpenGlHelper.setLightmapTextureCoords(OpenGlHelper.lightmapTexUnit, modulousModifier, divModifier);
 	}
 }

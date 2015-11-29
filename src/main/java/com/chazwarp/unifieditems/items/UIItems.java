@@ -5,7 +5,7 @@ import java.util.Map;
 
 import com.chazwarp.unifieditems.lib.ItemInfo;
 
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 

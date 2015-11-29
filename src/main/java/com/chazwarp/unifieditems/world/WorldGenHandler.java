@@ -4,8 +4,9 @@ import java.util.Random;
 
 import com.chazwarp.unifieditems.lib.OreGen;
 
-import cpw.mods.fml.common.IWorldGenerator;
-import cpw.mods.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.IWorldGenerator;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
@@ -28,20 +29,17 @@ public class WorldGenHandler implements IWorldGenerator {
 			int y = rand.nextInt(HighestY - LowestY) + LowestY;
 			int z = chunkZ * 16 + rand.nextInt(16);
 
-			gen.generate(world, rand, x, y, z);
+			BlockPos pos = new BlockPos(x, y, z);
+			
+			gen.generate(world, rand, pos);
 		}
 	}
 
 	@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world,
-			IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
-		generateStandardOre(random, chunkX, chunkZ, world, OreGen.COPPER_CHUNK,
-				copperGen, 40, 75);
-		generateStandardOre(random, chunkX, chunkZ, world, OreGen.TIN_CHUNK,
-				tinGen, 20, 55);
-		generateStandardOre(random, chunkX, chunkZ, world, OreGen.SILVER_CHUNK,
-				silverGen, 5, 30);
-		generateStandardOre(random, chunkX, chunkZ, world, OreGen.LEAD_CHUNK,
-				leadGen, 10, 35);
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.COPPER_CHUNK, copperGen, 40, 75);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.TIN_CHUNK, tinGen, 20, 55);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.SILVER_CHUNK, silverGen, 5, 30);
+		generateStandardOre(random, chunkX, chunkZ, world, OreGen.LEAD_CHUNK, leadGen, 10, 35);
 	}
 }

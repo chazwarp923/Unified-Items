@@ -4,7 +4,7 @@ import com.chazwarp.unifieditems.CommonProxy;
 import com.chazwarp.unifieditems.render.RubberTapRenderer;
 import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;
 
-import cpw.mods.fml.client.registry.ClientRegistry;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
 
 public class ClientProxy extends CommonProxy {
 	

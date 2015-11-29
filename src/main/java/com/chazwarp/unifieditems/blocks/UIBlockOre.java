@@ -5,15 +5,13 @@ package com.chazwarp.unifieditems.blocks;
 
 import com.chazwarp.unifieditems.client.texture.TextureOre;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.renderer.texture.TextureMap;
-import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class UIBlockOre extends UIBlock {
 	
@@ -35,7 +33,7 @@ public class UIBlockOre extends UIBlock {
 		//You can never be too sure
 		if(register instanceof TextureMap) {
 			TextureMap map = (TextureMap) register;
-			String name = getTextureName();
+			String name = getName();
 			TextureAtlasSprite sprite = map.getTextureExtry(name);
 			if(sprite == null) {
 				sprite = new TextureOre(this.unlocalizedName, baseTex.getUnlocalizedName().substring(5), hexColor);

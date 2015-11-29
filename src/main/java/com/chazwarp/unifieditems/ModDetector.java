@@ -5,7 +5,7 @@ package com.chazwarp.unifieditems;
 
 import com.chazwarp.unifieditems.modular.Modules;
 
-import cpw.mods.fml.common.Loader;
+import net.minecraftforge.fml.common.Loader;
 
 public class ModDetector {
 

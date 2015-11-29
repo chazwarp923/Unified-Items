@@ -9,6 +9,7 @@ import com.chazwarp.unifieditems.lib.Reference;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class UIBlock extends Block {
 
@@ -21,15 +22,23 @@ public class UIBlock extends Block {
 	public static final int STONE = 1;
 	public static final int IRON = 2;
 	public static final int DIAMOND = 3;
+	
+	private String name = "UIDefaultBlock";
 
 	public UIBlock(Material mat, float hardness, SoundType sound, String unlocalizedName, String harvestTool, int harvestLevel) {
 		super(mat);
+		
+		name = unlocalizedName;
+		GameRegistry.registerBlock(this, name);
 
 		setCreativeTab(UniTab.tab);
 		setHardness(hardness);
 		setStepSound(sound);
-		setBlockName(unlocalizedName);
-		setBlockTextureName(Reference.RESOURCE_PREFIX + unlocalizedName);
+		setUnlocalizedName(Reference.TEXTURE_LOC + "_" + unlocalizedName);
 		setHarvestLevel(harvestTool, harvestLevel);
+	}
+	
+	public String getName() {
+		return name;
 	}
 }

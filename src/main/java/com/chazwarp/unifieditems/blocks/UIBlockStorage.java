@@ -11,13 +11,13 @@ import net.minecraft.util.IIcon;
 
 public class UIBlockStorage extends UIBlock {
 	
-	private static String matName;
-	private static IIcon texture;
+	private String matName;
+	private IIcon texture;
 	
 	public UIBlockStorage(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor) {
 		super(Material.iron, hardness, Block.soundTypeMetal, unlocalizedName, UIBlock.PICKAXE, harvestLevel);
 		this.matName = matName;
-		setBlockTextureName(Reference.RESOURCE_PREFIX + "block");
+		setUnlocalizedName(Reference.TEXTURE_LOC + "_" + unlocalizedName + "block");
 	}
 	
 	/*@SideOnly(Side.CLIENT)

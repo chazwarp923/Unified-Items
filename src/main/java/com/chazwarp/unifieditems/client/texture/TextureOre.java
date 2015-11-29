@@ -14,8 +14,8 @@ import javax.imageio.ImageIO;
 
 import com.chazwarp.unifieditems.lib.Reference;
 
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.TextureAtlasSprite;
 import net.minecraft.client.resources.IResource;
@@ -101,7 +101,12 @@ public class TextureOre extends TextureAtlasSprite {
 			e.printStackTrace();
 		}
 		
-		this.loadSprite(oreImage, animation, (float) Minecraft.getMinecraft().gameSettings.anisotropicFiltering > 1.0F);
+		try {
+			this.loadSprite(oreImage, animation);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		return false;	
 	}

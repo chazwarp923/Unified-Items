@@ -6,8 +6,8 @@ import com.chazwarp.unifieditems.UnifiedItems;
 import com.chazwarp.unifieditems.lib.OreGen;
 import com.chazwarp.unifieditems.lib.Reference;
 
-import cpw.mods.fml.client.event.ConfigChangedEvent;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.common.config.Configuration;
 
 public class ConfigHandler {
