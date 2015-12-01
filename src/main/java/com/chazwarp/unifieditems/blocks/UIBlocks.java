@@ -3,10 +3,7 @@ package com.chazwarp.unifieditems.blocks;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.chazwarp.unifieditems.items.UIItemBlock;
-
 import net.minecraft.block.Block;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 public class UIBlocks {
@@ -23,15 +20,13 @@ public class UIBlocks {
 	}
 	
 	public static Block rubberTap = new BlockRubberTap();
-
+	
 	public static void registerBlocks() {
 		for(Map.Entry<String, UIBlockOre> block : ores.entrySet()) {
-			GameRegistry.registerBlock(block.getValue(), "ore" + block.getKey());
 			OreDictionary.registerOre("ore" + block.getKey(), block.getValue());
 		}
 		
 		for(Map.Entry<String, UIBlockStorage> block : blocks.entrySet()) {
-			GameRegistry.registerBlock(block.getValue(), UIItemBlock.class, "block" + block.getKey());
 			OreDictionary.registerOre("block" + block.getKey(), block.getValue());
 		}
 	}

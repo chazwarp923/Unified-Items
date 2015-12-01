@@ -19,7 +19,6 @@ public class ConfigGUI extends GuiConfig {
 						UnifiedItems.configFile).toString()));
 	}
 
-	@SuppressWarnings("rawtypes")
 	public static List<IConfigElement> getConfigElements() {
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
 		list.add(new ConfigElement(ConfigHandler.init(UnifiedItems.configFile)

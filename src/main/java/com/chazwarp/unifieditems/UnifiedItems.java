@@ -50,7 +50,7 @@ public class UnifiedItems {
 		ModDetector.preInit();
 		MaterialHandler.addBlocksAndItemsForMaterials();
 		UIBlocks.registerBlocks();
-		UIItems.initItems();
+		UIItems.registerItems();
 
 		// Registers World Gen
 		//new WorldGenHandler();
@@ -61,7 +61,7 @@ public class UnifiedItems {
 		// Hard Codes The Mod Data
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2 & ganymedes01";
 		preInitEvent.getModMetadata().description = "A Mod That Unifies Your World Generation";
-		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.MOD_ID + "/textures/logo.png";
+		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.TEXTURE_LOC + "/textures/logo.png";
 		preInitEvent.getModMetadata().modId = Reference.MOD_ID;
 		preInitEvent.getModMetadata().name = Reference.MOD_NAME;
 		preInitEvent.getModMetadata().version = Reference.VERSION;
@@ -69,8 +69,6 @@ public class UnifiedItems {
 
 	@Mod.EventHandler
 	public void Init(FMLInitializationEvent initEvent) {
-		// Registers Everything To The Ore Dictionary
-		//OreDict.registerAll();
 		// Adds All The Crafting Related Stuff
 		Shaped.addCrafting();
 		Shapeless.addCrafting();
