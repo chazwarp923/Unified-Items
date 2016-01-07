@@ -5,7 +5,6 @@
 package com.chazwarp.unifieditems.blocks;
 
 import com.chazwarp.unifieditems.UniTab;
-import com.chazwarp.unifieditems.lib.Reference;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -29,13 +28,15 @@ public class UIBlock extends Block {
 		super(mat);
 		
 		name = unlocalizedName;
-		GameRegistry.registerBlock(this, name);
 
 		setCreativeTab(UniTab.tab);
 		setHardness(hardness);
-		setStepSound(sound);
-		setUnlocalizedName(Reference.TEXTURE_LOC + "_" + unlocalizedName);
 		setHarvestLevel(harvestTool, harvestLevel);
+		setRegistryName(unlocalizedName);
+		setStepSound(sound);
+		setUnlocalizedName(unlocalizedName);
+		
+		GameRegistry.registerBlock(this, name);
 	}
 	
 	public String getName() {

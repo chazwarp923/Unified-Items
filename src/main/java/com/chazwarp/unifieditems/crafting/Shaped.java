@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 
 public class Shaped {
 
-	public static void addCrafting() {
+	public static void init() {
 
 	}
 

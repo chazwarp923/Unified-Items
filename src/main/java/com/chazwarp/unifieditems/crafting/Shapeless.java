@@ -2,7 +2,7 @@ package com.chazwarp.unifieditems.crafting;
 
 public class Shapeless {
 
-	public static void addCrafting() {
+	public static void init() {
 /*
 		// Adds the recipe for bronze
 		GameRegistry.addShapelessRecipe(new ItemStack(UIItems.ingotBronze, 4), new ItemStack(UIItems.ingotCopper), new ItemStack(UIItems.ingotCopper), new ItemStack(UIItems.ingotCopper), new ItemStack(UIItems.ingotTin));

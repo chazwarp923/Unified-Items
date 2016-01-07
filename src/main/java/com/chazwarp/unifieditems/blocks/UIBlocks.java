@@ -8,6 +8,8 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class UIBlocks {
 
+	public static BlockRubberTap rubberTap;
+	
 	public static Map<String, UIBlockOre> ores = new HashMap<String, UIBlockOre>();
 	public static Map<String, UIBlockStorage> blocks = new HashMap<String, UIBlockStorage>();
 	
@@ -19,9 +21,9 @@ public class UIBlocks {
 		blocks.put(matName, new UIBlockStorage(matName, hardness, unlocalizedName, harvestLevel, hexColor));
 	}
 	
-	public static Block rubberTap = new BlockRubberTap();
-	
-	public static void registerBlocks() {
+	public static void init() {
+		rubberTap = new BlockRubberTap();
+		
 		for(Map.Entry<String, UIBlockOre> block : ores.entrySet()) {
 			OreDictionary.registerOre("ore" + block.getKey(), block.getValue());
 		}

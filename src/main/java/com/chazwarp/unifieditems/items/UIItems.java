@@ -8,6 +8,10 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public class UIItems {
 
+	public static ItemRawRubber rawRubber;
+	public static ItemRubber ingotRubber;
+	public static ItemMortarAndPestle mortarAndPestle;
+	
 	public static Map<String, UIItemDust> dusts = new HashMap<String, UIItemDust>();
 	public static Map<String, UIItemIngot> ingots = new HashMap<String, UIItemIngot>();
 	public static Map<String, UIItemGem> gems = new HashMap<String, UIItemGem>();
@@ -23,12 +27,12 @@ public class UIItems {
 	public static void addGem(String matName, String unlocalizedName, int hexColor) {
 		gems.put(matName, new UIItemGem(unlocalizedName, hexColor));
 	}
-	
-	public static UIItem rawRubber = new ItemRawRubber();
-	public static UIItem ingotRubber = new ItemRubber();
-	public static UIItem mortarAndPestle = new ItemMortarAndPestle();
 
-	public static void registerItems() {
+	public static void init() {
+		rawRubber = new ItemRawRubber();
+		ingotRubber = new ItemRubber();
+		mortarAndPestle = new ItemMortarAndPestle();
+		
 		for(Map.Entry<String, UIItemDust> item : dusts.entrySet()) {
 			OreDictionary.registerOre("dust" + item.getKey(), item.getValue());
 		}
