@@ -11,6 +11,7 @@ import com.chazwarp.unifieditems.event.ItemCraftedEventHandler;
 import com.chazwarp.unifieditems.items.UIItems;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.material.MaterialHandler;
+import com.chazwarp.unifieditems.oredictionary.OreDictionaryHelper;
 
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -42,7 +43,7 @@ public class CommonProxy {
 		Shapeless.init();
 		Smelting.init();
 		
-		//Hard Codes The Mod Data
+		//Hard Codes The Mod Metadata
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2 & ganymedes01";
 		preInitEvent.getModMetadata().description = "A Mod That Unifies Your World Generation";
 		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.TEXTURE_LOC + "/textures/logo.png";
@@ -54,6 +55,7 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent initEvent) {
 		//Registers The Instance Of The Mod
 		MinecraftForge.EVENT_BUS.register(UnifiedItems.instance);
+		OreDictionaryHelper.init();
 	}
 
 	public void postInit(FMLPostInitializationEvent postInitEvent) {

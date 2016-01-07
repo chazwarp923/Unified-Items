@@ -11,14 +11,14 @@ import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
-public class WorldGenHandler implements IWorldGenerator {
+public class WorldGenerationHandler implements IWorldGenerator {
 
 	private WorldGenerator copperGen;
 	private WorldGenerator tinGen;
 	private WorldGenerator silverGen;
 	private WorldGenerator leadGen;
 
-	public WorldGenHandler() {
+	public WorldGenerationHandler() {
 		GameRegistry.registerWorldGenerator(this, 0);
 		//copperGen = new WorldGenMinable(UIBlocks.oreCopper, OreGen.COPPER_VEIN);
 	}

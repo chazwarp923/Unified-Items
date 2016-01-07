@@ -7,9 +7,9 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
-public class OreDict {
+public class OreDictionaryHelper {
 
-	public static void registerAll() {
+	public static void init() {
 		OreDictionary.registerOre("itemRawRubber", new ItemStack(UIItems.rawRubber));
 		OreDictionary.registerOre("itemRubber", new ItemStack(UIItems.ingotRubber));
 		OreDictionary.registerOre("ingotRubber", new ItemStack(UIItems.ingotRubber));
@@ -21,7 +21,6 @@ public class OreDict {
 		OreDictionary.registerOre("blockGravel", new ItemStack(Blocks.gravel));
 		
 		for (int i = 0; i < new ItemStack(Items.flint_and_steel).getMaxDamage(); i++)
-		OreDictionary.registerOre("craftingFlintAndSteel", new ItemStack(
-				Items.flint_and_steel, 1, i));
+		OreDictionary.registerOre("craftingFlintAndSteel", new ItemStack(Items.flint_and_steel, 1, i));
 	}
 }

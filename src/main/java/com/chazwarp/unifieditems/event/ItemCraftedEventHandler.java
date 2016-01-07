@@ -17,7 +17,7 @@ public class ItemCraftedEventHandler {
 	@SubscribeEvent
 	public void itemCrafted(ItemCraftedEvent event) {
 
-		// Helps The Torch Recipe
+		//Helps The Torch Recipe
 		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
 			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
@@ -32,7 +32,7 @@ public class ItemCraftedEventHandler {
 			}
 		}
 
-		// Helps The Ore Recipes
+		//Helps The Ore Recipes
 		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
 			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);

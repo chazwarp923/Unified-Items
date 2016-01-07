@@ -10,6 +10,12 @@ import java.awt.image.BufferedImage;
 
 public class ColorizingHelper {
 
+	/**
+	 * A simple method that takes a grey-scale {@link BufferedImage} and applies a {@link Color} hue to it (a.k.a. colorizes it)
+	 * @param rawImage
+	 * @param hexColor
+	 * @return a colorized {@link BufferedImage}
+	 */
 	public static BufferedImage colorizeImage(BufferedImage rawImage, Color hexColor) {
 		BufferedImage tempImage = new BufferedImage(rawImage.getWidth(), rawImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
 		Graphics2D g = tempImage.createGraphics();
