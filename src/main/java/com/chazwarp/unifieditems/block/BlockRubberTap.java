@@ -1,7 +1,7 @@
-package com.chazwarp.unifieditems.blocks;
+package com.chazwarp.unifieditems.block;
 
 import com.chazwarp.unifieditems.UniTab;
-import com.chazwarp.unifieditems.items.UIItemBlock;
+import com.chazwarp.unifieditems.item.UIItemBlock;
 import com.chazwarp.unifieditems.lib.BlockInfo;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.tileentity.TileEntityRubberTap;

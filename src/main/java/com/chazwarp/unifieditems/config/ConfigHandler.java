@@ -2,24 +2,38 @@ package com.chazwarp.unifieditems.config;
 
 import java.io.File;
 
-import com.chazwarp.unifieditems.UnifiedItems;
 import com.chazwarp.unifieditems.lib.OreGen;
 import com.chazwarp.unifieditems.lib.Reference;
 
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.common.config.Configuration;
 
 public class ConfigHandler {
 
+	private static Configuration config;
+	
 	public static String PER_VEIN = "Ores Per Vein";
 	public static String PER_CHUNK = "Veins Per Chunk";
 
 	public static Configuration init(File file) {
-		Configuration config = new Configuration(file);
+		config = new Configuration(file);
 
-		config.load();
+		syncConfig(true, false);
 
+		return config;
+	}
+	
+	/**
+	 * Synchconize the three copies of the config, if both booleans are false it will load defaults
+	 * @param loadConfigFromFile whether or not we load the config from file
+	 * @param loadConfigFromGUI whether or not we load the config from the config GUI
+	 */
+	private static void syncConfig(boolean loadConfigFromFile, boolean loadConfigFromGUI) {
+		if(loadConfigFromFile == true) {
+			config.load();
+		}
+		//TODO redo all this for the new system
 		config.addCustomCategoryComment(PER_VEIN, "This Is How Many Ore Blocks There Will Be In A Vein Of Ore");
 		config.addCustomCategoryComment(PER_CHUNK, "This Is How Many Veins Of Ore There Will Be Per Chunk");
 		config.setCategoryRequiresWorldRestart(PER_VEIN, true);
@@ -36,13 +50,11 @@ public class ConfigHandler {
 		OreGen.LEAD_CHUNK = config.getInt("Lead", PER_CHUNK, 4, 0, 8, "");
 
 		config.save();
-
-		return config;
 	}
 
 	@SubscribeEvent
-	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent eventArgs) {
-		if (eventArgs.modID.equals(Reference.MOD_ID))
-			ConfigHandler.init(UnifiedItems.configFile);
+	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent configChangedEvent) {
+		if (configChangedEvent.modID.equals(Reference.MOD_ID))
+			ConfigHandler.syncConfig(false, true);
 	}
 }

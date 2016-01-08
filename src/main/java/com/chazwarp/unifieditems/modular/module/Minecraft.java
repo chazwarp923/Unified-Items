@@ -1,7 +1,7 @@
 /**
 @author Chaz Kerby
 */
-package com.chazwarp.unifieditems.modular.modules;
+package com.chazwarp.unifieditems.modular.module;
 
 import com.chazwarp.unifieditems.material.MaterialHandler;
 import com.chazwarp.unifieditems.material.MaterialRegistry;

@@ -1,7 +1,7 @@
 /**
 @author Chaz Kerby
 */
-package com.chazwarp.unifieditems.items;
+package com.chazwarp.unifieditems.item;
 
 public class UIItemDust extends UIItem {
 	

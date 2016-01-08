@@ -3,7 +3,7 @@ package com.chazwarp.unifieditems.render;
 import org.lwjgl.opengl.GL11;
 
 import com.chazwarp.unifieditems.lib.Reference;
-import com.chazwarp.unifieditems.models.ModelRubberTap;
+import com.chazwarp.unifieditems.model.ModelRubberTap;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;

@@ -1,4 +1,4 @@
-package com.chazwarp.unifieditems.items;
+package com.chazwarp.unifieditems.item;
 
 import com.chazwarp.unifieditems.lib.ItemInfo;
 

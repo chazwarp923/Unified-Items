@@ -2,7 +2,7 @@
 @author Chaz Kerby
  */
 
-package com.chazwarp.unifieditems.items;
+package com.chazwarp.unifieditems.item;
 
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;

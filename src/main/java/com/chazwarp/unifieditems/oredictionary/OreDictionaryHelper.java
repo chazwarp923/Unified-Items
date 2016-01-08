@@ -1,6 +1,6 @@
 package com.chazwarp.unifieditems.oredictionary;
 
-import com.chazwarp.unifieditems.items.UIItems;
+import com.chazwarp.unifieditems.item.UIItems;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;

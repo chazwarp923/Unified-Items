@@ -3,7 +3,7 @@
  */
 package com.chazwarp.unifieditems;
 
-import com.chazwarp.unifieditems.items.UIItems;
+import com.chazwarp.unifieditems.item.UIItems;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;

@@ -1,4 +1,4 @@
-package com.chazwarp.unifieditems.blocks;
+package com.chazwarp.unifieditems.block;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -2,7 +2,7 @@
 @author Chaz Kerby
  */
 
-package com.chazwarp.unifieditems.blocks;
+package com.chazwarp.unifieditems.block;
 
 import com.chazwarp.unifieditems.UniTab;
 

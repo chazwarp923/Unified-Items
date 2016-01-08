@@ -6,8 +6,8 @@ package com.chazwarp.unifieditems.material;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.chazwarp.unifieditems.blocks.UIBlocks;
-import com.chazwarp.unifieditems.items.UIItems;
+import com.chazwarp.unifieditems.block.UIBlocks;
+import com.chazwarp.unifieditems.item.UIItems;
 
 public class MaterialHandler {
 	

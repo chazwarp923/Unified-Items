@@ -2,13 +2,13 @@ package com.chazwarp.unifieditems.proxy;
 
 import com.chazwarp.unifieditems.ModDetector;
 import com.chazwarp.unifieditems.UnifiedItems;
-import com.chazwarp.unifieditems.blocks.UIBlocks;
+import com.chazwarp.unifieditems.block.UIBlocks;
 import com.chazwarp.unifieditems.config.ConfigHandler;
 import com.chazwarp.unifieditems.crafting.Shaped;
 import com.chazwarp.unifieditems.crafting.Shapeless;
 import com.chazwarp.unifieditems.crafting.Smelting;
 import com.chazwarp.unifieditems.event.ItemCraftedEventHandler;
-import com.chazwarp.unifieditems.items.UIItems;
+import com.chazwarp.unifieditems.item.UIItems;
 import com.chazwarp.unifieditems.lib.Reference;
 import com.chazwarp.unifieditems.material.MaterialHandler;
 import com.chazwarp.unifieditems.oredictionary.OreDictionaryHelper;
@@ -24,7 +24,6 @@ public class CommonProxy {
 		//Does Config Things
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
 		ConfigHandler.init(UnifiedItems.configFile);
-		MinecraftForge.EVENT_BUS.register(new ConfigHandler());
 
 		//Register Event Handlers
 		MinecraftForge.EVENT_BUS.register(new ItemCraftedEventHandler());

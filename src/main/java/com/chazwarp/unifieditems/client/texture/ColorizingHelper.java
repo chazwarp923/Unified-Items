@@ -12,8 +12,8 @@ public class ColorizingHelper {
 
 	/**
 	 * A simple method that takes a grey-scale {@link BufferedImage} and applies a {@link Color} hue to it (a.k.a. colorizes it)
-	 * @param rawImage
-	 * @param hexColor
+	 * @param rawImage the {@link BufferedImage} to be colorized
+	 * @param hexColor the {@link Color} to be used to colorize
 	 * @return a colorized {@link BufferedImage}
 	 */
 	public static BufferedImage colorizeImage(BufferedImage rawImage, Color hexColor) {

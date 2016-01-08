@@ -4,10 +4,11 @@
 
 package com.chazwarp.unifieditems.event;
 
-import com.chazwarp.unifieditems.items.UIItems;
-
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.PlayerEvent.ItemCraftedEvent;
+
+import com.chazwarp.unifieditems.item.UIItems;
+
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

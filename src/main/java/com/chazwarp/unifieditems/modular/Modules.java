@@ -3,8 +3,8 @@
 */
 package com.chazwarp.unifieditems.modular;
 
-import com.chazwarp.unifieditems.modular.modules.Minecraft;
-import com.chazwarp.unifieditems.modular.modules.ThermalExpansion;
+import com.chazwarp.unifieditems.modular.module.Minecraft;
+import com.chazwarp.unifieditems.modular.module.ThermalExpansion;
 
 public enum Modules {
 
