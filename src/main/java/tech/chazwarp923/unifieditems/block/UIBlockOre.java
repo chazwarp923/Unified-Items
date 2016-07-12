@@ -16,19 +16,20 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class UIBlockOre extends UIBlock {
 	
-	private IIcon texture;
+	//private IIcon texture;
 	private String unlocalizedName;
 	private int hexColor;
 	private Block baseTex;
 	
 	public UIBlockOre(float hardness, String unlocalizedName, HarvestLevel harvestLevel, int hexColor, Block baseTex) {
-		super(Material.rock, hardness, SoundType.STONE, unlocalizedName, HarvestType.PICKAXE, harvestLevel);
+		super(Material.ROCK, hardness, SoundType.STONE, unlocalizedName, HarvestType.PICKAXE, harvestLevel);
 		this.unlocalizedName = unlocalizedName;
 		this.hexColor = hexColor;
 		this.baseTex = baseTex;
 	}
 	
-	@SideOnly(Side.CLIENT)
+	//TODO Reimplement
+	/*@SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register) {
 		//You can never be too sure
@@ -54,5 +55,5 @@ public class UIBlockOre extends UIBlock {
 	 @Override
 	 public IIcon getIcon(IBlockAccess world, int x, int y, int z, int side) {
 		 return texture;
-	 }
+	 }*/
 }

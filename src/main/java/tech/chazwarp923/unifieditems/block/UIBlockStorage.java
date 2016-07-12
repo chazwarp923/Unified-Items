@@ -3,23 +3,22 @@
 */
 package tech.chazwarp923.unifieditems.block;
 
-import tech.chazwarp923.unifieditems.lib.Reference;
-
-import net.minecraft.block.Block;
+import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
-import net.minecraft.util.IIcon;
+import tech.chazwarp923.unifieditems.lib.Reference;
 
 public class UIBlockStorage extends UIBlock {
 	
 	private String matName;
-	private IIcon texture;
+	//private IIcon texture;
 	
-	public UIBlockStorage(String matName, float hardness, String unlocalizedName, int harvestLevel, int hexColor) {
-		super(Material.iron, hardness, Block.soundTypeMetal, unlocalizedName, HarvestType.PICKAXE, harvestLevel);
+	public UIBlockStorage(String matName, float hardness, String unlocalizedName, HarvestLevel harvestLevel, int hexColor) {
+		super(Material.IRON, hardness, SoundType.METAL, unlocalizedName, HarvestType.PICKAXE, harvestLevel);
+		this.setUnlocalizedName(unlocalizedName);
 		this.matName = matName;
-		setUnlocalizedName(Reference.TEXTURE_LOC + "_" + unlocalizedName + "block");
 	}
 	
+	//TODO Reimplement
 	/*@SideOnly(Side.CLIENT)
     @Override
     public void registerBlockIcons(IIconRegister register) {

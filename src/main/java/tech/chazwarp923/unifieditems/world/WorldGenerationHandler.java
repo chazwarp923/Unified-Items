@@ -18,7 +18,13 @@ public class WorldGenerationHandler implements IWorldGenerator {
 	private WorldGenerator silverGen;
 	private WorldGenerator leadGen;
 
-	@Override
+	//TODO Fix
+	
+	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
+		
+	}
+	
+	/*@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
 		generateOre(random, chunkX, chunkZ, world, OreGen.COPPER_CHUNK, copperGen, 40, 75);
 		generateOre(random, chunkX, chunkZ, world, OreGen.TIN_CHUNK, tinGen, 20, 55);
@@ -34,5 +40,5 @@ public class WorldGenerationHandler implements IWorldGenerator {
 			
 			gen.generate(world, rand, new BlockPos(x, y, z));
 		}
-	}
+	}*/
 }

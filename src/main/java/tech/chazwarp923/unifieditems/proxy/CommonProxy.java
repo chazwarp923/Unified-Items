@@ -45,7 +45,7 @@ public class CommonProxy {
 		Smelting.init();
 		
 		//Hard Codes The Mod Metadata
-		preInitEvent.getModMetadata().credits = "Reika, enderblaze2 & ganymedes01";
+		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01";
 		preInitEvent.getModMetadata().description = "Unify all the world generation!";
 		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.TEXTURE_LOC + "/textures/logo.png";
 		preInitEvent.getModMetadata().modId = Reference.MOD_ID;

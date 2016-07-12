@@ -18,9 +18,9 @@ public class OreDictionaryHelper {
 		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 1));
 		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 2));
 		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 3));
-		OreDictionary.registerOre("blockGravel", new ItemStack(Blocks.gravel));
+		OreDictionary.registerOre("blockGravel", new ItemStack(Blocks.GRAVEL));
 		
-		for (int i = 0; i < new ItemStack(Items.flint_and_steel).getMaxDamage(); i++)
-		OreDictionary.registerOre("craftingFlintAndSteel", new ItemStack(Items.flint_and_steel, 1, i));
+		for (int i = 0; i < new ItemStack(Items.FLINT_AND_STEEL).getMaxDamage(); i++)
+		OreDictionary.registerOre("craftingFlintAndSteel", new ItemStack(Items.FLINT_AND_STEEL, 1, i));
 	}
 }

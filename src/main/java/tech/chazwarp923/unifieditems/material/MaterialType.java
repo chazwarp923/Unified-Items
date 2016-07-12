@@ -7,10 +7,11 @@ import java.util.ArrayList;
 
 public enum MaterialType {
 	GENERIC(true, true, true, false, true),
-	METAL(false, true, true, false, true),
-	GEM(true, true, false, true, true),
+	ALLOY(false, true, true, false, true),
+	GENERIC_GEM(true, true, false, true, true),
 	DUST(false, true, false, false, false),
 	INGOT(false, false, true, false, false),
+	GEM(false, false, false, true, false),
 	BLOCK(false, false, false, false, true);
 	
 	ArrayList<String> types;

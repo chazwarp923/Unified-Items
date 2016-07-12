@@ -22,8 +22,8 @@ public class ItemCraftedEventHandler {
 		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
 			if (event.craftMatrix.getStackInSlot(i) != null) {
 				ItemStack j = event.craftMatrix.getStackInSlot(i);
-				if (j.getItem() != null && j.getItem() == Items.flint_and_steel) {
-					ItemStack k = new ItemStack(Items.flint_and_steel, 2,
+				if (j.getItem() != null && j.getItem() == Items.FLINT_AND_STEEL) {
+					ItemStack k = new ItemStack(Items.FLINT_AND_STEEL, 2,
 							(j.getItemDamage() + 1));
 					if (k.getItemDamage() == k.getMaxDamage()) {
 						k = null;
@@ -49,7 +49,7 @@ public class ItemCraftedEventHandler {
 		}
 
 		// Helps The Flint Recipe
-		ItemStack GravelStack = new ItemStack(Blocks.gravel);
+		ItemStack GravelStack = new ItemStack(Blocks.GRAVEL);
 
 		for (int i = 0; i < event.craftMatrix.getSizeInventory(); i++) {
 			if (event.craftMatrix.getStackInSlot(i) != null) {

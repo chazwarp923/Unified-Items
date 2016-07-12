@@ -6,6 +6,9 @@ package tech.chazwarp923.unifieditems.material;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.apache.logging.log4j.Level;
+
+import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
@@ -26,33 +29,36 @@ public class MaterialHandler {
 		for(MaterialRegistry material : materialUseCount.keySet()) {
 			switch(material.type) {
 			case GENERIC:
-				UIBlocks.addOre(material.matName, material.hardness, "ore" + material.matName, material.harvestLevel, material.hexColor, material.baseTex);
-				UIItems.addDust(material.matName, "dust" + material.matName, material.hexColor);
-				UIItems.addIngot(material.matName, "ingot" + material.matName, material.hexColor);
-				UIBlocks.addBlock(material.matName, material.hardness, "block" + material.matName, material.harvestLevel, material.hexColor);
+				UIBlocks.addOre(material.name, material.hardness, "ore" + material.name, material.harvestLevel, material.hexColor, material.baseTex);
+				UIItems.addDust(material.name, "dust" + material.name, material.hexColor);
+				UIItems.addIngot(material.name, "ingot" + material.name, material.hexColor);
+				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel, material.hexColor);
 				break;
-			case METAL:
-				UIItems.addDust(material.matName, "dust" + material.matName, material.hexColor);
-				UIItems.addIngot(material.matName, "ingot" + material.matName, material.hexColor);
-				UIBlocks.addBlock(material.matName, material.hardness, "block" + material.matName, material.harvestLevel, material.hexColor);
+			case ALLOY:
+				UIItems.addDust(material.name, "dust" + material.name, material.hexColor);
+				UIItems.addIngot(material.name, "ingot" + material.name, material.hexColor);
+				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel, material.hexColor);
 				break;
-			case GEM:
-				UIBlocks.addOre(material.matName, material.hardness, "ore" + material.matName, material.harvestLevel, material.hexColor, material.baseTex);
-				UIItems.addDust(material.matName, "dust" + material.matName, material.hexColor);
-				UIItems.addGem(material.matName, "gem" + material.matName, material.hexColor);
-				UIBlocks.addBlock(material.matName, material.hardness, "block" + material.matName, material.harvestLevel, material.hexColor);
+			case GENERIC_GEM:
+				UIBlocks.addOre(material.name, material.hardness, "ore" + material.name, material.harvestLevel, material.hexColor, material.baseTex);
+				UIItems.addDust(material.name, "dust" + material.name, material.hexColor);
+				UIItems.addGem(material.name, "gem" + material.name, material.hexColor);
+				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel, material.hexColor);
 				break;
 			case DUST:
-				UIItems.addDust(material.matName, "dust" + material.matName, material.hexColor);
+				UIItems.addDust(material.name, "dust" + material.name, material.hexColor);
 				break;
 			case INGOT:
-				UIItems.addIngot(material.matName, "ingot" + material.matName, material.hexColor);
+				UIItems.addIngot(material.name, "ingot" + material.name, material.hexColor);
+				break;
+			case GEM:
+				UIItems.addGem(material.name, "gem" + material.name, material.hexColor);
 				break;
 			case BLOCK:
-				UIBlocks.addBlock(material.matName, material.hardness, "block" + material.matName, material.harvestLevel, material.hexColor);
+				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel, material.hexColor);
 				break;
 			default:
-				System.out.println("Something dun broke");
+				UnifiedItems.logger.log(Level.ERROR, "Invalid material enum passed for " + material.name );
 				break;
 			}
 		}

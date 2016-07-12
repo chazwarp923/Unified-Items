@@ -16,12 +16,12 @@ public class UIItem extends Item {
 	protected UIItem(String unlocalizedName) {
 		super();
 		
+		setCreativeTab(UniTab.tab);
+		setRegistryName(unlocalizedName);
+		setUnlocalizedName("UnifiedItems" + unlocalizedName);
 		name = unlocalizedName;
 		
-		setCreativeTab(UniTab.tab);
-		setUnlocalizedName(unlocalizedName);
-		
-		GameRegistry.registerItem(this, name);
+		GameRegistry.register(this);
 	}
 	
 	public String getName() {
