@@ -10,14 +10,9 @@ import net.minecraftforge.oredict.OreDictionary;
 public class OreDictionaryHelper {
 
 	public static void init() {
-		OreDictionary.registerOre("itemRawRubber", new ItemStack(UIItems.rawRubber));
-		OreDictionary.registerOre("itemRubber", new ItemStack(UIItems.ingotRubber));
-		OreDictionary.registerOre("ingotRubber", new ItemStack(UIItems.ingotRubber));
+		for(int i=0; i < 4; i++)
+		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, i));
 		
-		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 0));
-		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 1));
-		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 2));
-		OreDictionary.registerOre("craftingMortarAndPestle", new ItemStack(UIItems.mortarAndPestle, 1, 3));
 		OreDictionary.registerOre("blockGravel", new ItemStack(Blocks.GRAVEL));
 		
 		for (int i = 0; i < new ItemStack(Items.FLINT_AND_STEEL).getMaxDamage(); i++)

@@ -4,11 +4,8 @@
 package tech.chazwarp923.unifieditems.item;
 
 public class UIItemGem extends UIItem {
-
-	private int hexColor;
 	
-	protected UIItemGem(String unlocalizedName, int hexColor) {
+	protected UIItemGem(String unlocalizedName) {
 		super(unlocalizedName);
-		this.hexColor = hexColor;
 	}
 }

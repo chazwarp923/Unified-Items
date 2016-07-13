@@ -1,4 +1,4 @@
-itemGroup.uniTab=Unified Items
+itemGroup.UnifiedItems=Unified Items
 
 tile.oreCopper.name=Copper Ore
 tile.oreTin.name=Tin Ore
@@ -7,6 +7,12 @@ tile.oreLead.name=Lead Ore
 tile.oreNickel.name=Nickel Ore
 tile.orePlatinum.name=Platinum Ore
 tile.oreMithril.name=Mithril Ore
+tile.oreAluminum.name=Aluminum Ore
+tile.oreUranium.name=Uranium Ore
+tile.oreIridium.name=Iridium Ore
+tile.oreCobalt.name=Cobalt Ore
+tile.oreArdite.name=Ardite Ore
+
 tile.blockCopper.name=Copper Block
 tile.blockTin.name=Tin Block
 tile.blockBronze.name=Bronze Block
@@ -17,6 +23,13 @@ tile.blockInvar.name=Invar Block
 tile.blockElectrum.name=Electrum Block
 tile.blockPlatinum.name=Platinum Block
 tile.blockMithril.name=Mithril Block
+tile.blockAluminum.name=Aluminum Block
+tile.blockUranium.name=Uranium Block
+tile.blockIridium.name=Iridium Block
+tile.blockCobalt.name=Cobalt Block
+tile.blockArdite.name=Ardite Block
+tile.blockSteel.name=Steel Block
+
 tile.rubberTap.name=Rubber Tap
 
 item.dustCoal.name=Coal Powder
@@ -32,6 +45,13 @@ item.dustInvar.name=Invar Powder
 item.dustElectrum.name=Electrum Powder
 item.dustPlatinum.name=Platinum Powder
 item.dustMithril.name=Mithril Powder
+item.dustAluminum.name=Aluminum Powder
+item.dustUranium.name=Uranium Powder
+item.dustIridium.name=Iridium Powder
+item.dustCobalt.name=Cobalt Powder
+item.dustArdite.name=Ardite Powder
+item.dustSteel.name=Steel Powder
+
 item.ingotCopper.name=Copper Ingot
 item.ingotTin.name=Tin Ingot
 item.ingotBronze.name=Bronze Ingot
@@ -42,6 +62,13 @@ item.ingotInvar.name=Invar Ingot
 item.ingotElectrum.name=Electrum Ingot
 item.ingotPlatinum.name=Platinum Ingot
 item.ingotMithril.name=Mithril Ingot
+item.ingotAluminum.name=Aluminum Ingot
+item.ingotUranium.name=Uranium Ingot
+item.ingotIridium.name=Iridium Ingot
+item.ingotCobalt.name=Cobalt Ingot
+item.ingotArdite.name=Ardite Ingot
+item.ingotSteel.name=Steel Ingot
+
 item.rawRubber.name=Drop of Rubber
 item.ingotRubber.name=Rubber Bar
 item.mortarAndPestle.name=Mortar and Pestle

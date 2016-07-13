@@ -2,7 +2,7 @@ package tech.chazwarp923.unifieditems.crafting;
 
 public class Smelting {
 
-	public static void init() {
+	public static void preInit() {
 /*
 		// Smelting recipes for the Ores
 		GameRegistry.addSmelting(UIBlocks.oreCopper, new ItemStack(

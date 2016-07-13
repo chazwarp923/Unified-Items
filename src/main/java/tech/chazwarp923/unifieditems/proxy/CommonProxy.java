@@ -1,6 +1,5 @@
 package tech.chazwarp923.unifieditems.proxy;
 
-import tech.chazwarp923.unifieditems.ModDetector;
 import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
@@ -11,6 +10,7 @@ import tech.chazwarp923.unifieditems.event.ItemCraftedEventHandler;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.lib.Reference;
 import tech.chazwarp923.unifieditems.material.MaterialHandler;
+import tech.chazwarp923.unifieditems.modular.ModDetector;
 import tech.chazwarp923.unifieditems.oredictionary.OreDictionaryHelper;
 import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 
@@ -33,16 +33,8 @@ public class CommonProxy {
 		//Registers The Blocks And Items
 		ModDetector.preInit();
 		MaterialHandler.addBlocksAndItemsForMaterials();
-		UIBlocks.init();
-		UIItems.init();
-
-		//Registers World Generation
-		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), 0);
-
-		//Adds All The Crafting Related Stuff
-		Shaped.init();
-		Shapeless.init();
-		Smelting.init();
+		UIBlocks.preInit();
+		UIItems.preInit();
 		
 		//Hard Codes The Mod Metadata
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01";
@@ -56,6 +48,15 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent initEvent) {
 		//Registers The Instance Of The Mod
 		MinecraftForge.EVENT_BUS.register(UnifiedItems.instance);
+		
+		//Registers World Generation
+		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), 0);
+
+		//Adds All The Crafting Related Stuff
+		Shaped.preInit();
+		Shapeless.preInit();
+		Smelting.preInit();
+		
 		//Does Oredictonary Related Things
 		OreDictionaryHelper.init();
 	}

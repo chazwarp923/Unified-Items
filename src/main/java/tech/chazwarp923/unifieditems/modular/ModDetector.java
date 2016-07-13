@@ -1,10 +1,9 @@
 /**
 @author Chaz Kerby
 */
-package tech.chazwarp923.unifieditems;
+package tech.chazwarp923.unifieditems.modular;
 
 import net.minecraftforge.fml.common.Loader;
-import tech.chazwarp923.unifieditems.modular.Modules;
 
 public class ModDetector {
 
