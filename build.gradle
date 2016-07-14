@@ -12,6 +12,12 @@ buildscript {
 }
 apply plugin: 'net.minecraftforge.gradle.forge'
 
+apply plugin: 'java'
+  compileJava {
+  sourceCompatibility = '1.8'
+  targetCompatibility = '1.8'
+}
+
 version = "1.10.2-1.0"
 group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "unifieditems"
