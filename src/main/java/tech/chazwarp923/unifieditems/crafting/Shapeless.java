@@ -16,12 +16,14 @@ public class Shapeless {
 
 	public static void init() {
 
+		//TODO Fix #2
+		/*
 		// Adds The Recipes for Ores to Dusts
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Iron"), 2), new Object[] { "craftingMortarAndPestle", "oreIron" }));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Gold"), 2), new Object[] { "craftingMortarAndPestle", "oreGold" }));
 		for(Map.Entry<String, UIBlockOre> block : UIBlocks.ores.entrySet()) {
 			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get(block.getKey()), 2), new Object[] { "craftingMortarAndPestle","ore" + block.getKey() }));
-		}
+		}*/
 		
 		// Adds the recipe for bronze
 		GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get("Bronze"), 4), new ItemStack(UIItems.dusts.get("Copper")), new ItemStack(UIItems.dusts.get("Copper")), new ItemStack(UIItems.dusts.get("Copper")), new ItemStack(UIItems.dusts.get("Tin")));
