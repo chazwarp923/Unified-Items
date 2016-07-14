@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, updateJSON = "chazwarp923.tech/UnifiedItems.json", acceptedMinecraftVersions = "[1.10.2]", guiFactory = "tech.chazwarp923.unifieditems.config.ConfigGuiFactory")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, updateJSON = "http://chazwarp923.tech/UnifiedItems.json", acceptedMinecraftVersions = "[1.10.2]", guiFactory = "tech.chazwarp923.unifieditems.config.ConfigGuiFactory")
 public class UnifiedItems {
 
 	public static File configFile;
