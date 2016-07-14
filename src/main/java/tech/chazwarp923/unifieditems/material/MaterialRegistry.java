@@ -27,16 +27,26 @@ public enum MaterialRegistry {
     ARDITE(MaterialType.GENERIC, "Ardite", 2F, HarvestLevel.DIAMOND, 5, 120, 3, 4, 2),
     IRIDIUM(MaterialType.GENERIC, "Iridium", 2F, HarvestLevel.DIAMOND, 5, 10, 1, 1, 1);
 	
-	final MaterialType type;
-	final String name;
-	final float hardness;
-	final HarvestLevel harvestLevel;
+	public final MaterialType type;
+	public final String name;
+	public final float hardness;
+	public final HarvestLevel harvestLevel;
+	public final int minY;
+	public final int maxY;
+	public final int perVein;
+	public final int chunkDensity;
+	public final int dimId;
 	
 	MaterialRegistry(MaterialType type, String name, float hardness, HarvestLevel harvestLevel, int minY, int maxY, int perVein, int chunkDensity, int dimId) {
 		this.type = type;
 		this.name = name;
 		this.hardness = hardness;
 		this.harvestLevel = harvestLevel;
+		this.minY = minY;
+		this.maxY = maxY;
+		this.perVein = perVein;
+		this.chunkDensity = chunkDensity;
+		this.dimId = dimId;
 	}
 	
 	MaterialRegistry(MaterialType type, String name) {
@@ -44,5 +54,10 @@ public enum MaterialRegistry {
 		this.name = name;
 		this.hardness = -1;
 		this.harvestLevel = HarvestLevel.WOOD;
+		this.minY = 0;
+		this.maxY = 0;
+		this.perVein = 0;
+		this.chunkDensity = 0;
+		this.dimId = 0;
 	}
 }

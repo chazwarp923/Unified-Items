@@ -1,35 +1,32 @@
 package tech.chazwarp923.unifieditems.world;
 
+import java.util.Map;
 import java.util.Random;
-
-import tech.chazwarp923.unifieditems.lib.OreGen;
 
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
 import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
+import tech.chazwarp923.unifieditems.block.UIBlockOre;
+import tech.chazwarp923.unifieditems.block.UIBlocks;
+import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
 public class WorldGenerationHandler implements IWorldGenerator {
 
-	private WorldGenerator copperGen;
-	private WorldGenerator tinGen;
-	private WorldGenerator silverGen;
-	private WorldGenerator leadGen;
-
-	//TODO Fix
+	private WorldGenerator worldGen;
 	
+	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		
-	}
-	
-	/*@Override
-	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		generateOre(random, chunkX, chunkZ, world, OreGen.COPPER_CHUNK, copperGen, 40, 75);
-		generateOre(random, chunkX, chunkZ, world, OreGen.TIN_CHUNK, tinGen, 20, 55);
-		generateOre(random, chunkX, chunkZ, world, OreGen.SILVER_CHUNK, silverGen, 5, 30);
-		generateOre(random, chunkX, chunkZ, world, OreGen.LEAD_CHUNK, leadGen, 10, 35);
+		for(Map.Entry<String, UIBlockOre> block : UIBlocks.ores.entrySet()) {
+			MaterialRegistry material = stringToMaterial(block.getKey());
+			if(material.dimId == 0) {
+				worldGen = new WorldGenMinable(block.getValue().getDefaultState(), material.perVein);
+				generateOre(random, chunkX, chunkZ, world, material.chunkDensity, worldGen, material.minY, material.maxY);
+			}
+		}
 	}
 	
 	private void generateOre(Random rand, int chunkX, int chunkZ, World world, int iterations, WorldGenerator gen, int LowestY, int HighestY) {
@@ -40,5 +37,36 @@ public class WorldGenerationHandler implements IWorldGenerator {
 			
 			gen.generate(world, rand, new BlockPos(x, y, z));
 		}
-	}*/
+	}
+	
+	private MaterialRegistry stringToMaterial(String s) {
+		switch(s) {
+			case "Copper":
+				return MaterialRegistry.COPPER;
+			case "Tin":
+				return MaterialRegistry.TIN;
+			case "Silver":
+				return MaterialRegistry.SILVER;
+			case "Lead":
+				return MaterialRegistry.LEAD;
+			case "Nickel":
+				return MaterialRegistry.NICKEL;
+			case "Platinum":
+				return MaterialRegistry.PLATINUM;
+			case "Mithril":
+				return MaterialRegistry.MITHRIL;
+			case "Aluminum":
+				return MaterialRegistry.ALUMINUM;
+			case "Uranium":
+				return MaterialRegistry.URANIUM;
+			case "Cobalt":
+				return MaterialRegistry.COBALT;
+			case "Ardite":
+				return MaterialRegistry.ARDITE;
+			case "Iridium":
+				return MaterialRegistry.IRIDIUM;
+			default:
+				return null;
+		}
+	}
 }

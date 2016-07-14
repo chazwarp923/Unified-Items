@@ -50,7 +50,7 @@ public class CommonProxy {
 		MinecraftForge.EVENT_BUS.register(UnifiedItems.instance);
 		
 		//Registers World Generation
-		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), 0);
+		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
 
 		//Adds All The Crafting Related Stuff
 		Shaped.preInit();

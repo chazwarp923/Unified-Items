@@ -12,9 +12,9 @@ import tech.chazwarp923.unifieditems.modular.module.TinkersConstruct;
 public enum Modules {
 
 	MINECRAFT("Minecraft", Minecraft.class),
-	FORESTRY("ForestryforMinecraft", Forestry.class),
-	IC2("ic2", IC2.class),
-	TINKERSCONSTRUCT("TinkersConstruct", TinkersConstruct.class),
+	FORESTRY("forestry", Forestry.class),
+	IC2("IC2", IC2.class),
+	TINKERSCONSTRUCT("tconstruct", TinkersConstruct.class),
 	THERMALEXPANSION("ThermalExpansion", ThermalExpansion.class);
 	
 	final String modid;
