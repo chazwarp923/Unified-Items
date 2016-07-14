@@ -37,7 +37,7 @@ public class CommonProxy {
 		UIItems.preInit();
 		
 		//Hard Codes The Mod Metadata
-		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01";
+		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz";
 		preInitEvent.getModMetadata().description = "Unify all the world generation!";
 		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.TEXTURE_LOC + "/textures/logo.png";
 		preInitEvent.getModMetadata().modId = Reference.MOD_ID;
@@ -52,13 +52,13 @@ public class CommonProxy {
 		//Registers World Generation
 		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
 
-		//Adds All The Crafting Related Stuff
-		Shaped.preInit();
-		Shapeless.preInit();
-		Smelting.preInit();
-		
 		//Does Oredictonary Related Things
 		OreDictionaryHelper.init();
+		
+		//Adds All The Crafting Related Stuff
+		Shaped.init();
+		Shapeless.init();
+		Smelting.init();
 	}
 
 	public void postInit(FMLPostInitializationEvent postInitEvent) {

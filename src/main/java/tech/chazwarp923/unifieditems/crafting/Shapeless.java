@@ -14,7 +14,7 @@ import tech.chazwarp923.unifieditems.item.UIItems;
 
 public class Shapeless {
 
-	public static void preInit() {
+	public static void init() {
 
 		// Adds The Recipes for Ores to Dusts
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Iron"), 2), new Object[] { "craftingMortarAndPestle", "oreIron" }));
