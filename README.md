@@ -5,4 +5,4 @@ I have currently hardcoded the modules to just the major mods i know have update
 In the future i plan to add a json based module system that way users can make their own modules and customize it to their liking.
 
 #Download
-You can download it over on (http://minecraft.curseforge.com/projects/unified-items "CurseForge")
+You can download it over on [CurseForge](http://minecraft.curseforge.com/projects/unified-items)
