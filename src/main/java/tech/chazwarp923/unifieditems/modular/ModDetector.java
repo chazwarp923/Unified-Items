@@ -9,7 +9,7 @@ public class ModDetector {
 
 	public static void preInit() {
 		for(Modules module : Modules.values()) {
-			if(module.getModID().equals("Minecraft") || Loader.isModLoaded(module.getModID())) {
+			if(module.getModID().equals("Minecraft") ||Loader.isModLoaded(module.getModID())) {
 				try {
 					module.getClassForInstantiation().newInstance();
 				} catch (InstantiationException e) {
