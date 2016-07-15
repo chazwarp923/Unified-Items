@@ -20,8 +20,8 @@ public class Shapeless {
 		//TODO Fix #2
 		
 		//Adds the recipes for Ores to Dusts
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Iron"), 2), new Object[] { "craftingMortarAndPestle", "oreIron" }));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Gold"), 2), new Object[] { "craftingMortarAndPestle", "oreGold" }));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Iron"), 2), UIItems.mortarAndPestle, "oreIron"));
+		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Gold"), 2), UIItems.mortarAndPestle, "oreGold"));
 		for(Map.Entry<String, UIBlockOre> block : UIBlocks.ores.entrySet()) {
 			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get(block.getKey()), 2), new ItemStack(UIItems.mortarAndPestle, 1, OreDictionary.WILDCARD_VALUE), "ore" + block.getKey()));
 		}
