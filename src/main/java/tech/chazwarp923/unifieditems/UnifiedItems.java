@@ -19,7 +19,7 @@ public class UnifiedItems {
 
 	public static File configFile;
 
-	//The instance of your mod that Forge uses.
+	//The instance of the mod that Forge uses.
 	@Mod.Instance(Reference.MOD_ID)
 	public static UnifiedItems instance;
 	

@@ -1,5 +1,10 @@
 package tech.chazwarp923.unifieditems.proxy;
 
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
@@ -11,32 +16,25 @@ import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.lib.Reference;
 import tech.chazwarp923.unifieditems.material.MaterialHandler;
 import tech.chazwarp923.unifieditems.modular.ModDetector;
-import tech.chazwarp923.unifieditems.oredictionary.OreDictionaryHelper;
 import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
-
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {
-		//Does Config Things
+		//Gets the suggested config location then initilizes the config
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
 		ConfigHandler.init(UnifiedItems.configFile);
 
-		//Register Event Handlers
+		//Register event handlers
 		MinecraftForge.EVENT_BUS.register(new ItemCraftedEventHandler());
 
-		//Registers The Blocks And Items
+		//Registers the blocks And items
 		ModDetector.preInit();
 		MaterialHandler.addBlocksAndItemsForMaterials();
 		UIBlocks.preInit();
 		UIItems.preInit();
 		
-		//Hard Codes The Mod Metadata
+		//Hardcodes the mcmod.info
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz";
 		preInitEvent.getModMetadata().description = "Unify all the world generation!";
 		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.TEXTURE_LOC + "/textures/logo.png";
@@ -46,14 +44,11 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent initEvent) {
-		//Registers The Instance Of The Mod
+		//Registers the instance of the mod
 		MinecraftForge.EVENT_BUS.register(UnifiedItems.instance);
 		
-		//Registers World Generation
+		//Registers world generation
 		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
-
-		//Does Oredictonary Related Things
-		OreDictionaryHelper.init();
 		
 		//Adds All The Crafting Related Stuff
 		Shaped.init();
