@@ -10,20 +10,19 @@ import net.minecraftforge.oredict.OreDictionary;
 import net.minecraftforge.oredict.ShapelessOreRecipe;
 import tech.chazwarp923.unifieditems.block.UIBlockOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
 import tech.chazwarp923.unifieditems.item.UIItemIngot;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
 public class Shapeless {
 
 	public static void init() {
-
-		//TODO Fix #2
 		
 		//Adds the recipes for Ores to Dusts
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Iron"), 2), UIItems.mortarAndPestle, "oreIron"));
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get("Gold"), 2), UIItems.mortarAndPestle, "oreGold"));
+		GameRegistry.addRecipe(new OreToDustRecipe("Iron"));
+		GameRegistry.addRecipe(new OreToDustRecipe("Gold"));
 		for(Map.Entry<String, UIBlockOre> block : UIBlocks.ores.entrySet()) {
-			GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(UIItems.dusts.get(block.getKey()), 2), new ItemStack(UIItems.mortarAndPestle, 1, OreDictionary.WILDCARD_VALUE), "ore" + block.getKey()));
+			GameRegistry.addRecipe(new OreToDustRecipe(block.getKey()));
 		}
 		
 		//Adds the recipe for bronze

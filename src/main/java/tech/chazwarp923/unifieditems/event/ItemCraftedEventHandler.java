@@ -51,7 +51,7 @@ public class ItemCraftedEventHandler {
 		}*/
 
 		//Helps the ore and flint recipes
-		for (int i = 0; i < craftingGrid.getSizeInventory(); i++) {
+		/*for (int i = 0; i < craftingGrid.getSizeInventory(); i++) {
 			if(craftingGrid.getStackInSlot(i) != null) {
 				if(craftingGrid.getStackInSlot(i).getItem() instanceof ItemMortarAndPestle) {
 					ItemStack oldStack = craftingGrid.getStackInSlot(i);
@@ -66,15 +66,10 @@ public class ItemCraftedEventHandler {
 									UnifiedItems.logger.log(Level.INFO, "Old Ore Stack: " + oldOre);
 									int stackSize = oldOre.stackSize / 2;
 									UnifiedItems.logger.log(Level.INFO, "Assumed Stack Size: " + stackSize);
-									if(oldOre.stackSize == 1)
-										stackSize = 0;
-									UnifiedItems.logger.log(Level.INFO, "Corrected Stack Size: " + stackSize);
-									ItemStack newOre = new ItemStack(oldOre.getItem(), stackSize);
-									UnifiedItems.logger.log(Level.INFO, "New Ore Stack: " + newOre);
-									if(newOre.stackSize == 0) {
-										newOre = null;
-									}
-									craftingGrid.setInventorySlotContents(j, newOre);
+									craftingGrid.decrStackSize(j, 1);
+									//ItemStack newOre = new ItemStack(oldOre.getItem(), stackSize + 1);
+									//UnifiedItems.logger.log(Level.INFO, "New Ore Stack: " + newOre);
+									//craftingGrid.setInventorySlotContents(j, newOre);
 									UnifiedItems.logger.log(Level.INFO, "Slot Contents: " + craftingGrid.getStackInSlot(j));
 									slot = j;
 								}
@@ -82,9 +77,8 @@ public class ItemCraftedEventHandler {
 						}
 					}
 					craftingGrid.setInventorySlotContents(i, newStack);
-					UnifiedItems.logger.log(Level.INFO, "Slot Contents: " + craftingGrid.getStackInSlot(slot));
 				}
 			}
-		}
+		}*/
 	}
 }

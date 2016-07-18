@@ -5,12 +5,14 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.RecipeSorter;
 import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.crafting.Shaped;
 import tech.chazwarp923.unifieditems.crafting.Shapeless;
 import tech.chazwarp923.unifieditems.crafting.Smelting;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
 import tech.chazwarp923.unifieditems.event.ItemCraftedEventHandler;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.lib.Reference;
@@ -51,6 +53,7 @@ public class CommonProxy {
 		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
 		
 		//Adds All The Crafting Related Stuff
+		RecipeSorter.register(Reference.RESOURCE_PREFIX + "oreToDust", OreToDustRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
 		Shaped.init();
 		Shapeless.init();
 		Smelting.init();
