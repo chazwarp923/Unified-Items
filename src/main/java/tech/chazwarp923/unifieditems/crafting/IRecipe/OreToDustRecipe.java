@@ -52,7 +52,7 @@ public class OreToDustRecipe implements IRecipe {
 
 	@Override
 	public int getRecipeSize() {
-		return 2;
+		return 9;
 	}
 
 	@Override
@@ -67,17 +67,17 @@ public class OreToDustRecipe implements IRecipe {
         for (int i = 0; i < aitemstack.length; i++) {
             ItemStack itemstack = inv.getStackInSlot(i);
 
-            if (itemstack != null && itemstack.getItem().equals(UIItems.mortarAndPestle)) {
-                aitemstack[i] = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
-                if(aitemstack[i].getItemDamage() == aitemstack[i].getMaxDamage())
-                	aitemstack[i] = null;
-            }
-            else if(itemstack != null && !(itemstack.getItem().equals(UIItems.mortarAndPestle))) {
+            if(itemstack != null && !(itemstack.getItem().equals(UIItems.mortarAndPestle))) {
             	aitemstack[i] = itemstack;
             	aitemstack[i].stackSize = aitemstack[i].stackSize - 1;
             	if(aitemstack[i].stackSize == 0) {
             		aitemstack[i] = null;
             	}
+            }
+            else if (itemstack != null && itemstack.getItem().equals(UIItems.mortarAndPestle)) {
+                aitemstack[i] = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
+                if(aitemstack[i].getItemDamage() == aitemstack[i].getMaxDamage())
+                	aitemstack[i] = null;
             }
         }
         return aitemstack;
