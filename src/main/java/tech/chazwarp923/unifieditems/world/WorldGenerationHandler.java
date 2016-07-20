@@ -20,8 +20,8 @@ public class WorldGenerationHandler implements IWorldGenerator {
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		for(Map.Entry<String, UIBlockOre> block : UIBlocks.ores.entrySet()) {
-			MaterialRegistry material = stringToMaterial(block.getKey());
+		for(Map.Entry<MaterialRegistry, UIBlockOre> block : UIBlocks.ores.entrySet()) {
+			MaterialRegistry material = block.getKey();
 			if(material.dimId == 0) {
 				worldGen = new WorldGenMinable(block.getValue().getDefaultState(), material.perVein);
 				generateOre(random, chunkX, chunkZ, world, material.chunkDensity, worldGen, material.minY, material.maxY);
@@ -36,37 +36,6 @@ public class WorldGenerationHandler implements IWorldGenerator {
 			int z = chunkZ * 16 + rand.nextInt(16);
 			
 			gen.generate(world, rand, new BlockPos(x, y, z));
-		}
-	}
-	
-	private MaterialRegistry stringToMaterial(String s) {
-		switch(s) {
-			case "Copper":
-				return MaterialRegistry.COPPER;
-			case "Tin":
-				return MaterialRegistry.TIN;
-			case "Silver":
-				return MaterialRegistry.SILVER;
-			case "Lead":
-				return MaterialRegistry.LEAD;
-			case "Nickel":
-				return MaterialRegistry.NICKEL;
-			case "Platinum":
-				return MaterialRegistry.PLATINUM;
-			case "Mithril":
-				return MaterialRegistry.MITHRIL;
-			case "Aluminum":
-				return MaterialRegistry.ALUMINUM;
-			case "Uranium":
-				return MaterialRegistry.URANIUM;
-			case "Cobalt":
-				return MaterialRegistry.COBALT;
-			case "Ardite":
-				return MaterialRegistry.ARDITE;
-			case "Iridium":
-				return MaterialRegistry.IRIDIUM;
-			default:
-				return null;
 		}
 	}
 }

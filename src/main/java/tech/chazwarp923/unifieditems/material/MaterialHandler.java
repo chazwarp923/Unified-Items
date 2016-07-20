@@ -29,36 +29,36 @@ public class MaterialHandler {
 		for(MaterialRegistry material : materialUseCount.keySet()) {
 			switch(material.type) {
 			case GENERIC:
-				UIBlocks.addOre(material.name, material.hardness, "ore" + material.name, material.harvestLevel);
-				UIItems.addDust(material.name, "dust" + material.name);
-				UIItems.addIngot(material.name, "ingot" + material.name);
-				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel);
+				UIBlocks.addOre(material, material.hardness, "ore" + material.name, material.harvestLevel);
+				UIItems.addDust(material, "dust" + material.name);
+				UIItems.addIngot(material, "ingot" + material.name);
+				UIBlocks.addBlock(material, material.hardness, "block" + material.name, material.harvestLevel);
 				break;
 			case ALLOY:
-				UIItems.addDust(material.name, "dust" + material.name);
-				UIItems.addIngot(material.name, "ingot" + material.name);
-				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel);
+				UIItems.addDust(material, "dust" + material.name);
+				UIItems.addIngot(material, "ingot" + material.name);
+				UIBlocks.addBlock(material, material.hardness, "block" + material.name, material.harvestLevel);
 				break;
 			case GENERIC_GEM:
-				UIBlocks.addOre(material.name, material.hardness, "ore" + material.name, material.harvestLevel);
-				UIItems.addDust(material.name, "dust" + material.name);
-				UIItems.addGem(material.name, "gem" + material.name);
-				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel);
+				UIBlocks.addOre(material, material.hardness, "ore" + material.name, material.harvestLevel);
+				UIItems.addDust(material, "dust" + material.name);
+				UIItems.addGem(material, "gem" + material.name);
+				UIBlocks.addBlock(material, material.hardness, "block" + material.name, material.harvestLevel);
 				break;
 			case DUST:
-				UIItems.addDust(material.name, "dust" + material.name);
+				UIItems.addDust(material, "dust" + material.name);
 				break;
 			case INGOT:
-				UIItems.addIngot(material.name, "ingot" + material.name);
+				UIItems.addIngot(material, "ingot" + material.name);
 				break;
 			case GEM:
-				UIItems.addGem(material.name, "gem" + material.name);
+				UIItems.addGem(material, "gem" + material.name);
 				break;
 			case BLOCK:
-				UIBlocks.addBlock(material.name, material.hardness, "block" + material.name, material.harvestLevel);
+				UIBlocks.addBlock(material, material.hardness, "block" + material.name, material.harvestLevel);
 				break;
 			default:
-				UnifiedItems.logger.log(Level.ERROR, "Invalid material enum passed for " + material.name );
+				UnifiedItems.logger.log(Level.ERROR, "Invalid material enum passed for " + material.toString() );
 				break;
 			}
 		}
