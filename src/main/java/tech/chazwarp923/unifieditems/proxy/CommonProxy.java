@@ -13,7 +13,6 @@ import tech.chazwarp923.unifieditems.crafting.Shaped;
 import tech.chazwarp923.unifieditems.crafting.Shapeless;
 import tech.chazwarp923.unifieditems.crafting.Smelting;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
-import tech.chazwarp923.unifieditems.event.ItemCraftedEventHandler;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.lib.Reference;
 import tech.chazwarp923.unifieditems.material.MaterialHandler;
@@ -26,9 +25,6 @@ public class CommonProxy {
 		//Gets the suggested config location then initilizes the config
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
 		ConfigHandler.init(UnifiedItems.configFile);
-
-		//Register event handlers
-		MinecraftForge.EVENT_BUS.register(new ItemCraftedEventHandler());
 
 		//Registers the blocks And items
 		ModDetector.preInit();

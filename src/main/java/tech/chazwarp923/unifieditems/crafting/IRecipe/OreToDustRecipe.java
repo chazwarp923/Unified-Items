@@ -6,6 +6,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
+import tech.chazwarp923.unifieditems.item.ItemMortarAndPestle;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
 public class OreToDustRecipe implements IRecipe {
@@ -15,13 +16,13 @@ public class OreToDustRecipe implements IRecipe {
 	
 	public OreToDustRecipe(String material) {
 		if(!(material.equals("Iron")) && !(material.equals("Gold"))) {
-			input = new ItemStack(UIBlocks.ores.get(material));
+			input = new ItemStack(UIBlocks.ores.get(material), 1);
 		}
 		else if(material.equals("Iron")) {
-			input = new ItemStack(Blocks.IRON_ORE);
+			input = new ItemStack(Blocks.IRON_ORE, 1);
 		}
 		else if(material.equals("Gold")) {
-			input = new ItemStack(Blocks.GOLD_ORE);
+			input = new ItemStack(Blocks.GOLD_ORE, 1);
 		}
 		output = new ItemStack(UIItems.dusts.get(material), 2);
 	}
@@ -52,34 +53,28 @@ public class OreToDustRecipe implements IRecipe {
 
 	@Override
 	public int getRecipeSize() {
-		return 9;
+		return 2;
 	}
 
 	@Override
 	public ItemStack getRecipeOutput() {
-		return output.copy();
+		return output;
 	}
 
 	@Override
 	public ItemStack[] getRemainingItems(InventoryCrafting inv) {
-		ItemStack[] aitemstack = new ItemStack[inv.getSizeInventory()];
+		ItemStack[] grid = new ItemStack[inv.getSizeInventory()];
 
-        for (int i = 0; i < aitemstack.length; i++) {
+        for (int i = 0; i < grid.length; i++) {
             ItemStack itemstack = inv.getStackInSlot(i);
-
-            if(itemstack != null && !(itemstack.getItem().equals(UIItems.mortarAndPestle))) {
-            	aitemstack[i] = itemstack;
-            	aitemstack[i].stackSize = aitemstack[i].stackSize - 1;
-            	if(aitemstack[i].stackSize == 0) {
-            		aitemstack[i] = null;
-            	}
-            }
-            else if (itemstack != null && itemstack.getItem().equals(UIItems.mortarAndPestle)) {
-                aitemstack[i] = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
-                if(aitemstack[i].getItemDamage() == aitemstack[i].getMaxDamage())
-                	aitemstack[i] = null;
+            
+            if (itemstack != null && itemstack.getItem() instanceof ItemMortarAndPestle) {
+            	itemstack = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
+                if(itemstack.getItemDamage() == itemstack.getMaxDamage())
+                	itemstack = null;
+                grid[i] = itemstack;
             }
         }
-        return aitemstack;
+        return grid;
 	}
 }

@@ -18,6 +18,13 @@ apply plugin: 'java'
   targetCompatibility = '1.8'
 }
 
+eclipse {
+    classpath {
+         containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+    }
+}
+
 version = "1.10.2-1.0.4"
 group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "unifieditems"
@@ -48,9 +55,9 @@ repositories {
 
 dependencies {
     // compile against the JEI API
-    deobfCompile "mezz.jei:jei_1.10.2:3.7.5.230:api"
+    deobfCompile "mezz.jei:jei_1.10.2:3.7.8.234:api"
     // at runtime, use the full JEI jar
-    runtime "mezz.jei:jei_1.10.2:3.7.5.230"
+    runtime "mezz.jei:jei_1.10.2:3.7.8.234"
 
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
