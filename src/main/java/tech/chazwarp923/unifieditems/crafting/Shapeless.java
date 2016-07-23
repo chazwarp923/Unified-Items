@@ -20,10 +20,10 @@ public class Shapeless {
 	public static void init() {
 		
 		//Adds the recipes for Ores to Dusts
-		GameRegistry.addRecipe(new OreToDustRecipe("Iron"));
-		GameRegistry.addRecipe(new OreToDustRecipe("Gold"));
+		GameRegistry.addRecipe(new OreToDustRecipe(null, "Iron"));
+		GameRegistry.addRecipe(new OreToDustRecipe(null, "Gold"));
 		for(Map.Entry<MaterialRegistry, UIBlockOre> block : UIBlocks.ores.entrySet()) {
-			GameRegistry.addRecipe(new OreToDustRecipe(block.getKey().toString()));
+			GameRegistry.addRecipe(new OreToDustRecipe(block.getKey(), null));
 		}
 		
 		//Adds the recipe for bronze

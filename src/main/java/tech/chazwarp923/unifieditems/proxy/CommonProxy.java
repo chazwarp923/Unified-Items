@@ -12,7 +12,9 @@ import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.crafting.Shaped;
 import tech.chazwarp923.unifieditems.crafting.Shapeless;
 import tech.chazwarp923.unifieditems.crafting.Smelting;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.FlintRecipe;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.TorchRecipe;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.lib.Reference;
 import tech.chazwarp923.unifieditems.material.MaterialHandler;
@@ -50,6 +52,8 @@ public class CommonProxy {
 		
 		//Adds All The Crafting Related Stuff
 		RecipeSorter.register(Reference.RESOURCE_PREFIX + "oreToDust", OreToDustRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
+		RecipeSorter.register(Reference.RESOURCE_PREFIX + "flint", FlintRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
+		RecipeSorter.register(Reference.RESOURCE_PREFIX + "torch", TorchRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
 		Shaped.init();
 		Shapeless.init();
 		Smelting.init();
