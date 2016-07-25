@@ -30,7 +30,7 @@ group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-
 archivesBaseName = "unifieditems"
 
 minecraft {
-    version = "1.10.2-12.18.1.2018"
+    version = "1.10.2-12.18.1.2026"
     if(file('../run').exists()) {
         runDir = "../run"
     }
@@ -43,7 +43,7 @@ minecraft {
     // stable_#            stables are built at the discretion of the MCP team.
     // Use non-default mappings at your own risk. they may not allways work.
     // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20160720"
+    mappings = "snapshot_20160725"
 }
 
 repositories {

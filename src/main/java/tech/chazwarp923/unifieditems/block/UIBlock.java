@@ -25,7 +25,7 @@ public class UIBlock extends Block {
 
 		setCreativeTab(UnifiedItemsTab.tab);
 		setHardness(hardness);
-		setHarvestLevel(harvestTool.toString(), harvestLevel.level);
+		setHarvestLevel(harvestTool.type, harvestLevel.level);
 		setRegistryName(unlocalizedName);
 		setSoundType(sound);
 		setUnlocalizedName(unlocalizedName);
