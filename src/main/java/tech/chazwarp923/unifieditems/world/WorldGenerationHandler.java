@@ -12,6 +12,7 @@ import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
 import tech.chazwarp923.unifieditems.block.UIBlockOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
+import tech.chazwarp923.unifieditems.material.MaterialHandler;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
 public class WorldGenerationHandler implements IWorldGenerator {
@@ -23,7 +24,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
 		for(Map.Entry<MaterialRegistry, UIBlockOre> block : UIBlocks.ores.entrySet()) {
 			MaterialRegistry material = block.getKey();
 			if(material.dimId == 0) {
-				worldGen = new WorldGenMinable(block.getValue().getDefaultState(), material.perVein);
+				worldGen = new WorldGenMinable(block.getValue().getDefaultState(), material.perVein + MaterialHandler.getMaterialUseCount(material));
 				generateOre(random, chunkX, chunkZ, world, material.chunkDensity, worldGen, material.minY, material.maxY);
 			}
 		}

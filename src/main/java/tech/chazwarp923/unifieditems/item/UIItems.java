@@ -14,6 +14,7 @@ public class UIItems {
 	
 	public static Map<MaterialRegistry, UIItemDust> dusts = new HashMap<MaterialRegistry, UIItemDust>();
 	public static Map<MaterialRegistry, UIItemIngot> ingots = new HashMap<MaterialRegistry, UIItemIngot>();
+	public static Map<MaterialRegistry, UIItemNugget> nuggets = new HashMap<MaterialRegistry, UIItemNugget>();
 	public static Map<MaterialRegistry, UIItemGem> gems = new HashMap<MaterialRegistry, UIItemGem>();
 	
 	public static void addDust(MaterialRegistry mat, String unlocalizedName) {
@@ -22,6 +23,10 @@ public class UIItems {
 	
 	public static void addIngot(MaterialRegistry mat, String unlocalizedName) {
 		ingots.put(mat, new UIItemIngot(unlocalizedName));
+	}
+	
+	public static void addNugget(MaterialRegistry mat, String unlocalizedName) {
+		nuggets.put(mat, new UIItemNugget(unlocalizedName));
 	}
 	
 	public static void addGem(MaterialRegistry mat, String unlocalizedName) {

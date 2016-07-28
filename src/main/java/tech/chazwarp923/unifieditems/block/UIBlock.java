@@ -17,8 +17,6 @@ import tech.chazwarp923.unifieditems.UnifiedItemsTab;
 import tech.chazwarp923.unifieditems.item.UIItemBlock;
 
 public class UIBlock extends Block {
-	
-	private String name = "UIDefaultBlock";
 
 	public UIBlock(Material mat, float hardness, SoundType sound, String unlocalizedName, HarvestType harvestTool, HarvestLevel harvestLevel) {
 		super(mat);
@@ -29,7 +27,6 @@ public class UIBlock extends Block {
 		setRegistryName(unlocalizedName);
 		setSoundType(sound);
 		setUnlocalizedName(unlocalizedName);
-		name = unlocalizedName;
 		
 		GameRegistry.register(this);
 		GameRegistry.register(new UIItemBlock(this), getRegistryName());
@@ -39,8 +36,4 @@ public class UIBlock extends Block {
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(this), 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
-	
-	public String getName() {
-		return name;
-	}
 }

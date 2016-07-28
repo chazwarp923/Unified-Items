@@ -25,6 +25,10 @@ public class MaterialHandler {
 		}
 	}
 	
+	public static int getMaterialUseCount(MaterialRegistry mat) {
+		return materialUseCount.get(mat);
+	}
+	
 	public static void addBlocksAndItemsForMaterials() {
 		for(MaterialRegistry material : materialUseCount.keySet()) {
 			switch(material.type) {
@@ -32,11 +36,13 @@ public class MaterialHandler {
 				UIBlocks.addOre(material, material.hardness, "ore" + material.name, material.harvestLevel);
 				UIItems.addDust(material, "dust" + material.name);
 				UIItems.addIngot(material, "ingot" + material.name);
+				UIItems.addNugget(material, "nugget" + material.name);
 				UIBlocks.addBlock(material, material.hardness, "block" + material.name, material.harvestLevel);
 				break;
 			case ALLOY:
 				UIItems.addDust(material, "dust" + material.name);
 				UIItems.addIngot(material, "ingot" + material.name);
+				UIItems.addNugget(material, "nugget" + material.name);
 				UIBlocks.addBlock(material, material.hardness, "block" + material.name, material.harvestLevel);
 				break;
 			case GENERIC_GEM:
@@ -50,6 +56,9 @@ public class MaterialHandler {
 				break;
 			case INGOT:
 				UIItems.addIngot(material, "ingot" + material.name);
+				break;
+			case NUGGET:
+				UIItems.addNugget(material, "nugget" + material.name);
 				break;
 			case GEM:
 				UIItems.addGem(material, "gem" + material.name);
