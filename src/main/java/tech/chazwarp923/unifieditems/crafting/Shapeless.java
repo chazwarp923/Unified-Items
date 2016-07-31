@@ -7,6 +7,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import tech.chazwarp923.unifieditems.block.UIBlockOre;
+import tech.chazwarp923.unifieditems.block.UIBlockStorage;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.FlintRecipe;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
@@ -40,9 +41,14 @@ public class Shapeless {
 			GameRegistry.addShapelessRecipe(new ItemStack(UIItems.ingots.get(item.getKey())), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()));
 		}
 		
-		//Adds the recipes for the storage blocks
+		//Adds the recipes for ingots to blocks
 		for(Map.Entry<MaterialRegistry, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			GameRegistry.addShapelessRecipe(new ItemStack(UIBlocks.blocks.get(item.getKey())), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()));
+		}
+		
+		//Adds the recipes for blocks to ingots
+		for(Map.Entry<MaterialRegistry, UIBlockStorage> item : UIBlocks.blocks.entrySet()) {
+			GameRegistry.addShapelessRecipe(new ItemStack(UIItems.ingots.get(item.getKey()), 9), new ItemStack(item.getValue()));
 		}
 
 		//Adds the recipe for the "Mortar and Pestle"
