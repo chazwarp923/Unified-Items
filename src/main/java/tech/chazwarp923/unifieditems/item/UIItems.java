@@ -38,9 +38,21 @@ public class UIItems {
 		
 		for(Map.Entry<MaterialRegistry, UIItemDust> item : dusts.entrySet()) {
 			OreDictionary.registerOre("dust" + item.getKey().toString(), item.getValue());
+			if(item.getKey().equals(MaterialRegistry.ALUMINUM)) {
+				OreDictionary.registerOre("dustAluminium", item.getValue());
+			}
 		}
 		for(Map.Entry<MaterialRegistry, UIItemIngot> item : ingots.entrySet()) {
 			OreDictionary.registerOre("ingot" + item.getKey().toString(), item.getValue());
+			if(item.getKey().equals(MaterialRegistry.ALUMINUM)) {
+				OreDictionary.registerOre("ingotAluminium", item.getValue());
+			}
+		}
+		for(Map.Entry<MaterialRegistry, UIItemNugget> item : nuggets.entrySet()) {
+			OreDictionary.registerOre("nugget" + item.getKey().toString(), item.getValue());
+			if(item.getKey().equals(MaterialRegistry.ALUMINUM)) {
+				OreDictionary.registerOre("nuggetAluminium", item.getValue());
+			}
 		}
 		for(Map.Entry<MaterialRegistry, UIItemGem> item : gems.entrySet()) {
 			OreDictionary.registerOre("gem" + item.getKey().toString(), item.getValue());
@@ -59,13 +71,17 @@ public class UIItems {
 			item.getValue().initModel();
 		}
 		
+		for(Map.Entry<MaterialRegistry, UIItemNugget> item : nuggets.entrySet()) {
+			item.getValue().initModel();
+		}
+		
 		for(Map.Entry<MaterialRegistry, UIItemGem> item : gems.entrySet()) {
 			item.getValue().initModel();
 		}
 	}
 	
 	@SideOnly(Side.CLIENT)
-    public static void initModel(UIItem i) {
-        i.initModel();
+    public static void initModel(UIItem item) {
+        item.initModel();
     }
 }

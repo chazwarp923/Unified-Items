@@ -25,9 +25,15 @@ public class UIBlocks {
 	public static void preInit() {		
 		for(Map.Entry<MaterialRegistry, UIBlockOre> block : ores.entrySet()) {
 			OreDictionary.registerOre("ore" + block.getKey().toString(), block.getValue());
+			if(block.getKey().equals(MaterialRegistry.ALUMINUM)) {
+				OreDictionary.registerOre("oreAluminium", block.getValue());
+			}
 		}
 		for(Map.Entry<MaterialRegistry, UIBlockStorage> block : blocks.entrySet()) {
 			OreDictionary.registerOre("block" + block.getKey().toString(), block.getValue());
+			if(block.getKey().equals(MaterialRegistry.ALUMINUM)) {
+				OreDictionary.registerOre("blockAluminium", block.getValue());
+			}
 		}
 	}
 	

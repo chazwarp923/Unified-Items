@@ -30,8 +30,6 @@ tile.blockCobalt.name=Cobalt Block
 tile.blockArdite.name=Ardite Block
 tile.blockSteel.name=Steel Block
 
-tile.rubberTap.name=Rubber Tap
-
 item.dustCoal.name=Coal Powder
 item.dustIron.name=Iron Powder
 item.dustGold.name=Gold Powder
@@ -69,6 +67,21 @@ item.ingotCobalt.name=Cobalt Ingot
 item.ingotArdite.name=Ardite Ingot
 item.ingotSteel.name=Steel Ingot
 
-item.rawRubber.name=Drop of Rubber
-item.ingotRubber.name=Rubber Bar
+item.nuggetCopper.name=Copper Nugget
+item.nuggetTin.name=Tin Nugget
+item.nuggetBronze.name=Bronze Nugget
+item.nuggetSilver.name=Silver Nugget
+item.nuggetLead.name=Lead Nugget
+item.nuggetNickel.name=Nickel Nugget
+item.nuggetInvar.name=Invar Nugget
+item.nuggetElectrum.name=Electrum Nugget
+item.nuggetPlatinum.name=Platinum Nugget
+item.nuggetMithril.name=Mithril Nugget
+item.nuggetAluminum.name=Aluminum Nugget
+item.nuggetUranium.name=Uranium Nugget
+item.nuggetIridium.name=Iridium Nugget
+item.nuggetCobalt.name=Cobalt Nugget
+item.nuggetArdite.name=Ardite Nugget
+item.nuggetSteel.name=Steel Nugget
+
 item.mortarAndPestle.name=Mortar and Pestle

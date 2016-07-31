@@ -13,8 +13,6 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import tech.chazwarp923.unifieditems.UnifiedItemsTab;
 
 public class UIItem extends Item {
-
-	private String name = "UIDefaultItem";
 	
 	protected UIItem(String unlocalizedName) {
 		super();
@@ -22,7 +20,6 @@ public class UIItem extends Item {
 		setCreativeTab(UnifiedItemsTab.tab);
 		setRegistryName(unlocalizedName);
 		setUnlocalizedName(unlocalizedName);
-		name = unlocalizedName;
 		
 		GameRegistry.register(this);
 	}
@@ -31,8 +28,4 @@ public class UIItem extends Item {
     public void initModel() {
         ModelLoader.setCustomModelResourceLocation(this, 0, new ModelResourceLocation(getRegistryName(), "inventory"));
     }
-	
-	public String getName() {
-		return name;
-	}
 }
