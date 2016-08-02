@@ -25,7 +25,7 @@ eclipse {
     }
 }
 
-version = "1.10.2-1.0.7"
+version = "1.10.2-1.1.0"
 group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "unifieditems"
 
