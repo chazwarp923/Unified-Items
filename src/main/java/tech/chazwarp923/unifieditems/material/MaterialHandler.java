@@ -3,6 +3,7 @@
 */
 package tech.chazwarp923.unifieditems.material;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,23 +15,29 @@ import tech.chazwarp923.unifieditems.item.UIItems;
 
 public class MaterialHandler {
 	
-	protected static Map<MaterialRegistry, Integer> materialUseCount = new HashMap<MaterialRegistry, Integer>();
+	protected static Map<MaterialRegistry, Integer> materials = new HashMap<MaterialRegistry, Integer>();
 	
-	public static void registerUse(MaterialRegistry mat) {
-		if(materialUseCount.containsKey(mat)) {
-			materialUseCount.put(mat, materialUseCount.get(mat) + 1);
+	public static void registerMaterialUse(ArrayList<MaterialRegistry> materials) {
+		for(MaterialRegistry material : materials) {
+			addToMap(material);
+		}
+	}
+	
+	protected static void addToMap(MaterialRegistry mat) {
+		if(materials.containsKey(mat)) {
+			materials.put(mat, materials.get(mat) + 1);
 		}
 		else {
-			materialUseCount.put(mat, 1);
+			materials.put(mat, 1);
 		}
 	}
 	
 	public static int getMaterialUseCount(MaterialRegistry mat) {
-		return materialUseCount.get(mat);
+		return materials.get(mat);
 	}
 	
 	public static void addBlocksAndItemsForMaterials() {
-		for(MaterialRegistry material : materialUseCount.keySet()) {
+		for(MaterialRegistry material : materials.keySet()) {
 			switch(material.type) {
 			case GENERIC:
 				UIBlocks.addOre(material, material.hardness, "ore" + material.name, material.harvestLevel);

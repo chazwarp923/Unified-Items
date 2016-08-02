@@ -3,5 +3,4 @@
 */
 package tech.chazwarp923.unifieditems.modular;
 
-public class UIModule {
-}
+public class UIModule {}

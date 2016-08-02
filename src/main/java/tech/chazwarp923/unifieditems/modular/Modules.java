@@ -6,6 +6,7 @@ package tech.chazwarp923.unifieditems.modular;
 import tech.chazwarp923.unifieditems.modular.module.Forestry;
 import tech.chazwarp923.unifieditems.modular.module.IC2;
 import tech.chazwarp923.unifieditems.modular.module.Minecraft;
+import tech.chazwarp923.unifieditems.modular.module.TechReborn;
 import tech.chazwarp923.unifieditems.modular.module.ThermalExpansion;
 import tech.chazwarp923.unifieditems.modular.module.TinkersConstruct;
 
@@ -15,7 +16,8 @@ public enum Modules {
 	FORESTRY("forestry", Forestry.class),
 	IC2("IC2", IC2.class),
 	TINKERSCONSTRUCT("tconstruct", TinkersConstruct.class),
-	THERMALEXPANSION("ThermalExpansion", ThermalExpansion.class);
+	THERMALEXPANSION("ThermalExpansion", ThermalExpansion.class),
+	TECHREBORN("techreborn", TechReborn.class);
 	
 	final String modid;
 	final Class<? extends UIModule> module;

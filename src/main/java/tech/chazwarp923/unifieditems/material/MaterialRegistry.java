@@ -25,7 +25,11 @@ public enum MaterialRegistry {
     STEEL(MaterialType.ALLOY, "Steel"),
     COBALT(MaterialType.GENERIC, "Cobalt", 2F, HarvestLevel.DIAMOND, 5, 120, 3, 4, 1),
     ARDITE(MaterialType.GENERIC, "Ardite", 2F, HarvestLevel.DIAMOND, 5, 120, 3, 4, 1),
-    IRIDIUM(MaterialType.GENERIC, "Iridium", 2F, HarvestLevel.DIAMOND, 5, 10, 1, 1, 0);
+    IRIDIUM(MaterialType.GENERIC, "Iridium", 2F, HarvestLevel.DIAMOND, 5, 10, 1, 1, 0),
+	RUBY(MaterialType.GENERIC_GEM, "Ruby", 2F, HarvestLevel.IRON,10, 60, 6, 3, 0),
+	SAPPHIRE(MaterialType.GENERIC_GEM, "Sapphire", 2F, HarvestLevel.IRON,10, 60, 6, 3, 0),
+	BRASS(MaterialType.ALLOY, "BRASS"),
+	ZINC(MaterialType.GENERIC, "Copper", 2F, HarvestLevel.IRON, 20, 55, 7, 10, 0);
 	
 	public final MaterialType type;
 	public final String name;
