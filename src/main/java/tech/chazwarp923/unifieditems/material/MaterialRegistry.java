@@ -18,6 +18,7 @@ public enum MaterialRegistry {
 	NICKEL(MaterialType.GENERIC, "Nickel", 2F, HarvestLevel.IRON, 5, 20, 4, 2, 0),
 	INVAR(MaterialType.ALLOY, "Invar"),
 	ELECTRUM(MaterialType.ALLOY, "Electrum"),
+	OBSIDIAN(MaterialType.DUST, "Obsidian"),
 	PLATINUM(MaterialType.GENERIC, "Platinum", 2F, HarvestLevel.DIAMOND, 5, 15, 2, 2, 0),
 	MITHRIL(MaterialType.GENERIC, "Mithril", 2F, HarvestLevel.DIAMOND, 5, 15, 2, 2, 0),
     ALUMINUM(MaterialType.GENERIC, "Aluminum", 2F, HarvestLevel.STONE, 40, 85, 8, 12, 0),
@@ -28,8 +29,8 @@ public enum MaterialRegistry {
     IRIDIUM(MaterialType.GENERIC, "Iridium", 2F, HarvestLevel.DIAMOND, 5, 10, 1, 1, 0),
 	RUBY(MaterialType.GENERIC_GEM, "Ruby", 2F, HarvestLevel.IRON,10, 60, 6, 3, 0),
 	SAPPHIRE(MaterialType.GENERIC_GEM, "Sapphire", 2F, HarvestLevel.IRON,10, 60, 6, 3, 0),
-	BRASS(MaterialType.ALLOY, "BRASS"),
-	ZINC(MaterialType.GENERIC, "Copper", 2F, HarvestLevel.IRON, 20, 55, 7, 10, 0);
+	BRASS(MaterialType.ALLOY, "Brass"),
+	ZINC(MaterialType.GENERIC, "Zinc", 2F, HarvestLevel.IRON, 20, 55, 7, 10, 0);
 	
 	public final MaterialType type;
 	public final String name;

@@ -26,7 +26,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent preInitEvent) {
 		//Gets the suggested config location then initilizes the config
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
-		ConfigHandler.init(UnifiedItems.configFile);
+		ConfigHandler.preInit(UnifiedItems.configFile);
 
 		//Registers the blocks And items
 		ModDetector.preInit();
@@ -50,7 +50,7 @@ public class CommonProxy {
 		//Registers world generation
 		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
 		
-		//Adds All The Crafting Related Stuff
+		//Adds all the crafting related stuff
 		RecipeSorter.register(Reference.RESOURCE_PREFIX + "oreToDust", OreToDustRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
 		RecipeSorter.register(Reference.RESOURCE_PREFIX + "flint", FlintRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
 		RecipeSorter.register(Reference.RESOURCE_PREFIX + "torch", TorchRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");

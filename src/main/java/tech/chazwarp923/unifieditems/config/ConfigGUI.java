@@ -14,13 +14,13 @@ import net.minecraftforge.common.config.ConfigElement;
 public class ConfigGUI extends GuiConfig {
 
 	public ConfigGUI(GuiScreen parent) {
-		super(parent, getConfigElements(), Reference.MOD_ID, false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.init(UnifiedItems.configFile).toString()));
+		super(parent, getConfigElements(), Reference.MOD_ID, false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.preInit(UnifiedItems.configFile).toString()));
 	}
 
 	public static List<IConfigElement> getConfigElements() {
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
-		list.add(new ConfigElement(ConfigHandler.init(UnifiedItems.configFile).getCategory(ConfigHandler.PER_VEIN.toLowerCase())));
-		list.add(new ConfigElement(ConfigHandler.init(UnifiedItems.configFile).getCategory(ConfigHandler.PER_CHUNK.toLowerCase())));
+		list.add(new ConfigElement(ConfigHandler.preInit(UnifiedItems.configFile).getCategory(ConfigHandler.PER_VEIN.toLowerCase())));
+		list.add(new ConfigElement(ConfigHandler.preInit(UnifiedItems.configFile).getCategory(ConfigHandler.PER_CHUNK.toLowerCase())));
 
 		return list;
 	}

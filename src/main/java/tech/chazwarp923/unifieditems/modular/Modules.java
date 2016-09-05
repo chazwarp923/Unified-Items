@@ -3,9 +3,12 @@
 */
 package tech.chazwarp923.unifieditems.modular;
 
+import tech.chazwarp923.unifieditems.modular.module.EnderIO;
 import tech.chazwarp923.unifieditems.modular.module.Forestry;
 import tech.chazwarp923.unifieditems.modular.module.IC2;
+import tech.chazwarp923.unifieditems.modular.module.ImmersiveEngineering;
 import tech.chazwarp923.unifieditems.modular.module.Minecraft;
+import tech.chazwarp923.unifieditems.modular.module.Railcraft;
 import tech.chazwarp923.unifieditems.modular.module.TechReborn;
 import tech.chazwarp923.unifieditems.modular.module.ThermalExpansion;
 import tech.chazwarp923.unifieditems.modular.module.TinkersConstruct;
@@ -17,7 +20,10 @@ public enum Modules {
 	IC2("IC2", IC2.class),
 	TINKERSCONSTRUCT("tconstruct", TinkersConstruct.class),
 	THERMALEXPANSION("ThermalExpansion", ThermalExpansion.class),
-	TECHREBORN("techreborn", TechReborn.class);
+	TECHREBORN("techreborn", TechReborn.class),
+	ENDERIO("enderio", EnderIO.class),
+	IMMERSIVEENGINEERING("immersiveengineering", ImmersiveEngineering.class),
+	RAILCRAFT("railcraft", Railcraft.class);
 	
 	final String modid;
 	final Class<? extends UIModule> module;

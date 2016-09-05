@@ -14,7 +14,7 @@ public class ConfigHandler {
 	public static String PER_VEIN = "Ores Per Vein";
 	public static String PER_CHUNK = "Veins Per Chunk";
 
-	public static Configuration init(File file) {
+	public static Configuration preInit(File file) {
 		config = new Configuration(file);
 
 		syncConfig(true, false);

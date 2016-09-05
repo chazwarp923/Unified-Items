@@ -9,22 +9,18 @@ import tech.chazwarp923.unifieditems.material.MaterialHandler;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 import tech.chazwarp923.unifieditems.modular.UIModule;
 
-public class ThermalExpansion extends UIModule {
+public class ImmersiveEngineering extends UIModule {
 
-	public ThermalExpansion() {
+	public ImmersiveEngineering() {
 		ArrayList<MaterialRegistry> materials = new ArrayList<MaterialRegistry>();
-		materials.add(MaterialRegistry.COAL);
 		materials.add(MaterialRegistry.COPPER);
-		materials.add(MaterialRegistry.TIN);
-		materials.add(MaterialRegistry.BRONZE);
+		materials.add(MaterialRegistry.ALUMINUM);
 		materials.add(MaterialRegistry.SILVER);
 		materials.add(MaterialRegistry.LEAD);
 		materials.add(MaterialRegistry.NICKEL);
-		materials.add(MaterialRegistry.INVAR);
 		materials.add(MaterialRegistry.ELECTRUM);
-		materials.add(MaterialRegistry.OBSIDIAN);
-		materials.add(MaterialRegistry.PLATINUM);
-		materials.add(MaterialRegistry.MITHRIL);
+		materials.add(MaterialRegistry.STEEL);
+		materials.add(MaterialRegistry.URANIUM);
 		MaterialHandler.registerMaterialUse(materials);
 	}
 }

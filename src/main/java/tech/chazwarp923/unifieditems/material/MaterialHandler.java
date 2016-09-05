@@ -17,8 +17,8 @@ public class MaterialHandler {
 	
 	protected static Map<MaterialRegistry, Integer> materials = new HashMap<MaterialRegistry, Integer>();
 	
-	public static void registerMaterialUse(ArrayList<MaterialRegistry> materials) {
-		for(MaterialRegistry material : materials) {
+	public static void registerMaterialUse(ArrayList<MaterialRegistry> materialsToBeAdded) {
+		for(MaterialRegistry material : materialsToBeAdded) {
 			addToMap(material);
 		}
 	}

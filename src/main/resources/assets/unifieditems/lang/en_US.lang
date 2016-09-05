@@ -12,6 +12,10 @@ tile.oreUranium.name=Uranium Ore
 tile.oreIridium.name=Iridium Ore
 tile.oreCobalt.name=Cobalt Ore
 tile.oreArdite.name=Ardite Ore
+tile.oreZinc.name=Zinc Ore
+tile.oreSapphire.name=Sapphire Ore
+tile.oreRuby.name=Ruby Ore
+
 
 tile.blockCopper.name=Copper Block
 tile.blockTin.name=Tin Block
@@ -29,6 +33,10 @@ tile.blockIridium.name=Iridium Block
 tile.blockCobalt.name=Cobalt Block
 tile.blockArdite.name=Ardite Block
 tile.blockSteel.name=Steel Block
+tile.blockZinc.name=Zinc Block
+tile.blockBrass.name=Brass Block
+tile.blockSapphire.name=Sapphire Block
+tile.blockRuby.name=Ruby Block
 
 item.dustCoal.name=Coal Powder
 item.dustIron.name=Iron Powder
@@ -49,6 +57,11 @@ item.dustIridium.name=Iridium Powder
 item.dustCobalt.name=Cobalt Powder
 item.dustArdite.name=Ardite Powder
 item.dustSteel.name=Steel Powder
+item.dustObsidian.name=Obsidian Powder
+item.dustZinc.name=Zinc Powder
+item.dustBrass.name=Brass Powder
+item.dustSapphire.name=Sapphire Powder
+item.dustRuby.name=Ruby Powder
 
 item.ingotCopper.name=Copper Ingot
 item.ingotTin.name=Tin Ingot
@@ -66,6 +79,10 @@ item.ingotIridium.name=Iridium Ingot
 item.ingotCobalt.name=Cobalt Ingot
 item.ingotArdite.name=Ardite Ingot
 item.ingotSteel.name=Steel Ingot
+item.ingotZinc.name=Zinc Ingot
+item.ingotBrass.name=Brass Ingot
+item.gemSapphire.name=Sapphire Gem
+item.gemRuby.name=Ruby Gem
 
 item.nuggetCopper.name=Copper Nugget
 item.nuggetTin.name=Tin Nugget
@@ -83,5 +100,7 @@ item.nuggetIridium.name=Iridium Nugget
 item.nuggetCobalt.name=Cobalt Nugget
 item.nuggetArdite.name=Ardite Nugget
 item.nuggetSteel.name=Steel Nugget
+item.nuggetZinc.name=Zinc Nugget
+item.nuggetBrass.name=Brass Nugget
 
 item.mortarAndPestle.name=Mortar and Pestle

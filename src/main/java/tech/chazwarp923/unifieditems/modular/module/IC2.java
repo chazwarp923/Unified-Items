@@ -16,6 +16,7 @@ public class IC2 extends UIModule {
 		materials.add(MaterialRegistry.SILVER);
 		materials.add(MaterialRegistry.LEAD);
 		materials.add(MaterialRegistry.STEEL);
+		materials.add(MaterialRegistry.OBSIDIAN);
 		materials.add(MaterialRegistry.URANIUM);
 		MaterialHandler.registerMaterialUse(materials);
 	}
