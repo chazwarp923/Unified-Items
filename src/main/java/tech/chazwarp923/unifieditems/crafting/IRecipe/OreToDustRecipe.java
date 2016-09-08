@@ -80,4 +80,8 @@ public class OreToDustRecipe implements IRecipe {
         }
         return grid;
 	}
+	
+	public ItemStack getRecipeInput() {
+		return input;
+	}
 }
