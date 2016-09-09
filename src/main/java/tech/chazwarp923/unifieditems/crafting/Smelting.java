@@ -12,6 +12,7 @@ import tech.chazwarp923.unifieditems.item.UIItemDust;
 import tech.chazwarp923.unifieditems.item.UIItemIngot;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.material.MaterialType;
 
 public class Smelting {
 
@@ -19,7 +20,12 @@ public class Smelting {
 
 		// Smelting recipes for the Ores
 		for(Map.Entry<MaterialRegistry, UIBlockOre> block : UIBlocks.ores.entrySet()) {
-			GameRegistry.addSmelting(block.getValue(), new ItemStack(UIItems.ingots.get(block.getKey())), 0.5f);
+			if(block.getKey().type == MaterialType.GENERIC) {
+				GameRegistry.addSmelting(block.getValue(), new ItemStack(UIItems.ingots.get(block.getKey())), 0.5f);
+			}
+			else if(block.getKey().type == MaterialType.GENERIC_GEM) {
+				GameRegistry.addSmelting(block.getValue(), new ItemStack(UIItems.gems.get(block.getKey())), 0.5f);
+			}
 		}
 		
 		//Adds the recipes for other mods' ingots into my ingots

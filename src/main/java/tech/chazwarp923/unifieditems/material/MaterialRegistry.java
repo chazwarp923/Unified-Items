@@ -57,7 +57,7 @@ public enum MaterialRegistry {
 	MaterialRegistry(MaterialType type, String name) {
 		this.type = type;
 		this.name = name;
-		this.hardness = -1;
+		this.hardness = 2F;
 		this.harvestLevel = HarvestLevel.WOOD;
 		this.minY = 0;
 		this.maxY = 0;
