@@ -16,8 +16,8 @@ import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
+import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.item.UIItems;
-import tech.chazwarp923.unifieditems.lib.Reference;
 
 public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper> {
 

@@ -5,7 +5,7 @@ import java.io.File;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import tech.chazwarp923.unifieditems.lib.Reference;
+import tech.chazwarp923.unifieditems.Reference;
 
 public class ConfigHandler {
 

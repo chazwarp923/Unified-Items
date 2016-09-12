@@ -3,7 +3,6 @@
  */
 package tech.chazwarp923.unifieditems;
 
-import tech.chazwarp923.unifieditems.lib.Reference;
 import tech.chazwarp923.unifieditems.proxy.CommonProxy;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;

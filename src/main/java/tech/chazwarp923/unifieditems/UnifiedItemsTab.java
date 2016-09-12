@@ -6,7 +6,6 @@ package tech.chazwarp923.unifieditems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import tech.chazwarp923.unifieditems.item.UIItems;
-import tech.chazwarp923.unifieditems.lib.Reference;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
 public class UnifiedItemsTab extends CreativeTabs {

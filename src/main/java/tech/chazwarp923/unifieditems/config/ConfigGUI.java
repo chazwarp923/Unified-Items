@@ -3,9 +3,8 @@ package tech.chazwarp923.unifieditems.config;
 import java.util.ArrayList;
 import java.util.List;
 
+import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.UnifiedItems;
-import tech.chazwarp923.unifieditems.lib.Reference;
-
 import net.minecraftforge.fml.client.config.GuiConfig;
 import net.minecraftforge.fml.client.config.IConfigElement;
 import net.minecraft.client.gui.GuiScreen;

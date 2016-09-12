@@ -1,21 +1,38 @@
 buildscript {
     repositories {
+        mavenCentral()
         jcenter()
         maven {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
+        maven {
+            // Required for the curseforge task
+            name = "gradle"
+            url "https://plugins.gradle.org/m2/"
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.0.7"
     }
 }
-apply plugin: 'net.minecraftforge.gradle.forge'
+
+repositories {
+    maven {
+        //JEI maven
+        url "http://dvs1.progwml6.com/files/maven"
+    }
+}
 
 apply plugin: 'java'
-  compileJava {
-  sourceCompatibility = '1.8'
-  targetCompatibility = '1.8'
+apply plugin: 'maven'
+apply plugin: 'net.minecraftforge.gradle.forge'
+apply plugin: 'com.matthewprenger.cursegradle'
+
+compileJava {
+    sourceCompatibility = '1.8'
+    targetCompatibility = '1.8'
 }
 
 eclipse {
@@ -25,12 +42,13 @@ eclipse {
     }
 }
 
-version = "1.10.2-1.2.0"
-group= "com.chazwarp.unifieditems" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "unifieditems"
+version = "${minecraft_version}-${mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
+group = mod_group
+archivesBaseName = mod_artifact_basename
 
 minecraft {
-    version = "1.10.2-12.18.1.2076"
+    version = minecraft_version + "-" + forge_version
+    
     if(file('../run').exists()) {
         runDir = "../run"
     }
@@ -38,31 +56,16 @@ minecraft {
         runDir = "run"
     }
     
-    // the mappings can be changed at any time, and must be in the following format.
-    // snapshot_YYYYMMDD   snapshot are built nightly.
-    // stable_#            stables are built at the discretion of the MCP team.
-    // Use non-default mappings at your own risk. they may not allways work.
-    // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20160808"
-}
-
-repositories {
-  maven {
-    //JEI maven
-    url "http://dvs1.progwml6.com/files/maven"
-  }
+    useDepAts = true // Required for JEI
+    
+    mappings = mcp_mappings_version
 }
 
 dependencies {
     // compile against the JEI API
-    deobfCompile "mezz.jei:jei_1.10.2:3.7.8.234:api"
+    deobfCompile "mezz.jei:jei_${minecraft_version}:${dep_jei_version}:api"
     // at runtime, use the full JEI jar
-    runtime "mezz.jei:jei_1.10.2:3.7.8.234"
-
-    // for more info...
-    // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
-    // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+    runtime "mezz.jei:jei_${minecraft_version}:${dep_jei_version}"
 }
 
 processResources
