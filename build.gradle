@@ -58,6 +58,9 @@ minecraft {
     
     useDepAts = true // Required for JEI
     
+    replaceIn "UnifiedItems.java"
+    replace "@MOD_VERSION@", "${mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
+    
     mappings = mcp_mappings_version
 }
 
