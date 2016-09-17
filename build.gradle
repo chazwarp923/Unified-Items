@@ -59,7 +59,7 @@ minecraft {
     useDepAts = true // Required for JEI
     
     //set version in code
-    replaceIn "UnifiedItems.java"
+    replaceIn "Reference.java"
     replace "@MOD_VERSION@", "${mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
     //remove debug code
     replaceIn "ModDetector.java"
