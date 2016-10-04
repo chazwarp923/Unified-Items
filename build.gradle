@@ -56,7 +56,7 @@ minecraft {
         runDir = "run"
     }
     
-    useDepAts = true // Required for JEI
+
     
     //set version in code
     replaceIn "Reference.java"

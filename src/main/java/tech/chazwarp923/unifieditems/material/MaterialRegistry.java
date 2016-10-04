@@ -27,8 +27,8 @@ public enum MaterialRegistry {
     COBALT(MaterialType.GENERIC, "Cobalt", 2F, HarvestLevel.DIAMOND, 5, 120, 3, 4, 1),
     ARDITE(MaterialType.GENERIC, "Ardite", 2F, HarvestLevel.DIAMOND, 5, 120, 3, 4, 1),
     IRIDIUM(MaterialType.GENERIC, "Iridium", 2F, HarvestLevel.DIAMOND, 5, 10, 1, 1, 0),
-	RUBY(MaterialType.GENERIC_GEM, "Ruby", 2F, HarvestLevel.IRON,10, 60, 6, 3, 0),
-	SAPPHIRE(MaterialType.GENERIC_GEM, "Sapphire", 2F, HarvestLevel.IRON,10, 60, 6, 3, 0),
+	RUBY(MaterialType.GENERIC_GEM, "Ruby", 2F, HarvestLevel.IRON, 10, 60, 6, 3, 0),
+	SAPPHIRE(MaterialType.GENERIC_GEM, "Sapphire", 2F, HarvestLevel.IRON, 10, 60, 6, 3, 0),
 	BRASS(MaterialType.ALLOY, "Brass"),
 	ZINC(MaterialType.GENERIC, "Zinc", 2F, HarvestLevel.IRON, 20, 55, 7, 10, 0);
 	
@@ -58,7 +58,7 @@ public enum MaterialRegistry {
 		this.type = type;
 		this.name = name;
 		this.hardness = 2F;
-		this.harvestLevel = HarvestLevel.WOOD;
+		this.harvestLevel = HarvestLevel.STONE;
 		this.minY = 0;
 		this.maxY = 0;
 		this.perVein = 0;

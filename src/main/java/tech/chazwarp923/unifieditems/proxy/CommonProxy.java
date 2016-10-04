@@ -35,7 +35,7 @@ public class CommonProxy {
 		UIItems.preInit();
 		
 		//Hardcodes the mcmod.info
-		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz, LexManos";
+		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz, LexManos, CyanideX";
 		preInitEvent.getModMetadata().description = "Unify all the world generation!";
 		preInitEvent.getModMetadata().logoFile = "assets/" + Reference.TEXTURE_LOC + "/textures/logo.png";
 		preInitEvent.getModMetadata().modId = Reference.MOD_ID;
