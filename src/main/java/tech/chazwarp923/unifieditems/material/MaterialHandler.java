@@ -15,7 +15,7 @@ import tech.chazwarp923.unifieditems.item.UIItems;
 
 public class MaterialHandler {
 	
-	protected static Map<MaterialRegistry, Integer> materials = new HashMap<MaterialRegistry, Integer>();
+	private static Map<MaterialRegistry, Integer> materials = new HashMap<MaterialRegistry, Integer>();
 	
 	public static void registerMaterialUse(ArrayList<MaterialRegistry> materialsToBeAdded) {
 		for(MaterialRegistry material : materialsToBeAdded) {
@@ -36,6 +36,10 @@ public class MaterialHandler {
 		return materials.get(mat);
 	}
 	
+	public static Map<MaterialRegistry, Integer> getMaterials() {
+		return materials;
+	}
+
 	public static void addBlocksAndItemsForMaterials() {
 		for(MaterialRegistry material : materials.keySet()) {
 			switch(material.type) {

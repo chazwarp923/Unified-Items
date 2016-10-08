@@ -3,20 +3,23 @@
  */
 package tech.chazwarp923.unifieditems;
 
-import tech.chazwarp923.unifieditems.proxy.CommonProxy;
+import java.io.File;
+
+import org.apache.logging.log4j.Logger;
+
+import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import org.apache.logging.log4j.Logger;
-
-import java.io.File;
+import tech.chazwarp923.unifieditems.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, updateJSON = "http://chazwarp923.tech/UnifiedItems.json", acceptedMinecraftVersions = "[1.10.2]", guiFactory = "tech.chazwarp923.unifieditems.config.ConfigGuiFactory")
 public class UnifiedItems {
 
 	public static File configFile;
+	public static Configuration config;
 
 	//The instance of the mod that Forge uses.
 	@Mod.Instance(Reference.MOD_ID)

@@ -26,7 +26,7 @@ public class CommonProxy {
 	public void preInit(FMLPreInitializationEvent preInitEvent) {
 		//Gets the suggested config location then initilizes the config
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
-		ConfigHandler.preInit(UnifiedItems.configFile);
+		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
 
 		//Registers the blocks And items
 		ModDetector.preInit();
@@ -60,6 +60,8 @@ public class CommonProxy {
 	}
 
 	public void postInit(FMLPostInitializationEvent postInitEvent) {
-	
+		if(UnifiedItems.config.hasChanged()) {
+			UnifiedItems.config.save();
+		}
 	}
 }

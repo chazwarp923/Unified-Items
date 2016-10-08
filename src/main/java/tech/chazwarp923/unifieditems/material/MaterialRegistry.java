@@ -38,18 +38,18 @@ public enum MaterialRegistry {
 	public final HarvestLevel harvestLevel;
 	public final int minY;
 	public final int maxY;
-	public final int perVein;
+	public final int veinSize;
 	public final int chunkDensity;
 	public final int dimId;
 	
-	MaterialRegistry(MaterialType type, String name, float hardness, HarvestLevel harvestLevel, int minY, int maxY, int perVein, int chunkDensity, int dimId) {
+	MaterialRegistry(MaterialType type, String name, float hardness, HarvestLevel harvestLevel, int minY, int maxY, int veinSize, int chunkDensity, int dimId) {
 		this.type = type;
 		this.name = name;
 		this.hardness = hardness;
 		this.harvestLevel = harvestLevel;
 		this.minY = minY;
 		this.maxY = maxY;
-		this.perVein = perVein;
+		this.veinSize = veinSize;
 		this.chunkDensity = chunkDensity;
 		this.dimId = dimId;
 	}
@@ -61,7 +61,7 @@ public enum MaterialRegistry {
 		this.harvestLevel = HarvestLevel.STONE;
 		this.minY = 0;
 		this.maxY = 0;
-		this.perVein = 0;
+		this.veinSize = 0;
 		this.chunkDensity = 0;
 		this.dimId = 0;
 	}
