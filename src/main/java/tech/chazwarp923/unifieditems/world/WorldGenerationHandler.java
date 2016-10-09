@@ -25,8 +25,10 @@ public class WorldGenerationHandler implements IWorldGenerator {
 		for(Map.Entry<MaterialRegistry, UIBlockOre> block : UIBlocks.ores.entrySet()) {
 			MaterialRegistry material = block.getKey();
 			if(material.dimId == 0) {
-				if(ConfigHandler.veinSizeOverride.get(material) != -1) {
-					worldGen = new WorldGenMinable(block.getValue().getDefaultState(), ConfigHandler.veinSizeOverride.get(material));
+				if(ConfigHandler.veinSizeOverride.get(material) != null) {
+					if(ConfigHandler.veinSizeOverride.get(material) != -1) {
+						worldGen = new WorldGenMinable(block.getValue().getDefaultState(), ConfigHandler.veinSizeOverride.get(material));
+					}
 				}
 				else {
 					worldGen = new WorldGenMinable(block.getValue().getDefaultState(), material.veinSize + MaterialHandler.getMaterialUseCount(material));
