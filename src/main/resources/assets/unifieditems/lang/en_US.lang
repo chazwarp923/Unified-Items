@@ -1,8 +1,8 @@
 itemGroup.UnifiedItems=Unified Items
-config.minY=Minimum Y Level
-config.maxY=Maximum Y Level
-config.veinSizeOverride=Vein Size Override
-config.chunkDensity=Chunk Density
+config.miny=Minimum Y Level
+config.maxy=Maximum Y Level
+config.veinsizeoverride=Vein Size Override
+config.chunkdensity=Chunk Density
 
 tile.oreCopper.name=Copper Ore
 tile.oreTin.name=Tin Ore

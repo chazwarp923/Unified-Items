@@ -24,15 +24,15 @@ import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {
-		//Gets the suggested config location then initilizes the config
-		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
-		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
-
 		//Registers the blocks And items
 		ModDetector.preInit();
 		MaterialHandler.addBlocksAndItemsForMaterials();
 		UIBlocks.preInit();
 		UIItems.preInit();
+		
+		//Gets the suggested config location then initilizes the config
+		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
+		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
 		
 		//Hardcodes the mcmod.info
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz, LexManos, CyanideX";

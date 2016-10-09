@@ -13,15 +13,15 @@ import net.minecraftforge.common.config.ConfigElement;
 public class ConfigGUI extends GuiConfig {
 
 	public ConfigGUI(GuiScreen parent) {
-		super(parent, getConfigElements(), Reference.MOD_ID, false, false, GuiConfig.getAbridgedConfigPath(ConfigHandler.preInit(UnifiedItems.configFile).toString()));
+		super(parent, getConfigElements(), Reference.MOD_ID, false, false, GuiConfig.getAbridgedConfigPath(UnifiedItems.configFile.toString()));
 	}
 
 	public static List<IConfigElement> getConfigElements() {
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
-		list.add(new ConfigElement(ConfigHandler.preInit(UnifiedItems.configFile).getCategory(ConfigHandler.CATEGORY_MIN_Y).setLanguageKey("config.minY")));
-		list.add(new ConfigElement(ConfigHandler.preInit(UnifiedItems.configFile).getCategory(ConfigHandler.CATEGORY_MAX_Y).setLanguageKey("config.maxY")));
-		list.add(new ConfigElement(ConfigHandler.preInit(UnifiedItems.configFile).getCategory(ConfigHandler.CATEGORY_VEIN_SIZE_OVERRIDE).setLanguageKey("config.veinSizeOverride")));
-		list.add(new ConfigElement(ConfigHandler.preInit(UnifiedItems.configFile).getCategory(ConfigHandler.CATEGORY_CHUNK_DENSITY).setLanguageKey("config.chunkDensity")));
+		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_MIN_Y).setLanguageKey("config.miny")));
+		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_MAX_Y).setLanguageKey("config.maxy")));
+		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_VEIN_SIZE_OVERRIDE).setLanguageKey("config.veinsizeoverride")));
+		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_CHUNK_DENSITY).setLanguageKey("config.chunkdensity")));
 
 		return list;
 	}
