@@ -3,7 +3,7 @@ package tech.chazwarp923.unifieditems.item;
 public class ItemMortarAndPestle extends UIItem {
 
 	public ItemMortarAndPestle() {
-		super("mortarAndPestle");
+		super("mortar_and_pestle");
 		setMaxStackSize(1);
 		setMaxDamage(4);
 	}

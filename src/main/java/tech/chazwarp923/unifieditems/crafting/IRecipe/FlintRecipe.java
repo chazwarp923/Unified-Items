@@ -5,6 +5,7 @@ import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.NonNullList;
 import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.item.ItemMortarAndPestle;
 import tech.chazwarp923.unifieditems.item.UIItems;
@@ -49,20 +50,20 @@ public class FlintRecipe implements IRecipe {
 	}
 
 	@Override
-	public ItemStack[] getRemainingItems(InventoryCrafting inv) {
-		ItemStack[] grid = new ItemStack[inv.getSizeInventory()];
+	public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
+		NonNullList<ItemStack> nnl = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);
 
-        for (int i = 0; i < grid.length; i++) {
+        for (int i = 0; i < nnl.size(); i++) {
             ItemStack itemstack = inv.getStackInSlot(i);
             
-            if (itemstack != null && itemstack.getItem() instanceof ItemMortarAndPestle) {
+            if (itemstack.getItem() instanceof ItemMortarAndPestle) {
             	itemstack = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
-                	itemstack = null;
-                grid[i] = itemstack;
+                	itemstack.shrink(1);;
+                nnl.set(i, itemstack);
             }
         }
-        return grid;
+        return nnl;
 	}
 
 }

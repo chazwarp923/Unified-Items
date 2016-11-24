@@ -15,13 +15,8 @@ public class MortarAndPestleHandler implements IRecipeHandler<OreToDustRecipe> {
 	}
 
 	@Override
-	public String getRecipeCategoryUid() {
-		return MortarAndPestleCategory.UID;
-	}
-
-	@Override
 	public String getRecipeCategoryUid(OreToDustRecipe recipe) {
-		return getRecipeCategoryUid();
+		return MortarAndPestleCategory.UID;
 	}
 
 	@Override

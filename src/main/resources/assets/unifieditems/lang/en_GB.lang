@@ -1,5 +1,5 @@
-tile.oreAluminum.name=Aluminium Ore
-tile.blockAluminum.name=Aluminium Block
-item.dustAluminum.name=Aluminium Powder
-item.ingotAluminum.name=Aluminium Ingot
-item.nuggetAluminum.name=Aluminium Nugget
+tile.ore_aluminum.name=Aluminium Ore
+tile.block_aluminum.name=Aluminium Block
+item.dust_aluminum.name=Aluminium Powder
+item.ingot_aluminum.name=Aluminium Ingot
+item.nugget_aluminum.name=Aluminium Nugget

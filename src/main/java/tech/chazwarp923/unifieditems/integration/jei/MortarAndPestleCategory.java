@@ -3,8 +3,6 @@
 */
 package tech.chazwarp923.unifieditems.integration.jei;
 
-import java.util.Collections;
-
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.IGuiHelper;
@@ -12,6 +10,7 @@ import mezz.jei.api.gui.ICraftingGridHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
+import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
@@ -50,20 +49,18 @@ public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper>
 	}
 
 	@Override
-	public void setRecipe(@Nonnull IRecipeLayout recipeLayout, @Nonnull IRecipeWrapper recipeWrapper) {
-		if(recipeWrapper instanceof MortarAndPestleWrapper) {
-			MortarAndPestleWrapper wrapper = (MortarAndPestleWrapper)recipeWrapper;
-			
+	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
+		if(recipeWrapper instanceof MortarAndPestleWrapper) {			
 			IGuiItemStackGroup guiItemStacks = recipeLayout.getItemStacks();
 			
 			guiItemStacks.init(0, false, 0, 0);
-			guiItemStacks.setFromRecipe(0, wrapper.getInputs());
+			guiItemStacks.set(0, ingredients.getInputs(ItemStack.class).get(0));
 			
 			guiItemStacks.init(1, false, 18, 0);
-			guiItemStacks.setFromRecipe(1, Collections.singletonList(new ItemStack(UIItems.mortarAndPestle)));
+			guiItemStacks.set(1, new ItemStack(UIItems.mortarAndPestle));
 			
 			guiItemStacks.init(2, true, 94, 18);
-			guiItemStacks.setFromRecipe(2, wrapper.getOutputs());
+			guiItemStacks.set(2, ingredients.getOutputs(ItemStack.class).get(0));
 			
 		}
 	}
