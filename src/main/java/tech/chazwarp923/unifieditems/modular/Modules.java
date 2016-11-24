@@ -21,7 +21,7 @@ public enum Modules {
 	TINKERSCONSTRUCT("tconstruct", TinkersConstruct.class),
 	THERMALEXPANSION("ThermalExpansion", ThermalExpansion.class),
 	TECHREBORN("techreborn", TechReborn.class),
-	ENDERIO("enderio", EnderIO.class),
+	ENDERIO("EnderIO", EnderIO.class),
 	IMMERSIVEENGINEERING("immersiveengineering", ImmersiveEngineering.class),
 	RAILCRAFT("railcraft", Railcraft.class);
 	
