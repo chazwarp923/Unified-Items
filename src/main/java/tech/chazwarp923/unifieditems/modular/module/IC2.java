@@ -10,6 +10,7 @@ public class IC2 extends UIModule {
 
 	public IC2() {
 		ArrayList<MaterialRegistry> materials = new ArrayList<MaterialRegistry>();
+		materials.add(MaterialRegistry.COAL);
 		materials.add(MaterialRegistry.COPPER);
 		materials.add(MaterialRegistry.TIN);
 		materials.add(MaterialRegistry.BRONZE);
