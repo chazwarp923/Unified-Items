@@ -16,7 +16,7 @@ import tech.chazwarp923.unifieditems.item.UIItemGem;
 import tech.chazwarp923.unifieditems.item.UIItemIngot;
 import tech.chazwarp923.unifieditems.item.UIItemNugget;
 import tech.chazwarp923.unifieditems.item.UIItems;
-import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialType;
 
 public class Shapeless {
@@ -31,32 +31,32 @@ public class Shapeless {
 		RecipeRegistry.addOreToDustRecipe(recipe);
 		GameRegistry.addRecipe(recipe);
 		
-		for(Map.Entry<MaterialRegistry, UIBlockOre> block : UIBlocks.ores.entrySet()) {
+		for(Map.Entry<Material, UIBlockOre> block : UIBlocks.ores.entrySet()) {
 			recipe = new OreToDustRecipe(block.getKey(), null);
 			RecipeRegistry.addOreToDustRecipe(recipe);
 			GameRegistry.addRecipe(recipe);
 		}
 		
 		//Adds the recipe for bronze dust
-		GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get(MaterialRegistry.BRONZE), 4), new ItemStack(UIItems.dusts.get(MaterialRegistry.COPPER)), new ItemStack(UIItems.dusts.get(MaterialRegistry.COPPER)), new ItemStack(UIItems.dusts.get(MaterialRegistry.COPPER)), new ItemStack(UIItems.dusts.get(MaterialRegistry.TIN)));
+		GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.TIN)));
 
 		//Adds the recipes for ingots to nuggets
-		for(Map.Entry<MaterialRegistry, UIItemIngot> item : UIItems.ingots.entrySet()) {
+		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			GameRegistry.addShapelessRecipe(new ItemStack(UIItems.nuggets.get(item.getKey()), 9), new ItemStack(item.getValue()));
 		}
 		
 		//Adds the recipes for nuggets to ingots
-		for(Map.Entry<MaterialRegistry, UIItemNugget> item : UIItems.nuggets.entrySet()) {
+		for(Map.Entry<Material, UIItemNugget> item : UIItems.nuggets.entrySet()) {
 			GameRegistry.addShapelessRecipe(new ItemStack(UIItems.ingots.get(item.getKey())), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()));
 		}
 		
 		//Adds the recipes for ingots to blocks
-		for(Map.Entry<MaterialRegistry, UIItemIngot> item : UIItems.ingots.entrySet()) {
+		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			GameRegistry.addShapelessRecipe(new ItemStack(UIBlocks.blocks.get(item.getKey())), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()));
 		}
 		
 		//Adds the recipes for blocks to ingots and gems
-		for(Map.Entry<MaterialRegistry, UIBlockStorage> block : UIBlocks.blocks.entrySet()) {
+		for(Map.Entry<Material, UIBlockStorage> block : UIBlocks.blocks.entrySet()) {
 			if(block.getKey().type == MaterialType.GENERIC) {
 				GameRegistry.addShapelessRecipe(new ItemStack(UIItems.ingots.get(block.getKey()), 9), new ItemStack(block.getValue()));
 			}
@@ -66,7 +66,7 @@ public class Shapeless {
 		}
 		
 		//Adds the recipes for gems to blocks
-		for(Map.Entry<MaterialRegistry, UIItemGem> item : UIItems.gems.entrySet()) {
+		for(Map.Entry<Material, UIItemGem> item : UIItems.gems.entrySet()) {
 			GameRegistry.addShapelessRecipe(new ItemStack(UIBlocks.blocks.get(item.getKey())), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()), new ItemStack(item.getValue()));
 		}
 

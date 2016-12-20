@@ -3,6 +3,7 @@ config.miny=Minimum Y Level
 config.maxy=Maximum Y Level
 config.veinsizeoverride=Vein Size Override
 config.chunkdensity=Chunk Density
+config.manualoverride=Manual Override
 
 tile.ore_copper.name=Copper Ore
 tile.ore_tin.name=Tin Ore

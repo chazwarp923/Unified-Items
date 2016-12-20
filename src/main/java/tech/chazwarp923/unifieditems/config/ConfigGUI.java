@@ -22,7 +22,8 @@ public class ConfigGUI extends GuiConfig {
 		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_MAX_Y).setLanguageKey("config.maxy")));
 		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_VEIN_SIZE_OVERRIDE).setLanguageKey("config.veinsizeoverride")));
 		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_CHUNK_DENSITY).setLanguageKey("config.chunkdensity")));
-
+		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_MANUAL_OVERRIDE).setLanguageKey("config.manualoverride")));
+		
 		return list;
 	}
 }
