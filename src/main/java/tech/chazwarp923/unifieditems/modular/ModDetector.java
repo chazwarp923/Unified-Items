@@ -11,7 +11,8 @@ public class ModDetector {
 		for(Modules module : Modules.values()) {
 			if(module.getModID().equals("Minecraft") || Loader.isModLoaded(module.getModID()) || System.getProperty("user.name").equals("chaz")) {
 				try {
-					module.getClassForInstantiation().newInstance();
+					UIModule m = module.getClassForInstantiation().newInstance();
+					ModuleRegistry.registerModule(m);
 				} catch (InstantiationException e) {
 					e.printStackTrace();
 				} catch (IllegalAccessException e) {

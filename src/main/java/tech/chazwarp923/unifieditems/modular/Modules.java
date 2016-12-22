@@ -3,6 +3,7 @@
 */
 package tech.chazwarp923.unifieditems.modular;
 
+import tech.chazwarp923.unifieditems.modular.module.DenseOres;
 import tech.chazwarp923.unifieditems.modular.module.EnderIO;
 import tech.chazwarp923.unifieditems.modular.module.Forestry;
 import tech.chazwarp923.unifieditems.modular.module.IC2;
@@ -23,7 +24,8 @@ public enum Modules {
 	TECHREBORN("techreborn", TechReborn.class),
 	ENDERIO("enderio", EnderIO.class),
 	IMMERSIVEENGINEERING("immersiveengineering", ImmersiveEngineering.class),
-	RAILCRAFT("railcraft", Railcraft.class);
+	RAILCRAFT("railcraft", Railcraft.class),
+	DENSEORES("denseores", DenseOres.class);
 	
 	final String modid;
 	final Class<? extends UIModule> module;
