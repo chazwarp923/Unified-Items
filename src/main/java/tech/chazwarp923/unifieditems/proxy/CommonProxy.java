@@ -29,15 +29,15 @@ public class CommonProxy {
 		//Registers the blocks And items
 		MaterialRegistry.populate();
 		ModDetector.preInit();
+		MaterialHandler.addBlocksAndItemsForMaterials();
+		UIBlocks.preInit();
+		UIItems.preInit();
 		
 				//Gets the suggested config location then initilizes the config
 				UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
 				UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
 		
 		MaterialRegistry.setEnabled();
-		MaterialHandler.addBlocksAndItemsForMaterials();
-		UIBlocks.preInit();
-		UIItems.preInit();
 		ModuleRegistry.preInit();
 		
 		//Hardcodes the mcmod.info
