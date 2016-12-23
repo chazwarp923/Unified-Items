@@ -66,6 +66,10 @@ public enum Material {
 		this.dimId = 0;
 	}
 	
+	public boolean isEnabled() {
+		return MaterialRegistry.enabledMaterials.get(this);
+	}
+	
 	@Override
 	public String toString() {
 		return name;

@@ -3,6 +3,8 @@ package tech.chazwarp923.unifieditems.world;
 import java.util.Map;
 import java.util.Random;
 
+import org.apache.logging.log4j.Level;
+
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkGenerator;
@@ -10,6 +12,7 @@ import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraft.world.gen.feature.WorldGenerator;
 import net.minecraftforge.fml.common.IWorldGenerator;
+import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.block.UIBlockOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
@@ -31,10 +34,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
 				else {
 					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize + MaterialRegistry.getUseCount(material));
 				}
-				generateOre(random, chunkX, chunkZ, world, 
-						ConfigHandler.chunkDensity.get(material), worldGen, 
-						ConfigHandler.minY.get(material), 
-						ConfigHandler.maxY.get(material));
+				generateOre(random, chunkX, chunkZ, world, ConfigHandler.chunkDensity.get(material), worldGen, ConfigHandler.minY.get(material), ConfigHandler.maxY.get(material));
 			}
 		}
 	}

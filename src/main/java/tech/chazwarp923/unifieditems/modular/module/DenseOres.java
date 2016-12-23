@@ -18,7 +18,6 @@ public class DenseOres extends UIModule {
 	@Override
 	public void init() {
 		for(Map.Entry<Material, UIBlockOre> oreBlock : UIBlocks.ores.entrySet()) {
-			UnifiedItems.logger.log(Level.INFO, oreBlock);
 			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack((Block)oreBlock.getValue()));
 		}
 	}
