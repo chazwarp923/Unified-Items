@@ -7,31 +7,31 @@ import java.util.Map.Entry;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
-import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.material.Material;
 
 public class UIBlocks {
 	
-	public static Map<MaterialRegistry, UIBlockOre> ores = new HashMap<MaterialRegistry, UIBlockOre>();
-	public static Map<MaterialRegistry, UIBlockStorage> blocks = new HashMap<MaterialRegistry, UIBlockStorage>();
+	public static Map<Material, UIBlockOre> ores = new HashMap<Material, UIBlockOre>();
+	public static Map<Material, UIBlockStorage> blocks = new HashMap<Material, UIBlockStorage>();
 	
-	public static void addOre(MaterialRegistry mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
+	public static void addOre(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
 		ores.put(mat, new UIBlockOre(hardness, unlocalizedName, harvestLevel));
 	}
 	
-	public static void addBlock(MaterialRegistry mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
+	public static void addBlock(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
 		blocks.put(mat, new UIBlockStorage(hardness, unlocalizedName, harvestLevel));
 	}
 	
 	public static void preInit() {		
-		for(Map.Entry<MaterialRegistry, UIBlockOre> block : ores.entrySet()) {
+		for(Map.Entry<Material, UIBlockOre> block : ores.entrySet()) {
 			OreDictionary.registerOre("ore" + block.getKey().toString(), block.getValue());
-			if(block.getKey().equals(MaterialRegistry.ALUMINUM)) {
+			if(block.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("oreAluminium", block.getValue());
 			}
 		}
-		for(Map.Entry<MaterialRegistry, UIBlockStorage> block : blocks.entrySet()) {
+		for(Map.Entry<Material, UIBlockStorage> block : blocks.entrySet()) {
 			OreDictionary.registerOre("block" + block.getKey().toString(), block.getValue());
-			if(block.getKey().equals(MaterialRegistry.ALUMINUM)) {
+			if(block.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("blockAluminium", block.getValue());
 			}
 		}
@@ -39,10 +39,10 @@ public class UIBlocks {
 	
 	@SideOnly(Side.CLIENT)
 	public static void preInitClient() {
-		for(Entry<MaterialRegistry, UIBlockOre> block : ores.entrySet()) {
+		for(Entry<Material, UIBlockOre> block : ores.entrySet()) {
 			block.getValue().initModel();
 		}
-		for(Entry<MaterialRegistry, UIBlockStorage> block : blocks.entrySet()) {
+		for(Entry<Material, UIBlockStorage> block : blocks.entrySet()) {
 			block.getValue().initModel();
 		}
 	}

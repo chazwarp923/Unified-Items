@@ -18,21 +18,27 @@ import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.TorchRecipe;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.MaterialHandler;
+import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 import tech.chazwarp923.unifieditems.modular.ModDetector;
+import tech.chazwarp923.unifieditems.modular.ModuleRegistry;
 import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {
 		//Registers the blocks And items
+		MaterialRegistry.populate();
 		ModDetector.preInit();
+		
+				//Gets the suggested config location then initilizes the config
+				UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
+				UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
+		
+		MaterialRegistry.setEnabled();
 		MaterialHandler.addBlocksAndItemsForMaterials();
 		UIBlocks.preInit();
 		UIItems.preInit();
-		
-		//Gets the suggested config location then initilizes the config
-		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
-		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
+		ModuleRegistry.preInit();
 		
 		//Hardcodes the mcmod.info
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz, LexManos, CyanideX";
@@ -57,11 +63,13 @@ public class CommonProxy {
 		Shaped.init();
 		Shapeless.init();
 		Smelting.init();
+		ModuleRegistry.init();
 	}
 
 	public void postInit(FMLPostInitializationEvent postInitEvent) {
 		if(UnifiedItems.config.hasChanged()) {
 			UnifiedItems.config.save();
 		}
+		ModuleRegistry.postInit();
 	}
 }

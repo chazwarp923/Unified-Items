@@ -6,55 +6,55 @@ import java.util.Map;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.oredict.OreDictionary;
-import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.material.Material;
 
 public class UIItems {
 
 	public static ItemMortarAndPestle mortarAndPestle;
 	
-	public static Map<MaterialRegistry, UIItemDust> dusts = new HashMap<MaterialRegistry, UIItemDust>();
-	public static Map<MaterialRegistry, UIItemIngot> ingots = new HashMap<MaterialRegistry, UIItemIngot>();
-	public static Map<MaterialRegistry, UIItemNugget> nuggets = new HashMap<MaterialRegistry, UIItemNugget>();
-	public static Map<MaterialRegistry, UIItemGem> gems = new HashMap<MaterialRegistry, UIItemGem>();
+	public static Map<Material, UIItemDust> dusts = new HashMap<Material, UIItemDust>();
+	public static Map<Material, UIItemIngot> ingots = new HashMap<Material, UIItemIngot>();
+	public static Map<Material, UIItemNugget> nuggets = new HashMap<Material, UIItemNugget>();
+	public static Map<Material, UIItemGem> gems = new HashMap<Material, UIItemGem>();
 	
-	public static void addDust(MaterialRegistry mat, String unlocalizedName) {
+	public static void addDust(Material mat, String unlocalizedName) {
 		dusts.put(mat, new UIItemDust(unlocalizedName));
 	}
 	
-	public static void addIngot(MaterialRegistry mat, String unlocalizedName) {
+	public static void addIngot(Material mat, String unlocalizedName) {
 		ingots.put(mat, new UIItemIngot(unlocalizedName));
 	}
 	
-	public static void addNugget(MaterialRegistry mat, String unlocalizedName) {
+	public static void addNugget(Material mat, String unlocalizedName) {
 		nuggets.put(mat, new UIItemNugget(unlocalizedName));
 	}
 	
-	public static void addGem(MaterialRegistry mat, String unlocalizedName) {
+	public static void addGem(Material mat, String unlocalizedName) {
 		gems.put(mat, new UIItemGem(unlocalizedName));
 	}
 
 	public static void preInit() {
 		mortarAndPestle = new ItemMortarAndPestle();
 		
-		for(Map.Entry<MaterialRegistry, UIItemDust> item : dusts.entrySet()) {
+		for(Map.Entry<Material, UIItemDust> item : dusts.entrySet()) {
 			OreDictionary.registerOre("dust" + item.getKey().toString(), item.getValue());
-			if(item.getKey().equals(MaterialRegistry.ALUMINUM)) {
+			if(item.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("dustAluminium", item.getValue());
 			}
 		}
-		for(Map.Entry<MaterialRegistry, UIItemIngot> item : ingots.entrySet()) {
+		for(Map.Entry<Material, UIItemIngot> item : ingots.entrySet()) {
 			OreDictionary.registerOre("ingot" + item.getKey().toString(), item.getValue());
-			if(item.getKey().equals(MaterialRegistry.ALUMINUM)) {
+			if(item.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("ingotAluminium", item.getValue());
 			}
 		}
-		for(Map.Entry<MaterialRegistry, UIItemNugget> item : nuggets.entrySet()) {
+		for(Map.Entry<Material, UIItemNugget> item : nuggets.entrySet()) {
 			OreDictionary.registerOre("nugget" + item.getKey().toString(), item.getValue());
-			if(item.getKey().equals(MaterialRegistry.ALUMINUM)) {
+			if(item.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("nuggetAluminium", item.getValue());
 			}
 		}
-		for(Map.Entry<MaterialRegistry, UIItemGem> item : gems.entrySet()) {
+		for(Map.Entry<Material, UIItemGem> item : gems.entrySet()) {
 			OreDictionary.registerOre("gem" + item.getKey().toString(), item.getValue());
 		}
 	}
@@ -63,19 +63,19 @@ public class UIItems {
 	public static void preInitClient() {
 		mortarAndPestle.initModel();
 		
-		for(Map.Entry<MaterialRegistry, UIItemDust> item : dusts.entrySet()) {
+		for(Map.Entry<Material, UIItemDust> item : dusts.entrySet()) {
 			item.getValue().initModel();
 		}
 		
-		for(Map.Entry<MaterialRegistry, UIItemIngot> item : ingots.entrySet()) {
+		for(Map.Entry<Material, UIItemIngot> item : ingots.entrySet()) {
 			item.getValue().initModel();
 		}
 		
-		for(Map.Entry<MaterialRegistry, UIItemNugget> item : nuggets.entrySet()) {
+		for(Map.Entry<Material, UIItemNugget> item : nuggets.entrySet()) {
 			item.getValue().initModel();
 		}
 		
-		for(Map.Entry<MaterialRegistry, UIItemGem> item : gems.entrySet()) {
+		for(Map.Entry<Material, UIItemGem> item : gems.entrySet()) {
 			item.getValue().initModel();
 		}
 	}

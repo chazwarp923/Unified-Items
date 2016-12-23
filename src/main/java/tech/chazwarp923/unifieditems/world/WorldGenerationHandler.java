@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.IWorldGenerator;
 import tech.chazwarp923.unifieditems.block.UIBlockOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
-import tech.chazwarp923.unifieditems.material.MaterialHandler;
+import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
 public class WorldGenerationHandler implements IWorldGenerator {
@@ -22,19 +22,16 @@ public class WorldGenerationHandler implements IWorldGenerator {
 	
 	@Override
 	public void generate(Random random, int chunkX, int chunkZ, World world, IChunkGenerator chunkGenerator, IChunkProvider chunkProvider) {
-		for(Map.Entry<MaterialRegistry, UIBlockOre> ore : UIBlocks.ores.entrySet()) {
-			MaterialRegistry material = ore.getKey();
+		for(Map.Entry<Material, UIBlockOre> ore : UIBlocks.ores.entrySet()) {
+			Material material = ore.getKey();
 			if(material.dimId == 0) {
 				if(ConfigHandler.veinSizeOverride.get(material) != -1) {
 					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), ConfigHandler.veinSizeOverride.get(material));
 				}
 				else {
-					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize + MaterialHandler.getMaterialUseCount(material));
+					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize + MaterialRegistry.getUseCount(material));
 				}
-				generateOre(random, chunkX, chunkZ, world, 
-						ConfigHandler.chunkDensity.get(material), worldGen, 
-						ConfigHandler.minY.get(material), 
-						ConfigHandler.maxY.get(material));
+				generateOre(random, chunkX, chunkZ, world, ConfigHandler.chunkDensity.get(material), worldGen, ConfigHandler.minY.get(material), ConfigHandler.maxY.get(material));
 			}
 		}
 	}

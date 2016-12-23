@@ -6,7 +6,7 @@ package tech.chazwarp923.unifieditems;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 import tech.chazwarp923.unifieditems.item.UIItems;
-import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.material.Material;
 
 public class UnifiedItemsTab extends CreativeTabs {
 	public static final UnifiedItemsTab tab = new UnifiedItemsTab();
@@ -23,6 +23,6 @@ public class UnifiedItemsTab extends CreativeTabs {
 
 	@Override
 	public Item getTabIconItem() {
-		return UIItems.dusts.get(MaterialRegistry.IRON);
+		return UIItems.dusts.get(Material.IRON);
 	}
 }

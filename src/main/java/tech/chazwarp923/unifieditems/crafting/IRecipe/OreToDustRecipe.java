@@ -8,24 +8,24 @@ import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.item.ItemMortarAndPestle;
 import tech.chazwarp923.unifieditems.item.UIItems;
-import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.material.Material;
 
 public class OreToDustRecipe implements IRecipe {
 
 	protected ItemStack input;
 	protected ItemStack output;
 	
-	public OreToDustRecipe(MaterialRegistry material, String ore) {
+	public OreToDustRecipe(Material material, String ore) {
 		if(ore == null) {
 			input = new ItemStack(UIBlocks.ores.get(material), 1);
 		}
 		else if(ore.equals("Iron")) {
 			input = new ItemStack(Blocks.IRON_ORE, 1);
-			material = MaterialRegistry.IRON;
+			material = Material.IRON;
 		}
 		else if(ore.equals("Gold")) {
 			input = new ItemStack(Blocks.GOLD_ORE, 1);
-			material = MaterialRegistry.GOLD;
+			material = Material.GOLD;
 		}
 		output = new ItemStack(UIItems.dusts.get(material), 2);
 	}
