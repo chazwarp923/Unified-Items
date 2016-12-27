@@ -10,6 +10,7 @@ public enum Material {
 	COAL(MaterialType.DUST, "Coal"),
 	IRON(MaterialType.DUST, "Iron"),
 	GOLD(MaterialType.DUST, "Gold"),
+	DIAMOND(MaterialType.DUST, "Diamond"),
 	COPPER(MaterialType.GENERIC, "Copper", 2F, HarvestLevel.STONE, 40, 75, 8, 10, 0),
 	TIN(MaterialType.GENERIC, "Tin", 2F, HarvestLevel.STONE, 20, 55, 8, 10, 0),
 	BRONZE(MaterialType.ALLOY, "Bronze"),

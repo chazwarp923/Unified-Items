@@ -17,6 +17,7 @@ public class TechReborn extends UIModule {
 		materials.add(Material.TIN);
 		materials.add(Material.LEAD);
 		materials.add(Material.SILVER);
+		materials.add(Material.DIAMOND);
 		materials.add(Material.RUBY);
 		materials.add(Material.SAPPHIRE);
 		materials.add(Material.IRIDIUM);
