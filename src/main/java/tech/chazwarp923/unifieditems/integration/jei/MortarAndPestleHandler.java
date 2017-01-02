@@ -3,11 +3,15 @@
 */
 package tech.chazwarp923.unifieditems.integration.jei;
 
-import mezz.jei.api.recipe.IRecipeHandler;
 import mezz.jei.api.recipe.IRecipeWrapper;
+import mcjty.lib.jei.CompatRecipeHandler;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
 
-public class MortarAndPestleHandler implements IRecipeHandler<OreToDustRecipe> {
+public class MortarAndPestleHandler extends CompatRecipeHandler<OreToDustRecipe> {
+
+	public MortarAndPestleHandler(String id) {
+		super(id);
+	}
 
 	@Override
 	public Class<OreToDustRecipe> getRecipeClass() {

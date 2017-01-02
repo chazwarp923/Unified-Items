@@ -21,7 +21,7 @@ public class UnifiedItemsPlugin extends BlankModPlugin {
 			IJeiHelpers helpers = registry.getJeiHelpers();
 			registry.addRecipeCategories(new MortarAndPestleCategory(helpers.getGuiHelper()));
 			
-			registry.addRecipeHandlers(new MortarAndPestleHandler());
+			registry.addRecipeHandlers(new MortarAndPestleHandler(null));
 			
 			registry.addRecipes(RecipeRegistry.getOreToDustRecipes());
 			

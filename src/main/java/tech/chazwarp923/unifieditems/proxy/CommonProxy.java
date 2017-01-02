@@ -8,6 +8,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.RecipeSorter;
 import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.UnifiedItems;
+import tech.chazwarp923.unifieditems.VersionTransition;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.crafting.Shaped;
@@ -53,6 +54,9 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent initEvent) {
 		//Registers the instance of the mod
 		MinecraftForge.EVENT_BUS.register(UnifiedItems.instance);
+		
+		//Registers the missing mapping handler
+		MinecraftForge.EVENT_BUS.register(new VersionTransition());
 		
 		//Registers world generation
 		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
