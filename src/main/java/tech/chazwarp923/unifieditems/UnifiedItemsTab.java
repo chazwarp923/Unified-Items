@@ -3,12 +3,12 @@
  */
 package tech.chazwarp923.unifieditems;
 
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.ItemStack;
+import mcjty.lib.compat.CompatCreativeTabs;
+import net.minecraft.item.Item;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.Material;
 
-public class UnifiedItemsTab extends CreativeTabs {
+public class UnifiedItemsTab extends CompatCreativeTabs {
 	public static final UnifiedItemsTab tab = new UnifiedItemsTab();
 
 	public UnifiedItemsTab() {
@@ -22,7 +22,7 @@ public class UnifiedItemsTab extends CreativeTabs {
 	}
 
 	@Override
-	public ItemStack getTabIconItem() {
-		return new ItemStack(UIItems.dusts.get(Material.IRON));
+	protected Item getItem() {
+		return UIItems.dusts.get(Material.IRON);
 	}
 }
