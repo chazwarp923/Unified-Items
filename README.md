@@ -4,8 +4,8 @@ It is entirely modular by design and therefore only loads the necessary modules 
 I have currently hardcoded the modules to just the major mods i know have updated to 1.10 (and Thermal Expansion because i started on this in 1.7).
 In the future i plan to add a json based module system that way users can make their own modules and customize it to their liking.
 
-##Download
+#Download
 You can download it over on [CurseForge](http://minecraft.curseforge.com/projects/unified-items)
 
-###Changelog
+#Changelog
 You can find the current changelog over [here](http://chazwarp923.tech/jenkins/job/Unified%20Items/ws/CHANGELOG.md/*view*/)
