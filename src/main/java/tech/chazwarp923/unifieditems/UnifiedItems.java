@@ -6,10 +6,8 @@ package tech.chazwarp923.unifieditems;
 import java.io.File;
 import java.util.Map;
 
-import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.Logger;
 
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -30,7 +28,7 @@ import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.proxy.CommonProxy;
 
-@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, updateJSON = "http://chazwarp923.tech/UnifiedItems.json", acceptedMinecraftVersions = "[1.10.2],[1.11],[1.11.2]", guiFactory = "tech.chazwarp923.unifieditems.config.ConfigGuiFactory")
+@Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, updateJSON = "http://chazwarp923.tech/UnifiedItems.json", dependencies = "required-after:compatlayer@[0.1.6]", acceptedMinecraftVersions = "[1.10.2],[1.11],[1.11.2]", guiFactory = "tech.chazwarp923.unifieditems.config.ConfigGuiFactory")
 public class UnifiedItems {
 
 	public static File configFile;
