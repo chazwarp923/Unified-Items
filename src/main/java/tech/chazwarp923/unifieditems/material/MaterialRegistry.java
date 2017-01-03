@@ -9,7 +9,7 @@ import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
 
 public class MaterialRegistry {
-	                       //Material, State(Enabled/Disabled)
+	                    //Material, State(Enabled/Disabled)
 	public static HashMap<Material, Boolean> enabledMaterials = new HashMap<Material, Boolean>();
 	public static HashMap<Material, Integer> materialUsage = new HashMap<Material, Integer>();
 	
