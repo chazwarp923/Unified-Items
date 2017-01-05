@@ -109,7 +109,7 @@ public class UnifiedItems {
                     }
         		}
             	for(Material material : MaterialRegistry.gems) {
-        			if (resourcePath.equals(resourcePath.equals("gem" + material.name.toLowerCase()))) {
+        			if (resourcePath.equals("gem" + material.name.toLowerCase())) {
                         mapping.remap(UIItems.gems.get(material));
                     }
         		}
