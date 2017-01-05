@@ -6,8 +6,6 @@ import java.util.Map;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
-import tech.chazwarp923.unifieditems.block.UIBlockOre;
-import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
