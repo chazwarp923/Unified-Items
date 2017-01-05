@@ -26,6 +26,7 @@ import tech.chazwarp923.unifieditems.item.UIItemIngot;
 import tech.chazwarp923.unifieditems.item.UIItemNugget;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.Material;
+import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 import tech.chazwarp923.unifieditems.proxy.CommonProxy;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION, updateJSON = "http://chazwarp923.tech/UnifiedItems.json", dependencies = "required-after:compatlayer", acceptedMinecraftVersions = "[1.10.2],[1.11],[1.11.2]", guiFactory = "tech.chazwarp923.unifieditems.config.ConfigGuiFactory")
@@ -64,16 +65,16 @@ public class UnifiedItems {
     public void onMissingMapping(FMLMissingMappingsEvent event) {
 
         for (FMLMissingMappingsEvent.MissingMapping mapping : event.get()) {
-            String resourcePath = mapping.resourceLocation.getResourcePath();
+            String resourcePath = mapping.resourceLocation.getResourcePath().toLowerCase();
             if (mapping.type == GameRegistry.Type.BLOCK) {
-            	for(Map.Entry<Material, UIBlockOre> block : UIBlocks.ores.entrySet()) {
-            		if (resourcePath.equals("ore" + block.getKey().name.toLowerCase())) {
-                        mapping.remap(block.getValue());
+            	for(Material material : MaterialRegistry.ores) {
+            		if (resourcePath.equals("ore" + material.name.toLowerCase())) {
+                        mapping.remap(UIBlocks.ores.get(material));
                     }
             	}
-            	for(Map.Entry<Material, UIBlockStorage> block : UIBlocks.blocks.entrySet()) {
-            		if (resourcePath.equals("block" + block.getKey().name.toLowerCase())) {
-                        mapping.remap(block.getValue());
+            	for(Material material : MaterialRegistry.blocks) {
+            		if (resourcePath.equals("block" + material.name.toLowerCase())) {
+                        mapping.remap(UIBlocks.blocks.get(material));
                     }
             	}
             }
@@ -82,34 +83,34 @@ public class UnifiedItems {
             	if (resourcePath.equals("mortarAndPestle".toLowerCase())) {
                     mapping.remap(UIItems.mortarAndPestle);
                 }
-            	for(Map.Entry<Material, UIBlockOre> block : UIBlocks.ores.entrySet()) {
-            		if (resourcePath.equals("ore" + block.getKey().name.toLowerCase())) {
-                        mapping.remap(Item.getItemFromBlock(block.getValue()));
+            	for(Material material : MaterialRegistry.ores) {
+            		if (resourcePath.equals("ore" + material.name.toLowerCase())) {
+                        mapping.remap(Item.getItemFromBlock(UIBlocks.ores.get(material)));
                     }
             	}
-            	for(Map.Entry<Material, UIBlockStorage> block : UIBlocks.blocks.entrySet()) {
-            		if (resourcePath.equals("block" + block.getKey().name.toLowerCase())) {
-                        mapping.remap(Item.getItemFromBlock(block.getValue()));
+            	for(Material material : MaterialRegistry.blocks) {
+            		if (resourcePath.equals("block" + material.name.toLowerCase())) {
+                        mapping.remap(Item.getItemFromBlock(UIBlocks.blocks.get(material)));
                     }
             	}
-            	for(Map.Entry<Material, UIItemDust> item : UIItems.dusts.entrySet()) {
-            		if (resourcePath.equals("dust" + item.getKey().name.toLowerCase())) {
-                        mapping.remap(item.getValue());
+            	for(Material material : MaterialRegistry.dusts) {
+            		if (resourcePath.equals("dust" + material.name.toLowerCase())) {
+                        mapping.remap(UIItems.dusts.get(material));
                     }
         		}
-        		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
-        			if (resourcePath.equals("ingot" + item.getKey().name.toLowerCase())) {
-                        mapping.remap(item.getValue());
+            	for(Material material : MaterialRegistry.ingots) {
+        			if (resourcePath.equals("ingot" + material.name.toLowerCase())) {
+                        mapping.remap(UIItems.ingots.get(material));
                     }
         		}
-        		for(Map.Entry<Material, UIItemNugget> item : UIItems.nuggets.entrySet()) {
-        			if (resourcePath.equals("nugget" + item.getKey().name.toLowerCase())) {
-                        mapping.remap(item.getValue());
+            	for(Material material : MaterialRegistry.nuggets) {
+        			if (resourcePath.equals("nugget" + material.name.toLowerCase())) {
+                        mapping.remap(UIItems.nuggets.get(material));
                     }
         		}
-        		for(Map.Entry<Material, UIItemGem> item : UIItems.gems.entrySet()) {
-        			if (resourcePath.equals(resourcePath.equals("gem" + item.getKey().name.toLowerCase()))) {
-                        mapping.remap(item.getValue());
+            	for(Material material : MaterialRegistry.gems) {
+        			if (resourcePath.equals(resourcePath.equals("gem" + material.name.toLowerCase()))) {
+                        mapping.remap(UIItems.gems.get(material));
                     }
         		}
             }
