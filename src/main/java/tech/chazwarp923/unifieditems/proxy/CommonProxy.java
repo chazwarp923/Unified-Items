@@ -27,7 +27,6 @@ public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {
 		
-		//Registers the blocks And items
 		MaterialRegistry.populate();
 		ModDetector.preInit();
 		

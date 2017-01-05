@@ -12,11 +12,56 @@ public class MaterialRegistry {
 	                    //Material, State(Enabled/Disabled)
 	public static HashMap<Material, Boolean> enabledMaterials = new HashMap<Material, Boolean>();
 	public static HashMap<Material, Integer> materialUsage = new HashMap<Material, Integer>();
+	public static ArrayList<Material> ores = new ArrayList<Material>();
+	public static ArrayList<Material> dusts = new ArrayList<Material>();
+	public static ArrayList<Material> ingots = new ArrayList<Material>();
+	public static ArrayList<Material> nuggets = new ArrayList<Material>();
+	public static ArrayList<Material> gems = new ArrayList<Material>();
+	public static ArrayList<Material> blocks = new ArrayList<Material>();
 	
 	public static void populate() {
 		for(Material mat : Material.values()) {
 			enabledMaterials.put(mat, false);
 			materialUsage.put(mat, 0);
+			switch(mat.type) {
+				case GENERIC:
+					ores.add(mat);
+					dusts.add(mat);
+					ingots.add(mat);
+					nuggets.add(mat);
+					blocks.add(mat);
+					break;
+				case ALLOY:
+					dusts.add(mat);
+					ingots.add(mat);
+					nuggets.add(mat);
+					blocks.add(mat);
+					break;
+				case GENERIC_GEM:
+					ores.add(mat);
+					dusts.add(mat);
+					gems.add(mat);
+					blocks.add(mat);
+					break;
+				case DUST:
+					dusts.add(mat);
+					break;
+				case INGOT:
+					ingots.add(mat);
+					break;
+				case NUGGET:
+					nuggets.add(mat);
+					break;
+				case GEM:
+					gems.add(mat);
+					break;
+				case BLOCK:
+					blocks.add(mat);
+					break;
+				default:
+					UnifiedItems.logger.log(Level.ERROR, "ERROR: Material:" + mat + " has an incorrect type");
+					break;
+			}
 		}
 	}
 	

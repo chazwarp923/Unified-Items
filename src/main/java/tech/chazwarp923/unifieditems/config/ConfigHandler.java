@@ -27,11 +27,11 @@ public class ConfigHandler {
 	public static HashMap<Material, Integer> chunkDensity = new HashMap<Material, Integer>();
 	public static HashMap<Material, Integer> manualOverride = new HashMap<Material, Integer>();
 	
-	public static HashMap<Material, Property> minYProperties = new HashMap<Material, Property>();
-	public static HashMap<Material, Property> maxYProperties = new HashMap<Material, Property>();
-	public static HashMap<Material, Property> veinSizeOverrideProperties = new HashMap<Material, Property>();
-	public static HashMap<Material, Property> chunkDensityProperties = new HashMap<Material, Property>();
-	public static HashMap<Material, Property> manualOverrideProperties = new HashMap<Material, Property>();
+	private static HashMap<Material, Property> minYProperties = new HashMap<Material, Property>();
+	private static HashMap<Material, Property> maxYProperties = new HashMap<Material, Property>();
+	private static HashMap<Material, Property> veinSizeOverrideProperties = new HashMap<Material, Property>();
+	private static HashMap<Material, Property> chunkDensityProperties = new HashMap<Material, Property>();
+	private static HashMap<Material, Property> manualOverrideProperties = new HashMap<Material, Property>();
 
 	public static Configuration preInit(File file) {
 		cfg = new Configuration(file);
@@ -58,6 +58,7 @@ public class ConfigHandler {
 		
 		loadConfigProperties();
 		
+		
 		cfg.addCustomCategoryComment(CATEGORY_MIN_Y, "Minimum Y Level");
 		cfg.addCustomCategoryComment(CATEGORY_MAX_Y, "Maximum Y Level");
 		cfg.addCustomCategoryComment(CATEGORY_VEIN_SIZE_OVERRIDE, "For overriding the precalculated amount of ores per vein, -1 to disable and use precalculated values");
@@ -78,8 +79,7 @@ public class ConfigHandler {
 	}
 	
 	private static void loadConfigProperties() {
-		for(Map.Entry<Material, UIBlockOre> ore : UIBlocks.ores.entrySet()) {
-			Material material = ore.getKey();
+		for(Material material : MaterialRegistry.ores) {
 			minYProperties.put(material, cfg.get(CATEGORY_MIN_Y, material.name, material.minY, "", 0, 255));
 			maxYProperties.put(material, cfg.get(CATEGORY_MAX_Y, material.name, material.maxY, "", 0, 255));
 			veinSizeOverrideProperties.put(material, cfg.get(CATEGORY_VEIN_SIZE_OVERRIDE, material.name, -1, "", -1, 64));
@@ -93,8 +93,7 @@ public class ConfigHandler {
 	}
 	
 	private static void readConfigValues() {
-		for(Map.Entry<Material, UIBlockOre> ore : UIBlocks.ores.entrySet()) {
-			Material material = ore.getKey();
+		for(Material material : MaterialRegistry.ores) {
 			minY.put(material, minYProperties.get(material).getInt());
 			maxY.put(material, maxYProperties.get(material).getInt());
 			veinSizeOverride.put(material, veinSizeOverrideProperties.get(material).getInt());
@@ -108,8 +107,7 @@ public class ConfigHandler {
 	}
 	
 	private static void writeConfigValues() {
-		for(Map.Entry<Material, UIBlockOre> ore : UIBlocks.ores.entrySet()) {
-			Material material = ore.getKey();
+		for(Material material : MaterialRegistry.ores) {
 			minYProperties.get(material).set(minY.get(material));
 			maxYProperties.get(material).set(maxY.get(material));
 			veinSizeOverrideProperties.get(material).set(veinSizeOverride.get(material));
