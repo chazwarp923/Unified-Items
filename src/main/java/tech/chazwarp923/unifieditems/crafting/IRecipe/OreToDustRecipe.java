@@ -1,5 +1,6 @@
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
+import mcjty.lib.tools.ItemStackTools;
 import net.minecraft.init.Blocks;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
@@ -75,7 +76,7 @@ public class OreToDustRecipe implements IRecipe {
             if (itemstack != null && itemstack.getItem() instanceof ItemMortarAndPestle) {
             	itemstack = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
-                	itemstack = null;
+                	ItemStackTools.setStackSize(itemstack, 0);
                 nnl.set(i, itemstack);;
             }
         }
