@@ -67,6 +67,7 @@ item.dust_zinc.name=Zinc Powder
 item.dust_brass.name=Brass Powder
 item.dust_sapphire.name=Sapphire Powder
 item.dust_ruby.name=Ruby Powder
+item.dust_diamond.name=Diamond Powder
 
 item.ingot_copper.name=Copper Ingot
 item.ingot_tin.name=Tin Ingot
