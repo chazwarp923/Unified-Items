@@ -4,7 +4,6 @@
 package tech.chazwarp923.unifieditems;
 
 import java.io.File;
-import java.util.Map;
 
 import org.apache.logging.log4j.Logger;
 
@@ -17,13 +16,7 @@ import net.minecraftforge.fml.common.event.FMLMissingMappingsEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import tech.chazwarp923.unifieditems.block.UIBlockOre;
-import tech.chazwarp923.unifieditems.block.UIBlockStorage;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
-import tech.chazwarp923.unifieditems.item.UIItemDust;
-import tech.chazwarp923.unifieditems.item.UIItemGem;
-import tech.chazwarp923.unifieditems.item.UIItemIngot;
-import tech.chazwarp923.unifieditems.item.UIItemNugget;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
