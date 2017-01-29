@@ -28,8 +28,4 @@ public class MortarAndPestleHandler extends CompatRecipeHandler<OreToDustRecipe>
 		return MortarAndPestleCategory.UID;
 	}
 	*/
-	@Override
-	public boolean isRecipeValid(OreToDustRecipe recipe) {
-		return true;
-	}
 }

@@ -20,8 +20,8 @@ public class UnifiedItemsPlugin extends BlankModPlugin {
 		public void register(@Nonnull IModRegistry registry) {
 			IJeiHelpers helpers = registry.getJeiHelpers();
 			
-			registry.addRecipeHandlers(new MortarAndPestleHandler(MortarAndPestleCategory.UID));
 			registry.addRecipeCategories(new MortarAndPestleCategory(helpers.getGuiHelper()));
+			registry.addRecipeHandlers(new MortarAndPestleHandler(MortarAndPestleCategory.UID));
 			registry.addRecipeCategoryCraftingItem(new ItemStack(UIItems.mortarAndPestle), MortarAndPestleCategory.UID);
 			registry.addRecipes(RecipeRegistry.getOreToDustRecipes());
 		}
