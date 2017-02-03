@@ -53,15 +53,14 @@ public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper>
 		if(recipeWrapper instanceof MortarAndPestleWrapper) {			
 			IGuiItemStackGroup guiItemStacks = recipeLayout.getItemStacks();
 			
-			guiItemStacks.init(0, false, 0, 0);
-			guiItemStacks.set(0, ingredients.getInputs(ItemStack.class).get(0));
+			guiItemStacks.init(0, true, 0, 0);
+			guiItemStacks.set(0, ingredients.getInputs(ItemStack.class).get(0).get(0));
 			
-			guiItemStacks.init(1, false, 18, 0);
+			guiItemStacks.init(1, true, 18, 0);
 			guiItemStacks.set(1, new ItemStack(UIItems.mortarAndPestle));
 			
-			guiItemStacks.init(2, true, 94, 18);
-			guiItemStacks.set(2, ingredients.getOutputs(ItemStack.class).get(0));
-			
+			guiItemStacks.init(2, false, 94, 18);
+			guiItemStacks.set(2, ingredients.getOutputs(ItemStack.class).get(0).get(0));
 		}
 	}
 }
