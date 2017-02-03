@@ -6,6 +6,7 @@ import java.util.Map;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
+import net.minecraftforge.fml.client.config.GuiConfigEntries;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
@@ -34,6 +35,19 @@ public class ConfigHandler {
 	public static Configuration preInit(File file) {
 		cfg = new Configuration(file);
 		loadValuesFromDisk();
+		
+		for(Material material : MaterialRegistry.ores) {
+			minYProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(0).setMaxValue(255);
+			maxYProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(0).setMaxValue(255);
+			veinSizeOverrideProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(-1).setMaxValue(64);
+			chunkDensityProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(0).setMaxValue(64);
+		}
+		
+		for(Map.Entry<Material, Boolean> material : MaterialRegistry.enabledMaterials.entrySet()) {
+			Material materialKey = material.getKey();
+			manualOverrideProperties.get(materialKey).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(-1).setMaxValue(1);
+		}
+		
 		return cfg;
 	}
 	
@@ -47,7 +61,7 @@ public class ConfigHandler {
 
 	public static void saveConfigToDisk() {
 		syncConfig(false, false);
-}
+	}
 	
 	private static void syncConfig(boolean loadConfigFromFile, boolean readFieldsFromConfig) {
 		if(loadConfigFromFile) {
