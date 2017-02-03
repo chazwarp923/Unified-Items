@@ -5,6 +5,7 @@ package tech.chazwarp923.unifieditems.integration.jei;
 
 import javax.annotation.Nonnull;
 
+import mcjty.lib.jei.JeiCompatTools;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.ICraftingGridHelper;
 import mezz.jei.api.gui.IDrawable;
@@ -60,7 +61,7 @@ public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper>
 			guiItemStacks.set(1, new ItemStack(UIItems.mortarAndPestle));
 			
 			guiItemStacks.init(2, false, 94, 18);
-			guiItemStacks.set(2, ingredients.getOutputs(ItemStack.class).get(0).get(0));
+			guiItemStacks.set(2, JeiCompatTools.getOutputs(ingredients, ItemStack.class));
 		}
 	}
 }
