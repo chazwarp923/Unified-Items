@@ -36,10 +36,10 @@ public class OreToDustRecipe implements IRecipe {
 	public boolean matches(InventoryCrafting inv, World worldIn) {
 		int invSize = inv.getSizeInventory();
 		for(int i = 0; i < invSize; i++) {
-			if(inv.getStackInSlot(i) != null) {
+			if(!inv.getStackInSlot(i).equals(ItemStackTools.getEmptyStack())) {
 				if(inv.getStackInSlot(i).getItem().equals(UIItems.mortarAndPestle)) {
 					for(int j = 0; j < invSize; j++) {
-						if(inv.getStackInSlot(j) != null) {
+						if(!inv.getStackInSlot(j).equals(ItemStackTools.getEmptyStack())) {
 							if(inv.getStackInSlot(j).getItem().equals(input.getItem())) {
 								return true;
 							}
@@ -68,12 +68,12 @@ public class OreToDustRecipe implements IRecipe {
 
 	@Override
 	public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
-		NonNullList<ItemStack> nnl = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStack.EMPTY);
+		NonNullList<ItemStack> nnl = NonNullList.<ItemStack>withSize(inv.getSizeInventory(), ItemStackTools.getEmptyStack());
 
         for (int i = 0; i < nnl.size(); i++) {
             ItemStack itemstack = inv.getStackInSlot(i);
             
-            if (itemstack != null && itemstack.getItem() instanceof ItemMortarAndPestle) {
+            if (!(itemstack.equals(ItemStackTools.getEmptyStack())) && itemstack.getItem() instanceof ItemMortarAndPestle) {
             	itemstack = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
                 	ItemStackTools.setStackSize(itemstack, 0);
