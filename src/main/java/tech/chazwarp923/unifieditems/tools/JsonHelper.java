@@ -62,6 +62,7 @@ public class JsonHelper {
 		createJsonFile(name, "item");
 	}
 	
+	@SuppressWarnings("all")
 	private static void createJsonFile(String name, String type) {
 		String parent = "";
 		try {
