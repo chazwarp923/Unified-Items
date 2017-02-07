@@ -58,7 +58,7 @@ public class TorchRecipe implements CompatIRecipe {
             if (ItemStackTools.isValid(itemstack) && itemstack.getItem().equals(Items.FLINT_AND_STEEL)) {
             	itemstack = new ItemStack(Items.FLINT_AND_STEEL, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
-                	ItemStackTools.setStackSize(itemstack, 0);
+                	itemstack = ItemStackTools.getEmptyStack();
                 grid.set(i, itemstack);;
             }
         }
