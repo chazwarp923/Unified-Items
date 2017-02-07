@@ -50,7 +50,7 @@ public class FlintRecipe implements CompatIRecipe {
 	}
 
 	@Override
-	public ItemStackList getRemainingItems(InventoryCrafting inv) {
+	public ItemStackList getRemainingItemsCompat(InventoryCrafting inv) {
 		ItemStackList grid = ItemStackList.create(inv.getSizeInventory());
 
         for (int i = 0; i < grid.size(); i++) {
