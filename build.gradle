@@ -34,21 +34,12 @@ apply plugin: 'maven'
 apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'com.matthewprenger.cursegradle'
 
-compileJava {
-    sourceCompatibility = '1.8'
-    targetCompatibility = '1.8'
-}
-
-eclipse {
-    classpath {
-         containers.clear()
-         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-    }
-}
-
 version = "${minecraft_version}-${mod_version}-${System.getenv("BUILD_NUMBER") ?: 0}"
 group = mod_group
 archivesBaseName = mod_artifact_basename
+
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
 
 minecraft {
     version = minecraft_version + "-" + forge_version
@@ -68,6 +59,7 @@ minecraft {
     replace ' || System.getProperty("user.name").equals("chaz")', ""
     
     mappings = mcp_mappings_version
+    useDepAts = true
 }
 
 dependencies {
