@@ -75,7 +75,7 @@ public class OreToDustRecipe implements CompatIRecipe {
             if (ItemStackTools.isValid(itemstack) && itemstack.getItem().equals(UIItems.mortarAndPestle)) {
             	itemstack = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
-                	ItemStackTools.makeEmpty(itemstack);
+                	ItemStackTools.setStackSize(itemstack, 0);
                 grid.set(i, itemstack);
             }
         }
