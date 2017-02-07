@@ -21,7 +21,7 @@ public class TorchRecipe implements CompatIRecipe {
 			if(ItemStackTools.isValid(inv.getStackInSlot(i))) {
 				if(inv.getStackInSlot(i).getItem().equals(Items.FLINT_AND_STEEL)) {
 					for(int j = 0; j < invSize; j++) {
-						if(ItemStackTools.isValid(inv.getStackInSlot(i))) {
+						if(ItemStackTools.isValid(inv.getStackInSlot(j))) {
 							if(inv.getStackInSlot(j).getItem().equals(input.getItem())) {
 								return true;
 							}
