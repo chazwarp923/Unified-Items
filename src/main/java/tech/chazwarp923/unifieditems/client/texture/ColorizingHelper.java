@@ -1,5 +1,5 @@
 /**
-@author Chaz Kerby
+@author Chazwarp923
 */
 package tech.chazwarp923.unifieditems.client.texture;
 

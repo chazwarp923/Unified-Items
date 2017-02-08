@@ -1,3 +1,6 @@
+/**
+@author Chazwarp923
+ */
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
 import mcjty.lib.compat.CompatIRecipe;

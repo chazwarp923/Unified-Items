@@ -1,3 +1,6 @@
+/**
+@author Chazwarp923
+ */
 package tech.chazwarp923.unifieditems.block;
 
 import java.util.HashMap;
