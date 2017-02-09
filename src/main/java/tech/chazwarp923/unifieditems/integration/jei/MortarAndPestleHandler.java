@@ -5,21 +5,21 @@ package tech.chazwarp923.unifieditems.integration.jei;
 
 import mcjty.lib.jei.CompatRecipeHandler;
 import mezz.jei.api.recipe.IRecipeWrapper;
-import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
 
-public class MortarAndPestleHandler extends CompatRecipeHandler<OreToDustRecipe> {
+public class MortarAndPestleHandler extends CompatRecipeHandler<MortarAndPestleRecipe> {
 
 	public MortarAndPestleHandler(String id) {
 		super(id);
 	}
 
 	@Override
-	public Class<OreToDustRecipe> getRecipeClass() {
-		return OreToDustRecipe.class;
+	public Class<MortarAndPestleRecipe> getRecipeClass() {
+		return MortarAndPestleRecipe.class;
 	}
 
 	@Override
-	public IRecipeWrapper getRecipeWrapper(OreToDustRecipe recipe) {
+	public IRecipeWrapper getRecipeWrapper(MortarAndPestleRecipe recipe) {
 		return new MortarAndPestleWrapper(recipe);
 	}
 	/**

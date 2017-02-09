@@ -23,6 +23,6 @@ public class UnifiedItemsPlugin extends BlankModPlugin {
 			registry.addRecipeCategories(new MortarAndPestleCategory(helpers.getGuiHelper()));
 			registry.addRecipeHandlers(new MortarAndPestleHandler(MortarAndPestleCategory.UID));
 			registry.addRecipeCategoryCraftingItem(new ItemStack(UIItems.mortarAndPestle), MortarAndPestleCategory.UID);
-			registry.addRecipes(RecipeRegistry.getOreToDustRecipes());
+			//registry.addRecipes(RecipeRegistry.getMortarAndPestleRecipes());
 		}
 }

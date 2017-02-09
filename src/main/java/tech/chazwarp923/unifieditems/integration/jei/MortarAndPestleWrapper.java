@@ -7,13 +7,13 @@ import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.BlankRecipeWrapper;
 import mezz.jei.api.recipe.wrapper.ICraftingRecipeWrapper;
 import net.minecraft.item.ItemStack;
-import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
 
 public class MortarAndPestleWrapper extends BlankRecipeWrapper implements ICraftingRecipeWrapper {
 
-	private final OreToDustRecipe recipe;
+	private final MortarAndPestleRecipe recipe;
 	
-	public MortarAndPestleWrapper(OreToDustRecipe recipe) {
+	public MortarAndPestleWrapper(MortarAndPestleRecipe recipe) {
 		this.recipe = recipe;
 	}
 	
