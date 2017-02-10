@@ -5,13 +5,14 @@ package tech.chazwarp923.unifieditems.config;
 
 import java.io.File;
 import java.util.HashMap;
-import java.util.Map;
 
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
-import net.minecraftforge.fml.client.config.GuiConfigEntries;
+import net.minecraftforge.fml.common.FMLCommonHandler;
+import net.minecraftforge.fml.relauncher.Side;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
+import tech.chazwarp923.unifieditems.proxy.ClientProxy;
 
 public class ConfigHandler {
 
@@ -39,16 +40,8 @@ public class ConfigHandler {
 		cfg = new Configuration(file);
 		loadValuesFromDisk();
 		
-		for(Material material : MaterialRegistry.ores) {
-			minYProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(0).setMaxValue(255);
-			maxYProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(0).setMaxValue(255);
-			veinSizeOverrideProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(-1).setMaxValue(64);
-			chunkDensityProperties.get(material).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(0).setMaxValue(64);
-		}
-		
-		for(Map.Entry<Material, Boolean> material : MaterialRegistry.enabledMaterials.entrySet()) {
-			Material materialKey = material.getKey();
-			manualOverrideProperties.get(materialKey).setConfigEntryClass(GuiConfigEntries.NumberSliderEntry.class).setMinValue(-1).setMaxValue(1);
+		if(FMLCommonHandler.instance().getSide().equals(Side.CLIENT)) {
+			ClientProxy.configLoad(minYProperties, maxYProperties, veinSizeOverrideProperties, chunkDensityProperties, manualOverrideProperties);
 		}
 		
 		return cfg;
@@ -101,9 +94,8 @@ public class ConfigHandler {
 			chunkDensityProperties.put(material, cfg.get(CATEGORY_CHUNK_DENSITY, material.name, material.chunkDensity, "", 0, 64));
 		}
 		
-		for(Map.Entry<Material, Boolean> material : MaterialRegistry.enabledMaterials.entrySet()) {
-			Material materialKey = material.getKey();
-			manualOverrideProperties.put(materialKey, cfg.get(CATEGORY_MANUAL_OVERRIDE, materialKey.name, 0, "", -1, 1));
+		for(Material material : MaterialRegistry.enabledMaterials.keySet()) {
+			manualOverrideProperties.put(material, cfg.get(CATEGORY_MANUAL_OVERRIDE, material.name, 0, "", -1, 1));
 		}
 	}
 	
@@ -115,9 +107,8 @@ public class ConfigHandler {
 			chunkDensity.put(material, chunkDensityProperties.get(material).getInt());
 		}
 		
-		for(Map.Entry<Material, Boolean> material : MaterialRegistry.enabledMaterials.entrySet()) {
-			Material materialKey = material.getKey();
-			manualOverride.put(materialKey, manualOverrideProperties.get(materialKey).getInt());
+		for(Material material : MaterialRegistry.enabledMaterials.keySet()) {
+			manualOverride.put(material, manualOverrideProperties.get(material).getInt());
 		}
 	}
 	
@@ -129,9 +120,8 @@ public class ConfigHandler {
 			chunkDensityProperties.get(material).set(chunkDensity.get(material));
 		}
 		
-		for(Map.Entry<Material, Boolean> material : MaterialRegistry.enabledMaterials.entrySet()) {
-			Material materialKey = material.getKey();
-			manualOverrideProperties.get(materialKey).set(manualOverride.get(materialKey));
+		for(Material material : MaterialRegistry.enabledMaterials.keySet()) {
+			manualOverrideProperties.get(material).set(manualOverride.get(material));
 		}
 		
 		if(cfg.hasChanged()) {

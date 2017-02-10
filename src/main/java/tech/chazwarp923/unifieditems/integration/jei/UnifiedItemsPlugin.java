@@ -10,7 +10,6 @@ import mezz.jei.api.IJeiHelpers;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 import net.minecraft.item.ItemStack;
-import tech.chazwarp923.unifieditems.crafting.RecipeRegistry;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
 @JEIPlugin
@@ -23,6 +22,5 @@ public class UnifiedItemsPlugin extends BlankModPlugin {
 			registry.addRecipeCategories(new MortarAndPestleCategory(helpers.getGuiHelper()));
 			registry.addRecipeHandlers(new MortarAndPestleHandler(MortarAndPestleCategory.UID));
 			registry.addRecipeCategoryCraftingItem(new ItemStack(UIItems.mortarAndPestle), MortarAndPestleCategory.UID);
-			//registry.addRecipes(RecipeRegistry.getMortarAndPestleRecipes());
 		}
 }

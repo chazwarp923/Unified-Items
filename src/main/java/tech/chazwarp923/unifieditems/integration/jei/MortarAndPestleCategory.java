@@ -3,6 +3,8 @@
 */
 package tech.chazwarp923.unifieditems.integration.jei;
 
+import java.util.Arrays;
+
 import javax.annotation.Nonnull;
 
 import mcjty.lib.jei.JeiCompatTools;
@@ -58,7 +60,7 @@ public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper>
 			guiItemStacks.set(0, ingredients.getInputs(ItemStack.class).get(0).get(0));
 			
 			guiItemStacks.init(1, true, 18, 0);
-			guiItemStacks.set(1, new ItemStack(UIItems.mortarAndPestle));
+			guiItemStacks.set(1, Arrays.asList(new ItemStack(UIItems.mortarAndPestle), new ItemStack(UIItems.mortarAndPestle, 1, 1), new ItemStack(UIItems.mortarAndPestle, 1, 2), new ItemStack(UIItems.mortarAndPestle, 1, 3)));
 			
 			guiItemStacks.init(2, false, 94, 18);
 			guiItemStacks.set(2, JeiCompatTools.getOutputs(ingredients, ItemStack.class));
