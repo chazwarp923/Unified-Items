@@ -1,4 +1,5 @@
 itemGroup.unifieditems=Unified Items
+config.general=General
 config.miny=Minimum Y Level
 config.maxy=Maximum Y Level
 config.veinsizeoverride=Vein Size Override

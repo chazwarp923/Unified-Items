@@ -21,6 +21,7 @@ public class ConfigGUI extends GuiConfig {
 
 	public static List<IConfigElement> getConfigElements() {
 		List<IConfigElement> list = new ArrayList<IConfigElement>();
+		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_GENERAL).setLanguageKey("config.general")));
 		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_MIN_Y).setLanguageKey("config.miny")));
 		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_MAX_Y).setLanguageKey("config.maxy")));
 		list.add(new ConfigElement(UnifiedItems.config.getCategory(ConfigHandler.CATEGORY_VEIN_SIZE_OVERRIDE).setLanguageKey("config.veinsizeoverride")));

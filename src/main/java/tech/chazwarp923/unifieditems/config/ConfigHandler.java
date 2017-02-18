@@ -18,18 +18,21 @@ public class ConfigHandler {
 
 	private static Configuration cfg;
 	
+	public static String CATEGORY_GENERAL = "general";
 	public static String CATEGORY_MIN_Y = "miny";
 	public static String CATEGORY_MAX_Y = "maxy";
 	public static String CATEGORY_VEIN_SIZE_OVERRIDE = "veinsizeoverride";
 	public static String CATEGORY_CHUNK_DENSITY = "chunkdensity";
 	public static String CATEGORY_MANUAL_OVERRIDE = "manualoverride";
 	
+	public static HashMap<String, Boolean> general = new HashMap<String, Boolean>();
 	public static HashMap<Material, Integer> minY = new HashMap<Material, Integer>();
 	public static HashMap<Material, Integer> maxY = new HashMap<Material, Integer>();
 	public static HashMap<Material, Integer> veinSizeOverride = new HashMap<Material, Integer>();
 	public static HashMap<Material, Integer> chunkDensity = new HashMap<Material, Integer>();
 	public static HashMap<Material, Integer> manualOverride = new HashMap<Material, Integer>();
 	
+	private static HashMap<String, Property> generalProperties = new HashMap<String, Property>();
 	private static HashMap<Material, Property> minYProperties = new HashMap<Material, Property>();
 	private static HashMap<Material, Property> maxYProperties = new HashMap<Material, Property>();
 	private static HashMap<Material, Property> veinSizeOverrideProperties = new HashMap<Material, Property>();
@@ -66,13 +69,14 @@ public class ConfigHandler {
 		
 		loadConfigProperties();
 		
-		
+		cfg.addCustomCategoryComment(CATEGORY_GENERAL, "General options");
 		cfg.addCustomCategoryComment(CATEGORY_MIN_Y, "Minimum Y Level");
 		cfg.addCustomCategoryComment(CATEGORY_MAX_Y, "Maximum Y Level");
 		cfg.addCustomCategoryComment(CATEGORY_VEIN_SIZE_OVERRIDE, "For overriding the precalculated amount of ores per vein, -1 to disable and use precalculated values");
 		cfg.addCustomCategoryComment(CATEGORY_CHUNK_DENSITY, "How many veins are generated per chunk");
 		cfg.addCustomCategoryComment(CATEGORY_MANUAL_OVERRIDE, "Whether or not a material is force enabled/disabled, 0 = inactive, 1 = force enabled, -1 = force disabled");
 		
+		cfg.setCategoryRequiresMcRestart(CATEGORY_GENERAL, true);
 		cfg.setCategoryRequiresWorldRestart(CATEGORY_MIN_Y, true);
 		cfg.setCategoryRequiresWorldRestart(CATEGORY_MAX_Y, true);
 		cfg.setCategoryRequiresWorldRestart(CATEGORY_VEIN_SIZE_OVERRIDE, true);
@@ -87,6 +91,9 @@ public class ConfigHandler {
 	}
 	
 	private static void loadConfigProperties() {
+		
+		generalProperties.put("furnaceConvert", cfg.get(CATEGORY_GENERAL, "Furnace Conversion Recipes", true));
+		
 		for(Material material : MaterialRegistry.ores) {
 			minYProperties.put(material, cfg.get(CATEGORY_MIN_Y, material.name, material.minY, "", 0, 255));
 			maxYProperties.put(material, cfg.get(CATEGORY_MAX_Y, material.name, material.maxY, "", 0, 255));
@@ -100,6 +107,9 @@ public class ConfigHandler {
 	}
 	
 	private static void readConfigValues() {
+		
+		general.put("furnaceConvert", generalProperties.get("furnaceConvert").getBoolean());
+		
 		for(Material material : MaterialRegistry.ores) {
 			minY.put(material, minYProperties.get(material).getInt());
 			maxY.put(material, maxYProperties.get(material).getInt());
@@ -113,6 +123,9 @@ public class ConfigHandler {
 	}
 	
 	private static void writeConfigValues() {
+		
+		generalProperties.get("furnaceConvert").set(general.get("furnaceConvert"));
+		
 		for(Material material : MaterialRegistry.ores) {
 			minYProperties.get(material).set(minY.get(material));
 			maxYProperties.get(material).set(maxY.get(material));
