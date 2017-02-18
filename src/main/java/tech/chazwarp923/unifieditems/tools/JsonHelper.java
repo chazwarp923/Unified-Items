@@ -1,3 +1,6 @@
+/**
+@author Chazwarp923
+ */
 package tech.chazwarp923.unifieditems.tools;
 
 import java.io.FileNotFoundException;
@@ -18,12 +21,16 @@ public class JsonHelper {
 			createItemJson("dust_" + mat.name.toLowerCase());
 			createItemJson("ingot_" + mat.name.toLowerCase());
 			createItemJson("nugget_" + mat.name.toLowerCase());
+			createItemJson("plate_" + mat.name.toLowerCase());
+			createItemJson("gear_" + mat.name.toLowerCase());
 			createBlockJson("block_" + mat.name.toLowerCase());
 			break;
 		case ALLOY:
 			createItemJson("dust_" + mat.name.toLowerCase());
 			createItemJson("ingot_" + mat.name.toLowerCase());
 			createItemJson("nugget_" + mat.name.toLowerCase());
+			createItemJson("plate_" + mat.name.toLowerCase());
+			createItemJson("gear_" + mat.name.toLowerCase());
 			createBlockJson("block_" + mat.name.toLowerCase());
 			break;
 		case GENERIC_GEM:
@@ -43,6 +50,12 @@ public class JsonHelper {
 			break;
 		case GEM:
 			createItemJson("gem_" + mat.name.toLowerCase());
+			break;
+		case PLATE:
+			createItemJson("plate_" + mat.name.toLowerCase());
+			break;
+		case GEAR:
+			createItemJson("gear_" + mat.name.toLowerCase());
 			break;
 		case BLOCK:
 			createBlockJson("block_" + mat.name.toLowerCase());

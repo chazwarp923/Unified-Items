@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Level;
 
 import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
+import tech.chazwarp923.unifieditems.tools.JsonHelper;
 
 public class MaterialRegistry {
 	                    //Material, State(Enabled/Disabled)
@@ -20,10 +21,13 @@ public class MaterialRegistry {
 	public static ArrayList<Material> ingots = new ArrayList<Material>();
 	public static ArrayList<Material> nuggets = new ArrayList<Material>();
 	public static ArrayList<Material> gems = new ArrayList<Material>();
+	public static ArrayList<Material> plates = new ArrayList<Material>();
+	public static ArrayList<Material> gears = new ArrayList<Material>();
 	public static ArrayList<Material> blocks = new ArrayList<Material>();
 	
 	public static void populate() {
 		for(Material mat : Material.values()) {
+			//JsonHelper.generateJson(mat);
 			enabledMaterials.put(mat, false);
 			materialUsage.put(mat, 0);
 			switch(mat.type) {
@@ -32,12 +36,16 @@ public class MaterialRegistry {
 					dusts.add(mat);
 					ingots.add(mat);
 					nuggets.add(mat);
+					plates.add(mat);
+					gears.add(mat);
 					blocks.add(mat);
 					break;
 				case ALLOY:
 					dusts.add(mat);
 					ingots.add(mat);
 					nuggets.add(mat);
+					plates.add(mat);
+					gears.add(mat);
 					blocks.add(mat);
 					break;
 				case GENERIC_GEM:
@@ -57,6 +65,12 @@ public class MaterialRegistry {
 					break;
 				case GEM:
 					gems.add(mat);
+					break;
+				case PLATE:
+					plates.add(mat);
+					break;
+				case GEAR:
+					gears.add(mat);
 					break;
 				case BLOCK:
 					blocks.add(mat);

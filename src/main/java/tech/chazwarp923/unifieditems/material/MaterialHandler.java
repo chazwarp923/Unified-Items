@@ -20,12 +20,16 @@ public class MaterialHandler {
 					UIItems.addDust(material, "dust_" + material.name.toLowerCase().toLowerCase());
 					UIItems.addIngot(material, "ingot_" + material.name.toLowerCase());
 					UIItems.addNugget(material, "nugget_" + material.name.toLowerCase());
+					UIItems.addPlate(material, "plate_" + material.name.toLowerCase());
+					UIItems.addGear(material, "gear_" + material.name.toLowerCase());
 					UIBlocks.addBlock(material, material.hardness, "block_" + material.name.toLowerCase(), material.harvestLevel);
 					break;
 				case ALLOY:
 					UIItems.addDust(material, "dust_" + material.name.toLowerCase());
 					UIItems.addIngot(material, "ingot_" + material.name.toLowerCase());
 					UIItems.addNugget(material, "nugget_" + material.name.toLowerCase());
+					UIItems.addPlate(material, "plate_" + material.name.toLowerCase());
+					UIItems.addGear(material, "gear_" + material.name.toLowerCase());
 					UIBlocks.addBlock(material, material.hardness, "block_" + material.name.toLowerCase(), material.harvestLevel);
 					break;
 				case GENERIC_GEM:
@@ -45,6 +49,12 @@ public class MaterialHandler {
 					break;
 				case GEM:
 					UIItems.addGem(material, "gem_" + material.name.toLowerCase());
+					break;
+				case PLATE:
+					UIItems.addPlate(material, "plate_" + material.name.toLowerCase());
+					break;
+				case GEAR:
+					UIItems.addGear(material, "gear_" + material.name.toLowerCase());
 					break;
 				case BLOCK:
 					UIBlocks.addBlock(material, material.hardness, "block_" + material.name.toLowerCase(), material.harvestLevel);

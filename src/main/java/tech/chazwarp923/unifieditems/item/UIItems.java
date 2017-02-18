@@ -19,6 +19,8 @@ public class UIItems {
 	public static Map<Material, UIItemIngot> ingots = new HashMap<Material, UIItemIngot>();
 	public static Map<Material, UIItemNugget> nuggets = new HashMap<Material, UIItemNugget>();
 	public static Map<Material, UIItemGem> gems = new HashMap<Material, UIItemGem>();
+	public static Map<Material, UIItemPlate> plates = new HashMap<Material, UIItemPlate>();
+	public static Map<Material, UIItemGear> gears = new HashMap<Material, UIItemGear>();
 	
 	public static void addDust(Material mat, String unlocalizedName) {
 		dusts.put(mat, new UIItemDust(unlocalizedName));
@@ -35,6 +37,14 @@ public class UIItems {
 	public static void addGem(Material mat, String unlocalizedName) {
 		gems.put(mat, new UIItemGem(unlocalizedName));
 	}
+	
+	public static void addPlate(Material mat, String unlocalizedName) {
+		plates.put(mat, new UIItemPlate(unlocalizedName));
+	}
+	
+	public static void addGear(Material mat, String unlocalizedName) {
+		gears.put(mat, new UIItemGear(unlocalizedName));
+	}
 
 	public static void preInit() {
 		mortarAndPestle = new ItemMortarAndPestle();
@@ -45,20 +55,37 @@ public class UIItems {
 				OreDictionary.registerOre("dustAluminium", item.getValue());
 			}
 		}
+		
 		for(Map.Entry<Material, UIItemIngot> item : ingots.entrySet()) {
 			OreDictionary.registerOre("ingot" + item.getKey().toString(), item.getValue());
 			if(item.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("ingotAluminium", item.getValue());
 			}
 		}
+		
 		for(Map.Entry<Material, UIItemNugget> item : nuggets.entrySet()) {
 			OreDictionary.registerOre("nugget" + item.getKey().toString(), item.getValue());
 			if(item.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("nuggetAluminium", item.getValue());
 			}
 		}
+		
 		for(Map.Entry<Material, UIItemGem> item : gems.entrySet()) {
 			OreDictionary.registerOre("gem" + item.getKey().toString(), item.getValue());
+		}
+		
+		for(Map.Entry<Material, UIItemPlate> item : plates.entrySet()) {
+			OreDictionary.registerOre("plate" + item.getKey().toString(), item.getValue());
+			if(item.getKey().equals(Material.ALUMINUM)) {
+				OreDictionary.registerOre("plateAluminium", item.getValue());
+			}
+		}
+		
+		for(Map.Entry<Material, UIItemGear> item : gears.entrySet()) {
+			OreDictionary.registerOre("gear" + item.getKey().toString(), item.getValue());
+			if(item.getKey().equals(Material.ALUMINUM)) {
+				OreDictionary.registerOre("gearAluminium", item.getValue());
+			}
 		}
 	}
 	
@@ -79,6 +106,14 @@ public class UIItems {
 		}
 		
 		for(Map.Entry<Material, UIItemGem> item : gems.entrySet()) {
+			item.getValue().initModel();
+		}
+		
+		for(Map.Entry<Material, UIItemPlate> item : plates.entrySet()) {
+			item.getValue().initModel();
+		}
+		
+		for(Map.Entry<Material, UIItemGear> item : gears.entrySet()) {
 			item.getValue().initModel();
 		}
 	}
