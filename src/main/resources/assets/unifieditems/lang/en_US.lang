@@ -87,6 +87,7 @@ item.ingot_ardite.name=Ardite Ingot
 item.ingot_steel.name=Steel Ingot
 item.ingot_zinc.name=Zinc Ingot
 item.ingot_brass.name=Brass Ingot
+
 item.gem_sapphire.name=Sapphire Gem
 item.gem_ruby.name=Ruby Gem
 
@@ -108,5 +109,43 @@ item.nugget_ardite.name=Ardite Nugget
 item.nugget_steel.name=Steel Nugget
 item.nugget_zinc.name=Zinc Nugget
 item.nugget_brass.name=Brass Nugget
+
+item.plate_copper.name=Copper Plate
+item.plate_tin.name=Tin Plate
+item.plate_bronze.name=Bronze Plate
+item.plate_silver.name=Silver Plate
+item.plate_lead.name=Lead Plate
+item.plate_nickel.name=Nickel Plate
+item.plate_invar.name=Invar Plate
+item.plate_electrum.name=Electrum Plate
+item.plate_platinum.name=Platinum Plate
+item.plate_mithril.name=Mithril Plate
+item.plate_aluminum.name=Aluminum Plate
+item.plate_uranium.name=Uranium Plate
+item.plate_iridium.name=Iridium Plate
+item.plate_cobalt.name=Cobalt Plate
+item.plate_ardite.name=Ardite Plate
+item.plate_steel.name=Steel Plate
+item.plate_zinc.name=Zinc Plate
+item.plate_brass.name=Brass Plate
+
+item.gear_copper.name=Copper Gear
+item.gear_tin.name=Tin Gear
+item.gear_bronze.name=Bronze Gear
+item.gear_silver.name=Silver Gear
+item.gear_lead.name=Lead Gear
+item.gear_nickel.name=Nickel Gear
+item.gear_invar.name=Invar Gear
+item.gear_electrum.name=Electrum Gear
+item.gear_platinum.name=Platinum Gear
+item.gear_mithril.name=Mithril Gear
+item.gear_aluminum.name=Aluminum Gear
+item.gear_uranium.name=Uranium Gear
+item.gear_iridium.name=Iridium Gear
+item.gear_cobalt.name=Cobalt Gear
+item.gear_ardite.name=Ardite Gear
+item.gear_steel.name=Steel Gear
+item.gear_zinc.name=Zinc Gear
+item.gear_brass.name=Brass Gear
 
 item.mortar_and_pestle.name=Mortar and Pestle
