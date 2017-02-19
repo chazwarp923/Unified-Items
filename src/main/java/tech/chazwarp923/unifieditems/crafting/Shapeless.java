@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 import tech.chazwarp923.unifieditems.block.UIBlockOre;
 import tech.chazwarp923.unifieditems.block.UIBlockStorage;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
+import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.OreToDustRecipe;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.TorchRecipe;
@@ -31,7 +32,9 @@ public class Shapeless {
 		}
 		
 		//Adds the recipe for bronze dust
-		GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.TIN)));
+		if(ConfigHandler.general.get("bronzeCrafting")) {
+			GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.TIN)));
+		}
 
 		//Adds the recipes for ingots to nuggets
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {

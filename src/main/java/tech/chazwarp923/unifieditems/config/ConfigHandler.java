@@ -72,7 +72,7 @@ public class ConfigHandler {
 		cfg.addCustomCategoryComment(CATEGORY_GENERAL, "General options");
 		cfg.addCustomCategoryComment(CATEGORY_MIN_Y, "Minimum Y Level");
 		cfg.addCustomCategoryComment(CATEGORY_MAX_Y, "Maximum Y Level");
-		cfg.addCustomCategoryComment(CATEGORY_VEIN_SIZE_OVERRIDE, "For overriding the precalculated amount of ores per vein, -1 to disable and use precalculated values");
+		cfg.addCustomCategoryComment(CATEGORY_VEIN_SIZE_OVERRIDE, "For overriding the precalculated amount of ores per vein, -1 to disable and use dynamically calculated values");
 		cfg.addCustomCategoryComment(CATEGORY_CHUNK_DENSITY, "How many veins are generated per chunk");
 		cfg.addCustomCategoryComment(CATEGORY_MANUAL_OVERRIDE, "Whether or not a material is force enabled/disabled, 0 = inactive, 1 = force enabled, -1 = force disabled");
 		
