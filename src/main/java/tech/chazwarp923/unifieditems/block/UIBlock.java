@@ -4,7 +4,7 @@
 
 package tech.chazwarp923.unifieditems.block;
 
-import net.minecraft.block.Block;
+import mcjty.lib.compat.CompatBlock;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import tech.chazwarp923.unifieditems.UnifiedItemsTab;
 import tech.chazwarp923.unifieditems.item.UIItemBlock;
 
-public class UIBlock extends Block {
+public class UIBlock extends CompatBlock {
 
 	public UIBlock(Material mat, float hardness, SoundType sound, String unlocalizedName, HarvestType harvestTool, HarvestLevel harvestLevel) {
 		super(mat);

@@ -14,11 +14,16 @@ import tech.chazwarp923.unifieditems.material.Material;
 
 public class UIBlocks {
 	
-	public static Map<Material, UIBlockOre> ores = new HashMap<Material, UIBlockOre>();
+	public static Map<Material, UIBlockMetalOre> metalOres = new HashMap<Material, UIBlockMetalOre>();
+	public static Map<Material, UIBlockGemOre> gemOres = new HashMap<Material, UIBlockGemOre>();
 	public static Map<Material, UIBlockStorage> blocks = new HashMap<Material, UIBlockStorage>();
 	
-	public static void addOre(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
-		ores.put(mat, new UIBlockOre(hardness, unlocalizedName, harvestLevel));
+	public static void addMetalOre(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
+		metalOres.put(mat, new UIBlockMetalOre(hardness, unlocalizedName, harvestLevel));
+	}
+	
+	public static void addGemOre(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
+		gemOres.put(mat, new UIBlockGemOre(hardness, unlocalizedName, harvestLevel, mat));
 	}
 	
 	public static void addBlock(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
@@ -26,12 +31,17 @@ public class UIBlocks {
 	}
 	
 	public static void preInit() {		
-		for(Map.Entry<Material, UIBlockOre> block : ores.entrySet()) {
+		for(Map.Entry<Material, UIBlockMetalOre> block : metalOres.entrySet()) {
 			OreDictionary.registerOre("ore" + block.getKey().toString(), block.getValue());
 			if(block.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("oreAluminium", block.getValue());
 			}
 		}
+		
+		for(Map.Entry<Material, UIBlockGemOre> block : gemOres.entrySet()) {
+			OreDictionary.registerOre("ore" + block.getKey().toString(), block.getValue());
+		}
+		
 		for(Map.Entry<Material, UIBlockStorage> block : blocks.entrySet()) {
 			OreDictionary.registerOre("block" + block.getKey().toString(), block.getValue());
 			if(block.getKey().equals(Material.ALUMINUM)) {
@@ -42,9 +52,14 @@ public class UIBlocks {
 	
 	@SideOnly(Side.CLIENT)
 	public static void preInitClient() {
-		for(Entry<Material, UIBlockOre> block : ores.entrySet()) {
+		for(Entry<Material, UIBlockMetalOre> block : metalOres.entrySet()) {
 			block.getValue().initModel();
 		}
+		
+		for(Entry<Material, UIBlockGemOre> block : gemOres.entrySet()) {
+			block.getValue().initModel();
+		}
+		
 		for(Entry<Material, UIBlockStorage> block : blocks.entrySet()) {
 			block.getValue().initModel();
 		}

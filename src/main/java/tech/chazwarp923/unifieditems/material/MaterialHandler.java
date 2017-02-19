@@ -16,7 +16,7 @@ public class MaterialHandler {
 			if(MaterialRegistry.enabledMaterials.get(material) == true) {
 				switch(material.type) {
 				case GENERIC:
-					UIBlocks.addOre(material, material.hardness, "ore_" + material.name.toLowerCase(), material.harvestLevel);
+					UIBlocks.addMetalOre(material, material.hardness, "ore_" + material.name.toLowerCase(), material.harvestLevel);
 					UIItems.addDust(material, "dust_" + material.name.toLowerCase().toLowerCase());
 					UIItems.addIngot(material, "ingot_" + material.name.toLowerCase());
 					UIItems.addNugget(material, "nugget_" + material.name.toLowerCase());
@@ -33,7 +33,7 @@ public class MaterialHandler {
 					UIBlocks.addBlock(material, material.hardness, "block_" + material.name.toLowerCase(), material.harvestLevel);
 					break;
 				case GENERIC_GEM:
-					UIBlocks.addOre(material, material.hardness, "ore_" + material.name.toLowerCase(), material.harvestLevel);
+					UIBlocks.addGemOre(material, material.hardness, "ore_" + material.name.toLowerCase(), material.harvestLevel);
 					UIItems.addDust(material, "dust_" + material.name.toLowerCase());
 					UIItems.addGem(material, "gem_" + material.name.toLowerCase());
 					UIBlocks.addBlock(material, material.hardness, "block_" + material.name.toLowerCase(), material.harvestLevel);

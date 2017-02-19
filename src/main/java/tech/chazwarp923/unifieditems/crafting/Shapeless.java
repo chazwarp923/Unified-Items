@@ -6,7 +6,7 @@ import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import tech.chazwarp923.unifieditems.block.UIBlockOre;
+import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
 import tech.chazwarp923.unifieditems.block.UIBlockStorage;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
@@ -27,7 +27,7 @@ public class Shapeless {
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(UIItems.dusts.get(Material.IRON), 2)));
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.GOLD_ORE), new ItemStack(UIItems.dusts.get(Material.GOLD), 2)));
 		
-		for(Map.Entry<Material, UIBlockOre> block : UIBlocks.ores.entrySet()) {
+		for(Map.Entry<Material, UIBlockMetalOre> block : UIBlocks.metalOres.entrySet()) {
 			RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(block.getKey()));
 		}
 		

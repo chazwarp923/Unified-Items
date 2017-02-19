@@ -15,6 +15,6 @@ public class OreToDustRecipe extends MortarAndPestleRecipe {
 	}
 	
 	public OreToDustRecipe(Material material) {
-		super(new ItemStack(UIBlocks.ores.get(material), 1), new ItemStack(UIItems.dusts.get(material), 2));
+		super(new ItemStack(UIBlocks.metalOres.get(material), 1), new ItemStack(UIItems.dusts.get(material), 2));
 	}
 }

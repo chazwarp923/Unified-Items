@@ -62,7 +62,7 @@ public class UnifiedItems {
             if (mapping.type == GameRegistry.Type.BLOCK) {
             	for(Material material : MaterialRegistry.ores) {
             		if (resourcePath.equals("ore" + material.name.toLowerCase())) {
-                        mapping.remap(UIBlocks.ores.get(material));
+                        mapping.remap(UIBlocks.metalOres.get(material));
                     }
             	}
             	for(Material material : MaterialRegistry.blocks) {
@@ -78,7 +78,7 @@ public class UnifiedItems {
                 }
             	for(Material material : MaterialRegistry.ores) {
             		if (resourcePath.equals("ore" + material.name.toLowerCase())) {
-                        mapping.remap(Item.getItemFromBlock(UIBlocks.ores.get(material)));
+                        mapping.remap(Item.getItemFromBlock(UIBlocks.metalOres.get(material)));
                     }
             	}
             	for(Material material : MaterialRegistry.blocks) {

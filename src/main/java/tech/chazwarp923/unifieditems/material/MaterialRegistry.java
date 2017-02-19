@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Level;
 
 import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
-import tech.chazwarp923.unifieditems.tools.JsonHelper;
 
 public class MaterialRegistry {
 	                    //Material, State(Enabled/Disabled)
