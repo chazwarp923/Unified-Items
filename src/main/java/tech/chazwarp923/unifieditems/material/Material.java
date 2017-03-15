@@ -31,7 +31,8 @@ public enum Material {
 	RUBY(MaterialType.GENERIC_GEM, "Ruby", 2F, HarvestLevel.IRON, 10, 60, 6, 3, 0),
 	SAPPHIRE(MaterialType.GENERIC_GEM, "Sapphire", 2F, HarvestLevel.IRON, 10, 60, 6, 3, 0),
 	BRASS(MaterialType.ALLOY, "Brass", 2F, HarvestLevel.IRON),
-	ZINC(MaterialType.GENERIC, "Zinc", 2F, HarvestLevel.IRON, 20, 55, 7, 10, 0);
+	ZINC(MaterialType.GENERIC, "Zinc", 2F, HarvestLevel.IRON, 20, 55, 7, 10, 0),
+	CONSTANTAN(MaterialType.ALLOY, "Constantan", 2F, HarvestLevel.IRON);
 	
 	public final MaterialType type;
 	public final String name;

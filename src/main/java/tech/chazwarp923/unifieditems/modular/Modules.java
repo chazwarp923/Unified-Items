@@ -21,7 +21,7 @@ public enum Modules {
 	FORESTRY("forestry", Forestry.class),
 	IC2("IC2", IC2.class),
 	TINKERSCONSTRUCT("tconstruct", TinkersConstruct.class),
-	THERMALEXPANSION("ThermalExpansion", ThermalExpansion.class),
+	THERMALEXPANSION("thermalfoundation", ThermalExpansion.class),
 	TECHREBORN("techreborn", TechReborn.class),
 	ENDERIO("enderio", EnderIO.class),
 	IMMERSIVEENGINEERING("immersiveengineering", ImmersiveEngineering.class),

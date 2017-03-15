@@ -19,6 +19,7 @@ public class ImmersiveEngineering extends UIModule {
 		materials.add(Material.LEAD);
 		materials.add(Material.NICKEL);
 		materials.add(Material.ELECTRUM);
+		materials.add(Material.CONSTANTAN);
 		materials.add(Material.STEEL);
 		materials.add(Material.URANIUM);
 		MaterialRegistry.registerUse(materials);

@@ -41,6 +41,7 @@ tile.block_ardite.name=Ardite Block
 tile.block_steel.name=Steel Block
 tile.block_zinc.name=Zinc Block
 tile.block_brass.name=Brass Block
+tile.block_constantan.name=Constantan Block
 tile.block_sapphire.name=Sapphire Block
 tile.block_ruby.name=Ruby Block
 
@@ -66,6 +67,7 @@ item.dust_steel.name=Steel Powder
 item.dust_obsidian.name=Obsidian Powder
 item.dust_zinc.name=Zinc Powder
 item.dust_brass.name=Brass Powder
+item.dust_constantan.name=Constantan Powder
 item.dust_sapphire.name=Sapphire Powder
 item.dust_ruby.name=Ruby Powder
 item.dust_diamond.name=Diamond Powder
@@ -88,6 +90,7 @@ item.ingot_ardite.name=Ardite Ingot
 item.ingot_steel.name=Steel Ingot
 item.ingot_zinc.name=Zinc Ingot
 item.ingot_brass.name=Brass Ingot
+item.ingot_constantan.name=Constantan Ingot
 
 item.gem_sapphire.name=Sapphire Gem
 item.gem_ruby.name=Ruby Gem
@@ -110,6 +113,7 @@ item.nugget_ardite.name=Ardite Nugget
 item.nugget_steel.name=Steel Nugget
 item.nugget_zinc.name=Zinc Nugget
 item.nugget_brass.name=Brass Nugget
+item.nugget_constantan.name=Constantan Nugget
 
 item.plate_copper.name=Copper Plate
 item.plate_tin.name=Tin Plate
@@ -129,6 +133,7 @@ item.plate_ardite.name=Ardite Plate
 item.plate_steel.name=Steel Plate
 item.plate_zinc.name=Zinc Plate
 item.plate_brass.name=Brass Plate
+item.plate_constantan.name=Constantan Plate
 
 item.gear_copper.name=Copper Gear
 item.gear_tin.name=Tin Gear
@@ -148,5 +153,6 @@ item.gear_ardite.name=Ardite Gear
 item.gear_steel.name=Steel Gear
 item.gear_zinc.name=Zinc Gear
 item.gear_brass.name=Brass Gear
+item.gear_constantan.name=Constantan Gear
 
 item.mortar_and_pestle.name=Mortar and Pestle

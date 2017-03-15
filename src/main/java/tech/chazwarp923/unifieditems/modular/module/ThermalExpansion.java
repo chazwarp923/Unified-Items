@@ -17,14 +17,18 @@ public class ThermalExpansion extends UIModule {
 		materials.add(Material.COPPER);
 		materials.add(Material.TIN);
 		materials.add(Material.BRONZE);
+		materials.add(Material.ALUMINUM);
 		materials.add(Material.SILVER);
 		materials.add(Material.LEAD);
 		materials.add(Material.NICKEL);
 		materials.add(Material.INVAR);
 		materials.add(Material.ELECTRUM);
+		materials.add(Material.CONSTANTAN);
+		materials.add(Material.STEEL);
 		materials.add(Material.OBSIDIAN);
 		materials.add(Material.PLATINUM);
 		materials.add(Material.MITHRIL);
+		materials.add(Material.IRIDIUM);
 		MaterialRegistry.registerUse(materials);
 	}
 }
