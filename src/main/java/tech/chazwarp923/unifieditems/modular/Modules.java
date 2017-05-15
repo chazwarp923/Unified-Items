@@ -14,6 +14,7 @@ import tech.chazwarp923.unifieditems.modular.module.TechExpansion;
 import tech.chazwarp923.unifieditems.modular.module.TechReborn;
 import tech.chazwarp923.unifieditems.modular.module.ThermalExpansion;
 import tech.chazwarp923.unifieditems.modular.module.TinkersConstruct;
+import tech.chazwarp923.unifieditems.modular.module.VicsModernWarfare;
 
 public enum Modules {
 
@@ -27,7 +28,8 @@ public enum Modules {
 	IMMERSIVEENGINEERING("immersiveengineering", ImmersiveEngineering.class),
 	RAILCRAFT("railcraft", Railcraft.class),
 	DENSEORES("denseores", DenseOres.class),
-	TECHEXPANSION("techexpansion", TechExpansion.class);
+	TECHEXPANSION("techexpansion", TechExpansion.class),
+	VICSMODERNWARFARE("mw", VicsModernWarfare.class);
 	
 	final String modid;
 	final Class<? extends UIModule> module;
