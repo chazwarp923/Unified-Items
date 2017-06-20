@@ -2,10 +2,10 @@ package tech.chazwarp923.unifieditems.crafting;
 
 import java.util.Map;
 
-import mcjty.lib.tools.ItemStackTools;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.oredict.OreDictionary;
 import tech.chazwarp923.unifieditems.block.UIBlockGemOre;
 import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
@@ -31,7 +31,7 @@ public class Smelting {
 		//Adds the recipes for other mods' ingots into my ingots
 		if(ConfigHandler.general.get("furnaceConvert")) {
 			for(Map.Entry<Material, UIItemIngot> ingot : UIItems.ingots.entrySet()) {
-				for(ItemStack stack : ItemStackTools.getOres("ingot" + ingot.getKey().toString())) {
+				for(ItemStack stack : OreDictionary.getOres("ingot" + ingot.getKey().toString())) {
 					GameRegistry.addSmelting(stack, new ItemStack(ingot.getValue()), 0.0f);
 				}
 			}

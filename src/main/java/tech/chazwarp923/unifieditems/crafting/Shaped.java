@@ -13,7 +13,7 @@ public class Shaped {
 
 	public static void init() {
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
-			GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UIItems.gears.get(item.getKey()), 1), new Object[] { "SIS", "I I", "SIS", 'S', "stickWood", 'I', item.getValue() }));
+			//GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(UIItems.gears.get(item.getKey()), 1), new Object[] { "SIS", "I I", "SIS", 'S', "stickWood", 'I', item.getValue() }));
 		}
 	}
 }

@@ -7,21 +7,20 @@ import java.util.Arrays;
 
 import javax.annotation.Nonnull;
 
-import mcjty.lib.jei.JeiCompatTools;
 import mezz.jei.api.IGuiHelper;
 import mezz.jei.api.gui.ICraftingGridHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
 import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.BlankRecipeCategory;
+import mezz.jei.api.recipe.IRecipeCategory;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
-public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper> {
+public class MortarAndPestleCategory implements IRecipeCategory<IRecipeWrapper> {
 
 	public static final String UID = Reference.MOD_ID + ".mortarAndPestle";
 	
@@ -63,7 +62,12 @@ public class MortarAndPestleCategory extends BlankRecipeCategory<IRecipeWrapper>
 			guiItemStacks.set(1, Arrays.asList(new ItemStack(UIItems.mortarAndPestle), new ItemStack(UIItems.mortarAndPestle, 1, 1), new ItemStack(UIItems.mortarAndPestle, 1, 2), new ItemStack(UIItems.mortarAndPestle, 1, 3)));
 			
 			guiItemStacks.init(2, false, 94, 18);
-			guiItemStacks.set(2, JeiCompatTools.getOutputs(ingredients, ItemStack.class));
+			guiItemStacks.set(2, ingredients.getOutputs(ItemStack.class).get(0));
 		}
+	}
+
+	@Override
+	public String getModName() {
+		return Reference.MOD_NAME;
 	}
 }

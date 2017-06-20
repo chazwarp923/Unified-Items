@@ -3,15 +3,15 @@
 */
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
-import mcjty.lib.compat.CompatIRecipe;
-import mcjty.lib.tools.ItemStackList;
-import mcjty.lib.tools.ItemStackTools;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
-public class MortarAndPestleRecipe implements CompatIRecipe {
+public class MortarAndPestleRecipe implements IRecipe {
 
 	final ItemStack input;
 	final ItemStack output;
@@ -29,10 +29,10 @@ public class MortarAndPestleRecipe implements CompatIRecipe {
 	public boolean matches(InventoryCrafting inv, World worldIn) {
 		int invSize = inv.getSizeInventory();
 		for(int i = 0; i < invSize; i++) {
-			if(ItemStackTools.isValid(inv.getStackInSlot(i))) {
+			if(inv.getStackInSlot(i) != ItemStack.EMPTY) {
 				if(inv.getStackInSlot(i).getItem().equals(UIItems.mortarAndPestle)) {
 					for(int j = 0; j < invSize; j++) {
-						if(ItemStackTools.isValid(inv.getStackInSlot(j))) {
+						if(inv.getStackInSlot(j) != ItemStack.EMPTY) {
 							if(inv.getStackInSlot(j).getItem().equals(input.getItem())) {
 								return true;
 							}
@@ -45,16 +45,16 @@ public class MortarAndPestleRecipe implements CompatIRecipe {
 	}
 	
 	@Override
-	public ItemStackList getRemainingItemsCompat(InventoryCrafting inv) {
-		ItemStackList grid = ItemStackList.create(inv.getSizeInventory());
+	public NonNullList<ItemStack> getRemainingItems(InventoryCrafting inv) {
+		NonNullList<ItemStack> grid = NonNullList.withSize(inv.getSizeInventory(), ItemStack.EMPTY);
 
         for (int i = 0; i < grid.size(); i++) {
             ItemStack itemstack = inv.getStackInSlot(i);
             
-            if (ItemStackTools.isValid(itemstack) && itemstack.getItem().equals(UIItems.mortarAndPestle)) {
+            if (itemstack != ItemStack.EMPTY && itemstack.getItem().equals(UIItems.mortarAndPestle)) {
             	itemstack = new ItemStack(UIItems.mortarAndPestle, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
-                	itemstack = ItemStackTools.getEmptyStack();
+                	itemstack = ItemStack.EMPTY;
                 grid.set(i, itemstack);
             }
         }
@@ -71,12 +71,31 @@ public class MortarAndPestleRecipe implements CompatIRecipe {
 	}
 	
 	@Override
-	public int getRecipeSize() {
-		return 2;
-	}
-	
-	@Override
 	public ItemStack getCraftingResult(InventoryCrafting inv) {
 		return output.copy();
 	}
+
+	@Override
+	public IRecipe setRegistryName(ResourceLocation name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResourceLocation getRegistryName() {
+		//TODO Fix
+		return null;
+	}
+
+	@Override
+	public Class<IRecipe> getRegistryType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean canFit(int width, int height) {
+		return width >= 2 && height >= 2;
+	}
+
 }

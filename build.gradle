@@ -13,7 +13,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'net.minecraftforge.gradle:ForgeGradle:2.2-SNAPSHOT'
+        classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
         classpath "gradle.plugin.com.matthewprenger:CurseGradle:1.0.7"
     }
 }
@@ -23,10 +23,6 @@ repositories {
         //JEI maven
         url "http://dvs1.progwml6.com/files/maven"
     }
-    maven { // Compat Layer
-            //name = "compatlayer"
-            url "http://maven.k-4u.nl"
-        }
 }
 
 apply plugin: 'java'
@@ -67,8 +63,6 @@ dependencies {
     deobfCompile "mezz.jei:jei_${minecraft_version}:${dep_jei_version}:api"
     // at runtime, use the full JEI jar
     runtime "mezz.jei:jei_${minecraft_version}:${dep_jei_version}"
-    
-    deobfCompile "com.github.mcjty:compatlayer:${minecraft_version}-${dep_compatlayer_version}"
 }
 
 processResources
