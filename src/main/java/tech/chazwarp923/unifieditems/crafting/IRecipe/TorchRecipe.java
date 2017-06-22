@@ -3,6 +3,11 @@
  */
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
+import mezz.jei.api.ingredients.IIngredients;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
@@ -11,9 +16,10 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import scala.actors.threadpool.Arrays;
 import tech.chazwarp923.unifieditems.Reference;
 
-public class TorchRecipe implements IRecipe {
+public class TorchRecipe implements IRecipe, IRecipeWrapper {
 
 	protected ItemStack input = new ItemStack(Items.STICK);
 	protected ItemStack output = new ItemStack(Blocks.TORCH, 2);
@@ -72,8 +78,7 @@ public class TorchRecipe implements IRecipe {
 
 	@Override
 	public ResourceLocation getRegistryName() {
-		//TODO Fix
-		return new ResourceLocation(Reference.RESOURCE_PREFIX + "TorchRecipe");
+		return new ResourceLocation(Reference.RESOURCE_PREFIX + "TorchCrafting");
 	}
 
 	@Override
@@ -85,5 +90,11 @@ public class TorchRecipe implements IRecipe {
 	@Override
 	public boolean canFit(int width, int height) {
 		return width >= 1 && height >= 2;
+	}
+
+	@Override
+	public void getIngredients(IIngredients ingredients) {
+		ingredients.setInputs(ItemStack.class, new ArrayList<ItemStack>() {{add(input); add(new ItemStack(Items.FLINT_AND_STEEL));}});
+		ingredients.setOutput(ItemStack.class, output);
 	}
 }

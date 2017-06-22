@@ -18,6 +18,7 @@ import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import tech.chazwarp923.unifieditems.Reference;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
 public class MortarAndPestleCategory implements IRecipeCategory<IRecipeWrapper> {
@@ -52,7 +53,7 @@ public class MortarAndPestleCategory implements IRecipeCategory<IRecipeWrapper> 
 
 	@Override
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		if(recipeWrapper instanceof MortarAndPestleWrapper) {			
+		if(recipeWrapper instanceof MortarAndPestleRecipe) {			
 			IGuiItemStackGroup guiItemStacks = recipeLayout.getItemStacks();
 			
 			guiItemStacks.init(0, true, 0, 0);

@@ -3,15 +3,18 @@
 */
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
+import mezz.jei.api.ingredients.IIngredients;
+import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
-public class MortarAndPestleRecipe implements IRecipe {
+public class MortarAndPestleRecipe implements IRecipe, IRecipeWrapper {
 
 	final ItemStack input;
 	final ItemStack output;
@@ -83,8 +86,7 @@ public class MortarAndPestleRecipe implements IRecipe {
 
 	@Override
 	public ResourceLocation getRegistryName() {
-		//TODO Fix
-		return null;
+		return new ResourceLocation(Reference.RESOURCE_PREFIX + output.getUnlocalizedName());
 	}
 
 	@Override
@@ -98,4 +100,9 @@ public class MortarAndPestleRecipe implements IRecipe {
 		return width >= 2 && height >= 2;
 	}
 
+	@Override
+	public void getIngredients(IIngredients ingredients) {
+		ingredients.setInput(ItemStack.class, input);
+		ingredients.setOutput(ItemStack.class, output);
+	}
 }

@@ -4,8 +4,14 @@ import java.util.Map;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.item.crafting.ShapelessRecipes;
+import net.minecraft.util.NonNullList;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
 import tech.chazwarp923.unifieditems.block.UIBlockStorage;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
@@ -34,11 +40,16 @@ public class Shapeless {
 		//Adds the recipe for bronze dust
 		if(ConfigHandler.general.get("bronzeCrafting")) {
 			//GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.TIN)));
+			NonNullList<Ingredient> ingredients = NonNullList.withSize(4, Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)));
+			ingredients.set(3, Ingredient.fromItem(UIItems.dusts.get(Material.TIN)));
+			ForgeRegistries.RECIPES.register(new ShapelessRecipes(Reference.RESOURCE_PREFIX + "dusts", new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), ingredients).setRegistryName(UIItems.dusts.get(Material.BRONZE).toString() + "crafting"));
 		}
 
 		//Adds the recipes for ingots to nuggets
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			//GameRegistry.addShapelessRecipe(new ItemStack(UIItems.nuggets.get(item.getKey()), 9), new ItemStack(item.getValue()));
+			NonNullList<Ingredient> ingredients = NonNullList.withSize(1, Ingredient.fromItem(item.getValue()));
+			ForgeRegistries.RECIPES.register(new ShapelessRecipes(Reference.RESOURCE_PREFIX + "nuggets", new ItemStack((UIItems.nuggets.get(item.getKey())), 9), ingredients).setRegistryName(UIItems.nuggets.get(item.getKey()).toString() + "crafting"));
 		}
 		
 		//Adds the recipes for nuggets to ingots
@@ -68,16 +79,21 @@ public class Shapeless {
 
 		//Adds the recipe for the "Mortar and Pestle"
 		//GameRegistry.addShapelessRecipe(new ItemStack(UIItems.mortarAndPestle), new ItemStack(Items.BOWL), new ItemStack(Blocks.COBBLESTONE));
-
+		NonNullList<Ingredient> ingredients = NonNullList.withSize(2, Ingredient.fromItem(Items.BOWL));
+		ingredients.set(1, Ingredient.fromItem(Item.getItemFromBlock(Blocks.COBBLESTONE)));
+		ForgeRegistries.RECIPES.register(new ShapelessRecipes(Reference.RESOURCE_PREFIX + "general", new ItemStack(UIItems.mortarAndPestle), ingredients).setRegistryName(UIItems.mortarAndPestle.getUnlocalizedName() + "Crafting"));
+		
 		//Adds a recipe for flint
 		RecipeRegistry.addMortarAndPestleRecipe(new MortarAndPestleRecipe(new ItemStack(Blocks.GRAVEL), new ItemStack(Items.FLINT, 1)));
 		
 		//Adds the recipes that use the mortar and pestle
 		for(MortarAndPestleRecipe recipe : RecipeRegistry.getMortarAndPestleRecipes()) {
 			//GameRegistry.addRecipe(recipe);
+			ForgeRegistries.RECIPES.register(recipe);
 		}
 		
 		//Miscellaneous recipes
 		//GameRegistry.addRecipe(new TorchRecipe());
+		ForgeRegistries.RECIPES.register(new TorchRecipe());
 	}
 }
