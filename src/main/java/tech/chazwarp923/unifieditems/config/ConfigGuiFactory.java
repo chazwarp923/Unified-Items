@@ -39,7 +39,6 @@ public class ConfigGuiFactory implements IModGuiFactory {
 
 	@Override
 	public GuiScreen createConfigGui(GuiScreen parentScreen) {
-		// TODO Auto-generated method stub
-		return null;
+		return new ConfigGUI(parentScreen);
 	}
 }

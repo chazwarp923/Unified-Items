@@ -80,7 +80,6 @@ public class MortarAndPestleRecipe implements IRecipe, IRecipeWrapper {
 
 	@Override
 	public IRecipe setRegistryName(ResourceLocation name) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

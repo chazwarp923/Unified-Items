@@ -4,7 +4,6 @@
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
@@ -16,7 +15,6 @@ import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
-import scala.actors.threadpool.Arrays;
 import tech.chazwarp923.unifieditems.Reference;
 
 public class TorchRecipe implements IRecipe, IRecipeWrapper {
@@ -72,7 +70,6 @@ public class TorchRecipe implements IRecipe, IRecipeWrapper {
 
 	@Override
 	public IRecipe setRegistryName(ResourceLocation name) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
