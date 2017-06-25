@@ -89,6 +89,7 @@ public class TorchRecipe implements IRecipe, IRecipeWrapper {
 		return width >= 1 && height >= 2;
 	}
 
+	@SuppressWarnings("serial")
 	@Override
 	public void getIngredients(IIngredients ingredients) {
 		ingredients.setInputs(ItemStack.class, new ArrayList<ItemStack>() {{add(input); add(new ItemStack(Items.FLINT_AND_STEEL));}});

@@ -60,9 +60,9 @@ public class CommonProxy {
 		GameRegistry.registerWorldGenerator(new WorldGenerationHandler(), -1);
 		
 		//Adds all the crafting related stuff
-		RecipeSorter.register(Reference.RESOURCE_PREFIX + "mortarAndPestle", MortarAndPestleRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
-		RecipeSorter.register(Reference.RESOURCE_PREFIX + "oreToDust", OreToDustRecipe.class, RecipeSorter.Category.SHAPELESS, "after:" + Reference.MOD_ID + ":mortarAndPestle");
-		RecipeSorter.register(Reference.RESOURCE_PREFIX + "torch", TorchRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
+		//RecipeSorter.register(Reference.RESOURCE_PREFIX + "mortarAndPestle", MortarAndPestleRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
+		//RecipeSorter.register(Reference.RESOURCE_PREFIX + "oreToDust", OreToDustRecipe.class, RecipeSorter.Category.SHAPELESS, "after:" + Reference.MOD_ID + ":mortarAndPestle");
+		//RecipeSorter.register(Reference.RESOURCE_PREFIX + "torch", TorchRecipe.class, RecipeSorter.Category.SHAPELESS, "after:minecraft:shapeless");
 		Shaped.init();
 		Shapeless.init();
 		Smelting.init();
