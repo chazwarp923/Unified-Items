@@ -40,7 +40,5 @@ public class ClientProxy extends CommonProxy {
 		//Registers the models for the blocks and items
 		UIBlocks.preInitClient();
 		UIItems.preInitClient();
-	}
-	
-	
+	}	
 }
