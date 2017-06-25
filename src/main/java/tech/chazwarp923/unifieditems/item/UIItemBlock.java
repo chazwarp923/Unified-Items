@@ -11,6 +11,7 @@ public class UIItemBlock extends ItemBlock {
 
 	public UIItemBlock(Block block) {
 		super(block);
+		this.setRegistryName(block.getRegistryName());
 		setHasSubtypes(true);
 	}
 }

@@ -10,7 +10,7 @@ import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
 import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 import tech.chazwarp923.unifieditems.UnifiedItemsTab;
@@ -28,8 +28,8 @@ public class UIBlock extends Block {
 		setSoundType(sound);
 		setUnlocalizedName(unlocalizedName);
 		
-		GameRegistry.register(this);
-		GameRegistry.register(new UIItemBlock(this), getRegistryName());
+		ForgeRegistries.BLOCKS.register(this);
+		ForgeRegistries.ITEMS.register(new UIItemBlock(this));
 	}
 	
 	@SideOnly(Side.CLIENT)
