@@ -9,6 +9,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.item.crafting.ShapelessRecipes;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import tech.chazwarp923.unifieditems.Reference;
@@ -30,6 +31,12 @@ public class Shapeless {
 
 	public static void init() {
 		
+		
+		
+		//GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX +), new ResourceLocation(), new ItemStack(), params);
+		
+		
+		
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(UIItems.dusts.get(Material.IRON), 2)));
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.GOLD_ORE), new ItemStack(UIItems.dusts.get(Material.GOLD), 2)));
 		
@@ -39,17 +46,13 @@ public class Shapeless {
 		
 		//Adds the recipe for bronze dust
 		if(ConfigHandler.general.get("bronzeCrafting")) {
-			//GameRegistry.addShapelessRecipe(new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.COPPER)), new ItemStack(UIItems.dusts.get(Material.TIN)));
-			NonNullList<Ingredient> ingredients = NonNullList.withSize(4, Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)));
-			ingredients.set(3, Ingredient.fromItem(UIItems.dusts.get(Material.TIN)));
-			ForgeRegistries.RECIPES.register(new ShapelessRecipes(Reference.RESOURCE_PREFIX + "dustToDust", new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), ingredients).setRegistryName(Material.BRONZE.name + "dustToDustCrafting"));
+			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + Material.BRONZE.name + "dustToDustCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "dustToDust"), new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)), Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)), Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)), Ingredient.fromItem(UIItems.dusts.get(Material.TIN)));
 		}
 
 		//Adds the recipes for ingots to nuggets
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			//GameRegistry.addShapelessRecipe(new ItemStack(UIItems.nuggets.get(item.getKey()), 9), new ItemStack(item.getValue()));
-			NonNullList<Ingredient> ingredients = NonNullList.withSize(1, Ingredient.fromItem(item.getValue()));
-			ForgeRegistries.RECIPES.register(new ShapelessRecipes(Reference.RESOURCE_PREFIX + "ingotToNuggets", new ItemStack((UIItems.nuggets.get(item.getKey())), 9), ingredients).setRegistryName(item.getKey().name + "ingotToNuggetsCrafting"));
+			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + item.getKey().name + "ingotToNuggetsCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "ingotToNuggets"), new ItemStack((UIItems.nuggets.get(item.getKey())), 9), Ingredient.fromItem(item.getValue()));
 		}
 		
 		//Adds the recipes for nuggets to ingots
