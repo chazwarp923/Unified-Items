@@ -8,13 +8,16 @@ import java.util.HashMap;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.client.config.GuiConfigEntries;
+import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.relauncher.Side;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.event.OnConfigChangedEventHandler;
 import tech.chazwarp923.unifieditems.item.UIItems;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
+@Mod.EventBusSubscriber(Side.CLIENT)
 public class ClientProxy extends CommonProxy {
 	
 	public static void configLoad(HashMap<Material, Property> minYProperties, HashMap<Material, Property> maxYProperties, HashMap<Material, Property> veinSizeOverrideProperties, HashMap<Material, Property> chunkDensityProperties, HashMap<Material, Property> manualOverrideProperties) {
@@ -40,5 +43,5 @@ public class ClientProxy extends CommonProxy {
 		//Registers the models for the blocks and items
 		UIBlocks.preInitClient();
 		UIItems.preInitClient();
-	}	
+	}
 }

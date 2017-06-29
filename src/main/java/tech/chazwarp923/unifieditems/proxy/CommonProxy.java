@@ -24,8 +24,7 @@ import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 
 public class CommonProxy {
 
-	public void preInit(FMLPreInitializationEvent preInitEvent) {
-		
+	public void preInit(FMLPreInitializationEvent preInitEvent) {		
 		MaterialRegistry.populate();
 		ModDetector.preInit();
 		

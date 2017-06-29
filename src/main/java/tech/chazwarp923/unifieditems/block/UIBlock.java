@@ -28,7 +28,7 @@ public class UIBlock extends Block {
 		setSoundType(sound);
 		setUnlocalizedName(unlocalizedName);
 		
-		ForgeRegistries.BLOCKS.register(this);
+		//ForgeRegistries.BLOCKS.register(this);
 		ForgeRegistries.ITEMS.register(new UIItemBlock(this));
 	}
 	

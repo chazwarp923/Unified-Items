@@ -16,7 +16,7 @@ public class UIBlocks {
 	
 	public static Map<Material, UIBlockMetalOre> metalOres = new HashMap<Material, UIBlockMetalOre>();
 	public static Map<Material, UIBlockGemOre> gemOres = new HashMap<Material, UIBlockGemOre>();
-	public static Map<Material, UIBlockStorage> blocks = new HashMap<Material, UIBlockStorage>();
+	public static Map<Material, UIBlockStorage> storageBlocks = new HashMap<Material, UIBlockStorage>();
 	
 	public static void addMetalOre(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
 		metalOres.put(mat, new UIBlockMetalOre(hardness, unlocalizedName, harvestLevel));
@@ -27,7 +27,7 @@ public class UIBlocks {
 	}
 	
 	public static void addBlock(Material mat, float hardness, String unlocalizedName, HarvestLevel harvestLevel) {
-		blocks.put(mat, new UIBlockStorage(hardness, unlocalizedName, harvestLevel));
+		storageBlocks.put(mat, new UIBlockStorage(hardness, unlocalizedName, harvestLevel));
 	}
 	
 	public static void preInit() {		
@@ -42,7 +42,7 @@ public class UIBlocks {
 			OreDictionary.registerOre("ore" + block.getKey().toString(), block.getValue());
 		}
 		
-		for(Map.Entry<Material, UIBlockStorage> block : blocks.entrySet()) {
+		for(Map.Entry<Material, UIBlockStorage> block : storageBlocks.entrySet()) {
 			OreDictionary.registerOre("block" + block.getKey().toString(), block.getValue());
 			if(block.getKey().equals(Material.ALUMINUM)) {
 				OreDictionary.registerOre("blockAluminium", block.getValue());
@@ -60,7 +60,7 @@ public class UIBlocks {
 			block.getValue().initModel();
 		}
 		
-		for(Entry<Material, UIBlockStorage> block : blocks.entrySet()) {
+		for(Entry<Material, UIBlockStorage> block : storageBlocks.entrySet()) {
 			block.getValue().initModel();
 		}
 	}

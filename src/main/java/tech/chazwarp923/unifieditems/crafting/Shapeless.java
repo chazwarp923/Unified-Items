@@ -30,12 +30,6 @@ public class Shapeless {
 
 	public static void init() {
 		
-		
-		
-		//GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX +), new ResourceLocation(), new ItemStack(), params);
-		
-		
-		
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(UIItems.dusts.get(Material.IRON), 2)));
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.GOLD_ORE), new ItemStack(UIItems.dusts.get(Material.GOLD), 2)));
 		
@@ -47,7 +41,7 @@ public class Shapeless {
 		if(ConfigHandler.general.get("bronzeCrafting")) {
 			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + Material.BRONZE.name + "dustToDustCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "dustToDust"), new ItemStack(UIItems.dusts.get(Material.BRONZE), 4), Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)), Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)), Ingredient.fromItem(UIItems.dusts.get(Material.COPPER)), Ingredient.fromItem(UIItems.dusts.get(Material.TIN)));
 		}
-
+		
 		//Adds the recipes for ingots to nuggets
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + item.getKey().name + "ingotToNuggetsCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "ingotToNuggets"), new ItemStack((UIItems.nuggets.get(item.getKey())), 9), Ingredient.fromItem(item.getValue()));
@@ -64,18 +58,18 @@ public class Shapeless {
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
 			Ingredient[] ingredients = new Ingredient[9];
 			Arrays.fill(ingredients, Ingredient.fromItem(item.getValue()));
-			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + item.getKey().name + "ingotsToBlockCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "ingotsToBlock"), new ItemStack((UIBlocks.blocks.get(item.getKey()))), ingredients);
+			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + item.getKey().name + "ingotsToBlockCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "ingotsToBlock"), new ItemStack((UIBlocks.storageBlocks.get(item.getKey()))), ingredients);
 		}
 		
 		//Adds the recipes for gems to blocks
 		for(Map.Entry<Material, UIItemGem> item : UIItems.gems.entrySet()) {
 			Ingredient[] ingredients = new Ingredient[9];
 			Arrays.fill(ingredients, Ingredient.fromItem(item.getValue()));
-			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + item.getKey().name + "gemsToBlockCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "gemsToBlock"), new ItemStack((UIBlocks.blocks.get(item.getKey()))), ingredients);
+			GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + item.getKey().name + "gemsToBlockCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "gemsToBlock"), new ItemStack((UIBlocks.storageBlocks.get(item.getKey()))), ingredients);
 		}
 		
 		//Adds the recipes for blocks to ingots and gems
-		for(Map.Entry<Material, UIBlockStorage> block : UIBlocks.blocks.entrySet()) {
+		for(Map.Entry<Material, UIBlockStorage> block : UIBlocks.storageBlocks.entrySet()) {
 			if(block.getKey().type == MaterialType.GENERIC) {
 				GameRegistry.addShapelessRecipe(new ResourceLocation(Reference.RESOURCE_PREFIX + block.getKey().name + "blockToIngotsCrafting"), new ResourceLocation(Reference.RESOURCE_PREFIX + "blockToIngots"), new ItemStack((UIItems.ingots.get(block.getKey())), 9), Ingredient.fromItem(Item.getItemFromBlock(block.getValue())));
 			}
