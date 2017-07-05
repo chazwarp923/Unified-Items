@@ -3,8 +3,6 @@
 */
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
-import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
@@ -14,7 +12,7 @@ import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
-public class MortarAndPestleRecipe implements IRecipe, IRecipeWrapper {
+public class MortarAndPestleRecipe implements IRecipe {
 
 	final ItemStack input;
 	final ItemStack output;
@@ -22,10 +20,6 @@ public class MortarAndPestleRecipe implements IRecipe, IRecipeWrapper {
 	public MortarAndPestleRecipe(ItemStack input, ItemStack output) {
 		this.input = input;
 		this.output = output;
-	}
-	
-	public MortarAndPestleRecipe() {
-		throw new UnsupportedOperationException("Improper usage, this constructor is a dummy, use the other one");
 	}
 	
 	@Override
@@ -90,18 +84,12 @@ public class MortarAndPestleRecipe implements IRecipe, IRecipeWrapper {
 
 	@Override
 	public Class<IRecipe> getRegistryType() {
-		// TODO Auto-generated method stub
 		return null;
+		//return IRecipe.class;
 	}
 
 	@Override
 	public boolean canFit(int width, int height) {
 		return width >= 2 && height >= 2;
-	}
-
-	@Override
-	public void getIngredients(IIngredients ingredients) {
-		ingredients.setInput(ItemStack.class, input);
-		ingredients.setOutput(ItemStack.class, output);
 	}
 }
