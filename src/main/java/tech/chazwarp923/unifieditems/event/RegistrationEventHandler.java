@@ -3,28 +3,7 @@
 */
 package tech.chazwarp923.unifieditems.event;
 
-import java.util.Map;
-
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.registries.IForgeRegistry;
-import tech.chazwarp923.unifieditems.block.UIBlockGemOre;
-import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
-import tech.chazwarp923.unifieditems.block.UIBlockStorage;
-import tech.chazwarp923.unifieditems.block.UIBlocks;
-import tech.chazwarp923.unifieditems.crafting.RecipeRegistry;
-import tech.chazwarp923.unifieditems.item.UIItemDust;
-import tech.chazwarp923.unifieditems.item.UIItemGear;
-import tech.chazwarp923.unifieditems.item.UIItemGem;
-import tech.chazwarp923.unifieditems.item.UIItemIngot;
-import tech.chazwarp923.unifieditems.item.UIItemNugget;
-import tech.chazwarp923.unifieditems.item.UIItemPlate;
-import tech.chazwarp923.unifieditems.item.UIItems;
-import tech.chazwarp923.unifieditems.material.Material;
 
 @Mod.EventBusSubscriber
 public class RegistrationEventHandler { 
