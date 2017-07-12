@@ -13,9 +13,11 @@ import mezz.jei.api.IModPlugin;
 import mezz.jei.api.IModRegistry;
 import mezz.jei.api.JEIPlugin;
 import mezz.jei.api.recipe.IRecipeCategoryRegistration;
+import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
 import net.minecraft.item.ItemStack;
 import tech.chazwarp923.unifieditems.crafting.RecipeRegistry;
 import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
+import tech.chazwarp923.unifieditems.crafting.IRecipe.TorchRecipe;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
 @JEIPlugin
@@ -23,11 +25,14 @@ public class UnifiedItemsPlugin implements IModPlugin {
 	
 		@Override
 		public void register(@Nonnull IModRegistry registry) {
-			List<MortarAndPestleRecipeWrapper> wrappers = new ArrayList<MortarAndPestleRecipeWrapper>();
+			List<UIIRecipeWrapper> mortarAndPestleWrappers = new ArrayList<UIIRecipeWrapper>();
+			List<UIIRecipeWrapper> torchWrapper = new ArrayList<UIIRecipeWrapper>();
+			torchWrapper.add(new UIIRecipeWrapper(new TorchRecipe()));
 			for(MortarAndPestleRecipe recipe : RecipeRegistry.getMortarAndPestleRecipes()) {
-				wrappers.add(new MortarAndPestleRecipeWrapper(recipe));
+				mortarAndPestleWrappers.add(new UIIRecipeWrapper(recipe));
 			}	
-			registry.addRecipes(wrappers, MortarAndPestleCategory.UID);
+			registry.addRecipes(mortarAndPestleWrappers, MortarAndPestleCategory.UID);
+			registry.addRecipes(torchWrapper, VanillaRecipeCategoryUid.CRAFTING);
 			registry.addRecipeCatalyst(new ItemStack(UIItems.mortarAndPestle), MortarAndPestleCategory.UID);
 		}
 		

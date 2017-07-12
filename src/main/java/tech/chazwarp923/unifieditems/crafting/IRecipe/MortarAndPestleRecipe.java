@@ -12,10 +12,7 @@ import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
-public class MortarAndPestleRecipe implements IRecipe {
-
-	final ItemStack input;
-	final ItemStack output;
+public class MortarAndPestleRecipe extends UIIRecipe {
 	
 	public MortarAndPestleRecipe(ItemStack input, ItemStack output) {
 		this.input = input;
@@ -56,10 +53,6 @@ public class MortarAndPestleRecipe implements IRecipe {
             }
         }
         return grid;
-	}
-	
-	public ItemStack getRecipeInput() {
-		return input;
 	}
 
 	@Override

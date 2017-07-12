@@ -3,10 +3,6 @@
  */
 package tech.chazwarp923.unifieditems.crafting.IRecipe;
 
-import java.util.ArrayList;
-
-import mezz.jei.api.ingredients.IIngredients;
-import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
@@ -17,10 +13,12 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 import tech.chazwarp923.unifieditems.Reference;
 
-public class TorchRecipe implements IRecipe, IRecipeWrapper {
+public class TorchRecipe extends UIIRecipe {
 
-	protected ItemStack input = new ItemStack(Items.STICK);
-	protected ItemStack output = new ItemStack(Blocks.TORCH, 2);
+	public TorchRecipe() {
+		input = new ItemStack(Items.STICK);
+		output = new ItemStack(Blocks.TORCH, 2);
+	} 
 	
 	@Override
 	public boolean matches(InventoryCrafting inv, World worldIn) {
@@ -87,12 +85,5 @@ public class TorchRecipe implements IRecipe, IRecipeWrapper {
 	@Override
 	public boolean canFit(int width, int height) {
 		return width >= 1 && height >= 2;
-	}
-
-	@SuppressWarnings("serial")
-	@Override
-	public void getIngredients(IIngredients ingredients) {
-		ingredients.setInputs(ItemStack.class, new ArrayList<ItemStack>() {{add(input); add(new ItemStack(Items.FLINT_AND_STEEL));}});
-		ingredients.setOutput(ItemStack.class, output);
 	}
 }

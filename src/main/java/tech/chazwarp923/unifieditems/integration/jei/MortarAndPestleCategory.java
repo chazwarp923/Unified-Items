@@ -52,7 +52,7 @@ public class MortarAndPestleCategory implements IRecipeCategory<IRecipeWrapper> 
 
 	@Override
 	public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
-		if(recipeWrapper instanceof MortarAndPestleRecipeWrapper) {			
+		if(recipeWrapper instanceof UIIRecipeWrapper) {			
 			IGuiItemStackGroup guiItemStacks = recipeLayout.getItemStacks();
 			
 			guiItemStacks.init(0, true, 0, 0);
