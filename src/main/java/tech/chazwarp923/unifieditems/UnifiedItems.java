@@ -38,7 +38,7 @@ public class UnifiedItems {
 	}
 
 	@Mod.EventHandler
-	public void Init(FMLInitializationEvent initEvent) {
+	public void init(FMLInitializationEvent initEvent) {
 		proxy.init(initEvent);
 	}
 

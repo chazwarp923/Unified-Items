@@ -15,6 +15,6 @@ public class OnConfigChangedEventHandler {
 	@SubscribeEvent
 	public void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent configChangedEvent) {
 		if (configChangedEvent.getModID().equals(Reference.MOD_ID))
-			ConfigHandler.saveGUIValuesToDisk();;
+			ConfigHandler.saveGUIValuesToDisk();
 	}
 }

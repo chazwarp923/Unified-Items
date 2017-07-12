@@ -25,7 +25,7 @@ public class ModuleRegistry {
 	
 	public static void init() {
 		for(UIModule module : modules) {
-			module.init();;
+			module.init();
 		}
 	}
 	

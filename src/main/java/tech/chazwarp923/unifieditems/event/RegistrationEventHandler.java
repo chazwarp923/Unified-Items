@@ -17,7 +17,6 @@ import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
 import tech.chazwarp923.unifieditems.block.UIBlockStorage;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.crafting.RecipeRegistry;
-import tech.chazwarp923.unifieditems.item.UIItemBlock;
 import tech.chazwarp923.unifieditems.item.UIItemDust;
 import tech.chazwarp923.unifieditems.item.UIItemGear;
 import tech.chazwarp923.unifieditems.item.UIItemGem;
@@ -66,7 +65,7 @@ public class RegistrationEventHandler {
 		}
 		
 		//Register all the items		
-		registry.register(UIItems.mortarAndPestle);
+		//registry.register(UIItems.mortarAndPestle);
 					
 		for(Map.Entry<Material, UIItemDust> item : UIItems.dusts.entrySet()) {
 			//registry.register(item.getValue());
