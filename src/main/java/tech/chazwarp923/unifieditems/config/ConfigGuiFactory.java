@@ -11,6 +11,9 @@ import net.minecraft.client.gui.GuiScreen;
 
 public class ConfigGuiFactory implements IModGuiFactory {
 
+	/**
+	 * Empty because I'm forced to override it but don't need it
+	 */
 	@Override
 	public void initialize(Minecraft minecraftInstance) {
 

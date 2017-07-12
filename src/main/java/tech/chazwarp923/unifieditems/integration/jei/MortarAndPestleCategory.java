@@ -8,7 +8,6 @@ import java.util.Arrays;
 import javax.annotation.Nonnull;
 
 import mezz.jei.api.IGuiHelper;
-import mezz.jei.api.gui.ICraftingGridHelper;
 import mezz.jei.api.gui.IDrawable;
 import mezz.jei.api.gui.IGuiItemStackGroup;
 import mezz.jei.api.gui.IRecipeLayout;
@@ -26,13 +25,10 @@ public class MortarAndPestleCategory implements IRecipeCategory<IRecipeWrapper> 
 	
 	@Nonnull
 	private final IDrawable background;
-	@Nonnull
-	private final ICraftingGridHelper craftingGridHelper;
 	
 	public MortarAndPestleCategory(IGuiHelper gui) {
 		ResourceLocation location = new ResourceLocation("minecraft", "textures/gui/container/crafting_table.png");
 		background = gui.createDrawable(location, 29, 16, 116, 54);
-		craftingGridHelper = gui.createCraftingGridHelper(1, 0);
 	}
 	
 	@Override

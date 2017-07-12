@@ -21,28 +21,28 @@ public enum MaterialType {
 	
 	MaterialType(boolean ore, boolean dust, boolean ingot, boolean nugget, boolean gem, boolean plate, boolean gear, boolean block) {
 		ArrayList<String> temp = new ArrayList<String>();
-		if(ore == true) {
+		if(ore) {
 			temp.add("ore");
 		}
-		if(dust == true) {
+		if(dust) {
 			temp.add("dust");
 		}
-		if(ingot == true) {
+		if(ingot) {
 			temp.add("ingot");
 		}
-		if(nugget == true) {
+		if(nugget) {
 			temp.add("nugget");
 		}
-		if(gem == true) {
+		if(gem) {
 			temp.add("gem");
 		}
-		if(plate == true) {
+		if(plate) {
 			temp.add("plate");
 		}
-		if(gear == true) {
+		if(gear) {
 			temp.add("gear");
 		}
-		if(block == true) {
+		if(block) {
 			temp.add("block");
 		}
 		types = temp;

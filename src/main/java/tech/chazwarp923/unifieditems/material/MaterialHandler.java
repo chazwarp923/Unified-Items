@@ -13,7 +13,7 @@ public class MaterialHandler {
 
 	public static void addBlocksAndItemsForMaterials() {
 		for(Material material : MaterialRegistry.enabledMaterials.keySet()) {
-			if(MaterialRegistry.enabledMaterials.get(material) == true) {
+			if(MaterialRegistry.enabledMaterials.get(material)) {
 				switch(material.type) {
 				case GENERIC:
 					UIBlocks.addMetalOre(material, material.hardness, "ore_" + material.name.toLowerCase(), material.harvestLevel);

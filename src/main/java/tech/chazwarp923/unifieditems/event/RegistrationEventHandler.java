@@ -28,7 +28,7 @@ import tech.chazwarp923.unifieditems.material.Material;
 
 @Mod.EventBusSubscriber
 public class RegistrationEventHandler { 
-	
+	/**
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		IForgeRegistry<Block> registry = event.getRegistry();
@@ -102,5 +102,5 @@ public class RegistrationEventHandler {
 				//registry.register(recipe);
 			}
 		}
-	}
+	}*/
 }

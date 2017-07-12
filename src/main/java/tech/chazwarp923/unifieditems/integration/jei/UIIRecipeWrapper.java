@@ -14,8 +14,8 @@ import tech.chazwarp923.unifieditems.crafting.IRecipe.UIIRecipe;
 
 public class UIIRecipeWrapper implements IRecipeWrapper {
 
-	final ItemStack input;
-	final ItemStack output;
+	private final ItemStack input;
+	private final ItemStack output;
 	
 	public UIIRecipeWrapper(UIIRecipe recipe) {
 		this.input = recipe.getRecipeInput();

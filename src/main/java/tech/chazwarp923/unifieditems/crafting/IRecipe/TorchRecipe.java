@@ -60,7 +60,7 @@ public class TorchRecipe extends UIIRecipe {
             	itemstack = new ItemStack(Items.FLINT_AND_STEEL, 1, itemstack.getItemDamage() + 1);
                 if(itemstack.getItemDamage() == itemstack.getMaxDamage())
                 	itemstack = ItemStack.EMPTY;
-                grid.set(i, itemstack);;
+                grid.set(i, itemstack);
             }
         }
         return grid;
