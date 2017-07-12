@@ -10,7 +10,7 @@ import mezz.jei.api.ingredients.IIngredients;
 import mezz.jei.api.recipe.IRecipeWrapper;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import tech.chazwarp923.unifieditems.crafting.IRecipe.UIIRecipe;
+import tech.chazwarp923.unifieditems.crafting.irecipe.UIIRecipe;
 
 public class UIIRecipeWrapper implements IRecipeWrapper {
 

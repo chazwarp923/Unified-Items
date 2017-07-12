@@ -16,8 +16,8 @@ import mezz.jei.api.recipe.IRecipeCategoryRegistration;
 import mezz.jei.api.recipe.VanillaRecipeCategoryUid;
 import net.minecraft.item.ItemStack;
 import tech.chazwarp923.unifieditems.crafting.RecipeRegistry;
-import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
-import tech.chazwarp923.unifieditems.crafting.IRecipe.TorchRecipe;
+import tech.chazwarp923.unifieditems.crafting.irecipe.MortarAndPestleRecipe;
+import tech.chazwarp923.unifieditems.crafting.irecipe.TorchRecipe;
 import tech.chazwarp923.unifieditems.item.UIItems;
 
 @JEIPlugin

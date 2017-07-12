@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import net.minecraft.item.crafting.IRecipe;
-import tech.chazwarp923.unifieditems.crafting.IRecipe.MortarAndPestleRecipe;
+import tech.chazwarp923.unifieditems.crafting.irecipe.MortarAndPestleRecipe;
 
 public class RecipeRegistry {
 

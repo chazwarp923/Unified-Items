@@ -1,7 +1,7 @@
 /**
 @author Chazwarp923
  */
-package tech.chazwarp923.unifieditems.crafting.IRecipe;
+package tech.chazwarp923.unifieditems.crafting.irecipe;
 
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
