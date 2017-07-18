@@ -93,7 +93,6 @@ public class ConfigHandler {
 	private static void loadConfigProperties() {
 		
 		generalProperties.put("furnaceConvert", cfg.get(CATEGORY_GENERAL, "Furnace Conversion Recipes", true));
-		generalProperties.put("bronzeCrafting", cfg.get(CATEGORY_GENERAL, "Bronze Crafting Recipe", true));
 		
 		for(Material material : MaterialRegistry.ores) {
 			minYProperties.put(material, cfg.get(CATEGORY_MIN_Y, material.name, material.minY, "", 0, 255));
@@ -110,7 +109,6 @@ public class ConfigHandler {
 	private static void readConfigValues() {
 		
 		general.put("furnaceConvert", generalProperties.get("furnaceConvert").getBoolean());
-		general.put("bronzeCrafting", generalProperties.get("bronzeCrafting").getBoolean());
 		
 		for(Material material : MaterialRegistry.ores) {
 			minY.put(material, minYProperties.get(material).getInt());

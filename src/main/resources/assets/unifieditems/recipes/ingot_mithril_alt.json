@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_mithril",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:block_mithril",
+      "data": 0
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

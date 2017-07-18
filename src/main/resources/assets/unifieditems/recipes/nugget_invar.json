@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "unifieditems:nugget_invar",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_invar"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

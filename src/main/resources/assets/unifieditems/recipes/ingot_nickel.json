@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_nickel"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    },
+    {
+      "item": "unifieditems:nugget_nickel"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

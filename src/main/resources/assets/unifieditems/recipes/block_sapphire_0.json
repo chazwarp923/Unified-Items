@@ -1,0 +1,36 @@
+{
+  "result": {
+    "item": "unifieditems:block_sapphire",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    },
+    {
+      "item": "unifieditems:gem_sapphire"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

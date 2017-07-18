@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "unifieditems:nugget_constantan",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_constantan"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

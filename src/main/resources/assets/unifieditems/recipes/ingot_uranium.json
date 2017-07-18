@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_uranium"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    },
+    {
+      "item": "unifieditems:nugget_uranium"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

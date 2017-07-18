@@ -1,0 +1,17 @@
+{
+  "result": {
+    "item": "unifieditems:mortar_and_pestle"
+  },
+  "pattern": [
+    "BC"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "B": {
+      "item": "minecraft:bowl"
+    },
+    "C": {
+      "item": "#BLOCKCOBBLESTONE"
+    }
+  }
+}

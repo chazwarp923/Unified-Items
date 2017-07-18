@@ -1,0 +1,36 @@
+{
+  "result": {
+    "item": "unifieditems:block_constantan",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    },
+    {
+      "item": "unifieditems:ingot_constantan"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

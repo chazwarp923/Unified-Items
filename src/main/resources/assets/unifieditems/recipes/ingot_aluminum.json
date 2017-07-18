@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_aluminum"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    },
+    {
+      "item": "unifieditems:nugget_aluminum"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

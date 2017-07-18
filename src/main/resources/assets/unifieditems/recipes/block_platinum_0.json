@@ -1,0 +1,36 @@
+{
+  "result": {
+    "item": "unifieditems:block_platinum",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    },
+    {
+      "item": "unifieditems:ingot_platinum"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

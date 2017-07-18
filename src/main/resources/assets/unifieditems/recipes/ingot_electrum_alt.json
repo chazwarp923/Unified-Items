@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_electrum",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:block_electrum",
+      "data": 0
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

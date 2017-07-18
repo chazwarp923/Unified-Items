@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_cobalt"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    },
+    {
+      "item": "unifieditems:nugget_cobalt"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

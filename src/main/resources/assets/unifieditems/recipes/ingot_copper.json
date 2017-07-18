@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_copper"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    },
+    {
+      "item": "unifieditems:nugget_copper"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

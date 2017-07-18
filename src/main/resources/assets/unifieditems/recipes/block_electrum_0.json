@@ -1,0 +1,36 @@
+{
+  "result": {
+    "item": "unifieditems:block_electrum",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    },
+    {
+      "item": "unifieditems:ingot_electrum"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

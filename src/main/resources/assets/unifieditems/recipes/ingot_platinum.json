@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_platinum"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    },
+    {
+      "item": "unifieditems:nugget_platinum"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

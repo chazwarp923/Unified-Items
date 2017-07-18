@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "unifieditems:nugget_mithril",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_mithril"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

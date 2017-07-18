@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_electrum"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    },
+    {
+      "item": "unifieditems:nugget_electrum"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

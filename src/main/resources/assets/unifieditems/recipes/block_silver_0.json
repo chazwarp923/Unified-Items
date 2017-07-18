@@ -1,0 +1,36 @@
+{
+  "result": {
+    "item": "unifieditems:block_silver",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    },
+    {
+      "item": "unifieditems:ingot_silver"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

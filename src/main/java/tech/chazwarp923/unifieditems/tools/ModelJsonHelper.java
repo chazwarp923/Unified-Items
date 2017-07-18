@@ -12,7 +12,7 @@ import org.apache.logging.log4j.Level;
 import tech.chazwarp923.unifieditems.UnifiedItems;
 import tech.chazwarp923.unifieditems.material.Material;
 
-public class JsonHelper {
+public class ModelJsonHelper {
 
 	public static void generateJson(Material mat) {
 		switch(mat.type) {

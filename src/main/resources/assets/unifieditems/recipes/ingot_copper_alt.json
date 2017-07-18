@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_copper",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:block_copper",
+      "data": 0
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

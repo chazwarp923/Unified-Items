@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_zinc"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    },
+    {
+      "item": "unifieditems:nugget_zinc"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

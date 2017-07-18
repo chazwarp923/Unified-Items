@@ -1,0 +1,19 @@
+{
+  "result": {
+    "item": "unifieditems:gear_silver"
+  },
+  "pattern": [
+    "SIS",
+    "I I",
+    "SIS"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "item": "#STICKWOOD"
+    },
+    "I": {
+      "item": "unifieditems:ingot_silver"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_brass"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    },
+    {
+      "item": "unifieditems:nugget_brass"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

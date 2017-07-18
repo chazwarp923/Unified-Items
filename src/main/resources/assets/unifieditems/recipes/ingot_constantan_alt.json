@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_constantan",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:block_constantan",
+      "data": 0
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

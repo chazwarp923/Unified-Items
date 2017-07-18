@@ -1,0 +1,12 @@
+{
+  "result": {
+    "item": "unifieditems:nugget_silver",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_silver"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

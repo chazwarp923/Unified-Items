@@ -1,0 +1,13 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_tin",
+    "count": 9
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:block_tin",
+      "data": 0
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

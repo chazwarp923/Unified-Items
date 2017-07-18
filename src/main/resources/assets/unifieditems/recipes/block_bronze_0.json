@@ -1,0 +1,36 @@
+{
+  "result": {
+    "item": "unifieditems:block_bronze",
+    "data": 0
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    },
+    {
+      "item": "unifieditems:ingot_bronze"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

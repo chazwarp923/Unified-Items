@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_ardite"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    },
+    {
+      "item": "unifieditems:nugget_ardite"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

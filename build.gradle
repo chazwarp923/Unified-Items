@@ -53,6 +53,8 @@ minecraft {
     //remove debug code
     replaceIn "ModDetector.java"
     replace ' || System.getProperty("user.name").equals("chaz")', ""
+    replaceIn "RecipeJsonHelper.java"
+    replace "isEnabled = true", "isEnabled = false"
     
     mappings = mcp_mappings_version
     useDepAts = true

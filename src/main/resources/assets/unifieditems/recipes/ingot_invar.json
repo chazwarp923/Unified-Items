@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_invar"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    },
+    {
+      "item": "unifieditems:nugget_invar"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

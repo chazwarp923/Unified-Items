@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_mithril"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    },
+    {
+      "item": "unifieditems:nugget_mithril"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}

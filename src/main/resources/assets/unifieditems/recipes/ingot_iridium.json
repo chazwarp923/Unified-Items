@@ -1,0 +1,35 @@
+{
+  "result": {
+    "item": "unifieditems:ingot_iridium"
+  },
+  "ingredients": [
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    },
+    {
+      "item": "unifieditems:nugget_iridium"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless"
+}
