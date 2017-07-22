@@ -51,8 +51,8 @@ minecraft {
     replaceIn "Reference.java"
     replace "@MOD_VERSION@", "${mod_version}.${System.getenv("BUILD_NUMBER") ?: 0}"
     //remove debug code
-    replaceIn "ModDetector.java"
-    replace ' || System.getProperty("user.name").equals("chaz")', ""
+    replaceIn "MaterialDetector.java"
+    replace ' || true', ""
     replaceIn "RecipeJsonHelper.java"
     replace "isEnabled = true", "isEnabled = false"
     

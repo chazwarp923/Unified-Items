@@ -28,7 +28,7 @@ public class MaterialDetector {
 	public static void preInit(FMLPreInitializationEvent event) {
 		config = new File(event.getModConfigurationDirectory().toString() + "/" + Reference.MOD_ID + "-LastKnownMaterials.json");
 		for(Material mat : Material.values()) {
-			if(doesOreNameExist(mat) || isDevEnvironment()) {
+			if(doesOreNameExist(mat) || true) {
 				enabledMaterials.add(mat);
 			}
 		}
@@ -78,10 +78,5 @@ public class MaterialDetector {
 		exists.add(OreDictionary.doesOreNameExist("block" + mat.name));
 		
 		return exists.contains(Boolean.TRUE);
-	}
-	
-	private static boolean isDevEnvironment() {
-		File devFile = new File("C:\\Users\\chazk\\DevFileCheckDoNotDelete.txt");
-		return devFile.exists();
 	}
 }
