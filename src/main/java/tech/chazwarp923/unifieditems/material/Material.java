@@ -84,6 +84,18 @@ public enum Material {
 		return MaterialRegistry.enabledMaterials.get(this);
 	}
 	
+	/**
+	 * @param name, The name of the material
+	 * @return The {@link Material} if it exists, {@link Material.COAL} if it doesn't
+	 */
+	public static Material getMaterialFromName(String name) {
+		for(Material mat : Material.values()) {
+			if(mat.name.equals(name))
+				return mat;
+		}
+		return Material.COAL;
+	}
+	
 	@Override
 	public String toString() {
 		return name;

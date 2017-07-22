@@ -18,7 +18,6 @@ import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.material.Material;
-import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 
 public class WorldGenerationHandler implements IWorldGenerator {
 
@@ -33,7 +32,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
 					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), ConfigHandler.veinSizeOverride.get(material));
 				}
 				else {
-					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize + MaterialRegistry.getUseCount(material));
+					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize);
 				}
 				generateOre(random, chunkX, chunkZ, world, ConfigHandler.chunkDensity.get(material), worldGen, ConfigHandler.minY.get(material), ConfigHandler.maxY.get(material));
 			}
@@ -46,7 +45,7 @@ public class WorldGenerationHandler implements IWorldGenerator {
 					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), ConfigHandler.veinSizeOverride.get(material));
 				}
 				else {
-					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize + MaterialRegistry.getUseCount(material));
+					worldGen = new WorldGenMinable(ore.getValue().getDefaultState(), material.veinSize);
 				}
 				generateOre(random, chunkX, chunkZ, world, ConfigHandler.chunkDensity.get(material), worldGen, ConfigHandler.minY.get(material), ConfigHandler.maxY.get(material));
 			}

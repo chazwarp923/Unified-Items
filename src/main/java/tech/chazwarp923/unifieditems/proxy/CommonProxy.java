@@ -3,40 +3,46 @@
  */
 package tech.chazwarp923.unifieditems.proxy;
 
+import java.util.Map;
+
+import net.minecraft.block.Block;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLInterModComms;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import tech.chazwarp923.unifieditems.Reference;
 import tech.chazwarp923.unifieditems.UnifiedItems;
+import tech.chazwarp923.unifieditems.block.UIBlockGemOre;
+import tech.chazwarp923.unifieditems.block.UIBlockMetalOre;
 import tech.chazwarp923.unifieditems.block.UIBlocks;
 import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.crafting.Shaped;
 import tech.chazwarp923.unifieditems.crafting.Shapeless;
 import tech.chazwarp923.unifieditems.crafting.Smelting;
 import tech.chazwarp923.unifieditems.item.UIItems;
+import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialHandler;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
-import tech.chazwarp923.unifieditems.modular.ModDetector;
-import tech.chazwarp923.unifieditems.modular.ModuleRegistry;
+import tech.chazwarp923.unifieditems.modular.MaterialDetector;
 import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {		
 		MaterialRegistry.populate();
-		ModDetector.preInit();
+		MaterialDetector.preInit(preInitEvent);
 		
-			//Gets the suggested config location then initilizes the config
-			UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
-			UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
-		
-		MaterialRegistry.setEnabled();
+		//Gets the suggested config location then initilizes the config
+		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
+		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
+			
+		MaterialRegistry.setEnabled(MaterialDetector.readKnownMaterials());
 		MaterialHandler.addBlocksAndItemsForMaterials();
 		UIBlocks.preInit();
 		UIItems.preInit();
-		ModuleRegistry.preInit();
 		
 		//Hardcodes the mcmod.info
 		preInitEvent.getModMetadata().credits = "Reika, enderblaze2, ganymedes01, mezz, LexManos, CyanideX, Katur";
@@ -48,6 +54,8 @@ public class CommonProxy {
 	}
 	
 	public void init(FMLInitializationEvent initEvent) {
+		MaterialDetector.init();
+		
 		//Registers the instance of the mod
 		MinecraftForge.EVENT_BUS.register(UnifiedItems.instance);
 		
@@ -61,13 +69,18 @@ public class CommonProxy {
 		Shaped.init();
 		Shapeless.init();
 		Smelting.init();
-		ModuleRegistry.init();
+		
+		for(Map.Entry<Material, UIBlockMetalOre> oreBlock : UIBlocks.metalOres.entrySet()) {
+			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack((Block)oreBlock.getValue()));
+		}
+		for(Map.Entry<Material, UIBlockGemOre> oreBlock : UIBlocks.gemOres.entrySet()) {
+			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack((Block)oreBlock.getValue()));
+		}
 	}
 
 	public void postInit(FMLPostInitializationEvent postInitEvent) {
 		if(UnifiedItems.config.hasChanged()) {
 			UnifiedItems.config.save();
 		}
-		ModuleRegistry.postInit();
 	}
 }
