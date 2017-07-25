@@ -17,6 +17,7 @@ import com.google.gson.GsonBuilder;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.oredict.OreDictionary;
 import tech.chazwarp923.unifieditems.Reference;
+import tech.chazwarp923.unifieditems.config.ConfigHandler;
 import tech.chazwarp923.unifieditems.material.Material;
 
 public class MaterialDetector {
@@ -26,16 +27,18 @@ public class MaterialDetector {
 	private static List<Material> enabledMaterials = new ArrayList<Material>();
 	
 	public static void preInit(FMLPreInitializationEvent event) {
-		config = new File(event.getModConfigurationDirectory().toString() + "/" + Reference.MOD_ID + "-LastKnownMaterials.json");
-		for(Material mat : Material.values()) {
-			if(doesOreNameExist(mat) || true) {
-				enabledMaterials.add(mat);
+		if(ConfigHandler.general.get("autoDetection")) {
+			config = new File(event.getModConfigurationDirectory().toString() + "/" + Reference.MOD_ID + "-LastKnownMaterials.json");
+			for(Material mat : Material.values()) {
+				if(doesOreNameExist(mat) || true) {
+					enabledMaterials.add(mat);
+				}
 			}
 		}
 	}
 	
 	public static void init() {
-		if(!config.exists()) {
+		if(ConfigHandler.general.get("autoDetection") && !config.exists()) {
 			JsonDataOrganizer jdo = new JsonDataOrganizer();
 			for(Material mat : enabledMaterials) {
 				jdo.materials.add(mat.name);
@@ -50,7 +53,7 @@ public class MaterialDetector {
 	}
 	
 	public static List<Material> readKnownMaterials() {
-		if(config.exists()) {
+		if(ConfigHandler.general.get("autoDetection") && config.exists()) {
 			try {
 				BufferedReader br = new BufferedReader(new FileReader(config));
 				JsonDataOrganizer json = GSON.fromJson(br, JsonDataOrganizer.class);

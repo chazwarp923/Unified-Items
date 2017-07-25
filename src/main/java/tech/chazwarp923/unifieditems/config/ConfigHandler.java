@@ -92,6 +92,7 @@ public class ConfigHandler {
 	
 	private static void loadConfigProperties() {
 		
+		generalProperties.put("autoDetection", cfg.get(CATEGORY_GENERAL, "Automatic Detction of Materials", true));
 		generalProperties.put("furnaceConvert", cfg.get(CATEGORY_GENERAL, "Furnace Conversion Recipes", true));
 		
 		for(Material material : MaterialRegistry.ores) {
@@ -108,6 +109,7 @@ public class ConfigHandler {
 	
 	private static void readConfigValues() {
 		
+		general.put("autoDetection", generalProperties.get("autoDetection").getBoolean());
 		general.put("furnaceConvert", generalProperties.get("furnaceConvert").getBoolean());
 		
 		for(Material material : MaterialRegistry.ores) {
@@ -124,6 +126,7 @@ public class ConfigHandler {
 	
 	private static void writeConfigValues() {
 		
+		generalProperties.get("autoDetection").set(general.get("autoDetection"));
 		generalProperties.get("furnaceConvert").set(general.get("furnaceConvert"));
 		
 		for(Material material : MaterialRegistry.ores) {

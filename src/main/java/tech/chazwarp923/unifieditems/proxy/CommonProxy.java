@@ -32,13 +32,13 @@ import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {		
-		MaterialRegistry.populate();
-		MaterialDetector.preInit(preInitEvent);
+		MaterialRegistry.populate();//This Must be run before the config is loaded ALWAYS
 		
 		//Gets the suggested config location then initilizes the config
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
 		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
-			
+		
+		MaterialDetector.preInit(preInitEvent);
 		MaterialRegistry.setEnabled(MaterialDetector.readKnownMaterials());
 		MaterialHandler.addBlocksAndItemsForMaterials();
 		UIBlocks.preInit();
