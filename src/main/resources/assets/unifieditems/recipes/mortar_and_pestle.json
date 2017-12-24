@@ -11,7 +11,8 @@
       "item": "minecraft:bowl"
     },
     "C": {
-      "item": "#BLOCKCOBBLESTONE"
+	  "type": "forge:ore_dict",
+      "ore": "blockCobblestone"
     }
   }
 }

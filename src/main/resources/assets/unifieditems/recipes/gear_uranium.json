@@ -10,7 +10,8 @@
   "type": "forge:ore_shaped",
   "key": {
     "S": {
-      "item": "#STICKWOOD"
+      "ore": "stickWood",
+      "type": "forge:ore_dict"
     },
     "I": {
       "item": "unifieditems:ingot_uranium"

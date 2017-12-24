@@ -3,32 +3,25 @@
 */
 package tech.chazwarp923.unifieditems.tools;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeSet;
-
 import com.google.common.collect.ImmutableMap;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import tech.chazwarp923.unifieditems.UnifiedItems;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.*;
 
 public class RecipeJsonHelper {
 	
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
 	private static File RECIPE_DIR = null;
 	private static final Set<String> USED_OD_NAMES = new TreeSet<>();
-	private static boolean isEnabled = false;
+	private static boolean isEnabled = true;
 
 	private static void setupDir() {
 		if (RECIPE_DIR == null) {
@@ -163,7 +156,8 @@ public class RecipeJsonHelper {
 		if (thing instanceof String) {
 			Map<String, Object> ret = new HashMap<>();
 			USED_OD_NAMES.add((String) thing);
-			ret.put("item", "#" + ((String) thing).toUpperCase(Locale.ROOT));
+			ret.put("ore", thing);
+			ret.put("type", "forge:ore_dict");
 			return ret;
 		}
 

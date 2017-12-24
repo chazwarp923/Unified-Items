@@ -3,9 +3,6 @@
  */
 package tech.chazwarp923.unifieditems.proxy;
 
-import java.util.Map;
-
-import net.minecraft.block.Block;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -29,12 +26,14 @@ import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 import tech.chazwarp923.unifieditems.modular.MaterialDetector;
 import tech.chazwarp923.unifieditems.world.WorldGenerationHandler;
 
+import java.util.Map;
+
 public class CommonProxy {
 
 	public void preInit(FMLPreInitializationEvent preInitEvent) {		
 		MaterialRegistry.populate();//This Must be run before the config is loaded ALWAYS
 		
-		//Gets the suggested config location then initilizes the config
+		//Gets the suggested config location then initializes the config
 		UnifiedItems.configFile = preInitEvent.getSuggestedConfigurationFile();
 		UnifiedItems.config = ConfigHandler.preInit(UnifiedItems.configFile);
 		
@@ -71,10 +70,10 @@ public class CommonProxy {
 		Smelting.init();
 		
 		for(Map.Entry<Material, UIBlockMetalOre> oreBlock : UIBlocks.metalOres.entrySet()) {
-			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack((Block)oreBlock.getValue()));
+			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack(oreBlock.getValue()));
 		}
 		for(Map.Entry<Material, UIBlockGemOre> oreBlock : UIBlocks.gemOres.entrySet()) {
-			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack((Block)oreBlock.getValue()));
+			FMLInterModComms.sendMessage("denseores", "addDenseOreStone", new ItemStack(oreBlock.getValue()));
 		}
 	}
 

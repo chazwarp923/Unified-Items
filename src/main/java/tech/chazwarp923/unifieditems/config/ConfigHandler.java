@@ -3,9 +3,6 @@
  */
 package tech.chazwarp923.unifieditems.config;
 
-import java.io.File;
-import java.util.HashMap;
-
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 import net.minecraftforge.fml.common.FMLCommonHandler;
@@ -13,6 +10,9 @@ import net.minecraftforge.fml.relauncher.Side;
 import tech.chazwarp923.unifieditems.material.Material;
 import tech.chazwarp923.unifieditems.material.MaterialRegistry;
 import tech.chazwarp923.unifieditems.proxy.ClientProxy;
+
+import java.io.File;
+import java.util.HashMap;
 
 public class ConfigHandler {
 
@@ -50,7 +50,7 @@ public class ConfigHandler {
 		return cfg;
 	}
 	
-	public static void loadValuesFromDisk() {
+	private static void loadValuesFromDisk() {
 		syncConfig(true, true);
 	}
 
@@ -61,7 +61,7 @@ public class ConfigHandler {
 	public static void saveConfigToDisk() {
 		syncConfig(false, false);
 	}
-	
+
 	private static void syncConfig(boolean loadConfigFromFile, boolean readFieldsFromConfig) {
 		if(loadConfigFromFile) {
 			cfg.load();
@@ -92,7 +92,7 @@ public class ConfigHandler {
 	
 	private static void loadConfigProperties() {
 		
-		generalProperties.put("autoDetection", cfg.get(CATEGORY_GENERAL, "Automatic Detction of Materials", true));
+		generalProperties.put("autoDetection", cfg.get(CATEGORY_GENERAL, "Automatic Detection of Materials", true));
 		generalProperties.put("furnaceConvert", cfg.get(CATEGORY_GENERAL, "Furnace Conversion Recipes", true));
 		
 		for(Material material : MaterialRegistry.ores) {
