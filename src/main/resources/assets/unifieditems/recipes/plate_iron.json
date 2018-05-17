@@ -1,0 +1,16 @@
+{
+  "result": {
+    "item": "unifieditems:plate_iron",
+    "count": 4
+  },
+  "pattern": [
+    "II",
+    "II"
+  ],
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  }
+}

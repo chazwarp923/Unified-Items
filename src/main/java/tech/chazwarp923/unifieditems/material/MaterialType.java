@@ -9,6 +9,7 @@ public enum MaterialType {
 	GENERIC(true, true, true, true, false, true, true, true),
 	ALLOY(false, true, true, true, false, true, true, true),
 	GENERIC_GEM(true, true, false, false, true, false, false, true),
+	VANILLA(false, true, false, false, false, true, true, false),
 	DUST(false, true, false, false, false, false, false, false),
 	INGOT(false, false, true, false, false, false, false, false),
 	NUGGET(false, false, false, true, false, false, false, false),

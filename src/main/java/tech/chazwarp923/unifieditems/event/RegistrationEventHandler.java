@@ -72,12 +72,12 @@ public class RegistrationEventHandler {
 	}
 	
 	@SubscribeEvent
-	public void registerCrafting(RegistryEvent.Register<IRecipe> event) {
-		IForgeRegistry<IRecipe> registry = event.getRegistry();
+	public void registerCrafting(RegistryEvent.Register<irecipe> event) {
+		IForgeRegistry<irecipe> registry = event.getRegistry();
 		
 		//Register all the recipes
-		if(registry.getRegistrySuperType().equals(IRecipe.class)) {
-			for(IRecipe recipe : RecipeRegistry.getCraftingRecipes()) {
+		if(registry.getRegistrySuperType().equals(irecipe.class)) {
+			for(irecipe recipe : RecipeRegistry.getCraftingRecipes()) {
 				//registry.register(recipe);
 			}
 		}

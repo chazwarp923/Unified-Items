@@ -72,13 +72,13 @@ public class MortarAndPestleRecipe extends UIIRecipe {
 
 	@Override
 	public ResourceLocation getRegistryName() {
-		return new ResourceLocation(Reference.RESOURCE_PREFIX + output.getUnlocalizedName());
+		return new ResourceLocation(Reference.RESOURCE_PREFIX + output.getUnlocalizedName() + "MortarAndPestleRecipe");
 	}
 
 	@Override
 	public Class<IRecipe> getRegistryType() {
 		return null;
-		//return IRecipe.class;
+		//return irecipe.class;
 	}
 
 	@Override

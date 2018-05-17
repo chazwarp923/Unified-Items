@@ -27,10 +27,16 @@ public class Shapeless {
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.IRON_ORE), new ItemStack(UIItems.dusts.get(Material.IRON), 2)));
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.GOLD_ORE), new ItemStack(UIItems.dusts.get(Material.GOLD), 2)));
 		RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(new ItemStack(Blocks.OBSIDIAN), new ItemStack(UIItems.dusts.get(Material.OBSIDIAN), 4)));
-		
+
+		//Adds the recipes for ores to dusts
 		for(Map.Entry<Material, UIBlockMetalOre> block : UIBlocks.metalOres.entrySet()) {
 			RecipeRegistry.addMortarAndPestleRecipe(new OreToDustRecipe(block.getKey()));
 		}
+
+        //Adds the recipes for ingots to dusts
+        for(Map.Entry<Material, UIItemIngot> ingot : UIItems.ingots.entrySet()) {
+            RecipeRegistry.addMortarAndPestleRecipe((new OreToDustRecipe(new ItemStack(UIItems.ingots.get(ingot.getKey())), new ItemStack(UIItems.dusts.get(ingot.getKey()), 1))));
+        }
 		
 		//Adds the recipes for ingots to nuggets
 		for(Map.Entry<Material, UIItemIngot> item : UIItems.ingots.entrySet()) {
@@ -61,9 +67,6 @@ public class Shapeless {
 				RecipeJsonHelper.addShapelessRecipe(new ItemStack(UIItems.gems.get(block.getKey()), 9), new ItemStack(block.getValue()));
 			}
 		}
-
-		//Adds the recipe for the "Mortar and Pestle"
-		//RecipeJsonHelper.addShapelessRecipe(new ItemStack(UIItems.mortarAndPestle), new ItemStack(Items.BOWL), new ItemStack(Blocks.COBBLESTONE));
 		
 		//Adds a recipe for flint
 		RecipeRegistry.addMortarAndPestleRecipe(new MortarAndPestleRecipe(new ItemStack(Blocks.GRAVEL), new ItemStack(Items.FLINT, 1)));

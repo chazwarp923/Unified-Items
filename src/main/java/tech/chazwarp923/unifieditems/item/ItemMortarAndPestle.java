@@ -8,6 +8,6 @@ public class ItemMortarAndPestle extends UIItem {
 	public ItemMortarAndPestle() {
 		super("mortar_and_pestle");
 		setMaxStackSize(1);
-		setMaxDamage(4);
+		setMaxDamage(8);
 	}
 }

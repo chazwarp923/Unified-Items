@@ -115,6 +115,8 @@ item.nugget_zinc.name=Zinc Nugget
 item.nugget_brass.name=Brass Nugget
 item.nugget_constantan.name=Constantan Nugget
 
+item.plate_iron.name=Iron Plate
+item.plate_gold.name=Gold Plate
 item.plate_copper.name=Copper Plate
 item.plate_tin.name=Tin Plate
 item.plate_bronze.name=Bronze Plate
@@ -135,6 +137,8 @@ item.plate_zinc.name=Zinc Plate
 item.plate_brass.name=Brass Plate
 item.plate_constantan.name=Constantan Plate
 
+item.gear_iron.name=Iron Gear
+item.gear_gold.name=Gold Gear
 item.gear_copper.name=Copper Gear
 item.gear_tin.name=Tin Gear
 item.gear_bronze.name=Bronze Gear

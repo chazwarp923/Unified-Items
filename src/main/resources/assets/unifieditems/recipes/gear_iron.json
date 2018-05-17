@@ -1,0 +1,20 @@
+{
+  "result": {
+    "item": "unifieditems:gear_iron"
+  },
+  "pattern": [
+    "SIS",
+    "I I",
+    "SIS"
+  ],
+  "type": "forge:ore_shaped",
+  "key": {
+    "S": {
+      "ore": "stickWood",
+      "type": "forge:ore_dict"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  }
+}

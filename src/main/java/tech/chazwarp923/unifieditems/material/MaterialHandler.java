@@ -38,6 +38,11 @@ public class MaterialHandler {
 					UIItems.addGem(material, "gem_" + material.name.toLowerCase());
 					UIBlocks.addBlock(material, material.hardness, "block_" + material.name.toLowerCase(), material.harvestLevel);
 					break;
+                case VANILLA:
+                    UIItems.addDust(material, "dust_" + material.name.toLowerCase().toLowerCase());
+                    UIItems.addPlate(material, "plate_" + material.name.toLowerCase());
+                    UIItems.addGear(material, "gear_" + material.name.toLowerCase());
+                    break;
 				case DUST:
 					UIItems.addDust(material, "dust_" + material.name.toLowerCase());
 					break;
